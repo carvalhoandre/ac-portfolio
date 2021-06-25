@@ -5,6 +5,7 @@ import Header from '../../components/Header'
 import HomeSection from '../../components/HomeSection'
 import About from '../../components/About'
 import Skills from '../../components/Skills'
+import Qualification from '../../components/Qualification'
 
 export default function Home() {
     return (
@@ -18,6 +19,8 @@ export default function Home() {
                 <About />
 
                 <Skills />
+
+                <Qualification />
 
             </main>
         </>
