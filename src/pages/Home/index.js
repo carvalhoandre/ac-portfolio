@@ -6,6 +6,7 @@ import HomeSection from '../../components/HomeSection'
 import About from '../../components/About'
 import Skills from '../../components/Skills'
 import Qualification from '../../components/Qualification'
+import Services from '../../components/Services'
 
 export default function Home() {
     return (
@@ -21,6 +22,8 @@ export default function Home() {
                 <Skills />
 
                 <Qualification />
+
+                <Services />
 
             </main>
         </>
