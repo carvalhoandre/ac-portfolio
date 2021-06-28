@@ -10,6 +10,7 @@ import Services from '../../components/Services'
 import Portfolio from '../../components/Portfolio'
 import InMind from '../../components/InMind'
 import Testimonial from '../../components/Testimonial'
+import Contact from '../../components/Contact'
 
 export default function Home() {
     return (
@@ -33,6 +34,8 @@ export default function Home() {
                 <InMind />
 
                 <Testimonial />
+
+                <Contact />
             </main>
         </>
     )
