@@ -8,6 +8,7 @@ import Skills from '../../components/Skills'
 import Qualification from '../../components/Qualification'
 import Services from '../../components/Services'
 import Portfolio from '../../components/Portfolio'
+import InMind from '../../components/InMind'
 
 export default function Home() {
     return (
@@ -28,6 +29,7 @@ export default function Home() {
 
                 <Portfolio />
 
+                <InMind />
             </main>
         </>
     )
