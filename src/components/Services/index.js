@@ -5,7 +5,7 @@ const initialState = {
     more: false
 }
 
-export default class About extends Component {
+export default class Services extends Component {
 
     state = {
         ...initialState

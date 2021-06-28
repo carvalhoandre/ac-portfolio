@@ -17,6 +17,7 @@
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
   --container-color: #FFF;
+  --swiper-theme-color: hsl(var(--hue-color), 69%, 61%) !important;
   /* font and typography */
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2em;

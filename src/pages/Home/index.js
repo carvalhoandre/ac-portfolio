@@ -7,6 +7,7 @@ import About from '../../components/About'
 import Skills from '../../components/Skills'
 import Qualification from '../../components/Qualification'
 import Services from '../../components/Services'
+import Portfolio from '../../components/Portfolio'
 
 export default function Home() {
     return (
@@ -24,6 +25,8 @@ export default function Home() {
                 <Qualification />
 
                 <Services />
+
+                <Portfolio />
 
             </main>
         </>
