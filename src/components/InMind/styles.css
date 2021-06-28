@@ -7,7 +7,7 @@
     padding-top: 3em;
 }
 
-.project_title{
+.project_title {
     font-size: var(--h2-font-size);
     margin-bottom: var(--mb-0-75);
 }
@@ -16,12 +16,11 @@
     margin-bottom: var(--mb-1-5);
 }
 
-.project_title,
-.project_description {
+.project_title, .project_description {
     color: #FFF;
 }
 
-.project_img{
+.project_img {
     width: 323px;
     justify-self: center;
 }

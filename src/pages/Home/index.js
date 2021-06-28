@@ -9,6 +9,7 @@ import Qualification from '../../components/Qualification'
 import Services from '../../components/Services'
 import Portfolio from '../../components/Portfolio'
 import InMind from '../../components/InMind'
+import Testimonial from '../../components/Testimonial'
 
 export default function Home() {
     return (
@@ -30,6 +31,8 @@ export default function Home() {
                 <Portfolio />
 
                 <InMind />
+
+                <Testimonial />
             </main>
         </>
     )
