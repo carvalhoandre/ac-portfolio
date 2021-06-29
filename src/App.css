@@ -45,6 +45,18 @@
   --z-modal: 1000;
 }
 
+/* Variables Dark Theme */
+
+body.dark-theme {
+  /* colors */
+  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 75%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 28%, 12%);
+  --container-color: hsl(var(--hue-color), 29%, 16%);
+}
+
 /* base */
 
 * {
@@ -82,20 +94,6 @@ img {
   height: auto;
 }
 
-/* base screens */
-
-@media screen and (min-width: 968px) {
-  :root {
-    --big-font-size: 3em;
-    --h1-font-size: 2.5em;
-    --h2-font-size: 1.5em;
-    --h3-font-size: 1.25em;
-    --normal-font-size: 1em;
-    --small-font-size: .875em;
-    --smaller-font-size: .813em;
-  }
-}
-
 /* reusable css classes */
 
 .section {
@@ -117,6 +115,7 @@ img {
 }
 
 /* layout */
+
 .container {
   max-width: 768px;
   margin-left: var(--mb-1-5);
@@ -126,4 +125,18 @@ img {
 .grid {
   display: grid;
   gap: 1.5em;
+}
+
+/* base screens */
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3em;
+    --h1-font-size: 2.5em;
+    --h2-font-size: 1.5em;
+    --h3-font-size: 1.25em;
+    --normal-font-size: 1em;
+    --small-font-size: .875em;
+    --smaller-font-size: .813em;
+  }
 }

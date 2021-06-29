@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-no-target-blank */
+import React, { Component } from 'react'
 import './styles.css'
 
 import Header from '../../components/Header'
@@ -14,35 +14,39 @@ import Contact from '../../components/Contact'
 import Footer from '../../components/Footer'
 import ScrollTop from '../../components/ScrollTop'
 
-export default function Home() {
-    return (
-        <>
-            <Header />
+import { getTheme } from '../../services/theme'
 
-            <main className="main">
-                
-                <HomeSection />
 
-                <About />
+const initialState = {
+    theme: getTheme()
+}
 
-                <Skills />
+export default class Home extends Component {
 
-                <Qualification />
+    state = {
+        ...initialState
+    }
 
-                <Services />
-
-                <Portfolio />
-
-                <InMind />
-
-                <Testimonial />
-
-                <Contact />
-            </main>
-
-            <Footer />
-
-            <ScrollTop />
-        </>
-    )
+    render() {
+        return (
+            <>
+                <body className={`${this.state.theme === 'light' ? '' : 'dark-theme'}`}>
+                    <Header />
+                    <main className="main">
+                        <HomeSection />
+                        <About />
+                        <Skills />
+                        <Qualification />
+                        <Services />
+                        <Portfolio />
+                        <InMind />
+                        <Testimonial />
+                        <Contact />
+                    </main>
+                    <Footer />
+                    <ScrollTop />
+                </body>
+            </>
+        )
+    }
 }
