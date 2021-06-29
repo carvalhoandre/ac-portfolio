@@ -6,7 +6,7 @@ export default class Contact extends Component {
     render() {
         return (
             <>
-                <section className="contact section" id="contact">
+                <section className="contact section" id="contactme">
                     <h2 className="section_title">Contact Me</h2>
                     <span className="section_subtitle">Get in touch</span>
 

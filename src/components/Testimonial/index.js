@@ -30,7 +30,7 @@ export default class Testimonial extends Component {
     render() {
         return (
             <>
-                <section className="testimonial section" id="services">
+                <section className="testimonial section">
                     <h2 className="section_title">Testimonial</h2>
                     <span className="section_subtitle">My client saying</span>
 

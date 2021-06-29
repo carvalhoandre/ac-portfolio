@@ -12,6 +12,7 @@ import InMind from '../../components/InMind'
 import Testimonial from '../../components/Testimonial'
 import Contact from '../../components/Contact'
 import Footer from '../../components/Footer'
+import ScrollTop from '../../components/ScrollTop'
 
 export default function Home() {
     return (
@@ -40,6 +41,8 @@ export default function Home() {
             </main>
 
             <Footer />
+
+            <ScrollTop />
         </>
     )
 }

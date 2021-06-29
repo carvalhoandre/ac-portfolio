@@ -1,0 +1,16 @@
+.scrollup{
+    position: relative;
+    margin: 0em;
+    left: 90%;
+    bottom: 28em;
+    background-color: transparent;
+    opacity: .8;
+    padding: 0em;
+    z-index: var(--z-tooltip);
+    transition: .4s;
+}
+
+.scrollup_icon{
+    font-size: 1.5em;
+    color: #FFF;
+}

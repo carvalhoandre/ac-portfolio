@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import './styles.css'
 
 const initialState = {
-    nav: false
+    nav: false,
+    id: null
 }
 
 export default class Header extends Component {
@@ -22,32 +23,50 @@ export default class Header extends Component {
                                 <ul className="nav_list grid" onClick={() => this.setState({ nav: false })}>
                                     <li className="nav_item">
                                         <a href="#home" className="nav_link">
-                                            <i className="uil uil-estate nav_icon"></i>Home
+                                            <i
+                                                className={`uil uil-estate nav_icon ${this.state.id === 'home' ? 'active-link' : ''}`}
+                                            />
+                                            Home
                                         </a>
                                     </li>
                                     <li className="nav_item">
                                         <a href="#about" className="nav_link">
-                                            <i className="uil uil-user nav_icon"></i> About
+                                            <i
+                                                className={`uil uil-user nav_icon ${this.state.id === 'about' ? 'active-link' : ''}`}
+                                            />
+                                            About
                                         </a>
                                     </li>
                                     <li className="nav_item">
                                         <a href="#skills" className="nav_link">
-                                            <i className="uil uil-file-alt nav_icon"></i> Skills
+                                            <i
+                                                className={`uil uil-file-alt nav_icon ${this.state.id === 'skills' ? 'active-link' : ''}`}
+                                            />
+                                            Skills
                                         </a>
                                     </li>
                                     <li className="nav_item">
                                         <a href="#services" className="nav_link">
-                                            <i className="uil uil-bag nav_icon"></i> Services
+                                            <i
+                                                className={`uil uil-bag nav_icon ${this.state.id === 'services' ? 'active-link' : ''}`}
+                                            />
+                                            Services
                                         </a>
                                     </li>
                                     <li className="nav_item">
                                         <a href="#portfolio" className="nav_link">
-                                            <i className="uil uil-scenery nav_icon"></i> Portfolio
+                                            <i
+                                                className={`uil uil-scenery nav_icon ${this.state.id === 'portfolio' ? 'active-link' : ''}`}
+                                            />
+                                            Portfolio
                                         </a>
                                     </li>
                                     <li className="nav_item">
                                         <a href="#contactme" className="nav_link">
-                                            <i className="uil uil-message nav_icon"></i>Contactme
+                                            <i
+                                                className={`uil uil-message nav_icon ${this.state.id === 'contactme' ? 'active-link' : ''}`}
+                                            />
+                                            Contactme
                                         </a>
                                     </li>
                                 </ul>
