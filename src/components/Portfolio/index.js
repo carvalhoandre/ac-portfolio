@@ -76,7 +76,7 @@ export default class Portfolio extends Component {
                                         <img src={ImageThree} alt="portfolio_image" className="portfolio_img" />
 
                                         <div className="portfolio_data">
-                                            <h3 className="portfolio_title">Pnline Store</h3>
+                                            <h3 className="portfolio_title">Online Store</h3>
                                             <p className="portfolio_description">Website adaptable to all devices,
                                                 witch ui components and animated interactions.
                                             </p>

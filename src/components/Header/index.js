@@ -64,7 +64,6 @@ export default class Header extends Component {
                                     <i className="uil uil-times nav_close nav_icon" id="nav-close" />
                                 </div>
                             </div>
-
                         </nav>
                     </header>
                 ) : (
@@ -75,7 +74,7 @@ export default class Header extends Component {
                                 <div className="nav_btns">
                                     {/* theme change button */}
                                     <i
-                                        className={`change-theme uil uil-${this.state.theme === 'dark' ? 'moon' : 'sun'}`} 
+                                        className={`change-theme uil uil-${this.state.theme === 'dark' ? 'sun' : 'sun'}`} 
                                         id="theme-button"
                                         onClick={(() => {
                                             this.state.theme === 'dark' ? setTheme('light') : setTheme('dark')
