@@ -15,7 +15,7 @@ export default class InMind extends Component {
                                 <p className="project_description">
                                     Contact me now and get a 30% discount on your new project.
                                 </p>
-                                <a href="#contact" className="button button--flex button--white">
+                                <a href="#contactme" className="button button--flex button--white">
                                     Contact Me
                                     <i className="uil uil-message project_icon button_icon" />
                                 </a>

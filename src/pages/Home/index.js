@@ -43,9 +43,8 @@ export default class Home extends Component {
                         <Testimonial />
                         <Contact />
                     </main>
-                    <Footer />
-                    <ScrollTop />
                 </body>
+                <Footer />
             </>
         )
     }

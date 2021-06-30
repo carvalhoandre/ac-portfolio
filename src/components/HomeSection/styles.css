@@ -20,16 +20,16 @@
 }
 
 .home_social-icon:hover {
-    color: var(--first-color);
+    color: var(--first-color-alt);
 }
 
 .home_blob {
-    width: 200px;
+    width: 400px;
     fill: var(--first-color);
 }
 
 .home_blob-img {
-    width: 170px;
+    width: 270px;
 }
 
 .home_data {
@@ -46,7 +46,6 @@
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-0-75);
 }
-
 
 .home_description{
     margin-bottom: var(--mb-2);
