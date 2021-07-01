@@ -18,7 +18,7 @@ export default function HomeSection() {
                                 <i class="uil uil-github-alt"></i>
                             </a>
 
-                            <a href="https://github.com/carvalhoandre" target="_blank" className="home_social-icon">
+                            <a href="https://dribbble.com/andre_carvalho" target="_blank" className="home_social-icon">
                                 <i class="uil uil-dribbble"></i>
                             </a>
                         </div>

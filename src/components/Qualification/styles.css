@@ -34,6 +34,10 @@
     font-weight: var(--font-medium);
 }
 
+.space {
+    width: 100px;
+}
+
 .qualification_subtitle{
     display: inline-block;
     font-size: var(--small-font-size);

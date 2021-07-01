@@ -54,6 +54,10 @@
     font-weight: var(--font-medium);
 }
 
+.case {
+    width: 90px;
+}
+
 .nav_link:hover {
     color: var(--first-color);
 }

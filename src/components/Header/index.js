@@ -53,9 +53,9 @@ export default class Header extends Component {
                                     </a>
                                 </li>
                                 <li className="nav_item">
-                                    <a href="#contactme" className="nav_link">
+                                    <a href="#contactme" className="nav_link case">
                                         <i className={`uil uil-message nav_icon`} />
-                                        Contactme
+                                        Contact Me
                                     </a>
                                 </li>
                             </ul>

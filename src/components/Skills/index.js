@@ -29,7 +29,7 @@ export default class About extends Component {
 
                                     <div>
                                         <h1 className="skills_title">Frontend developer</h1>
-                                        <span className="skills_subtitle">More than 4 years</span>
+                                        <span className="skills_subtitle">More than 2 years</span>
                                     </div>
 
                                     <i
@@ -52,7 +52,25 @@ export default class About extends Component {
                                         </div>
                                     </div>
 
-
+                                    <div className="skills_data">
+                                        <div className="skills_titles">
+                                            <h3 className="skills_name">React Native</h3>
+                                            <span className="skills_number">85%</span>
+                                        </div>
+                                        <div className="skills_bar">
+                                            <span className="skills_percentage skills_react"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="skills_data">
+                                        <div className="skills_titles">
+                                            <h3 className="skills_name">React</h3>
+                                            <span className="skills_number">85%</span>
+                                        </div>
+                                        <div className="skills_bar">
+                                            <span className="skills_percentage skills_react"></span>
+                                        </div>
+                                    </div>
 
                                     <div className="skills_data">
                                         <div className="skills_titles">
@@ -64,19 +82,15 @@ export default class About extends Component {
                                         </div>
                                     </div>
 
-
-
                                     <div className="skills_data">
                                         <div className="skills_titles">
                                             <h3 className="skills_name">JavaScript</h3>
-                                            <span className="skills_number">85%</span>
+                                            <span className="skills_number">80%</span>
                                         </div>
                                         <div className="skills_bar">
                                             <span className="skills_percentage skills_js"></span>
                                         </div>
                                     </div>
-
-
 
                                     <div className="skills_data">
                                         <div className="skills_titles">
@@ -90,13 +104,14 @@ export default class About extends Component {
 
                                     <div className="skills_data">
                                         <div className="skills_titles">
-                                            <h3 className="skills_name">React</h3>
-                                            <span className="skills_number">85%</span>
+                                            <h3 className="skills_name">Ionic</h3>
+                                            <span className="skills_number">70%</span>
                                         </div>
                                         <div className="skills_bar">
-                                            <span className="skills_percentage skills_react"></span>
+                                            <span className="skills_percentage skills_ionic"></span>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -142,16 +157,6 @@ export default class About extends Component {
 
                                 <div className="skills_data">
                                     <div className="skills_titles">
-                                        <h3 className="skills_name">Firebase</h3>
-                                        <span className="skills_number">60%</span>
-                                    </div>
-                                    <div className="skills_bar">
-                                        <span className="skills_percentage skills_firebase"></span>
-                                    </div>
-                                </div>
-
-                                <div className="skills_data">
-                                    <div className="skills_titles">
                                         <h3 className="skills_name">PHP</h3>
                                         <span className="skills_number">55%</span>
                                     </div>
@@ -170,7 +175,7 @@ export default class About extends Component {
 
                                     <div>
                                         <h1 className="skills_title">Designer</h1>
-                                        <span className="skills_subtitle">More than 5 years</span>
+                                        <span className="skills_subtitle">More than 2 years</span>
                                     </div>
                                     <i
                                         className="uil uil-angle-down skills_arrow"
@@ -194,7 +199,7 @@ export default class About extends Component {
                                     <div className="skills_data">
                                         <div className="skills_titles">
                                             <h3 className="skills_name">Photoshop</h3>
-                                            <span className="skills_number">85%</span>
+                                            <span className="skills_number">80%</span>
                                         </div>
                                         <div className="skills_bar">
                                             <span className="skills_percentage skills_photoshop"></span>

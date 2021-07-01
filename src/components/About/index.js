@@ -14,24 +14,20 @@ export default function About() {
 
                     <div className="about_data">
                         <p className="about_description">
-                            Web developer, with extensive knowledge and years of experience,
-                            working in web, technoloies and Ui / Ux design, delivering quality work.
+                            Web developer, with extensive knowledge, 
+                            working in web and mobile with top technologies 
+                            and Ui / Ux design, delivering quality work.
                         </p>
 
                         <div className="about_info">
                             <div>
-                                <span className="about_info-title">08+</span>
+                                <span className="about_info-title">03+</span>
                                 <span className="about_info-name">Years <br /> experience</span>
                             </div>
 
                             <div>
-                                <span className="about_info-title">20+</span>
+                                <span className="about_info-title">10+</span>
                                 <span className="about_info-name">Completed <br /> project</span>
-                            </div>
-
-                            <div>
-                                <span className="about_info-title">05+</span>
-                                <span className="about_info-name">Companies <br /> worked</span>
                             </div>
                         </div>
 

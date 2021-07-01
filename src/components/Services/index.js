@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import './styles.css'
 
 const initialState = {
-    more: false
+    moreOne: false,
+    moreTwo: false,
+    moreThree: false
 }
 
 export default class Services extends Component {
@@ -29,20 +31,21 @@ export default class Services extends Component {
                             <span
                                 className="button button--flex button--small button--link services_button"
                                 onClick={(() => {
-                                    this.state.more === true ? this.setState({ more: false }) : this.setState({ more: true })
+                                    this.state.moreOne === true ? this.setState({ moreOne: false }) : this.setState({ moreOne: true })
                                 })}
                             >
                                 View More
                                 <i className="uil uil-arrow-right button_icon" />
                             </span>
 
-                            <div className={`services_modal ${this.state.more === true ? 'active-modal' : ''}`}>
+                            <div className={`services_modal ${this.state.moreOne === true ? 'active-modal' : ''}`}>
                                 <div className="services_modal-content">
-                                    <h4 className="services_modal">Ui/Ux <br /> Designer</h4>
+                                    <h4 className="services_modal-title">Ui/Ux <br /> Designer</h4>
                                     <i
                                         className="uil uil-times services_modal-close"
                                         onClick={(() => {
-                                            this.state.more === true ? this.setState({ more: false }) : this.setState({ more: true })
+                                            this.state.moreOne === true ? this.setState({ moreOne: false }) :
+                                                this.setState({ moreOne: true })
                                         })}
                                     />
                                     <ul className="services_modal-services grid">
@@ -53,7 +56,7 @@ export default class Services extends Component {
 
                                         <li className="services_modal-service">
                                             <i className="uil uil-check-circle services_modal-icon" />
-                                            <p>Web page development.</p>
+                                            <p>Creating Designs.</p>
                                         </li>
 
                                         <li className="services_modal-service">
@@ -80,27 +83,28 @@ export default class Services extends Component {
                             <span
                                 className="button button--flex button--small button--link services_button"
                                 onClick={(() => {
-                                    this.state.more === true ? this.setState({ more: false }) : this.setState({ more: true })
+                                    this.state.moreTwo === true ? this.setState({ moreTwo: false }) : this.setState({ moreTwo: true })
                                 })}
                             >
                                 View More
                                 <i className="uil uil-arrow-right button_icon" />
                             </span>
 
-                            <div className={`services_modal ${this.state.more === true ? 'active-modal' : ''}`}>
+                            <div className={`services_modal ${this.state.moreTwo === true ? 'active-modal' : ''}`}>
                                 <div className="services_modal-content">
-                                    <h4 className="services_modal">Frontend <br /> Developer</h4>
+                                    <h4 className="services_modal-title">Frontend <br /> Developer</h4>
                                     <i
                                         className="uil uil-times services_modal-close"
                                         onClick={(() => {
-                                            this.state.more === true ? this.setState({ more: false }) : this.setState({ more: true })
+                                            this.state.moreTwo === true ? this.setState({ moreTwo: false }) :
+                                                this.setState({ moreTwo: true })
                                         })}
                                     />
 
                                     <ul className="services_modal-services grid">
                                         <li className="services_modal-service">
                                             <i className="uil uil-check-circle services_modal-icon" />
-                                            <p>I develop the user interface.</p>
+                                            <p>Apps for Android and IOS.</p>
                                         </li>
 
                                         <li className="services_modal-service">
@@ -110,7 +114,7 @@ export default class Services extends Component {
 
                                         <li className="services_modal-service">
                                             <i className="uil uil-check-circle services_modal-icon" />
-                                            <p>I create ux element interactions.</p>
+                                            <p>Models business.</p>
                                         </li>
 
                                         <li className="services_modal-service">
@@ -122,57 +126,6 @@ export default class Services extends Component {
                             </div>
                         </div>
 
-                        {/* services three */}
-                        <div className="services_content">
-                            <div>
-                                <i className="uil uil-pen services_icon" />
-                                <h3 className="services_title">Branding <br /> Designer</h3>
-                            </div>
-
-                            <span
-                                className="button button--flex button--small button--link services_button"
-                                onClick={(() => {
-                                    this.state.more === true ? this.setState({ more: false }) : this.setState({ more: true })
-                                })}
-                            >
-                                View More
-                                <i className="uil uil-arrow-right button_icon" />
-                            </span>
-
-                            <div className={`services_modal ${this.state.more === true ? 'active-modal' : ''}`}>
-                                <div className="services_modal-content">
-                                    <h4 className="services_modal-title">Branding <br /> Designer</h4>
-                                    <i
-                                        className="uil uil-times services_modal-close"
-                                        onClick={(() => {
-                                            this.state.more === true ? this.setState({ more: false }) : this.setState({ more: true })
-                                        })}
-                                    />
-
-                                    <ul className="services_modal-services grid">
-                                        <li className="services_modal-service">
-                                            <i className="uil uil-check-circle services_modal-icon" />
-                                            <p>I develop the user interface.</p>
-                                        </li>
-
-                                        <li className="services_modal-service">
-                                            <i className="uil uil-check-circle services_modal-icon" />
-                                            <p>Web page development.</p>
-                                        </li>
-
-                                        <li className="services_modal-service">
-                                            <i className="uil uil-check-circle services_modal-icon" />
-                                            <p>I create ux element interactions.</p>
-                                        </li>
-
-                                        <li className="services_modal-service">
-                                            <i className="uil uil-check-circle services_modal-icon" />
-                                            <p>I position your company brand.</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </section>
             </>

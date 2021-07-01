@@ -22,24 +22,24 @@ export default class Qualification extends Component {
 
                     <div className="qualification_container container">
                         <div className="qualification_tabs">
-                            <div 
+                            <div
                                 className={`qualification_button ${this.state.education === true ? 'qualification_button_active' : ''}`}
                                 onClick={(() => {
                                     console.log('education = true')
-                                    this.state.education === true ? this.setState({ education: false }) : 
-                                    this.setState({ education: true })
+                                    this.state.education === true ? this.setState({ education: false }) :
+                                        this.setState({ education: true })
                                 })}
                             >
-                                <i className="uil uil-graduation-cap qualification_icon"/>
+                                <i className="uil uil-graduation-cap qualification_icon" />
                                 Education
                             </div>
 
-                            <div 
+                            <div
                                 className={`qualification_button ${this.state.work === true ? 'qualification_button_active' : ''}`}
                                 onClick={(() => {
                                     console.log('work click')
-                                    this.state.work === true ? this.setState({ work: false }) : 
-                                    this.setState({ work: true })
+                                    this.state.work === true ? this.setState({ work: false }) :
+                                        this.setState({ work: true })
                                 })}
                             >
                                 <i className="uil uil-briefcase-alt qualification_icon" />
@@ -90,31 +90,6 @@ export default class Qualification extends Component {
                                 <div className="qualification_data">
 
                                     <div>
-                                        <h3 className="qualification_title">Scrum Master (PSM I)</h3>
-                                        <span className="qualification_subtitle">CertiProf - 62756068</span>
-                                        <div className="qualification_calendar">
-                                            <i className="uil uil-schedule " />
-                                            2021
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <span className="qualification_rounder"></span>
-                                        <span className="qualification_line"></span>
-                                    </div>
-
-                                </div>
-
-                                {/* qualification for */}
-                                <div className="qualification_data">
-                                    <div></div>
-
-                                    <div>
-                                        <span className="qualification_rounder"></span>
-                                        <span className="qualification_line"></span>
-                                    </div>
-
-                                    <div>
                                         <h3 className="qualification_title">Java Development</h3>
                                         <span className="qualification_subtitle">Dev Superior</span>
                                         <div className="qualification_calendar">
@@ -122,12 +97,19 @@ export default class Qualification extends Component {
                                             2020 - 2021
                                         </div>
                                     </div>
+
+                                    <div>
+                                        <span className="qualification_rounder"></span>
+                                        <span className="qualification_line"></span>
+                                    </div>
+
                                 </div>
+
                             </div>
 
                             {/* qualification content two */}
                             <div className={`qualification_content ${this.state.work !== false ? 'qualification_active' : ''}`}
-                            data-content id="work">
+                                data-content id="work">
                                 {/* qualification one */}
                                 <div className="qualification_data">
                                     <div>
@@ -161,7 +143,7 @@ export default class Qualification extends Component {
                                         <span className="qualification_subtitle">Proative Technology</span>
                                         <div className="qualification_calendar">
                                             <i className="uil uil-calendar-alt " />
-                                            2020 - 2021
+                                            actual
                                         </div>
                                     </div>
                                 </div>

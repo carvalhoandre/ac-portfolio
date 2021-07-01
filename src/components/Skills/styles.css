@@ -66,11 +66,11 @@
     width: 90%;
 }
 
-.skills_css, .skills_java {
+.skills_css, .skills_java, .skills_js, .skills_photoshop {
     width: 80%;
 }
 
-.skills_js, .skills_react, .skills_photoshop {
+.skills_react {
     width: 85%;
 }
 
@@ -78,7 +78,11 @@
     width: 75%;
 }
 
-.skills_node, .skills_firebase, .skills_figma {
+.skills_ionic {
+    width: 70%;
+}
+
+.skills_node, .skills_figma {
     width: 60%;
 }
 
