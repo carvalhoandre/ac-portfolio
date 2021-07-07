@@ -5,9 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import './styles.css'
 
-import ImageOne from '../../assets/portfolio1.jpg'
-import ImageTwo from '../../assets/portfolio2.jpg'
-import ImageThree from '../../assets/portfolio3.jpg'
+import ImageOne from '../../assets/portfolio1.png'
+import ImageTwo from '../../assets/portfolio2.png'
+import ImageThree from '../../assets/portfolio3.png'
+import ImageFor from '../../assets/portfolio4.png'
 
 // Import Swiper styles
 import "swiper/swiper.min.css";
@@ -74,6 +75,23 @@ export default class Portfolio extends Component {
                                     {/* Portfolio trhee */}
                                     <div className="portfolio_content grid">
                                         <img src={ImageThree} alt="portfolio_image" className="portfolio_img" />
+
+                                        <div className="portfolio_data">
+                                            <h3 className="portfolio_title">Online Store</h3>
+                                            <p className="portfolio_description">Website adaptable to all devices,
+                                                witch ui components and animated interactions.
+                                            </p>
+                                            <a href="/" className="button button--flex button--samll portfolio_button">
+                                                Demo
+                                                <i className="uil uil-arrow-right button_icon" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    {/* Portfolio for */}
+                                    <div className="portfolio_content grid">
+                                        <img src={ImageFor} alt="portfolio_image" className="portfolio_img" />
 
                                         <div className="portfolio_data">
                                             <h3 className="portfolio_title">Online Store</h3>
