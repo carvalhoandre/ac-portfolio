@@ -14,17 +14,13 @@ export default function About() {
 
                     <div className="about_data">
                         <p className="about_description">
-                            Web developer, with extensive knowledge, 
-                            working in web and mobile with top technologies 
-                            and Ui / Ux design, delivering quality work.
+                            I have, extensive knowledge, working in web and 
+                            mobile with top technologies for example React / 
+                            React Native and Ui / Ux for design, delivering 
+                            quality work.
                         </p>
 
                         <div className="about_info">
-                            <div>
-                                <span className="about_info-title">03+</span>
-                                <span className="about_info-name">Years <br /> experience</span>
-                            </div>
-
                             <div>
                                 <span className="about_info-title">10+</span>
                                 <span className="about_info-name">Completed <br /> project</span>
@@ -33,7 +29,7 @@ export default function About() {
 
                         <div className="about_buttons">
                             <a download="" href={Curriculum} alt="curriculum" className="button button--flex">
-                                Download CV<i class="uil uil-arrow-to-bottom button_icon"></i>
+                                Download CV<i className="uil uil-arrow-to-bottom button_icon"></i>
                             </a>
                         </div>
                     </div>

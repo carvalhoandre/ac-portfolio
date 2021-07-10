@@ -54,3 +54,25 @@
     outline: none;
     padding: .25em .5em .5em 0;
 }
+
+.button_send {
+    border-color: var(--first-color);
+}
+
+.button_send:hover {
+    cursor: pointer;
+}
+
+.form-error {
+    font-size: var(--small-font-size);
+    color: var(--first-color);
+}
+
+.loader {
+    text-align: center;
+    background-color: #FFF !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh !important;
+}

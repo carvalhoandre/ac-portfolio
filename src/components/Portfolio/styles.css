@@ -47,8 +47,6 @@
     -ms-flex-align: center;
 }
 
-
-
 .swiper-button-next::after, .swiper-button-prev::after {
     font-size: 1.5em !important;
     color: var(--first-color);
@@ -68,7 +66,27 @@
     right: -.5em;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets {
+.swiper-container-horizontal>.swiper-pagination-bullets {
     bottom: -2em;
 }
 
+.coming {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.coming_icon {
+    display: block;
+    font-size: 1.5em;
+    color: var(--first-color);
+    margin: var(--mb-0-25);
+    margin-bottom: var(--mb-0-75);
+}
+
+.coming_icons{
+    display: flex;
+    flex-direction: row;
+}

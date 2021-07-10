@@ -11,15 +11,15 @@ export default function HomeSection() {
                     <div className="home_content grid">
                         <div className="home_social">
                             <a href="https://www.linkedin.com/in/carvalhoandree/" target="_blank" className="home_social-icon">
-                                <i class="uil uil-linkedin-alt"></i>
+                                <i className="uil uil-linkedin-alt" />
                             </a>
 
                             <a href="https://github.com/carvalhoandre" target="_blank" className="home_social-icon">
-                                <i class="uil uil-github-alt"></i>
+                                <i className="uil uil-github-alt" />
                             </a>
 
                             <a href="https://dribbble.com/andre_carvalho" target="_blank" className="home_social-icon">
-                                <i class="uil uil-dribbble"></i>
+                                <i className="uil uil-dribbble" />
                             </a>
                         </div>
 
@@ -29,10 +29,9 @@ export default function HomeSection() {
                     </div>
 
                     <div className="home_data">
-                        <h1 className="home_title">Hi, I'm André</h1>
-                        <h3 className="home_subtitle">Frontend developer</h3>
-                        <p className="home_descption">High level experience in web design and development knowledge,
-                            producing quality work.</p>
+                        <h1 className="home_title">Hi there! I'm André</h1>
+                        <h3 className="home_subtitle">Mobile and Frontend developer</h3>
+                        <p className="home_descption">Forever producing quality work.</p>
                         <a href="#contactme" className="button button--flex">
                             Contact Me <i className="uil uil-message button_icon"></i>
                         </a>

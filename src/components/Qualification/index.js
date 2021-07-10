@@ -86,6 +86,8 @@ export default class Qualification extends Component {
                                     </div>
                                 </div>
 
+
+
                                 {/* qualification three */}
                                 <div className="qualification_data">
 
@@ -103,6 +105,25 @@ export default class Qualification extends Component {
                                         <span className="qualification_line"></span>
                                     </div>
 
+                                </div>
+
+                                {/* qualification five */}
+                                <div className="qualification_data">
+                                    <div></div>
+
+                                    <div>
+                                        <span className="qualification_rounder"></span>
+                                        <span className="qualification_line"></span>
+                                    </div>
+
+                                    <div>
+                                        <h3 className="qualification_title">Scrum Certificate</h3>
+                                        <span className="qualification_subtitle">CertiProf</span>
+                                        <div className="qualification_calendar">
+                                            <i className="uil uil-schedule " />
+                                            2021
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
@@ -143,7 +164,7 @@ export default class Qualification extends Component {
                                         <span className="qualification_subtitle">Proative Technology</span>
                                         <div className="qualification_calendar">
                                             <i className="uil uil-calendar-alt " />
-                                            actual
+                                            Current
                                         </div>
                                     </div>
                                 </div>

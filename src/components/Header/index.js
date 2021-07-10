@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import './styles.css'
 
+import LogoWhite from '../../assets/logoP.png'
+import LogoBlack from '../../assets/padrao.png'
+
 import { getTheme, setTheme } from '../../services/theme'
 
 const initialState = {
@@ -60,7 +63,7 @@ export default class Header extends Component {
                                 </li>
                             </ul>
                             <div>
-                                <i  
+                                <i
                                     className="uil uil-times nav_close nav_icon"
                                     onClick={() => this.setState({ nav: false })}
                                 />
@@ -68,27 +71,31 @@ export default class Header extends Component {
                         </div>
 
                         <div className={`nav_header ${this.state.nav === true ? 'close-menu' : 'show-menu'}`} id="nav-menu">
-                            <a href="/" className="nav_logo">André</a>
-                            <div className="nav_btns">
-                                {/* theme change button */}
+                            {this.state.theme !== 'light' ?
+                                <a href="/" className="nav_logo"><img src={LogoWhite} alt="logo" className="logo-ac" /></a>
+                                :
+                                <a href="/" className="nav_logo"><img src={LogoBlack} alt="logo" className="logo-ac" /></a>
+                            }
+                        <div className="nav_btns">
+                            {/* theme change button */}
+                            <i
+                                className={`change-theme uil uil-${this.state.theme === 'dark' ? 'sun' : 'moon'}`}
+                                id="theme-button"
+                                onClick={(() => {
+                                    this.state.theme === 'dark' ? setTheme('light') : setTheme('dark')
+                                    window.location.reload();
+                                })}
+                            />
+                            <div className="nav_toggle nav_icon" id="nav-toggle">
                                 <i
-                                    className={`change-theme uil uil-${this.state.theme === 'dark' ? 'sun' : 'moon'}`}
-                                    id="theme-button"
-                                    onClick={(() => {
-                                        this.state.theme === 'dark' ? setTheme('light') : setTheme('dark')
-                                        window.location.reload();
-                                    })}
+                                    className="uil uil-ellipsis-v"
+                                    onClick={() => this.setState({ nav: true })}
                                 />
-                                <div className="nav_toggle nav_icon" id="nav-toggle">
-                                    <i
-                                        className="uil uil-apps"
-                                        onClick={() => this.setState({ nav: true })}
-                                    />
-                                </div>
                             </div>
                         </div>
+                        </div>
                     </nav>
-                </header>
+            </header>
             </>
         )
     }

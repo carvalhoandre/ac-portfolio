@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 
 import React, { Component } from "react";
 // Import Swiper React components
@@ -43,12 +44,15 @@ export default class Portfolio extends Component {
                                         <img src={ImageOne} alt="portfolio_image" className="portfolio_img" />
 
                                         <div className="portfolio_data">
-                                            <h3 className="portfolio_title">Modern Website</h3>
-                                            <p className="portfolio_description">Website adaptable to all devices,
-                                                witch ui components and animated interactions.
+                                            <h3 className="portfolio_title">acCompany</h3>
+                                            <p className="portfolio_description">
+                                                Example Website to for your business,
+                                                using layout minimalist in white.
                                             </p>
-                                            <a href="/" className="button button--flex button--samll portfolio_button">
-                                                Demo
+                                            <a href="https://companyac.netlify.app/"
+                                                className="button button--flex button--samll portfolio_button"
+                                                target="_blank">
+                                                Go!
                                                 <i className="uil uil-arrow-right button_icon" />
                                             </a>
                                         </div>
@@ -60,12 +64,16 @@ export default class Portfolio extends Component {
                                         <img src={ImageTwo} alt="portfolio_image" className="portfolio_img" />
 
                                         <div className="portfolio_data">
-                                            <h3 className="portfolio_title">Brand Website</h3>
-                                            <p className="portfolio_description">Website adaptable to all devices,
-                                                witch ui components and animated interactions.
+                                            <h3 className="portfolio_title">acDelivery</h3>
+                                            <p className="portfolio_description">
+                                                Make requests for delivery and orders simply
+                                                and quickly, with integration with the driver's app.
                                             </p>
-                                            <a href="/" className="button button--flex button--samll portfolio_button">
-                                                Demo
+                                            <a href="https://acdelivery.netlify.app/"
+                                                className="button button--flex button--samll portfolio_button"
+                                                target="_blank"
+                                            >
+                                                Go!
                                                 <i className="uil uil-arrow-right button_icon" />
                                             </a>
                                         </div>
@@ -77,12 +85,15 @@ export default class Portfolio extends Component {
                                         <img src={ImageThree} alt="portfolio_image" className="portfolio_img" />
 
                                         <div className="portfolio_data">
-                                            <h3 className="portfolio_title">Online Store</h3>
-                                            <p className="portfolio_description">Website adaptable to all devices,
-                                                witch ui components and animated interactions.
+                                            <h3 className="portfolio_title">acSales</h3>
+                                            <p className="portfolio_description">
+                                                Layout demonstrativo para suas vendas
                                             </p>
-                                            <a href="/" className="button button--flex button--samll portfolio_button">
-                                                Demo
+                                            <a href="https://acsales.netlify.app/"
+                                                className="button button--flex button--samll portfolio_button"
+                                                target="_blank"
+                                            >
+                                                Go!
                                                 <i className="uil uil-arrow-right button_icon" />
                                             </a>
                                         </div>
@@ -94,18 +105,29 @@ export default class Portfolio extends Component {
                                         <img src={ImageFor} alt="portfolio_image" className="portfolio_img" />
 
                                         <div className="portfolio_data">
-                                            <h3 className="portfolio_title">Online Store</h3>
-                                            <p className="portfolio_description">Website adaptable to all devices,
-                                                witch ui components and animated interactions.
+                                            <h3 className="portfolio_title">acStore</h3>
+                                            <p className="portfolio_description">
+                                                Business model for small entrepreneurs to
+                                                have their own online store!
                                             </p>
-                                            <a href="/" className="button button--flex button--samll portfolio_button">
-                                                Demo
+                                            <a href="https://acstore.netlify.app/"
+                                                className="button button--flex button--samll portfolio_button"
+                                                target="_blank"
+                                            >
+                                                Go!
                                                 <i className="uil uil-arrow-right button_icon" />
                                             </a>
                                         </div>
                                     </div>
                                 </SwiperSlide>
                             </Swiper>
+                        </div>
+                        <div className="coming">
+                            <p className="portfolio_description">Coming soon apps demo on Play Store and App Store</p>
+                            <div className="coming_icons">
+                                <i className="uil uil-google-play coming_icon" />
+                                <i className="uil uil-apple-alt coming_icon" />
+                            </div>
                         </div>
                     </div>
                 </section>
