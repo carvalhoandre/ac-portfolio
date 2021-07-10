@@ -119,7 +119,7 @@ function Home() {
                                                         rel="external"
                                                         className="contact_email"
                                                     >
-                                                        andre_cavalho0@live.com
+                                                        cavalho.devel@gmail.com
                                                     </a>
                                                 </span>
                                             </div>
