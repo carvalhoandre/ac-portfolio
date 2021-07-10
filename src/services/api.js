@@ -5,7 +5,6 @@ const api = axios.create({
 });
 
 export const message = (data) => {
-    console.log("chegou no metoto", data)
     return api.post("/client", data,{
         observe:'response',
         response: 'text'

@@ -43,7 +43,6 @@ function Home() {
         setLoading(true)
         message(data)
             .then((response) => {
-                console.log(response)
                 setLoading(false)
                 toast('😁 Thanks! Check your email!', {
                     position: "top-center",
@@ -56,7 +55,6 @@ function Home() {
                 });
             },
                 error => {
-                    console.log(error)
                     setLoading(false)
                     toast.error('Unable to connect to server, please try again later', {
                         position: "top-center",
