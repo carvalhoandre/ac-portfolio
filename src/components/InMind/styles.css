@@ -10,6 +10,7 @@
 .project_title {
     font-size: var(--h2-font-size);
     margin-bottom: var(--mb-0-75);
+    color: #FFF;
 }
 
 .project_description {

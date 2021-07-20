@@ -79,6 +79,11 @@
     font-size: 1.25em;
 }
 
+.home_perfil{
+    border-color: var(--hue-color);
+    border-radius: 0em 20em;
+}
+
 /* buttons */
 .button{
     display: inline-block;

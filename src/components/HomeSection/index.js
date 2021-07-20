@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 import './styles.css'
-import Blob from '../../assets/blob.svg'
+import Blob from '../../assets/perfil.png'
 
 export default function HomeSection() {
     return (
@@ -24,7 +24,7 @@ export default function HomeSection() {
                         </div>
 
                         <div className="home_img">
-                            <img src={Blob} alt="back" className="home" />
+                            <img src={Blob} alt="back" className="home home_perfil" />
                         </div>
                     </div>
 
