@@ -77,7 +77,7 @@ function Home() {
         <>
             {loading ? (
                 <div className="loader">
-                    <ClockLoader size={100} color={'#6E57E0'} loading={loading} />
+                    <ClockLoader size={100} color={'#5022c3'} loading={loading} />
                     <h3 className="home_subtitle">One minute please, enving email...</h3>
                 </div>
             ) : (
@@ -174,8 +174,8 @@ function Home() {
                                                     className="contact_input"
                                                 />
                                             </div>
-                                            <div className="contact_content">
-                                                <label for={null} className="contact_label">Message</label>
+                                            <div className="contact_content ">
+                                                <label for={null} className="contact_label message">Message</label>
                                                 <Field
                                                     name="message"
                                                     className="contact_input"

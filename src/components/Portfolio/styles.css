@@ -15,9 +15,11 @@
 .portfolio_title {
     font-size: var(--h3-font-size);
     margin-bottom: var(--mb-0-5);
+    text-align: center;
 }
 
 .portfolio_description {
+    text-align: center;
     margin-bottom: var(--mb-0-75);
 }
 

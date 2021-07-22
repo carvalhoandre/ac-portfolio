@@ -1,6 +1,6 @@
 import './styles.css'
-import Image from '../../assets/about.jpg'
-import Curriculum from '../../assets/CVAndreLeiteCarvalho.pdf';
+import Image from '../../assets/about.png'
+import Curriculum from '../../assets/CVAndreLeiteCarvalho.jpeg';
 
 export default function About() {
     return (
@@ -28,7 +28,7 @@ export default function About() {
                         </div>
 
                         <div className="about_buttons">
-                            <a download="" href={Curriculum} alt="curriculum" className="button button--flex">
+                            <a href={Curriculum} download alt="curriculum" className="button button--flex">
                                 Download CV<i className="uil uil-arrow-to-bottom button_icon"></i>
                             </a>
                         </div>

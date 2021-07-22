@@ -43,7 +43,7 @@ export default class About extends Component {
                                 <div className="skills_list grid">
                                     <div className="skills_data">
                                         <div className="skills_titles">
-                                            <h3 className="skills_name">HTML</h3>
+                                            <h3 className="skills_name">HTML and CSS</h3>
                                             <span className="skills_number">90%</span>
                                         </div>
                                         <div className="skills_bar">
@@ -68,16 +68,6 @@ export default class About extends Component {
                                         </div>
                                         <div className="skills_bar">
                                             <span className="skills_percentage skills_react"></span>
-                                        </div>
-                                    </div>
-
-                                    <div className="skills_data">
-                                        <div className="skills_titles">
-                                            <h3 className="skills_name">CSS</h3>
-                                            <span className="skills_number">80%</span>
-                                        </div>
-                                        <div className="skills_bar">
-                                            <span className="skills_percentage skills_css"></span>
                                         </div>
                                     </div>
 
