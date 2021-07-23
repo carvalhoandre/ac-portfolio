@@ -14,9 +14,8 @@ export default function About() {
 
                     <div className="about_data">
                         <p className="about_description">
-                            I have, extensive knowledge, working in web and 
-                            mobile with top technologies for example React / 
-                            React Native and Ui / Ux for design, delivering 
+                            My extensive knowledge is focused on working with web and mobile devices, using cutting edge technology such as for example React /
+                            React Native and Ui / Ux for design, delivering
                             quality work.
                         </p>
 
