@@ -14,7 +14,7 @@ export default class Footer extends Component {
                                 <span className="footer_subtitle">Mobile and Frontend developer</span>
                             </div>
                         </div>
-
+                        
                         <p className="footer_copy">
                             &#169; André Carvalho. All right reserved
                         </p>

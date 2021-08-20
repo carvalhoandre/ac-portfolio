@@ -1,6 +1,6 @@
 import './styles.css'
 import Image from '../../assets/about.png'
-import Curriculum from '../../assets/CVAndreLeiteCarvalho.jpeg';
+import Curriculum from '../../assets/CVAndreLeiteCarvalho.pdf';
 
 export default function About() {
     return (

@@ -92,6 +92,7 @@ function Home() {
                             <Services />
                             <Portfolio />
                             <InMind />
+
                             <section className="contact section" id="contactme">
                                 <h2 className="section_title">Contact Me</h2>
                                 <span className="section_subtitle">Get in touch</span>

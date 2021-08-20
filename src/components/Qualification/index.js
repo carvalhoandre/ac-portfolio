@@ -56,8 +56,8 @@ export default class Qualification extends Component {
                                         <h3 className="qualification_title">Computer Science</h3>
                                         <span className="qualification_subtitle">Universidade Nove de Julho - UNINOVE</span>
                                         <div className="qualification_calendar">
-                                            <i className="uil uil-schedule " />
-                                            January, 2019 - December, 2022
+                                            <i className="uil uil-calendar-alt icon-calendar" />
+                                            Current
                                         </div>
                                     </div>
 
@@ -80,7 +80,7 @@ export default class Qualification extends Component {
                                         <h3 className="qualification_title">React Native Development</h3>
                                         <span className="qualification_subtitle">Cod3r</span>
                                         <div className="qualification_calendar">
-                                            <i className="uil uil-schedule " />
+                                            <i className="uil uil-calendar-alt icon-calendar" />
                                             2021
                                         </div>
                                     </div>
@@ -95,7 +95,7 @@ export default class Qualification extends Component {
                                         <h3 className="qualification_title">Java Development</h3>
                                         <span className="qualification_subtitle">Dev Superior</span>
                                         <div className="qualification_calendar">
-                                            <i className="uil uil-schedule " />
+                                            <i className="uil uil-calendar-alt icon-calendar" />
                                             2020 - 2021
                                         </div>
                                     </div>
@@ -120,7 +120,7 @@ export default class Qualification extends Component {
                                         <h3 className="qualification_title">Scrum Certificate</h3>
                                         <span className="qualification_subtitle">CertiProf</span>
                                         <div className="qualification_calendar">
-                                            <i className="uil uil-schedule " />
+                                            <i className="uil uil-calendar-alt icon-calendar" />
                                             2021
                                         </div>
                                     </div>
@@ -138,8 +138,8 @@ export default class Qualification extends Component {
                                         <span className="qualification_text">Internship</span>
                                         <span className="qualification_subtitle">Proative Technology</span>
                                         <div className="qualification_calendar">
-                                            <i className="uil uil-schedule " />
-                                            2020 - 2021
+                                            <i className="uil uil-calendar-alt icon-calendar" />
+                                            Jan 2020 - Jan 2021
                                         </div>
                                     </div>
 
@@ -163,9 +163,27 @@ export default class Qualification extends Component {
                                         <span className="qualification_text">Internship</span>
                                         <span className="qualification_subtitle">Proative Technology</span>
                                         <div className="qualification_calendar">
-                                            <i className="uil uil-calendar-alt " />
+                                            <i className="uil uil-calendar-alt icon-calendar" />
+                                            Jan 2021 - Aug 2021
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* qualification one */}
+                                <div className="qualification_data">
+                                    <div>
+                                        <h3 className="qualification_title">Front-end Jr</h3>
+                                        <span className="qualification_text">Full-time</span>
+                                        <span className="qualification_subtitle">Proative Technology</span>
+                                        <div className="qualification_calendar">
+                                            <i className="uil uil-calendar-alt icon-calendar" />
                                             Current
                                         </div>
+                                    </div>
+
+                                    <div>
+                                        <span className="qualification_rounder"></span>
+                                        <span className="qualification_line"></span>
                                     </div>
                                 </div>
                             </div>
