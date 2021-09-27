@@ -126,6 +126,25 @@ export default class Qualification extends Component {
                                     </div>
                                 </div>
 
+                                {/* qualification six */}
+                                <div className="qualification_data">
+
+                                    <div>
+                                        <h3 className="qualification_title">Interface design</h3>
+                                        <span className="qualification_subtitle">Udemy - André Bernardes</span>
+                                        <div className="qualification_calendar">
+                                            <i className="uil uil-calendar-alt icon-calendar" />
+                                            2021
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <span className="qualification_rounder"></span>
+                                        <span className="qualification_line"></span>
+                                    </div>
+
+                                </div>
+
                             </div>
 
                             {/* qualification content two */}

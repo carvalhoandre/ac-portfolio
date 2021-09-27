@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './styles.css'
 
-import LogoWhite from '../../assets/logoP.png'
-import LogoBlack from '../../assets/padrao.png'
+import LogoWhite from '../../assets/logoWhite.svg'
+import LogoBlack from '../../assets/logoBlack.svg'
 
 import { getTheme, setTheme } from '../../services/theme'
 

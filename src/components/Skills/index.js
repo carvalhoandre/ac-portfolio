@@ -44,10 +44,20 @@ export default class About extends Component {
                                     <div className="skills_data">
                                         <div className="skills_titles">
                                             <h3 className="skills_name">HTML and CSS</h3>
-                                            <span className="skills_number">90%</span>
+                                            <span className="skills_number">95%</span>
                                         </div>
                                         <div className="skills_bar">
                                             <span className="skills_percentage skills_html"></span>
+                                        </div>
+                                    </div>
+
+                                    <div className="skills_data">
+                                        <div className="skills_titles">
+                                            <h3 className="skills_name">JavaScript</h3>
+                                            <span className="skills_number">90%</span>
+                                        </div>
+                                        <div className="skills_bar">
+                                            <span className="skills_percentage skills_js"></span>
                                         </div>
                                     </div>
 
@@ -71,15 +81,6 @@ export default class About extends Component {
                                         </div>
                                     </div>
 
-                                    <div className="skills_data">
-                                        <div className="skills_titles">
-                                            <h3 className="skills_name">JavaScript</h3>
-                                            <span className="skills_number">80%</span>
-                                        </div>
-                                        <div className="skills_bar">
-                                            <span className="skills_percentage skills_js"></span>
-                                        </div>
-                                    </div>
 
                                     <div className="skills_data">
                                         <div className="skills_titles">
@@ -173,6 +174,17 @@ export default class About extends Component {
                                 </div>
 
                                 <div className="skills_list grid">
+
+                                    <div className="skills_data">
+                                        <div className="skills_titles">
+                                            <h3 className="skills_name">Figma</h3>
+                                            <span className="skills_number">90%</span>
+                                        </div>
+                                        <div className="skills_bar">
+                                            <span className="skills_percentage skills_figma"></span>
+                                        </div>
+                                    </div>
+
                                     <div className="skills_data">
                                         <div className="skills_titles">
                                             <h3 className="skills_name">Photoshop</h3>
@@ -185,11 +197,11 @@ export default class About extends Component {
 
                                     <div className="skills_data">
                                         <div className="skills_titles">
-                                            <h3 className="skills_name">Figma</h3>
+                                            <h3 className="skills_name">Illustrator</h3>
                                             <span className="skills_number">60%</span>
                                         </div>
                                         <div className="skills_bar">
-                                            <span className="skills_percentage skills_figma"></span>
+                                            <span className="skills_percentage skills_illustrator"></span>
                                         </div>
                                     </div>
 

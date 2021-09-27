@@ -87,7 +87,7 @@ export default class Portfolio extends Component {
                                         <div className="portfolio_data">
                                             <h3 className="portfolio_title">acSales</h3>
                                             <p className="portfolio_description">
-                                                Layout demonstrativo para suas vendas
+                                                Demonstrative layout for your sales 
                                             </p>
                                             <a href="https://acsales.netlify.app/"
                                                 className="button button--flex button--samll portfolio_button"

@@ -63,11 +63,15 @@
 }
 
 .skills_html {
-    width: 90%;
+    width: 95%;
 }
 
-.skills_css, .skills_java, .skills_js, .skills_photoshop {
+.skills_css, .skills_java, .skills_photoshop {
     width: 80%;
+}
+
+.skills_js, .skills_figma {
+    width: 90%;
 }
 
 .skills_react {
@@ -82,7 +86,7 @@
     width: 70%;
 }
 
-.skills_node, .skills_figma {
+.skills_node, .skills_illustrator {
     width: 60%;
 }
 
