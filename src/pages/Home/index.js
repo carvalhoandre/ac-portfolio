@@ -10,7 +10,6 @@ import Skills from '../../components/Skills'
 import Qualification from '../../components/Qualification'
 import Services from '../../components/Services'
 import Portfolio from '../../components/Portfolio'
-import InMind from '../../components/InMind'
 import Footer from '../../components/Footer'
 
 import { getTheme } from '../../services/theme'
