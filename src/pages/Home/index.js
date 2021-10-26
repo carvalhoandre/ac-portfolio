@@ -19,19 +19,10 @@ import { getTheme } from '../../services/theme'
 import { ErrorMessage, Formik, Form, Field } from 'formik'
 import ClockLoader from "react-spinners/ClockLoader";
 import * as yup from 'yup'
-import { setLocale } from 'yup';
 import { toast } from 'react-toastify';
 
 import { message } from '../../services/api'
 
-setLocale({
-    mixed: {
-        required: 'Campo obrigatório',
-    },
-    string: {
-        email: "Formato de e-mail enválido",
-    },
-});
 
 function Home() {
 
@@ -91,7 +82,7 @@ function Home() {
                             <Qualification />
                             <Services />
                             <Portfolio />
-                            <InMind />
+
 
                             <section className="contact section" id="contactme">
                                 <h2 className="section_title">Contact Me</h2>
@@ -140,55 +131,71 @@ function Home() {
                                         initialValues={{}}
                                         onSubmit={handleSubimit}
                                         validationSchema={validations}
+                                        enableReinitialize
                                     >
-                                        <Form className="contact_form grid">
-                                            <div className="contact_inputs grid">
+                                        {({ isValid, dirty }) => (
+                                            <Form className="contact_form grid">
+                                                <div className="contact_inputs grid">
+                                                    <div className="contact_content">
+                                                        <Field
+                                                            name="name"
+                                                            className="contact_input"
+                                                        />
+                                                        <label className="contact_label">Name</label>
+                                                    </div>
+                                                </div>
+                                                <ErrorMessage
+                                                    component="span"
+                                                    name="name"
+                                                    className="form-error"
+                                                />
                                                 <div className="contact_content">
-                                                    <label for={null} className="contact_label">Name</label>
                                                     <Field
-                                                        name="name"
+                                                        name="email"
+                                                        type="email"
+                                                        id="email"
                                                         className="contact_input"
                                                     />
-                                                    <ErrorMessage
-                                                        component="span"
-                                                        name="name"
-                                                        className="form-error"
-                                                    />
+                                                    <label className="contact_label">Email</label>
                                                 </div>
-                                            </div>
-                                            <div className="contact_content">
-                                                <label for={null} className="contact_label">Email</label>
-                                                <Field
-                                                    name="email"
-                                                    className="contact_input"
-                                                />
                                                 <ErrorMessage
                                                     component="span"
                                                     name="email"
                                                     className="form-error"
                                                 />
-                                            </div>
-                                            <div className="contact_content">
-                                                <label for={null} className="contact_label">Project</label>
-                                                <Field
-                                                    name="project"
-                                                    className="contact_input"
-                                                />
-                                            </div>
-                                            <div className="contact_content ">
-                                                <label for={null} className="contact_label message">Message</label>
-                                                <Field
-                                                    name="message"
-                                                    className="contact_input"
-                                                />
-                                            </div>
-                                            <div>
-                                                <button type="submit" className="button button--flex button_send">
-                                                    Send Message
-                                                    <i className="uil uil-message button_icon" />
-                                                </button>
-                                            </div>
-                                        </Form>
+                                                <div className="contact_content">
+                                                    <Field
+                                                        name="project"
+                                                        id="project"
+                                                        type="text"
+                                                        className="contact_input"
+                                                    />
+                                                    <label className="contact_label">Project</label>
+                                                </div>
+                                                <div className="contact_content ">
+                                                    <Field
+                                                        name="message"
+                                                        type="text"
+                                                        id="message"
+                                                        className="contact_input"
+                                                    />
+                                                    <label className="contact_label message">Message</label>
+                                                </div>
+                                                <div>
+                                                    <button
+                                                        variant="info"
+                                                        fill
+                                                        wd
+                                                        type="submit"
+                                                        className="button button--flex button_send"
+                                                        disabled={!(dirty && isValid)}
+                                                    >
+                                                        Send Message
+                                                        <i className="uil uil-message button_icon" />
+                                                    </button>
+                                                </div>
+                                            </Form>
+                                        )}
                                     </Formik>
                                 </div>
                             </section>

@@ -20,7 +20,6 @@ export default class InMind extends Component {
                                     <i className="uil uil-message project_icon button_icon" />
                                 </a>
                             </div>
-
                             <img src={Image} alt="my_photo" className="project_img" />
                         </div>
                     </div>
