@@ -11,6 +11,7 @@ import Qualification from '../../components/Qualification'
 import Services from '../../components/Services'
 import Portfolio from '../../components/Portfolio'
 import Footer from '../../components/Footer'
+import InMind from '../../components/InMind'
 
 import { getTheme } from '../../services/theme'
 
@@ -79,6 +80,7 @@ function Home() {
                             <About />
                             <Skills />
                             <Qualification />
+                            <InMind />
                             <Services />
                             <Portfolio />
 
