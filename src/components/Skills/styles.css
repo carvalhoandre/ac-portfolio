@@ -70,19 +70,15 @@
     width: 80%;
 }
 
-.skills_js, .skills_figma {
+.skills_js, .skills_figma, .skills_react {
     width: 90%;
 }
 
-.skills_react {
+.skills_type {
     width: 85%;
 }
 
-.skills_type {
-    width: 75%;
-}
-
-.skills_ionic {
+.skills_ionic, .skills_angular {
     width: 70%;
 }
 

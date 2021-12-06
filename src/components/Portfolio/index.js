@@ -1,8 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 
 import React, { Component } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
 
 import './styles.css'
 
@@ -11,6 +9,7 @@ import ImageTwo from '../../assets/portfolio2.png'
 import ImageThree from '../../assets/portfolio3.png'
 import ImageFor from '../../assets/portfolio4.png'
 
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css"
@@ -18,12 +17,11 @@ import "swiper/components/pagination/pagination.min.css"
 
 // import Swiper core and required modules
 import SwiperCore, {
-    Navigation, Pagination, Mousewheel, Keyboard
+    Navigation, Pagination, Mousewheel, Keyboard, Autoplay
 } from 'swiper/core';
 
 // install Swiper modules
-SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard]);
-
+SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard, Autoplay]);
 
 export default class Portfolio extends Component {
 
@@ -37,7 +35,17 @@ export default class Portfolio extends Component {
 
                     <div className="portfolio_container container">
                         <div>
-                            <Swiper cssMode={true} navigation={true} pagination={true} mousewheel={true} keyboard={true} className="mySwiper">
+                            <Swiper
+                                cssMode={true}
+                                navigation={true}
+                                pagination={true}
+                                mousewheel={true}
+                                keyboard={true}
+                                className="mySwiper"
+                                autoplay={{
+                                    delay: 5000,
+                                }}
+                            >
                                 <SwiperSlide>
                                     {/* Portfolio one */}
                                     <div className="portfolio_content grid">
@@ -87,7 +95,7 @@ export default class Portfolio extends Component {
                                         <div className="portfolio_data">
                                             <h3 className="portfolio_title">acSales</h3>
                                             <p className="portfolio_description">
-                                                Demonstrative layout for your sales 
+                                                Demonstrative layout for your sales
                                             </p>
                                             <a href="https://acsales.netlify.app/"
                                                 className="button button--flex button--samll portfolio_button"

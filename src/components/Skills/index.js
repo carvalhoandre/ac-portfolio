@@ -64,7 +64,7 @@ export default class About extends Component {
                                     <div className="skills_data">
                                         <div className="skills_titles">
                                             <h3 className="skills_name">React Native</h3>
-                                            <span className="skills_number">85%</span>
+                                            <span className="skills_number">90%</span>
                                         </div>
                                         <div className="skills_bar">
                                             <span className="skills_percentage skills_react"></span>
@@ -74,7 +74,7 @@ export default class About extends Component {
                                     <div className="skills_data">
                                         <div className="skills_titles">
                                             <h3 className="skills_name">React</h3>
-                                            <span className="skills_number">85%</span>
+                                            <span className="skills_number">90%</span>
                                         </div>
                                         <div className="skills_bar">
                                             <span className="skills_percentage skills_react"></span>
@@ -85,7 +85,7 @@ export default class About extends Component {
                                     <div className="skills_data">
                                         <div className="skills_titles">
                                             <h3 className="skills_name">TypeScript</h3>
-                                            <span className="skills_number">75%</span>
+                                            <span className="skills_number">85%</span>
                                         </div>
                                         <div className="skills_bar">
                                             <span className="skills_percentage skills_type"></span>
@@ -99,6 +99,16 @@ export default class About extends Component {
                                         </div>
                                         <div className="skills_bar">
                                             <span className="skills_percentage skills_ionic"></span>
+                                        </div>
+                                    </div>
+
+                                    <div className="skills_data">
+                                        <div className="skills_titles">
+                                            <h3 className="skills_name">Angular</h3>
+                                            <span className="skills_number">70%</span>
+                                        </div>
+                                        <div className="skills_bar">
+                                            <span className="skills_percentage skills_angular"></span>
                                         </div>
                                     </div>
 

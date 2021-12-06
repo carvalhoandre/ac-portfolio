@@ -173,7 +173,7 @@ function Home() {
                                                     />
                                                     <label className="contact_label">Project</label>
                                                 </div>
-                                                <div className="contact_content ">
+                                                <div className="contact_content">
                                                     <Field
                                                         name="message"
                                                         type="text"
