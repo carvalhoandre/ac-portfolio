@@ -29,6 +29,7 @@ export default class About extends Component {
 
                                     <div>
                                         <h1 className="skills_title">Frontend developer</h1>
+                                        <span className="skills_subtitle">More than 2 years</span>
                                     </div>
 
                                     <i
@@ -123,6 +124,7 @@ export default class About extends Component {
 
                                 <div>
                                     <h1 className="skills_title">Backend developer</h1>
+                                    <span className="skills_subtitle">More than 2 years</span>
                                 </div>
 
                                 <i

@@ -30,7 +30,7 @@ export default function HomeSection() {
 
                     <div className="home_data">
                         <h1 className="home_title">Hi there! I'm André</h1>
-                        <h3 className="home_subtitle">Mobile and Frontend developer</h3>
+                        <h3 className="home_subtitle">Frontend Developer</h3>
                         <p className="home_descption">Always producing quality work.</p>
                         <a href="#contactme" className="button button--flex">
                             Contact Me <i className="uil uil-message button_icon"></i>

@@ -25,7 +25,6 @@ export default class Qualification extends Component {
                             <div
                                 className={`qualification_button ${this.state.education === true ? 'qualification_button_active' : ''}`}
                                 onClick={(() => {
-                                    console.log('education = true')
                                     this.state.education === true ? this.setState({ education: false }) :
                                         this.setState({ education: true })
                                 })}
@@ -37,7 +36,6 @@ export default class Qualification extends Component {
                             <div
                                 className={`qualification_button ${this.state.work === true ? 'qualification_button_active' : ''}`}
                                 onClick={(() => {
-                                    console.log('work click')
                                     this.state.work === true ? this.setState({ work: false }) :
                                         this.setState({ work: true })
                                 })}
@@ -170,7 +168,7 @@ export default class Qualification extends Component {
 
                                 {/* qualification two */}
                                 <div className="qualification_data">
-                                    <div></div>
+                                    <div />
 
                                     <div>
                                         <span className="qualification_rounder"></span>
@@ -188,7 +186,7 @@ export default class Qualification extends Component {
                                     </div>
                                 </div>
 
-                                {/* qualification one */}
+                                {/* qualification three */}
                                 <div className="qualification_data">
                                     <div>
                                         <h3 className="qualification_title">Front-end Jr</h3>
@@ -196,13 +194,34 @@ export default class Qualification extends Component {
                                         <span className="qualification_subtitle">Proative Technology</span>
                                         <div className="qualification_calendar">
                                             <i className="uil uil-calendar-alt icon-calendar" />
-                                            Current
+                                            Aug 2021 - Mar 2022
                                         </div>
                                     </div>
 
                                     <div>
                                         <span className="qualification_rounder"></span>
                                         <span className="qualification_line"></span>
+                                    </div>
+                                </div>
+
+                                 {/* qualification four */}
+                                 <div className="qualification_data">
+                                    <div />
+
+                                    <div>
+                                        <span className="qualification_rounder"></span>
+                                        <span className="qualification_line"></span>
+                                    </div>
+
+                                    <div>
+                                    <h3 className="qualification_title">Front-end Jr</h3>
+                                        <span className="qualification_text">Full-time</span>
+                                        <div />
+                                        <span className="qualification_subtitle">Hyperlocal</span>
+                                        <div className="qualification_calendar">
+                                            <i className="uil uil-calendar-alt icon-calendar" />
+                                            Current
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -53,7 +53,7 @@ export default class Footer extends Component {
                         </div>
 
                         <p className="footer_copy">
-                            &#169; André Carvalho. All right reserved
+                            &#169; 2022 André Carvalho. All right reserved
                         </p>
                     </div>
                 </footer>

@@ -8,6 +8,7 @@
 .about_description{
     text-align: center;
     margin-bottom: var(--mb-2-5);
+    line-height: 1.5em;
 }
 
 .about_info{

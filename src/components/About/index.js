@@ -14,15 +14,23 @@ export default function About() {
 
                     <div className="about_data">
                         <p className="about_description">
-                            My extensive knowledge is focused on working with web and mobile devices, using cutting edge technology such as for example React /
-                            React Native and Ui / Ux for design, delivering
-                            quality work.
+                            Web developer, working in web, technoloies and Ui / Ux design, delivering quality work.
                         </p>
 
                         <div className="about_info">
                             <div>
-                                <span className="about_info-title">10+</span>
+                                <span className="about_info-title">02+</span>
+                                <span className="about_info-name">Years <br /> experience</span>
+                            </div>
+
+                            <div>
+                                <span className="about_info-title">08+</span>
                                 <span className="about_info-name">Completed <br /> project</span>
+                            </div>
+
+                            <div>
+                                <span className="about_info-title">02+</span>
+                                <span className="about_info-name">Companies <br /> worked</span>
                             </div>
                         </div>
 
