@@ -174,7 +174,7 @@ img {
 
 /* for small devices */
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 375px) {
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -207,8 +207,8 @@ img {
   .services_modal {
     padding: 0 .5em;
   }
-  .project_img {
-    width: 200px;
+  .project_container {
+    padding-bottom: 3em;
   }
   .testimonial_data, .testimonial_header {
     flex-direction: column;
@@ -362,9 +362,10 @@ img {
   .project_container {
     background-color: var(--first-color);
     border-radius: 1em;
-    padding: 3em 2.5em 0;
+    padding: 0;
     grid-template-columns: 1fr max-content;
     column-gap: 3em;
+    align-items: center;
   }
   .project_data {
     padding-top: 8em;
