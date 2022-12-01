@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./styles.css";
-import One from "../../assets/inmind1.png";
+import CardFrom from "../../assets/cardfrom.png";
+import CardBack from "../../assets/cardback.png";
 
 // Import Swiper styles
 import "swiper/swiper.min.css";
@@ -24,7 +25,7 @@ export default class InMind extends Component {
     return (
       <section className="project section">
         <div className="project_bg">
-          <div className="project_container container grid">
+          <div className="project_container grid">
             <div className="project_data">
               <h2 className="project_title">You have a new project?</h2>
               <p className="project_description">
@@ -39,7 +40,10 @@ export default class InMind extends Component {
               </a>
             </div>
 
-            <img src={One} alt="my_photo" className="project_img" />
+            <div className="project_images">
+              <img src={CardFrom} alt="card_from" className="project_img" />
+              <img src={CardBack} alt="card_from" className="project_img" />
+            </div>
           </div>
         </div>
       </section>

@@ -29,7 +29,6 @@
 
 .footer_social {
     font-size: 1.25em;
-    margin-right: var(--mb-1-5);
 }
 
 .footer_social:hover {
@@ -42,6 +41,14 @@
     color: #FFF;
     margin-top: var(--mb-3);
 }
+
+.footer_socials {
+    display: flex;
+    flex-direction: row;
+    gap: var(--mb-1);
+    margin-top: var(--mb-1-5);
+    justify-content: center
+  }
 
 .footer_title, .footer_subtitle, .footer_link, .footer_social {
     color: #FFF;
