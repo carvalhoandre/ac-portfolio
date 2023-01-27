@@ -107,6 +107,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: auto;
+    gap: 10px;
     height: 100vh;
 }
 
