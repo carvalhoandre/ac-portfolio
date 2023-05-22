@@ -32,7 +32,7 @@ export default class About extends Component {
 
                   <div>
                     <h1 className="skills_title">Frontend developer</h1>
-                    <span className="skills_subtitle">More than 2 years</span>
+                    <span className="skills_subtitle">More than 3 years</span>
                   </div>
 
                   <i
@@ -130,7 +130,7 @@ export default class About extends Component {
 
                 <div>
                   <h1 className="skills_title">Backend developer</h1>
-                  <span className="skills_subtitle">More than 2 years</span>
+                  <span className="skills_subtitle">More than 3 years</span>
                 </div>
 
                 <i
@@ -161,16 +161,6 @@ export default class About extends Component {
                   </div>
                   <div className="skills_bar">
                     <span className="skills_percentage skills_node"></span>
-                  </div>
-                </div>
-
-                <div className="skills_data">
-                  <div className="skills_titles">
-                    <h3 className="skills_name">PHP</h3>
-                    <span className="skills_number">55%</span>
-                  </div>
-                  <div className="skills_bar">
-                    <span className="skills_percentage skills_php"></span>
                   </div>
                 </div>
               </div>
