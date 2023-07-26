@@ -86,13 +86,11 @@ export default class Qualification extends Component {
                 </div>
 
                 <div>
-                  <h3 className="qualification_title">
-                    React Native Development
-                  </h3>
-                  <span className="qualification_subtitle">Cod3r</span>
+                  <h3 className="qualification_title">Frontend developer</h3>
+                  <span className="qualification_subtitle">Origamid</span>
                   <div className="qualification_calendar">
                     <i className="uil uil-calendar-alt icon-calendar" />
-                    2021
+                    Current
                   </div>
                 </div>
               </div>
@@ -100,11 +98,11 @@ export default class Qualification extends Component {
               {/* qualification three */}
               <div className="qualification_data">
                 <div>
-                  <h3 className="qualification_title">Java Development</h3>
-                  <span className="qualification_subtitle">Dev Superior</span>
+                  <h3 className="qualification_title">Scrum Certificate</h3>
+                  <span className="qualification_subtitle">CertiProf</span>
                   <div className="qualification_calendar">
                     <i className="uil uil-calendar-alt icon-calendar" />
-                    2020 - 2021
+                    2023
                   </div>
                 </div>
 
@@ -114,7 +112,7 @@ export default class Qualification extends Component {
                 </div>
               </div>
 
-              {/* qualification five */}
+              {/* qualification four */}
               <div className="qualification_data">
                 <div></div>
 
@@ -124,8 +122,10 @@ export default class Qualification extends Component {
                 </div>
 
                 <div>
-                  <h3 className="qualification_title">Scrum Certificate</h3>
-                  <span className="qualification_subtitle">CertiProf</span>
+                  <h3 className="qualification_title">Interface design</h3>
+                  <span className="qualification_subtitle">
+                    Udemy - André Bernardes
+                  </span>
                   <div className="qualification_calendar">
                     <i className="uil uil-calendar-alt icon-calendar" />
                     2021
@@ -133,13 +133,13 @@ export default class Qualification extends Component {
                 </div>
               </div>
 
-              {/* qualification six */}
+              {/* qualification five */}
               <div className="qualification_data">
                 <div>
-                  <h3 className="qualification_title">Interface design</h3>
-                  <span className="qualification_subtitle">
-                    Udemy - André Bernardes
-                  </span>
+                  <h3 className="qualification_title">
+                    React Native Development
+                  </h3>
+                  <span className="qualification_subtitle">Cod3r</span>
                   <div className="qualification_calendar">
                     <i className="uil uil-calendar-alt icon-calendar" />
                     2021
@@ -161,7 +161,7 @@ export default class Qualification extends Component {
               data-content
               id="work"
             >
-              {/* qualification one */}
+              {/* work one */}
               <div className="qualification_data">
                 <div />
 
@@ -183,7 +183,7 @@ export default class Qualification extends Component {
                 </div>
               </div>
 
-              {/* qualification two */}
+              {/* work two */}
               <div className="qualification_data">
                 <div>
                   <h3 className="qualification_title">DevOps</h3>
@@ -203,7 +203,7 @@ export default class Qualification extends Component {
                 </div>
               </div>
 
-              {/* qualification three */}
+              {/* work three */}
               <div className="qualification_data">
                 <div />
 
@@ -225,7 +225,7 @@ export default class Qualification extends Component {
                 </div>
               </div>
 
-              {/* qualification four */}
+              {/* work four */}
               <div className="qualification_data">
                 <div>
                   <h3 className="qualification_title">Front end</h3>
@@ -234,10 +234,10 @@ export default class Qualification extends Component {
                   <span className="qualification_subtitle">Hyperlocal</span>
                   <div className="qualification_calendar">
                     <i className="uil uil-calendar-alt icon-calendar" />
-                    Current
+                    Mar 2022 - Current
                   </div>
                 </div>
-                
+
                 <div>
                   <span className="qualification_rounder" />
                   <span className="qualification_line" />

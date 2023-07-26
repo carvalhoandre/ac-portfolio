@@ -63,11 +63,6 @@ export default class Services extends Component {
                                             <i className="uil uil-check-circle services_modal-icon" />
                                             <p>I create ux element interactions.</p>
                                         </li>
-
-                                        <li className="services_modal-service">
-                                            <i className="uil uil-check-circle services_modal-icon" />
-                                            <p>I position your company brand.</p>
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -115,11 +110,6 @@ export default class Services extends Component {
                                         <li className="services_modal-service">
                                             <i className="uil uil-check-circle services_modal-icon" />
                                             <p>Models business.</p>
-                                        </li>
-
-                                        <li className="services_modal-service">
-                                            <i className="uil uil-check-circle services_modal-icon" />
-                                            <p>I position your company brand.</p>
                                         </li>
                                     </ul>
                                 </div>
