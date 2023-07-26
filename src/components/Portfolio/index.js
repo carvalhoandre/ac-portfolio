@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import "./styles.css";
 import Coins from "../../assets/coins.svg";
 import Delivery from "../../assets/delivery.svg";
-import Sales from "../../assets/sales.svg";
 import Store from "../../assets/store.svg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -114,32 +113,6 @@ export default class Portfolio extends Component {
                     </p>
                     <a
                       href="https://accoins.netlify.app/"
-                      className="button button--flex button--samll portfolio_button"
-                      target="_blank"
-                    >
-                      Go!
-                      <i className="uil uil-arrow-right button_icon" />
-                    </a>
-                  </div>
-                </div>
-              </SwiperSlide>
-
-              {/* Portfolio four */}
-              <SwiperSlide>
-                <div className="portfolio_content grid">
-                  <img
-                    src={Sales}
-                    alt="portfolio_image"
-                    className="portfolio_img"
-                  />
-
-                  <div className="portfolio_data">
-                    <h3 className="portfolio_title">ac Sales</h3>
-                    <p className="portfolio_description">
-                      Example Website to for your sales.
-                    </p>
-                    <a
-                      href="https://acsales.netlify.app/"
                       className="button button--flex button--samll portfolio_button"
                       target="_blank"
                     >
