@@ -19,7 +19,7 @@ export default class Header extends Component {
   render() {
     return (
       <header className="header" id="header">
-        <nav className="nav container">
+        <nav className="nav container" aria-label="primary">
           <div
             className={`nav_menu ${
               this.state.nav === true ? "show-menu" : "close-menu"

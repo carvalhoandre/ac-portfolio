@@ -30,6 +30,7 @@ function Home() {
         <>
           <body className={`${theme === "light" ? "" : "dark-theme"}`}>
             <Header />
+
             <main className="main">
               <HomeSection />
               <About />

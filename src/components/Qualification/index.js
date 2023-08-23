@@ -15,8 +15,14 @@ export default class Qualification extends Component {
     const { education, work } = this.state;
 
     return (
-      <section className="qualification section" id="qualification">
-        <h2 className="section_title">Qualification</h2>
+      <section
+        className="qualification section"
+        id="qualification"
+        aria-labelledby="qualification_title"
+      >
+        <h2 className="section_title" id="qualification_title">
+          Qualification
+        </h2>
         <span className="section_subtitle">My personal journey</span>
 
         <div className="qualification_container container">
