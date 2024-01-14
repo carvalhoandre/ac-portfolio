@@ -1,15 +1,5 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, { Component } from "react";
-import "./styles.css";
-import Coins from "../../assets/coins.svg";
-import Delivery from "../../assets/delivery.svg";
-import Store from "../../assets/store.svg";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/swiper.min.css";
-import "swiper/components/navigation/navigation.min.css";
-import "swiper/components/pagination/pagination.min.css";
 
 // import Swiper core and required modules
 import SwiperCore, {
@@ -19,6 +9,17 @@ import SwiperCore, {
   Keyboard,
   Autoplay,
 } from "swiper/core";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/swiper.min.css";
+import "swiper/components/navigation/navigation.min.css";
+import "swiper/components/pagination/pagination.min.css";
+
+import "./styles.css";
+
+import Bikcraft from "../../assets/bikcraft.svg";
+import Store from "../../assets/store.svg";
 
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard, Autoplay]);
@@ -55,7 +56,7 @@ export default class Portfolio extends Component {
                   <div className="portfolio_data">
                     <h3 className="portfolio_title">ac Store</h3>
                     <p className="portfolio_description">
-                      Demonstrative layout for your sales
+                      Discover modern watches blending style and function.
                     </p>
                     <a
                       href="https://acstore.netlify.app/"
@@ -73,46 +74,19 @@ export default class Portfolio extends Component {
               <SwiperSlide>
                 <div className="portfolio_content grid">
                   <img
-                    src={Delivery}
+                    src={Bikcraft}
                     alt="portfolio_image"
                     className="portfolio_img"
                   />
 
                   <div className="portfolio_data">
-                    <h3 className="portfolio_title">ac Delivery</h3>
+                    <h3 className="portfolio_title">ac Bikcraft</h3>
                     <p className="portfolio_description">
-                      Make requests for delivery and orders simply and quickly,
-                      with integration with the driver's app.
+                      Passionate team crafting unique bicycles for exceptional
+                      experiences.
                     </p>
                     <a
-                      href="https://acdelivery.netlify.app/"
-                      className="button button--flex button--samll portfolio_button"
-                      target="_blank"
-                    >
-                      Go!
-                      <i className="uil uil-arrow-right button_icon" />
-                    </a>
-                  </div>
-                </div>
-              </SwiperSlide>
-
-              {/* Portfolio three */}
-              <SwiperSlide>
-                <div className="portfolio_content grid">
-                  <img
-                    src={Coins}
-                    alt="portfolio_image"
-                    className="portfolio_img"
-                  />
-
-                  <div className="portfolio_data">
-                    <h3 className="portfolio_title">ac Coins</h3>
-                    <p className="portfolio_description">
-                      Example Website to for your business, using layout
-                      minimalist in white.
-                    </p>
-                    <a
-                      href="https://accoins.netlify.app/"
+                      href="https://acbikcraft.netlify.app/"
                       className="button button--flex button--samll portfolio_button"
                       target="_blank"
                     >
