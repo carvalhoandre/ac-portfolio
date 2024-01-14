@@ -20,7 +20,7 @@ export default function About() {
 
             <div className="about_info">
               <div>
-                <span className="about_info-title">02+</span>
+                <span className="about_info-title">03+</span>
                 <span className="about_info-name">
                   Years <br /> experience
                 </span>
