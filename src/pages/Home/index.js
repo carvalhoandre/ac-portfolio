@@ -23,7 +23,7 @@ function Home() {
   const [theme] = useState(getTheme());
 
   return (
-    <body className={`${theme === "light" ? "" : "dark-theme"}`}>
+    <div className={`${theme === "light" ? "" : "dark-theme"}`}>
       {loading ? (
         <Loader />
       ) : (
@@ -45,7 +45,7 @@ function Home() {
           <Footer />
         </>
       )}
-    </body>
+    </div>
   );
 }
 

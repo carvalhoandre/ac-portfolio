@@ -10,11 +10,8 @@ import Loader from "./components/Loader";
 import './App.css';
 
 ReactDOM.render(
-  <React.Suspense
-    path="*"
-    fallback={<Loader />}
-  >
-     <Routes />
+  <React.Suspense fallback={<Loader />}>
+    <Routes />
   </React.Suspense>,
   document.getElementById("root")
 );
