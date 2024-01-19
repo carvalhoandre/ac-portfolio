@@ -1,15 +1,17 @@
-import React, { Component } from 'react'
-import './styles.css'
+import React, { Component } from "react";
+import "./styles.css";
 
 export default class ScrollTop extends Component {
-
-    render() {
-        return (
-            <>
-                <a href="#home" className="scrollup" id="scroll-up">
-                    <i className="uil uil-arrow-up scrollup_icon" />
-                </a>
-            </>
-        )
-    }
+  render() {
+    return (
+      <a
+        href="#home"
+        className="scrollup"
+        id="scroll-up"
+        aria-labelledby="label-scroll-up"
+      >
+        <i className="uil uil-arrow-up scrollup_icon" />
+      </a>
+    );
+  }
 }

@@ -23,7 +23,7 @@ SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard, Autoplay]);
 export default class InMind extends Component {
   render() {
     return (
-      <section className="project section">
+      <section className="project section" aria-labelledby="label-in-mind">
         <div className="project_bg">
           <div className="project_container grid">
             <div className="project_data">

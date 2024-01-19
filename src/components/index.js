@@ -1,1 +1,0 @@
-import Loader from './Loader'

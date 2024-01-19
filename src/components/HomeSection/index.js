@@ -1,10 +1,10 @@
-/* eslint-disable react/jsx-no-target-blank */
-import "./styles.css";
 import Blob from "../../assets/perfil.png";
+
+import "./styles.css";
 
 export default function HomeSection() {
   return (
-    <section className="home section" id="home">
+    <section className="home section" id="home" aria-labelledby="label-social">
       <div className="home_container container grid">
         <div className="home_content grid">
           <div className="home_social">

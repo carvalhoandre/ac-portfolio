@@ -1,18 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import "normalize.css";
 
+import Routes from "./Routes";
 import Loader from "./components/Loader";
+
+import './App.css';
 
 ReactDOM.render(
   <React.Suspense
     path="*"
     fallback={<Loader />}
   >
-    <App />
+     <Routes />
   </React.Suspense>,
   document.getElementById("root")
 );

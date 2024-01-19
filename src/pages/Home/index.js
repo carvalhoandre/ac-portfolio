@@ -23,30 +23,29 @@ function Home() {
   const [theme] = useState(getTheme());
 
   return (
-    <>
+    <body className={`${theme === "light" ? "" : "dark-theme"}`}>
       {loading ? (
         <Loader />
       ) : (
         <>
-          <body className={`${theme === "light" ? "" : "dark-theme"}`}>
-            <Header />
+          <Header />
 
-            <main className="main">
-              <HomeSection />
-              <About />
-              <Skills />
-              <Qualification />
-              <InMind />
-              <Services />
-              <Portfolio />
+          <main className="main">
+            <HomeSection />
+            <About />
+            <Skills />
+            <Qualification />
+            <InMind />
+            <Services />
+            <Portfolio />
 
-              <Contact setLoading={setLoading} />
-            </main>
-          </body>
+            <Contact setLoading={setLoading} />
+          </main>
+
           <Footer />
         </>
       )}
-    </>
+    </body>
   );
 }
 

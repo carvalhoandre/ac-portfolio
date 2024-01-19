@@ -18,14 +18,14 @@ export default class Qualification extends Component {
       <section
         className="qualification section"
         id="qualification"
-        aria-labelledby="qualification_title"
+        aria-labelledby="label-qualification"
       >
         <h2 className="section_title" id="qualification_title">
           Qualification
         </h2>
         <span className="section_subtitle">My personal journey</span>
 
-        <div className="qualification_container container">
+        <article className="qualification_container container">
           <div className="qualification_tabs">
             <div
               className={`qualification_button ${
@@ -54,9 +54,9 @@ export default class Qualification extends Component {
             </div>
           </div>
 
-          <div className="qualification_sections">
-            {/* qualification content one */}
-            <div
+          <article className="qualification_sections">
+            {/* qualification content student */}
+            <ul
               className={`qualification_content ${
                 education !== false ? "qualification_active" : ""
               }`}
@@ -64,7 +64,7 @@ export default class Qualification extends Component {
               id="education"
             >
               {/* qualification one */}
-              <div className="qualification_data">
+              <li className="qualification_data">
                 <div>
                   <h3 className="qualification_title">Computer Science</h3>
                   <span className="qualification_subtitle">
@@ -80,10 +80,10 @@ export default class Qualification extends Component {
                   <span className="qualification_rounder" />
                   <span className="qualification_line" />
                 </div>
-              </div>
+              </li>
 
               {/* qualification two */}
-              <div className="qualification_data">
+              <li className="qualification_data">
                 <div></div>
 
                 <div>
@@ -99,10 +99,10 @@ export default class Qualification extends Component {
                     Current
                   </div>
                 </div>
-              </div>
+              </li>
 
               {/* qualification three */}
-              <div className="qualification_data">
+              <li className="qualification_data">
                 <div>
                   <h3 className="qualification_title">Scrum Certificate</h3>
                   <span className="qualification_subtitle">CertiProf</span>
@@ -116,10 +116,10 @@ export default class Qualification extends Component {
                   <span className="qualification_rounder" />
                   <span className="qualification_line" />
                 </div>
-              </div>
+              </li>
 
               {/* qualification four */}
-              <div className="qualification_data">
+              <li className="qualification_data">
                 <div></div>
 
                 <div>
@@ -137,10 +137,10 @@ export default class Qualification extends Component {
                     2021
                   </div>
                 </div>
-              </div>
+              </li>
 
               {/* qualification five */}
-              <div className="qualification_data">
+              <li className="qualification_data">
                 <div>
                   <h3 className="qualification_title">
                     React Native Development
@@ -156,11 +156,11 @@ export default class Qualification extends Component {
                   <span className="qualification_rounder" />
                   <span className="qualification_line" />
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
 
-            {/* qualification content two */}
-            <div
+            {/* qualification content works */}
+            <ul
               className={`qualification_content ${
                 work ? "qualification_active" : ""
               }`}
@@ -168,7 +168,7 @@ export default class Qualification extends Component {
               id="work"
             >
               {/* work one */}
-              <div className="qualification_data">
+              <li className="qualification_data">
                 <div />
 
                 <div>
@@ -187,10 +187,10 @@ export default class Qualification extends Component {
                     Jan 2020 - Jan 2021
                   </div>
                 </div>
-              </div>
+              </li>
 
               {/* work two */}
-              <div className="qualification_data">
+              <li className="qualification_data">
                 <div>
                   <h3 className="qualification_title">DevOps</h3>
                   <span className="qualification_text">Internship</span>
@@ -207,10 +207,10 @@ export default class Qualification extends Component {
                   <span className="qualification_rounder" />
                   <span className="qualification_line" />
                 </div>
-              </div>
+              </li>
 
               {/* work three */}
-              <div className="qualification_data">
+              <li className="qualification_data">
                 <div />
 
                 <div>
@@ -229,10 +229,10 @@ export default class Qualification extends Component {
                     Aug 2021 - Mar 2022
                   </div>
                 </div>
-              </div>
+              </li>
 
               {/* work four */}
-              <div className="qualification_data">
+              <li className="qualification_data">
                 <div>
                   <h3 className="qualification_title">Front end</h3>
                   <span className="qualification_text">Full time</span>
@@ -248,10 +248,10 @@ export default class Qualification extends Component {
                   <span className="qualification_rounder" />
                   <span className="qualification_line" />
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+              </li>
+            </ul>
+          </article>
+        </article>
       </section>
     );
   }

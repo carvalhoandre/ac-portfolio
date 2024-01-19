@@ -78,15 +78,14 @@ export default class Header extends Component {
             }`}
             id="nav-menu"
           >
-            {this.state.theme !== "light" ? (
-              <a href="/" className="nav_logo">
-                <img src={LogoWhite} alt="logo" className="logo-ac" />
-              </a>
-            ) : (
-              <a href="/" className="nav_logo">
+            <a href="/" className="nav_logo">
+              {this.state.theme === "light" ? (
                 <img src={LogoBlack} alt="logo" className="logo-ac" />
-              </a>
-            )}
+                ) : (
+                <img src={LogoWhite} alt="logo" className="logo-ac" />
+              )}
+            </a>
+
             <div className="nav_btns">
               {/* theme change button */}
               <i

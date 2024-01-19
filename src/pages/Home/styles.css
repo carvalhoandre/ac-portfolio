@@ -1,5 +1,6 @@
 .contact_container {
     row-gap: 3em;
+    align-items: center;
 }
 
 .contact_information {

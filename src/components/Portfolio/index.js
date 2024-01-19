@@ -27,7 +27,7 @@ SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard, Autoplay]);
 export default class Portfolio extends Component {
   render() {
     return (
-      <section className="portfolio section" id="portfolio">
+      <section className="portfolio section" id="portfolio" aria-labelledby="label-portfolio">
         <h2 className="section_title">Portfolio</h2>
         <span className="section_subtitle">Most recent work</span>
 

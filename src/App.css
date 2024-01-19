@@ -251,7 +251,7 @@ img {
   .project_container,
   .contact_container,
   .footer_container {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr);
   }
   .qualification_sections {
     display: grid;
@@ -265,8 +265,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .container {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
   body {
     margin: 0;
@@ -394,7 +393,7 @@ img {
     max-width: fit-content;
     margin: auto;
     border-radius: 1em;
-    padding: 0;
+    padding: 3em;
     grid-template-columns: 1fr max-content;
     column-gap: 1em;
     align-items: center;
@@ -409,7 +408,7 @@ img {
     max-width: 200px;
   }
   .footer_container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .footer_bg {
     padding: 3em 0 3.5em;

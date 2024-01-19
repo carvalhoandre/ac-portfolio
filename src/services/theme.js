@@ -11,9 +11,7 @@ export const getTheme = () => {
 };
 
 export const setTheme = (theme) => {
-  if (theme === null) {
-    localStorage.removeItem(STORAGE_KEYS.theme);
-  } else {
-    localStorage.setItem(STORAGE_KEYS.theme, JSON.stringify(theme));
-  }
+  if (theme === null) return localStorage.removeItem(STORAGE_KEYS.theme);
+
+  localStorage.setItem(STORAGE_KEYS.theme, JSON.stringify(theme));
 };
