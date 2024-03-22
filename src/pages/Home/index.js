@@ -15,8 +15,6 @@ import InMind from "../../components/InMind";
 import Contact from "../../components/Contact";
 import Loader from "../../components/Loader";
 
-import { getTheme } from "../../services/theme";
-
 function Home() {
   const [loading, setLoading] = useState(false);
 
@@ -26,7 +24,7 @@ function Home() {
     <>
       <Header />
 
-      <main className="main">
+      <div className="main">
         <HomeSection />
         <About />
         <Skills />
@@ -36,7 +34,7 @@ function Home() {
         <Portfolio />
 
         <Contact setLoading={setLoading} />
-      </main>
+      </div>
 
       <Footer />
     </>
