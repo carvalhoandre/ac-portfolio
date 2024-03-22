@@ -20,32 +20,26 @@ import { getTheme } from "../../services/theme";
 function Home() {
   const [loading, setLoading] = useState(false);
 
-  const [theme] = useState(getTheme());
+  if (loading) return <Loader />;
 
   return (
-    <div className={`${theme === "light" ? "" : "dark-theme"}`}>
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <Header />
+    <>
+      <Header />
 
-          <main className="main">
-            <HomeSection />
-            <About />
-            <Skills />
-            <Qualification />
-            <InMind />
-            <Services />
-            <Portfolio />
+      <main className="main">
+        <HomeSection />
+        <About />
+        <Skills />
+        <Qualification />
+        <InMind />
+        <Services />
+        <Portfolio />
 
-            <Contact setLoading={setLoading} />
-          </main>
+        <Contact setLoading={setLoading} />
+      </main>
 
-          <Footer />
-        </>
-      )}
-    </div>
+      <Footer />
+    </>
   );
 }
 
