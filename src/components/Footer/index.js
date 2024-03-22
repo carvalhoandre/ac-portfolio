@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+
+import { getCurrentYear } from "../../helper/data";
+
 import "./styles.css";
 
 export default class Footer extends Component {
   render() {
+    const currentYear = getCurrentYear();
+
     return (
       <footer className="footer">
         <div className="footer_bg">
@@ -57,7 +62,7 @@ export default class Footer extends Component {
           </div>
 
           <p className="footer_copy">
-            &#169; 2022 André Carvalho. All right reserved
+            &#169; {` ${currentYear} André Carvalho. All right reserved`}
           </p>
         </div>
       </footer>
