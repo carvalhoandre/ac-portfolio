@@ -16,10 +16,11 @@ import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/pagination/pagination.min.css";
 
-import "./styles.css";
+import Bikcraft from "../../assets/portfolio/bikcraft.svg";
+import Store from "../../assets/portfolio/store.svg";
+import Countries from "../../assets/portfolio/countries.svg";
 
-import Bikcraft from "../../assets/bikcraft.svg";
-import Store from "../../assets/store.svg";
+import "./styles.css";
 
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard, Autoplay]);
@@ -27,7 +28,11 @@ SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard, Autoplay]);
 export default class Portfolio extends Component {
   render() {
     return (
-      <section className="portfolio section" id="portfolio" aria-labelledby="label-portfolio">
+      <section
+        className="portfolio section"
+        id="portfolio"
+        aria-labelledby="label-portfolio"
+      >
         <h2 className="section_title">Portfolio</h2>
         <span className="section_subtitle">Most recent work</span>
 
@@ -96,8 +101,36 @@ export default class Portfolio extends Component {
                   </div>
                 </div>
               </SwiperSlide>
+
+              {/* Portfolio three */}
+              <SwiperSlide>
+                <div className="portfolio_content grid">
+                  <img
+                    src={Countries}
+                    alt="portfolio_image"
+                    className="portfolio_img"
+                  />
+
+                  <div className="portfolio_data">
+                    <h3 className="portfolio_title">ac Countries</h3>
+                    <p className="portfolio_description">
+                      Querying and presenting information about countries using
+                      the RestCountries API.
+                    </p>
+                    <a
+                      href="https://accountries.netlify.app/"
+                      className="button button--flex button--samll portfolio_button"
+                      target="_blank"
+                    >
+                      Go!
+                      <i className="uil uil-arrow-right button_icon" />
+                    </a>
+                  </div>
+                </div>
+              </SwiperSlide>
             </Swiper>
           </div>
+
           <div className="coming">
             <p className="portfolio_description">
               Coming soon apps demo on Play Store and App Store

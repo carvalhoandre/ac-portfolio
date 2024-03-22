@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import Blob from "../../assets/perfil.png";
+import Blob from "../../assets/photos/perfil.png";
 
 import "./styles.css";
 

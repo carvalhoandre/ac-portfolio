@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./styles.css";
 
-import LogoWhite from "../../assets/logoWhite.svg";
-import LogoBlack from "../../assets/logoBlack.svg";
+import LogoWhite from "../../assets/logo/white.svg";
+import LogoBlack from "../../assets/logo/black.svg";
 
 import { getTheme, setTheme } from "../../services/theme";
 

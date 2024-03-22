@@ -1,5 +1,5 @@
-import Image from "../../assets/about.png";
-import Curriculum from "../../assets/CVAndreLeiteCarvalho.pdf";
+import Image from "../../assets/photos/about.png";
+import Curriculum from "../../assets/cv/CVAndreLeiteCarvalho.pdf";
 
 import "./styles.css";
 

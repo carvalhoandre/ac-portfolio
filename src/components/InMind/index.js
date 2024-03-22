@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./styles.css";
-import CardFrom from "../../assets/cardfrom.png";
-import CardBack from "../../assets/cardback.png";
+import CardFrom from "../../assets/card/front.svg";
+import CardBack from "../../assets/card/back.svg";
 
 // Import Swiper styles
 import "swiper/swiper.min.css";
