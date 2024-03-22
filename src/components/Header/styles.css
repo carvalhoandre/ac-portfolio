@@ -1,6 +1,5 @@
 .header {
     width: 100%;
-    position: fixed;
     bottom: 0;
     left: 0;
     z-index: var(--z-fixed);
@@ -8,7 +7,6 @@
 }
 
 .nav {
-    max-width: 968px;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
@@ -115,13 +113,12 @@
 }
 
 .logo-ac{
-    max-width: 65px;
-    max-height: 65px;
+    max-width: 3rem;
+    max-height: 3rem;
 }
 
 @media screen and (max-width: 767px) {
     .nav_menu {
-        position: fixed;
         left: 0;
         width: 100%;
         background-color: var(--body-color);
@@ -131,7 +128,6 @@
         transition: .3s;
     }
     .nav_header {
-        position: fixed;
         left: 0;
         width: 100%;
         background-color: var(--body-color);
@@ -139,9 +135,5 @@
         box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
         border-radius: 1.5em 1.5em 0 0;
         transition: .3s;
-    }
-    .logo-ac{
-        max-width: 35px;
-        max-height: 35px;
     }
 }
