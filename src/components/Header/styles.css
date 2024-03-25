@@ -121,6 +121,7 @@
     .nav_menu {
         left: 0;
         width: 100%;
+        position: fixed;
         background-color: var(--body-color);
         padding: 2em 1.5em 4em;
         box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
@@ -128,6 +129,7 @@
         transition: .3s;
     }
     .nav_header {
+        position: fixed;
         left: 0;
         width: 100%;
         background-color: var(--body-color);
