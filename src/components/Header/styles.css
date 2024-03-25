@@ -1,142 +1,161 @@
 .header {
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: var(--z-fixed);
-    background-color: transparent;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: transparent;
 }
 
 .nav {
-    height: var(--header-height);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+  display: flex;
+  height: var(--header-height);
+  justify-content: center;
+  align-items: center;
+  padding: 0 var(--mb-3);
 }
 
 .nav_header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: var(--z-fixed);
 }
 
-.nav_logo, .nav_toggle {
-    color: var(--title-color);
-    font-weight: var(--font-medium);
+.nav_logo,
+.nav_toggle {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
 }
 
 .nav_logo:hover {
-    color: var(--first-color);
+  color: var(--first-color);
 }
 
 .nav_toggle {
-    font-size: 1.1em;
-    cursor: pointer;
+  font-size: 1.1em;
+  cursor: pointer;
 }
 
 .nav_toggle:hover {
-    color: var(--first-color);
+  color: var(--first-color);
 }
 
 .nav_list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
 }
 
 .nav_link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: var(--small-font-size);
-    color: var(--title-color);
-    font-weight: var(--font-medium);
-    width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  width: max-content;
 }
 
 .case {
-    width: 90px;
+  width: 90px;
 }
 
 .nav_link:hover {
-    color: var(--first-color);
+  color: var(--first-color);
 }
 
 .nav_icon {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
-.nav_icon:visited{
-    color: var(--first-color);
+.nav_icon:visited {
+  color: var(--first-color);
 }
 
 .nav_close {
-    z-index: 1;
-    position: absolute;
-    right: 1.3em;
-    bottom: .5em;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: var(--first-color);
+  z-index: 1;
+  position: absolute;
+  right: 1.3em;
+  bottom: 0.5em;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: var(--first-color);
 }
 
 .nav_close:hover {
-    color: var(--first-color);
+  color: var(--first-color);
 }
 
 .show-menu {
-    bottom: 0;
+  bottom: 0;
 }
 
 .close-menu {
-    bottom: -1000px;
-    width: 0px;
-    height: 0px;
+  bottom: -1000px;
+  width: 0px;
+  height: 0px;
 }
 
 .active-link {
-    color: var(--first-color);
+  color: var(--first-color);
 }
 
 .nav_btns {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  margin-top: var(--mb-0-75);
 }
 
-.change-theme{
-    font-size: 1.25em;
-    color: var(--title-color);
-    margin-right: var(--mb-1);
-    cursor: pointer;
+.change-theme {
+  font-size: 1.25em;
+  color: var(--title-color);
+  margin-right: var(--mb-1);
+  cursor: pointer;
 }
 
-.change-theme:hover{
-    color: var(--first-color);
+.change-theme:hover {
+  color: var(--first-color);
 }
 
-.logo-ac{
-    max-width: 3rem;
-    max-height: 3rem;
+.logo-ac {
+  max-width: 3rem;
+  max-height: 3rem;
 }
 
 @media screen and (max-width: 767px) {
-    .nav_menu {
-        left: 0;
-        width: 100%;
-        position: fixed;
-        background-color: var(--body-color);
-        padding: 2em 1.5em 4em;
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
-        border-radius: 1.5em 1.5em 0 0;
-        transition: .3s;
-    }
-    .nav_header {
-        position: fixed;
-        left: 0;
-        width: 100%;
-        background-color: var(--body-color);
-        padding: 0.5em 1em;
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
-        border-radius: 1.5em 1.5em 0 0;
-        transition: .3s;
-    }
+  .nav_menu {
+    left: 0;
+    width: 100%;
+    position: fixed;
+    background-color: var(--body-color);
+    padding: 2em 1.5em 4em;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5em 1.5em 0 0;
+    transition: 0.3s;
+    z-index: var(--z-fixed);
+  }
+  .nav_header {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding: 0.5em 1em;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5em 1.5em 0 0;
+    transition: 0.3s;
+  }
+
+  .nav_link {
+    width: 5rem;
+  }
+
+  .logo-ac {
+    max-width: 2rem;
+    max-height: 2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .nav_link {
+    width: 3rem;
+  }
 }

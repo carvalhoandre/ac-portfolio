@@ -10,6 +10,7 @@
     border-radius: .25em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
     transition: .3s;
+    min-width: 100%;
 }
 
 .services_content:hover {
