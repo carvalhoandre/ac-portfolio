@@ -16,6 +16,8 @@ export default class Header extends Component {
     ...initialState,
   };
 
+  isDark = this.state.theme === "dark";
+
   render() {
     return (
       <header className="header" id="header">
@@ -79,10 +81,10 @@ export default class Header extends Component {
             id="nav-menu"
           >
             <a href="/" className="nav_logo">
-              {this.state.theme === "light" ? (
-                <img src={LogoBlack} alt="logo" className="logo-ac" />
-                ) : (
+              {this.isDark ? (
                 <img src={LogoWhite} alt="logo" className="logo-ac" />
+              ) : (
+                <img src={LogoBlack} alt="logo" className="logo-ac" />
               )}
             </a>
 
@@ -90,13 +92,11 @@ export default class Header extends Component {
               {/* theme change button */}
               <i
                 className={`change-theme uil uil-${
-                  this.state.theme === "dark" ? "sun" : "moon"
+                  this.isDark ? "sun" : "moon"
                 }`}
                 id="theme-button"
                 onClick={() => {
-                  this.state.theme === "dark"
-                    ? setTheme("light")
-                    : setTheme("dark");
+                  this.isDark ? setTheme("light") : setTheme("dark");
                   window.location.reload();
                 }}
               />

@@ -10,7 +10,7 @@ export default function HomeSection() {
       <div className="home_container container grid">
         <div className="home_content grid">
           <div className="home_social">
-          <a
+            <a
               href="https://www.linkedin.com/in/carvalhoandree/"
               target="_blank"
               rel="noreferrer"
@@ -45,11 +45,14 @@ export default function HomeSection() {
 
         <div className="home_data">
           <h1 className="home_title">Hi there! I'm André</h1>
+
           <h3 className="home_subtitle">Frontend Developer</h3>
+
           <p className="home_descption">Always producing quality work.</p>
-          <Link to="#contactme" className="button button--flex">
+
+          <a href="#contactme" className="button button--flex">
             Contact Me <i className="uil uil-message button_icon"></i>
-          </Link>
+          </a>
         </div>
 
         <div className="home_scroll">
