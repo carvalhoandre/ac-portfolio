@@ -1,23 +1,73 @@
-# My Portfolio Project
+# PortfolioAC
 
-Welcome to my portfolio project built with React.js!
+**PortfolioAC** is a web and mobile developer's portfolio showcasing expertise in web development, technologies, and UI/UX design. The portfolio is built with React.js and includes various features and functionalities.
 
-## Overview
+## Live Demo
 
-This project showcases my skills, experiences, and projects in a visually appealing and interactive manner. It serves as a professional portfolio to highlight my achievements and capabilities to potential employers, clients, or collaborators.
-
-## Features
-
-- **Responsive Design**: The portfolio is designed to be fully responsive, ensuring optimal viewing experience across various devices and screen sizes.
-- **Project Showcase**: Display a curated selection of my projects with descriptions, technologies used, and links to live demos or source code repositories.
-- **About Me Section**: Provides a brief introduction about myself, my background, skills, and interests.
-- **Contact Information**: Includes ways to contact me, such as email, social media links, or a contact form.
-- **Dynamic Content**: Utilizes React.js to dynamically render content, making it easy to update and maintain.
+Check out the live demo of the portfolio: [PortfolioAC Live Demo](http://andrelcarvalho.netlify.app/)
 
 ## Technologies Used
 
-- **React.js**: Frontend JavaScript library for building user interfaces.
-- **HTML/CSS**: Used for structuring and styling the portfolio.
-- **JavaScript (ES6+)**: Utilized for implementing interactive features and functionality.
-- **Version Control (e.g., Git)**: Managed project versions and collaboration with version control.
-- **Deployment Platform**: Deployed on [Netlify](https://andrelcarvalho.netlify.app/#home).
+- React.js
+- React Router DOM
+- Axios
+- Formik
+- Yup
+- React Spinners
+- React Toastify
+- Swiper
+- Normalize.css
+- Web Vitals
+
+## Getting Started
+
+To get a local copy of the project up and running, follow these simple steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/portfolioac.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd portfolioac
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the portfolio.
+
+## Usage
+
+Explore the different sections of the portfolio:
+
+- **Home:** Introduction and brief overview.
+- **About:** Detailed information about the developer.
+- **Skills:** Overview of technical skills and qualifications.
+- **Services:** Description of services offered.
+- **Portfolio:** Showcase of recent projects.
+- **Contact Me:** Contact information and form to reach out.
+
+## Contributing
+
+Contributions are welcome! Feel free to submit pull requests or open issues for any improvements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+Special thanks to [Netlify](https://www.netlify.com/) for hosting the live demo.
