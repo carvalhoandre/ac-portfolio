@@ -14,8 +14,8 @@ export default function About() {
 
         <div className="about_data">
           <p className="about_description">
-            Web developer, working in web, technologies and Ui / Ux design,
-            delivering quality work.
+            Web and mobile developer, working in web, technologies, and UI/UX
+            design, delivering quality work.
           </p>
 
           <div className="about_info">
