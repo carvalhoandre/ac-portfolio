@@ -4,7 +4,7 @@
 
 ## Live Demo
 
-Check out the live demo of the portfolio: [PortfolioAC Live Demo](http://andrelcarvalho.netlify.app/)
+Check out the live: [AC Portfolio](http://andrelcarvalho.netlify.app/)
 
 ## Technologies Used
 
