@@ -10,8 +10,6 @@ Check out the live: [AC Portfolio](http://andrelcarvalho.netlify.app/)
 
 - React.js
 - React Router DOM
-- Axios
-- Formik
 - Yup
 - React Spinners
 - React Toastify
