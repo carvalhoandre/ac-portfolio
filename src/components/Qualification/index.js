@@ -177,29 +177,29 @@ export default class Qualification extends Component {
                 </div>
 
                 <div>
-                  <h3 className="qualification_title">Service Desk Analyst </h3>
-                  <span className="qualification_text">Internship</span>
-                  <span className="qualification_subtitle">
-                    Proative Technology
-                  </span>
+                  <h3 className="qualification_title">Front-End Engineer</h3>
+                  <span className="qualification_text">Full time</span>
+                  <br />
+                  <span className="qualification_subtitle">Syndesi</span>
+
                   <div className="qualification_calendar">
                     <i className="uil uil-calendar-alt icon-calendar" />
-                    Jan 2020 - Jan 2021
+                    Apr 2024 - Current
                   </div>
                 </div>
               </li>
+           
 
               {/* work two */}
               <li className="qualification_data">
                 <div>
-                  <h3 className="qualification_title">DevOps</h3>
-                  <span className="qualification_text">Internship</span>
-                  <span className="qualification_subtitle">
-                    Proative Technology
-                  </span>
+                  <h3 className="qualification_title">Front end</h3>
+                  <span className="qualification_text">Full time</span>
+                  <div />
+                  <span className="qualification_subtitle">Hyperlocal</span>
                   <div className="qualification_calendar">
                     <i className="uil uil-calendar-alt icon-calendar" />
-                    Jan 2021 - Aug 2021
+                    Mar 2022 - Apr 2024
                   </div>
                 </div>
 
@@ -208,6 +208,7 @@ export default class Qualification extends Component {
                   <span className="qualification_line" />
                 </div>
               </li>
+             
 
               {/* work three */}
               <li className="qualification_data">
@@ -234,19 +235,42 @@ export default class Qualification extends Component {
               {/* work four */}
               <li className="qualification_data">
                 <div>
-                  <h3 className="qualification_title">Front end</h3>
-                  <span className="qualification_text">Full time</span>
-                  <div />
-                  <span className="qualification_subtitle">Hyperlocal</span>
+                  <h3 className="qualification_title">DevOps</h3>
+                  <span className="qualification_text">Internship</span>
+                  <span className="qualification_subtitle">
+                    Proative Technology
+                  </span>
                   <div className="qualification_calendar">
                     <i className="uil uil-calendar-alt icon-calendar" />
-                    Mar 2022 - Current
+                    Jan 2021 - Aug 2021
                   </div>
                 </div>
 
                 <div>
                   <span className="qualification_rounder" />
                   <span className="qualification_line" />
+                </div>
+              </li>
+
+              {/* work five */}
+              <li className="qualification_data">
+                <div />
+
+                <div>
+                  <span className="qualification_rounder" />
+                  <span className="qualification_line" />
+                </div>
+
+                <div>
+                  <h3 className="qualification_title">Service Desk Analyst </h3>
+                  <span className="qualification_text">Internship</span>
+                  <span className="qualification_subtitle">
+                    Proative Technology
+                  </span>
+                  <div className="qualification_calendar">
+                    <i className="uil uil-calendar-alt icon-calendar" />
+                    Jan 2020 - Jan 2021
+                  </div>
                 </div>
               </li>
             </ul>

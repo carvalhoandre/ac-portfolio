@@ -34,7 +34,7 @@ export default function About() {
             </div>
 
             <div>
-              <span className="about_info-title">02+</span>
+              <span className="about_info-title">03+</span>
               <span className="about_info-name">
                 Companies <br /> worked
               </span>
