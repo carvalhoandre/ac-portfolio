@@ -193,7 +193,7 @@ export default class Qualification extends Component {
               {/* work two */}
               <li className="qualification_data">
                 <div>
-                  <h3 className="qualification_title">Front end</h3>
+                  <h3 className="qualification_title">Front-End</h3>
                   <span className="qualification_text">Full time</span>
                   <div />
                   <span className="qualification_subtitle">Hyperlocal</span>
@@ -220,7 +220,7 @@ export default class Qualification extends Component {
                 </div>
 
                 <div>
-                  <h3 className="qualification_title">Front end</h3>
+                  <h3 className="qualification_title">Front-End</h3>
                   <span className="qualification_text">Full time</span>
                   <span className="qualification_subtitle">
                     Proative Technology

@@ -14,6 +14,7 @@ import Footer from "../../components/Footer";
 import InMind from "../../components/InMind";
 import Contact from "../../components/Contact";
 import Loader from "../../components/Loader";
+import Testimonial from "../../components/Testimonial";
 
 function Home() {
   const [loading, setLoading] = useState(false);
@@ -32,6 +33,7 @@ function Home() {
         <InMind />
         <Services />
         <Portfolio />
+        <Testimonial />
 
         <Contact setLoading={setLoading} />
       </div>
