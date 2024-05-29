@@ -47,10 +47,6 @@
   color: var(--text-color-light);
 }
 
-.test {
-  max-width: 2rem;
-}
-
 .testimonial_description {
   margin-bottom: var(--mb-2-5);
   line-height: 1.5rem;

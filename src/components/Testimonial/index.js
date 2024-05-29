@@ -82,7 +82,7 @@ export default class Testimonial extends Component {
                     <div>
                       <div className="testimonial_data">
                         <div className="testimonial_header">
-                          <div className="test">
+                          <div>
                             <h3 className="testimonial_name">
                               Bruno Elias de Souza
                             </h3>
