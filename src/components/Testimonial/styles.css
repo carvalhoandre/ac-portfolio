@@ -18,7 +18,8 @@
 .testimonial_container {
   height: fit-content;
 
-  & > div, & > div > div {
+  & > div,
+  & > div > div {
     height: fit-content;
     align-items: stretch;
   }
@@ -41,8 +42,13 @@
 }
 
 .testimonial_client {
+  max-width: 2rem;
   font-size: var(--small-font-size);
   color: var(--text-color-light);
+}
+
+.test {
+  max-width: 2rem;
 }
 
 .testimonial_description {

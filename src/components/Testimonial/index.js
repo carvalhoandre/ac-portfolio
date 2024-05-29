@@ -26,7 +26,6 @@ export default class Testimonial extends Component {
               <Swiper
                 pagination={{ dynamicBullets: true }}
                 className="testimonial_swiper"
-
               >
                 <SwiperSlide>
                   {/* Testimonial one */}
@@ -36,11 +35,9 @@ export default class Testimonial extends Component {
                       <div className="testimonial_data">
                         <div className="testimonial_header">
                           <div>
-                            <a href="https://www.linkedin.com/in/ian-charlesson-gomes-santana-a78947b6?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BR2d50PIISx%2BDXsizoh5tJw%3D%3D">
-                              <h3 className="testimonial_name">
-                                Ian Charlesson Gomes Santana
-                              </h3>
-                            </a>
+                            <h3 className="testimonial_name">
+                              Ian Charlesson Gomes Santana
+                            </h3>
                             <span className="testimonial_client">
                               Senior Test Analyst - Was working with me on the
                               same team at Hyperlocal.
@@ -85,12 +82,10 @@ export default class Testimonial extends Component {
                     <div>
                       <div className="testimonial_data">
                         <div className="testimonial_header">
-                          <div>
-                            <a href="https://www.linkedin.com/in/bruno-elias-de-souza-780851161?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BTmRMtE%2BRR7C5LUtiGy3zoQ%3D%3D">
-                              <h3 className="testimonial_name">
-                                Bruno Elias de Souza
-                              </h3>
-                            </a>
+                          <div className="test">
+                            <h3 className="testimonial_name">
+                              Bruno Elias de Souza
+                            </h3>
                             <span className="testimonial_client">
                               Software Developer - Was working with me on the
                               same team at Hyperlocal.
