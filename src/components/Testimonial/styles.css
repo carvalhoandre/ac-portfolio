@@ -48,6 +48,9 @@
 }
 
 .testimonial_description {
+  max-height: 100px;
+  overflow-y: auto;
+
   margin-bottom: var(--mb-2-5);
   line-height: 1.5rem;
 }
