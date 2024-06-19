@@ -1,7 +1,11 @@
 function Contact() {
   return (
-    <section className="contact section" id="contactme" aria-labelledby="label-contact">
-      <h2 className="section_title">Contact Me</h2>
+    <section
+      className="contact section"
+      id="contactme"
+      aria-labelledby="label-contact"
+    >
+      <h2 className="section_title">Get in Touch</h2>
       <span className="section_subtitle">Get in touch</span>
 
       <ul className="contact_container container grid">
@@ -10,7 +14,7 @@ function Contact() {
 
           <div>
             <h3 className="contact_title">Call Me</h3>
-            <span className="contact_subtitle">11 94924-5875</span>
+            <span className="contact_subtitle">+55 11 94924-5875</span>
           </div>
         </li>
 

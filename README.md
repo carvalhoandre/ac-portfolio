@@ -56,7 +56,7 @@ Explore the different sections of the portfolio:
 - **Skills:** Overview of technical skills and qualifications.
 - **Services:** Description of services offered.
 - **Portfolio:** Showcase of recent projects.
-- **Contact Me:** Contact information and form to reach out.
+- **Get in Touch:** Contact information and form to reach out.
 
 ## Contributing
 

@@ -14,8 +14,9 @@ export default function About() {
 
         <div className="about_data">
           <p className="about_description">
-            Web and mobile developer, working in web, technologies, and UI/UX
-            design, delivering quality work.
+            Web and Mobile Developer specializing in modern web technologies and
+            UI/UX design. Committed to delivering top-notch quality in every
+            project
           </p>
 
           <div className="about_info">
@@ -48,7 +49,7 @@ export default function About() {
               alt="curriculum"
               className="button button--flex"
             >
-              Download CV
+              Download My CV
               <i className="uil uil-arrow-to-bottom button_icon"></i>
             </a>
           </div>

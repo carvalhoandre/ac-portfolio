@@ -50,7 +50,7 @@ export default class Footer extends Component {
               </li>
               <li>
                 <a href="#contact" className="footer_link">
-                  Contact Me
+                  Get in Touch
                 </a>
               </li>
               <li>
