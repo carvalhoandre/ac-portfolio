@@ -3,7 +3,10 @@
     "paths": {
       "use-sound": ["node_modules/use-sound/dist/index.d.ts"],
       "@/*": ["./src/*"],
-      "@assets/*": ["./src/assets/*"]
+      "@assets/*": ["./src/assets/*"],
+      "@config/*": ["./src/config/*"],
+      "@components/*": ["./src/components/*"],
+      "@utils/*": ["./src/utils/*"]
     }
   }
 }
