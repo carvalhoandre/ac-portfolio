@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "use-sound": ["node_modules/use-sound/dist/index.d.ts"],
+      "@/*": ["./src/*"],
+      "@assets/*": ["./src/assets/*"]
+    }
+  }
+}
