@@ -1,16 +1,8 @@
-import { getTheme } from "@utils/theme";
-
+import { Routes } from "@/routes";
 import "./App.css";
-import Header from "@components/Header";
 
 const App = () => {
-  const currentTheme = getTheme();
-
-  return (
-    <section className={`${currentTheme === "light" ? "" : "dark-theme"}`}>
-      <Header />
-    </section>
-  );
+  return <Routes />;
 };
 
 export default App;

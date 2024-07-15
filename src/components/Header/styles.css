@@ -27,10 +27,6 @@
   font-weight: var(--font-medium);
 }
 
-.nav_logo:hover {
-  color: var(--first-color);
-}
-
 .nav_toggle {
   font-size: 1.1em;
   cursor: pointer;

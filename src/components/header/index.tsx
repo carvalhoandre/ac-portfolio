@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+
+import { IHeaderProps } from "./types";
 
 import LogoWhite from "@assets/logo/white.svg";
 import LogoBlack from "@assets/logo/black.svg";
 
 import IComponent from "@/@types";
-import { setTheme, isDarkTheme } from "@utils/theme";
 
 import Icon from "@components/Icon";
 import NavItem from "@components/Header/components/NavItem";
@@ -40,17 +41,12 @@ const navItems: Array<INavITemProps> = [
   },
 ];
 
-const Header: IComponent = ({ testId = "header" }) => {
-  const [isDarkMode, setIsDarkMode] = useState(isDarkTheme());
+const Header: IComponent<IHeaderProps> = ({
+  testId = "header",
+  isDarkMode,
+  toggleTheme,
+}) => {
   const [isNavVisible, setIsNavVisible] = useState(false);
-
-  useEffect(() => {
-    setTheme(isDarkMode ? "dark" : "light");
-  }, [isDarkMode]);
-
-  const toggleTheme = () => {
-    setIsDarkMode((prevMode) => !prevMode);
-  };
 
   return (
     <header className="header" id="header" data-testid={testId}>
