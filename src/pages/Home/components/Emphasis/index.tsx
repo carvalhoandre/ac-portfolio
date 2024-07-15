@@ -21,6 +21,7 @@ const socials: Array<ISocialIconProps> = [
     icon: "dribbble",
   },
 ];
+
 const Emphasis: IComponent = ({ testId = "emphasis" }) => {
   return (
     <section
