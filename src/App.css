@@ -286,9 +286,6 @@
   .home_blob {
     width: 320px;
   }
-  .home_social {
-    transform: translateX(-6em);
-  }
   .services_container {
     grid-template-columns: repeat(3, 238px);
   }

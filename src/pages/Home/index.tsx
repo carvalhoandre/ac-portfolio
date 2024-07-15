@@ -4,6 +4,7 @@ import { isDarkTheme, setTheme } from "@utils/theme";
 import Header from "@components/Header";
 
 import IComponent from "@/@types";
+import Emphasis from "@/components/Emphasis";
 
 const Home: IComponent = ({ testId = "home" }) => {
   const [isDarkMode, setIsDarkMode] = useState(isDarkTheme());
@@ -17,11 +18,10 @@ const Home: IComponent = ({ testId = "home" }) => {
   };
 
   return (
-    <section
-      className={`${isDarkMode ? "dark-theme" : ""}`}
-      data-testid={testId}
-    >
+    <section className={isDarkMode ? "dark-theme" : ""} data-testid={testId}>
       <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+
+      <Emphasis />
     </section>
   );
 };
