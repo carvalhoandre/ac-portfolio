@@ -23,3 +23,9 @@ export const setTheme = (theme: string | null): void => {
     console.error("Error setting theme in localStorage:", error);
   }
 };
+
+export const isDarkTheme = () => {
+  const theme = getTheme();
+
+  return theme === "dark";
+};

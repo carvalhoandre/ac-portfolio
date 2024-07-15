@@ -1,11 +1,16 @@
-import "./App.css";
+import { getTheme } from "@utils/theme";
 
-function App() {
+import "./App.css";
+import Header from "@components/Header";
+
+const App = () => {
+  const currentTheme = getTheme();
+
   return (
-    <>
-      <h1>Base project</h1>
-    </>
+    <section className={`${currentTheme === "light" ? "" : "dark-theme"}`}>
+      <Header />
+    </section>
   );
-}
+};
 
 export default App;
