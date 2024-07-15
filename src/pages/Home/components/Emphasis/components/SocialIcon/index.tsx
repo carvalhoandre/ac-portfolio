@@ -4,11 +4,10 @@ import { ISocialIconProps } from "./types";
 import Icon from "@components/Icon";
 
 const SocialIcon: IComponent<ISocialIconProps> = ({
-  testId = "nav-item",
+  testId = "social-icon",
   link,
   icon,
 }) => {
-  console.log(testId, link, icon);
   return (
     <a
       href={link}
