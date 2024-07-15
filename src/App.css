@@ -4,22 +4,6 @@
   padding: 2em 0 4em;
 }
 
-.section_title {
-  font-size: var(--h1-font-size);
-  margin-bottom: 0.5rem;
-}
-
-.section_subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: var(--mb-3);
-}
-
-.section_title,
-.section_subtitle {
-  text-align: center;
-}
-
 /* layout */
 .container {
   max-width: 768px;

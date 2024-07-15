@@ -5,8 +5,9 @@ import Image from "@assets/photos/about.png";
 
 import Curriculum from "@assets/cv/CVAndreLeiteCarvalho.pdf";
 
+import SectionHeader from "@components/SectionHeader";
+import AboutItem from "./components/AboutItem";
 import "./styles.css";
-import AboutItem from "@/pages/Home/components/About/components/AboutItem";
 
 const aboutItems: Array<IAboutItemProps> = [
   {
@@ -34,8 +35,7 @@ const About: IComponent = ({ testId = "about" }) => {
       aria-labelledby="label-about"
       data-testid={testId}
     >
-      <h2 className="section_title">About Me</h2>
-      <span className="section_subtitle">My introduction</span>
+      <SectionHeader title="About Me" subTitle="My introduction" />
 
       <div className="about_container container grid">
         <img src={Image} alt="André Leite Carvalho" className="about_img" />
