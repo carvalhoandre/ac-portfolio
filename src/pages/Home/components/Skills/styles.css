@@ -1,5 +1,6 @@
 .skills_container {
   row-gap: 0;
+  column-gap: 5em;
 }
 
 .skills_header {
