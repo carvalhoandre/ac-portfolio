@@ -46,7 +46,7 @@ export default function HomeSection() {
         <div className="home_data">
           <h1 className="home_title">Hi there! I'm André</h1>
 
-          <h3 className="home_subtitle">a Front-End Engineer</h3>
+          <h3 className="home_subtitle">a Frontend Developer</h3>
 
           <p className="home_descption">
             committed to delivering high-quality work consistently.

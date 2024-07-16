@@ -177,7 +177,7 @@ export default class Qualification extends Component {
                 </div>
 
                 <div>
-                  <h3 className="qualification_title">Front-End Engineer</h3>
+                  <h3 className="qualification_title">Frontend Developer</h3>
                   <span className="qualification_text">Full time</span>
                   <br />
                   <span className="qualification_subtitle">Syndesi</span>
@@ -188,7 +188,6 @@ export default class Qualification extends Component {
                   </div>
                 </div>
               </li>
-           
 
               {/* work two */}
               <li className="qualification_data">
@@ -208,7 +207,6 @@ export default class Qualification extends Component {
                   <span className="qualification_line" />
                 </div>
               </li>
-             
 
               {/* work three */}
               <li className="qualification_data">

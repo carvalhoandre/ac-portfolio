@@ -30,7 +30,7 @@ export default class About extends Component {
                 <i className="uil uil-brackets-curly skills_icon"></i>
 
                 <div>
-                  <h1 className="skills_title">Front-End Engineer</h1>
+                  <h1 className="skills_title">Frontend Developer</h1>
                   <span className="skills_subtitle">More than 3 years</span>
                 </div>
 

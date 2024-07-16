@@ -14,7 +14,7 @@ export default class Footer extends Component {
           <div className="footer_container container grid">
             <div>
               <h1 className="footer_title">André Carvalho</h1>
-              <span className="footer_subtitle">Front-End Engineer</span>
+              <span className="footer_subtitle">Frontend Developer</span>
 
               <div className="footer_socials">
                 <a
