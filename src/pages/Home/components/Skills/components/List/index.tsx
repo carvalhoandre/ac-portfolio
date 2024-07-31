@@ -1,8 +1,10 @@
+import { useState } from "react";
+
 import IComponent from "@/@types";
 import { ISkillListProps } from "./types";
-import Icon from "@/components/Icon";
-import SkillItem from "@/pages/Home/components/Skills/components/Item";
-import { useState } from "react";
+
+import Icon from "@components/Icon";
+import SkillItem from "../Item";
 
 const SkillList: IComponent<ISkillListProps> = ({
   testId = "skill-list",
@@ -22,7 +24,7 @@ const SkillList: IComponent<ISkillListProps> = ({
       <div
         className={`skills_content ${isOpen ? "skills_open" : "skills_close"}`}
       >
-        <div className="skills_header">
+        <div className="skills_header" onClick={toggleOpen}>
           <Icon icon={icon} className="skills_icon" />
 
           <div>
@@ -30,7 +32,7 @@ const SkillList: IComponent<ISkillListProps> = ({
             {!!subTitle && <h4 className="skills_subtitle">{subTitle}</h4>}
           </div>
 
-          <i className="uil uil-angle-down skills_arrow" onClick={toggleOpen} />
+          <i className="uil uil-angle-down skills_arrow" />
         </div>
 
         {isOpen && (
