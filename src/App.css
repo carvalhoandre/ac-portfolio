@@ -103,6 +103,10 @@
   .project_data {
     padding-bottom: 2em;
   }
+
+  .services_title {
+    max-width: 36px;
+  }
 }
 
 @media screen and (min-width: 768px) {
