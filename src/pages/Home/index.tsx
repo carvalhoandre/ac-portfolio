@@ -4,7 +4,7 @@ import IComponent from "@/@types";
 import { isDarkTheme, setTheme } from "@utils/theme";
 
 import Header from "@components/Header";
-import { About, Emphasis, Qualifications, Skills } from "./components";
+import { About, Emphasis, Qualifications, Skills, InMind } from "./components";
 
 const Home: IComponent = ({ testId = "home" }) => {
   const [isDarkMode, setIsDarkMode] = useState(isDarkTheme());
@@ -28,6 +28,8 @@ const Home: IComponent = ({ testId = "home" }) => {
       <Skills />
 
       <Qualifications />
+
+      <InMind />
     </body>
   );
 };
