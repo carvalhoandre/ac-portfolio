@@ -11,6 +11,7 @@ import {
   Skills,
   InMind,
   Services,
+  Portfolio,
 } from "./components";
 
 const Home: IComponent = ({ testId = "home" }) => {
@@ -39,6 +40,8 @@ const Home: IComponent = ({ testId = "home" }) => {
       <InMind />
 
       <Services />
+
+      <Portfolio />
     </body>
   );
 };
