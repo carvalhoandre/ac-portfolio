@@ -12,6 +12,7 @@ import {
   InMind,
   Services,
   Portfolio,
+  Testimonial,
 } from "./components";
 
 const Home: IComponent = ({ testId = "home" }) => {
@@ -42,6 +43,8 @@ const Home: IComponent = ({ testId = "home" }) => {
       <Services />
 
       <Portfolio />
+
+      <Testimonial />
     </body>
   );
 };

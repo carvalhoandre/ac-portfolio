@@ -72,7 +72,9 @@
   .testimonial_description {
     text-align: center;
   }
-}
+  .testimonial_slider_header {
+    align-items: center;
+  }
 
 /* for medium devices */
 
@@ -106,6 +108,13 @@
 
   .services_title {
     max-width: 36px;
+  }
+  .testimonial_slider_header {
+    align-items: center;
+  }
+  .testimonial_data,
+  .testimonial_header {
+    flex-direction: column !important;
   }
 }
 

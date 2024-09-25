@@ -7,8 +7,8 @@ import Store from "@assets/portfolio/store.svg";
 import Countries from "@assets/portfolio/countries.svg";
 
 import SectionHeader from "@components/SectionHeader";
+import Icon from "@components/Icon";
 import "./styles.css";
-import Icon from "@/components/Icon";
 
 const portfolioItems = [
   {
@@ -36,16 +36,6 @@ const portfolioItems = [
 const Portfolio: IComponent = ({ testId = "portfolio" }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) =>
-        prevSlide === portfolioItems.length - 1 ? 0 : prevSlide + 1
-      );
-    }, 10000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   const handlePrevSlide = () => {
     setCurrentSlide((prevSlide) =>
       prevSlide === 0 ? portfolioItems.length - 1 : prevSlide - 1
@@ -57,6 +47,16 @@ const Portfolio: IComponent = ({ testId = "portfolio" }) => {
       prevSlide === portfolioItems.length - 1 ? 0 : prevSlide + 1
     );
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) =>
+        prevSlide === portfolioItems.length - 1 ? 0 : prevSlide + 1
+      );
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
