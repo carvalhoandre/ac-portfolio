@@ -2,7 +2,7 @@ import IComponent from "@/@types";
 
 import { ListsSkills } from "./skills";
 
-import SectionHeader from "@components/SectionHeader";
+import { SectionHeader } from "@components/index";
 import SkillList from "./components/List";
 import "./styles.css";
 
@@ -26,4 +26,4 @@ const Skills: IComponent = ({ testId = "skills" }) => {
   );
 };
 
-export default Skills;
+export { Skills };

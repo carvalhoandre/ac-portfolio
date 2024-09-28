@@ -15,4 +15,4 @@ const Loader: IComponent = ({ testId = "loader" }) => {
   );
 };
 
-export default Loader;
+export { Loader };

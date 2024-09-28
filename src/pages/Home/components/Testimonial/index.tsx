@@ -3,12 +3,8 @@ import { useEffect, useState } from "react";
 import IComponent from "@/@types";
 import { ITestimonial } from "./types";
 
-import Icon from "@components/Icon";
-import SectionHeader from "@components/SectionHeader";
-import SliderControls from "@components/SliderControls";
-
+import { SliderDots, SliderControls, SectionHeader } from "@components/index";
 import "./styles.css";
-import SliderDots from "@/components/SliderDots";
 
 const testimonials: Array<ITestimonial> = [
   {
@@ -16,7 +12,7 @@ const testimonials: Array<ITestimonial> = [
     client:
       "Senior Test Analyst - Was working with me on the same team at Hyperlocal.",
     description:
-      "On August 10, 2023, Ian Charlesson was working with André on the same team. It's a pleasure to work with and recommend André Leite, a developer with immense potential in Front-End and Mobile. In the moments we worked together, he demonstrated a remarkable passion for learning and growing in the field. With knowledge in technologies such as HTML, CSS, JavaScript, ReactJS, and React Native, André Leite has the ability to create attractive and responsive interfaces. His proactive collaboration, attention to detail, and problem-solving skills make him a valuable member of any development team. His positive attitude and constant pursuit of learning are inspiring. André Leite not only delivers high-quality results but also contributes to a constructive team environment.",
+      "On August 10, 2023, Ian Charlesson was working with André on the same team. It's a pleasure to work with and recommend André Leite, a developer with immense potential in Front-End and Mobile. In the moments we worked together, he demonstrated a remarkable passion for learning and growing in the field...",
   },
   {
     name: "Bruno Elias de Souza",
@@ -82,18 +78,6 @@ const Testimonial: IComponent = ({ testId = "testimonial" }) => {
                       <span className="testimonial_client">{client}</span>
                     </div>
                   </div>
-
-                  <div className="testimonial_rating">
-                    {Array(5)
-                      .fill("")
-                      .map((_, starIndex) => (
-                        <Icon
-                          key={starIndex}
-                          icon="star"
-                          className="testimonial_icon-star"
-                        />
-                      ))}
-                  </div>
                 </div>
 
                 <p className="testimonial_description">{description}</p>
@@ -117,4 +101,4 @@ const Testimonial: IComponent = ({ testId = "testimonial" }) => {
   );
 };
 
-export default Testimonial;
+export { Testimonial };

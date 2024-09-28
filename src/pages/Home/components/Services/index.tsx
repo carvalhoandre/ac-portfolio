@@ -1,7 +1,7 @@
 import IComponent from "@/@types";
 import ServiceItem from "./components/ServiceItem";
 
-import SectionHeader from "@components/SectionHeader";
+import { SectionHeader } from "@components/index";
 
 import "./styles.css";
 
@@ -36,4 +36,4 @@ const Services: IComponent = ({ testId = "services" }) => {
   );
 };
 
-export default Services;
+export { Services };

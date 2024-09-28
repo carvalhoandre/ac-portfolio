@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 import IComponent from "@/@types";
 import { isDarkTheme, setTheme } from "@utils/theme";
 
-import Header from "@components/Header";
+import { Header, Footer } from "@components/index";
+
 import {
   About,
+  Contact,
   Emphasis,
   Qualifications,
   Skills,
@@ -27,25 +29,30 @@ const Home: IComponent = ({ testId = "home" }) => {
   };
 
   return (
-    <body className={isDarkMode ? "dark-theme" : ""} data-testid={testId}>
-      <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+    <>
+      <body className={isDarkMode ? "dark-theme" : ""} data-testid={testId}>
+        <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
 
-      <Emphasis />
+        <Emphasis />
 
-      <About />
+        <About />
 
-      <Skills />
+        <Skills />
 
-      <Qualifications />
+        <Qualifications />
 
-      <InMind />
+        <InMind />
 
-      <Services />
+        <Services />
 
-      <Portfolio />
+        <Portfolio />
 
-      <Testimonial />
-    </body>
+        <Testimonial />
+
+        <Contact />
+      </body>
+      <Footer />
+    </>
   );
 };
 

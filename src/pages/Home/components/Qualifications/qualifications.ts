@@ -2,9 +2,9 @@ import { IQualificationsItemProps } from "./components/Item/types";
 
 export const QualificationsStudentList: Array<IQualificationsItemProps> = [
   {
-    date: "2018 - 2022",
-    subtitle: "Universidade Nove de Julho - UNINOVE",
-    title: "Computer Science",
+    date: "2024",
+    subtitle: "EF English",
+    title: "English",
   },
   {
     date: "Current",
@@ -14,7 +14,7 @@ export const QualificationsStudentList: Array<IQualificationsItemProps> = [
   {
     date: "2018 - 2022",
     subtitle: "Scrum Certificate",
-    title: "Scrum Certificate",
+    title: "Scrum",
   },
   {
     date: "2021",
@@ -25,11 +25,6 @@ export const QualificationsStudentList: Array<IQualificationsItemProps> = [
     date: "2021",
     subtitle: "Cod3r",
     title: "React Native Development",
-  },
-  {
-    date: "2018 - 2022",
-    subtitle: "Universidade Nove de Julho - UNINOVE",
-    title: "Computer Science",
   },
   {
     date: "2018 - 2022",

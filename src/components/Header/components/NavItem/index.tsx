@@ -1,7 +1,7 @@
 import IComponent from "@/@types";
 import { INavITemProps } from "./types";
 
-import Icon from "@components/Icon";
+import { Icon } from "@components/Icon";
 import "./styles.css";
 
 const NavItem: IComponent<INavITemProps> = ({

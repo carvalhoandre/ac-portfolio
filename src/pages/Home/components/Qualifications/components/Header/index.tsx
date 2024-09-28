@@ -2,7 +2,7 @@ import IComponent from "@/@types";
 import { IQualificationsHeaderProps } from "./types";
 import { ISelected } from "../../types";
 
-import Icon from "@/components/Icon";
+import { Icon } from "@/components/Icon";
 
 const QualificationsHeader: IComponent<IQualificationsHeaderProps> = ({
   testId = "skill-header",

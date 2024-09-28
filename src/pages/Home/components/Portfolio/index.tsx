@@ -6,11 +6,8 @@ import Bikcraft from "@assets/portfolio/bikcraft.svg";
 import Store from "@assets/portfolio/store.svg";
 import Countries from "@assets/portfolio/countries.svg";
 
-import SectionHeader from "@components/SectionHeader";
-import SliderControls from "@components/SliderControls";
-
+import { SectionHeader, SliderDots, SliderControls } from "@components/index";
 import "./styles.css";
-import SliderDots from "@/components/SliderDots";
 
 const portfolioItems = [
   {
@@ -122,4 +119,4 @@ const Portfolio: IComponent = ({ testId = "portfolio" }) => {
   );
 };
 
-export default Portfolio;
+export { Portfolio };

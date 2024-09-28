@@ -2,44 +2,17 @@ import { useState } from "react";
 
 import { IHeaderProps } from "./types";
 
+import { navItems } from "@utils/navItems";
+
 import LogoWhite from "@assets/logo/white.svg";
 import LogoBlack from "@assets/logo/black.svg";
 
 import IComponent from "@/@types";
 
-import Icon from "@components/Icon";
+import { Icon } from "@components/Icon";
 import NavItem from "@components/Header/components/NavItem";
-import { INavITemProps } from "./components/NavItem/types";
 
 import "./styles.css";
-
-const navItems: Array<INavITemProps> = [
-  {
-    href: "home",
-    icon: "estate",
-  },
-  {
-    href: "about",
-    icon: "user",
-  },
-  {
-    href: "skills",
-    icon: "file-alt",
-  },
-  {
-    href: "services",
-    icon: "bag",
-  },
-  {
-    href: "portfolio",
-    icon: "scenery",
-  },
-  {
-    href: "contactme",
-    icon: "message",
-    name: "Get in Touch",
-  },
-];
 
 const Header: IComponent<IHeaderProps> = ({
   testId = "header",
@@ -105,4 +78,4 @@ const Header: IComponent<IHeaderProps> = ({
   );
 };
 
-export default Header;
+export { Header };

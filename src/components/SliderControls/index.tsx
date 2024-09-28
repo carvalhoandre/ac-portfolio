@@ -1,7 +1,7 @@
 import IComponent from "@/@types";
 import { ISliderControlsProps } from "./types";
 
-import Icon from "@components/Icon";
+import { Icon } from "@components/Icon";
 
 const SliderControls: IComponent<ISliderControlsProps> = ({
   testId = "slider-controls",
@@ -29,4 +29,4 @@ const SliderControls: IComponent<ISliderControlsProps> = ({
   );
 };
 
-export default SliderControls;
+export { SliderControls };

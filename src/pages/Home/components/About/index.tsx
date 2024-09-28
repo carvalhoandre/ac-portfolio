@@ -5,7 +5,7 @@ import Image from "@assets/photos/about.png";
 
 import Curriculum from "@assets/cv/CVAndreLeiteCarvalho.pdf";
 
-import SectionHeader from "@components/SectionHeader";
+import { SectionHeader } from "@components/index";
 import AboutItem from "./components/AboutItem";
 import "./styles.css";
 
@@ -70,4 +70,4 @@ const About: IComponent = ({ testId = "about" }) => {
   );
 };
 
-export default About;
+export { About };

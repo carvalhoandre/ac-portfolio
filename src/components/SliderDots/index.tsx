@@ -20,4 +20,4 @@ const SliderDots: IComponent<ISliderDotsProps> = ({
   );
 };
 
-export default SliderDots;
+export { SliderDots };

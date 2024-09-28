@@ -3,7 +3,7 @@ import { useState } from "react";
 import IComponent from "@/@types";
 import { ISkillListProps } from "./types";
 
-import Icon from "@components/Icon";
+import { Icon } from "@components/Icon";
 import SkillItem from "../Item";
 
 const SkillList: IComponent<ISkillListProps> = ({

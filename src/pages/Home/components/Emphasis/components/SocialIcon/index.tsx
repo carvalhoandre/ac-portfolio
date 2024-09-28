@@ -1,7 +1,7 @@
 import IComponent from "@/@types";
 import { ISocialIconProps } from "./types";
 
-import Icon from "@components/Icon";
+import { Icon } from "@components/Icon";
 
 const SocialIcon: IComponent<ISocialIconProps> = ({
   testId = "social-icon",

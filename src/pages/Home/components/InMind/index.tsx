@@ -3,7 +3,7 @@ import IComponent from "@/@types";
 import CardFrom from "@assets/card/front.svg";
 import CardBack from "@assets/card/back.svg";
 
-import Icon from "@components/Icon";
+import { Icon } from "@components/Icon";
 import "./styles.css";
 
 const InMind: IComponent = ({ testId = "in-mind" }) => {
@@ -17,12 +17,14 @@ const InMind: IComponent = ({ testId = "in-mind" }) => {
         <div className="project_container grid">
           <div className="project_data">
             <h2 className="project_title">Got a new project?</h2>
+
             <p className="project_description">
               Contact and enjoy a 15% discount on your first project
             </p>
+
             <a href="#contactme" className="button button--flex button--white">
               Get in Touch
-              <Icon icon="message" />
+              <Icon icon="message" className="project_icon button_icon" />
             </a>
           </div>
 
@@ -36,4 +38,4 @@ const InMind: IComponent = ({ testId = "in-mind" }) => {
   );
 };
 
-export default InMind;
+export { InMind };

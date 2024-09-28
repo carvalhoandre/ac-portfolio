@@ -8,7 +8,7 @@ import {
 
 const Home = lazy(() => import("@pages/Home"));
 
-import Loader from "@components/Loader";
+import { Loader } from "@components/Loader";
 
 const handleLoader = () => <Loader />;
 

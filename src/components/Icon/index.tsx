@@ -18,4 +18,4 @@ const Icon: IComponent<IIconProps> = ({
   );
 };
 
-export default Icon;
+export { Icon };

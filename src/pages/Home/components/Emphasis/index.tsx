@@ -1,26 +1,12 @@
 import IComponent from "@/@types";
-import { ISocialIconProps } from "./components/SocialIcon/types";
+
+import { socials } from "@utils/socials";
 
 import SocialIcon from "./components/SocialIcon";
 
 import Blob from "@assets/photos/perfil.png";
 
 import "./styles.css";
-
-const socials: Array<ISocialIconProps> = [
-  {
-    link: "https://www.linkedin.com/in/carvalhoandree",
-    icon: "linkedin-alt",
-  },
-  {
-    link: "https://github.com/carvalhoandre",
-    icon: "github-alt",
-  },
-  {
-    link: "https://dribbble.com/andre_carvalho",
-    icon: "dribbble",
-  },
-];
 
 const Emphasis: IComponent = ({ testId = "emphasis" }) => {
   return (
@@ -65,4 +51,4 @@ const Emphasis: IComponent = ({ testId = "emphasis" }) => {
   );
 };
 
-export default Emphasis;
+export { Emphasis };

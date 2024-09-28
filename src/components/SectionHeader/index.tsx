@@ -16,4 +16,4 @@ const SectionHeader: IComponent<ISectionHeaderProps> = ({
   );
 };
 
-export default SectionHeader;
+export { SectionHeader };

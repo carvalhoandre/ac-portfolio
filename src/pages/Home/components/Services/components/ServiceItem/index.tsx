@@ -3,7 +3,7 @@ import React from "react";
 import IComponent from "@/@types";
 import { IServiceItemProps } from "./types";
 
-import Icon from "@/components/Icon";
+import { Icon } from "@/components/Icon";
 
 const ServiceItem: IComponent<IServiceItemProps> = ({
   testId = "service",
@@ -29,7 +29,10 @@ const ServiceItem: IComponent<IServiceItemProps> = ({
         <Icon icon="arrow-right" className="button_icon" />
       </span>
 
-      <div className={`services_modal ${showMore ? "active-modal" : ""}`}>
+      <div
+        className={`services_modal ${showMore ? "active-modal" : ""}`}
+        onClick={() => setShowMore(false)}
+      >
         <div className="services_modal-content">
           <h4 className="services_modal-title">{title}</h4>
 

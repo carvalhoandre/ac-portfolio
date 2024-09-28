@@ -43,11 +43,12 @@
 }
 
 .testimonial_description {
-  margin-top: var(--mb-1-5);
-  margin-bottom: var(--mb-2-5);
   line-height: 1.5rem;
   font-size: var(--normal-font-size);
   color: var(--text-color);
+  text-align: justify;
+  max-width: 80%;
+  margin: var(--mb-1-5) auto var(--mb-2-5) auto;
 }
 
 .testimonial_icon-star {

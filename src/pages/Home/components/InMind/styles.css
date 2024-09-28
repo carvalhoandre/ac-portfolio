@@ -38,10 +38,10 @@
 }
 
 .button--white {
-  background-color: #fff;
-  color: var(--first-color);
+  background-color: #fff !important;
+  color: var(--first-color) !important;
 }
 
 .button--white:hover {
-  background-color: #fff;
+  background-color: #fff !important;
 }

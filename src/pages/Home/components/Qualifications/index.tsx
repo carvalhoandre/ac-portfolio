@@ -3,7 +3,7 @@ import { useState, useCallback } from "react";
 import IComponent from "@/@types";
 import { ISelected } from "./types";
 
-import SectionHeader from "@components/SectionHeader";
+import { SectionHeader } from "@components/index";
 import QualificationsHeader from "./components/Header";
 import QualificationsItem from "./components/Item";
 
@@ -77,4 +77,4 @@ const Qualifications: IComponent = ({ testId = "skills" }) => {
   );
 };
 
-export default Qualifications;
+export { Qualifications };
