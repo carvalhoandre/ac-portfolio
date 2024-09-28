@@ -27,10 +27,6 @@
   font-weight: var(--font-medium);
 }
 
-.nav_logo:hover {
-  color: var(--first-color);
-}
-
 .nav_toggle {
   font-size: 1.1em;
   cursor: pointer;
@@ -42,17 +38,15 @@
 
 .nav_list {
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   gap: 2em;
 }
 
 .nav_link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
-  width: max-content;
+  width: 80px;
 }
 
 .case {
@@ -102,7 +96,6 @@
 .nav_btns {
   display: flex;
   align-items: center;
-  margin-top: var(--mb-0-75);
 }
 
 .change-theme {
@@ -133,6 +126,7 @@
     transition: 0.3s;
     z-index: var(--z-fixed);
   }
+
   .nav_header {
     position: fixed;
     left: 0;

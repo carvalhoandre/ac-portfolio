@@ -1,0 +1,121 @@
+.portfolio_container {
+  position: relative;
+  overflow: initial;
+}
+
+.portfolio_data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio_content {
+  padding: 0 1.5em;
+}
+
+.portfolio_img {
+  width: 265px;
+  border-radius: 0.5em;
+  justify-self: center;
+}
+
+.portfolio_title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-5);
+  text-align: center;
+}
+
+.portfolio_description {
+  text-align: center;
+  margin-bottom: var(--mb-0-75);
+}
+
+.portfolio_button:hover .button_icon {
+  transform: translateX(0.25em);
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio_slide {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.portfolio_slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.slider_controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.prev_button,
+.next_button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.coming {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.coming_icon {
+  display: block;
+  font-size: 1.5em;
+  color: var(--first-color);
+  margin: var(--mb-0-25);
+  margin-bottom: var(--mb-0-75);
+}
+
+.arrow_icon {
+  display: block;
+  font-size: 1em;
+  color: var(--first-color);
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.coming_icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.dots_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active-dot {
+  background-color: var(--first-color);
+}
