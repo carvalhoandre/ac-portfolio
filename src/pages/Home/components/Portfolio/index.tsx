@@ -7,8 +7,10 @@ import Store from "@assets/portfolio/store.svg";
 import Countries from "@assets/portfolio/countries.svg";
 
 import SectionHeader from "@components/SectionHeader";
-import Icon from "@components/Icon";
+import SliderControls from "@components/SliderControls";
+
 import "./styles.css";
+import SliderDots from "@/components/SliderDots";
 
 const portfolioItems = [
   {
@@ -33,6 +35,8 @@ const portfolioItems = [
   },
 ];
 
+const TEN_SECONDS = 10000;
+
 const Portfolio: IComponent = ({ testId = "portfolio" }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -53,7 +57,7 @@ const Portfolio: IComponent = ({ testId = "portfolio" }) => {
       setCurrentSlide((prevSlide) =>
         prevSlide === portfolioItems.length - 1 ? 0 : prevSlide + 1
       );
-    }, 10000);
+    }, TEN_SECONDS);
 
     return () => clearInterval(interval);
   }, []);
@@ -103,44 +107,16 @@ const Portfolio: IComponent = ({ testId = "portfolio" }) => {
           ))}
         </div>
 
-        <div className="dots_container">
-          {portfolioItems.map((_, index) => (
-            <span
-              key={index}
-              className={`dot ${index === currentSlide ? "active-dot" : ""}`}
-              onClick={() => setCurrentSlide(index)}
-            />
-          ))}
-        </div>
+        <SliderDots
+          currentSlide={currentSlide}
+          itemsArray={portfolioItems}
+          setCurrentSlide={setCurrentSlide}
+        />
 
-        <div className="slider_controls">
-          <button
-            className="prev_button"
-            onClick={handlePrevSlide}
-            aria-label="Previous slide"
-          >
-            <Icon icon="angle-left" className="arrow_icon" />
-          </button>
-
-          <button
-            className="next_button"
-            onClick={handleNextSlide}
-            aria-label="Next slide"
-          >
-            <Icon icon="angle-right" className="arrow_icon" />
-          </button>
-        </div>
-
-        <div className="coming">
-          <p className="portfolio_description">
-            Coming soon apps demo on Play Store and App Store
-          </p>
-
-          <div className="coming_icons">
-            <Icon icon="google-play" className="coming_icon" />
-            <Icon icon="apple-alt" className="coming_icon" />
-          </div>
-        </div>
+        <SliderControls
+          handleNextSlide={handleNextSlide}
+          handlePrevSlide={handlePrevSlide}
+        />
       </div>
     </section>
   );

@@ -5,8 +5,10 @@ import { ITestimonial } from "./types";
 
 import Icon from "@components/Icon";
 import SectionHeader from "@components/SectionHeader";
+import SliderControls from "@components/SliderControls";
 
 import "./styles.css";
+import SliderDots from "@/components/SliderDots";
 
 const testimonials: Array<ITestimonial> = [
   {
@@ -24,6 +26,8 @@ const testimonials: Array<ITestimonial> = [
       "Working and sharing knowledge with André has always been very productive. He is dedicated to learning/teaching and implementing logical solutions for the business.",
   },
 ];
+
+const TEN_SECONDS = 10000;
 
 const Testimonial: IComponent = ({ testId = "testimonial" }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -45,7 +49,7 @@ const Testimonial: IComponent = ({ testId = "testimonial" }) => {
       setCurrentSlide((prevSlide) =>
         prevSlide === testimonials.length - 1 ? 0 : prevSlide + 1
       );
-    }, 10000); // Change every 10 seconds
+    }, TEN_SECONDS);
 
     return () => clearInterval(interval);
   }, []);
@@ -98,35 +102,16 @@ const Testimonial: IComponent = ({ testId = "testimonial" }) => {
           ))}
         </div>
 
-        <div className="dots_container">
-          {testimonials.map((_, index) => (
-            <span
-              key={index}
-              className={`dot ${index === currentSlide ? "active-dot" : ""}`}
-              onClick={() => setCurrentSlide(index)}
-              role="button"
-              aria-label={`Go to testimonial ${index + 1}`}
-            />
-          ))}
-        </div>
+        <SliderDots
+          itemsArray={testimonials}
+          currentSlide={currentSlide}
+          setCurrentSlide={setCurrentSlide}
+        />
 
-        <div className="slider_controls">
-          <button
-            className="prev_button"
-            onClick={handlePrevSlide}
-            aria-label="Previous slide"
-          >
-            <Icon icon="angle-left" className="arrow_icon" />
-          </button>
-
-          <button
-            className="next_button"
-            onClick={handleNextSlide}
-            aria-label="Next slide"
-          >
-            <Icon icon="angle-right" className="arrow_icon" />
-          </button>
-        </div>
+        <SliderControls
+          handleNextSlide={handleNextSlide}
+          handlePrevSlide={handlePrevSlide}
+        />
       </div>
     </section>
   );

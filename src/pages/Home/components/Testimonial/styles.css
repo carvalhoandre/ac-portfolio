@@ -1,7 +1,6 @@
 .testimonial_data,
 .testimonial_header {
   display: flex;
-  flex-direction: row;
 }
 
 .testimonial_data {
@@ -25,7 +24,6 @@
 .testimonial_slider_header {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   align-content: flex-start;
 }
 
