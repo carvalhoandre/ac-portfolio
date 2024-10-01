@@ -5,17 +5,19 @@
       "@/*": ["src/*"],
       "@types/*": ["src/@types/*"],
       "@assets/*": ["src/assets/*"],
-      "@config/*": ["src/config/*"],
       "@components/*": ["src/components/*"],
-      "@utils/*": ["src/utils/*"],
+      "@config/*": ["src/config/*"],
+      "@helper/*": ["src/helper/*"],
       "@pages/*": ["src/pages/*"],
-      "@helper/*": ["src/helper/*"]
+      "@routes/*": ["src/routes/*"],
+      "@utils/*": ["src/utils/*"]
     },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "jsx": "react-jsx",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "types": ["node"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules", "dist"]

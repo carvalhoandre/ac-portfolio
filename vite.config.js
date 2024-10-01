@@ -1,18 +1,33 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
+import react from "@vitejs/plugin-react-swc";
+import * as path from "path";
 export default defineConfig({
     plugins: [react()],
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "src"),
+            "@types": path.resolve(__dirname, "src/types"),
             "@assets": path.resolve(__dirname, "src/assets"),
-            "@config": path.resolve(__dirname, "src/config"),
-            "@pages": path.resolve(__dirname, "src/pages"),
             "@components": path.resolve(__dirname, "src/components"),
-            "@utils": path.resolve(__dirname, "src/utils"),
-            "@types": path.resolve(__dirname, "src/@types"),
+            "@config": path.resolve(__dirname, "src/config"),
             "@helper": path.resolve(__dirname, "src/helper"),
+            "@pages": path.resolve(__dirname, "src/pages"),
+            "@routes": path.resolve(__dirname, "src/routes"),
+            "@utils": path.resolve(__dirname, "src/utils"),
         },
+    },
+    build: {
+        chunkSizeWarningLimit: 2000,
+    },
+    server: {
+        host: true,
+        port: 8080,
+    },
+    preview: {
+        host: true,
+        port: 8080,
+    },
+    optimizeDeps: {
+        exclude: ["@typescript-eslint/eslint-plugin", "@typescript-eslint/parser"],
     },
 });
