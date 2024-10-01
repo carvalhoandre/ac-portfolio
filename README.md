@@ -3,6 +3,7 @@
 **PortfolioAC** is a web and mobile developer's portfolio showcasing expertise in web development, technologies, and UI/UX design. The portfolio is built with React.js and includes various features and functionalities.
 
 ## Live Demo
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4773c3ae-732c-4012-a7c0-9baa3b5fd413/deploy-status)](https://app.netlify.com/sites/andrelcarvalho/deploys)
 
 Check out the live: [AC Portfolio](http://andrelcarvalho.netlify.app/)
 
