@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import IComponent from "@/@types";
 import { isDarkTheme, setTheme } from "@utils/theme";
 
-import { Header } from "@components/Header";
-import { Footer } from "@components/Footer";
+import { Header, Footer } from "@components/index";
 
 import {
   About,

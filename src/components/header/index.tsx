@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import { IHeaderProps } from "./types";
-
 import { navItems } from "@utils/navItems";
 
 import LogoWhite from "@assets/logo/white.svg";
@@ -13,6 +11,11 @@ import { Icon } from "@components/Icon";
 import NavItem from "@components/Header/components/NavItem";
 
 import "./styles.css";
+
+type IHeaderProps = {
+  isDarkMode: boolean;
+  toggleTheme: () => void;
+};
 
 const Header: IComponent<IHeaderProps> = ({
   testId = "header",
