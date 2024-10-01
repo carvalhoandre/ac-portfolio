@@ -72,6 +72,10 @@
   .testimonial_description {
     text-align: center;
   }
+  .contact_container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* for medium devices */
@@ -252,6 +256,10 @@
   .project_description {
     max-width: 200px;
   }
+  .contact_container {
+    flex-direction: row;
+    align-items: center;
+  }
   .footer_container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -313,5 +321,9 @@
   }
   .contact_inputs {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .contact_container {
+    flex-direction: row;
+    align-items: center;
   }
 }

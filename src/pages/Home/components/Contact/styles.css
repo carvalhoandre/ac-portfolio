@@ -1,7 +1,6 @@
 .contact_container {
   display: flex;
   gap: var(--mb-3);
-  align-items: center;
   justify-content: center;
 }
 
