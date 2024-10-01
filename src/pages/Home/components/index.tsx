@@ -1,9 +1,0 @@
-export { About } from "./About";
-export { Contact } from "./Contact";
-export { InMind } from "./InMind";
-export { Skills } from "./Skills";
-export { Emphasis } from "./Emphasis";
-export { Services } from "./Services";
-export { Qualifications } from "./Qualifications";
-export { Portfolio } from "./Portfolio";
-export { Testimonial } from "./Testimonial";
