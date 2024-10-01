@@ -1,50 +1,71 @@
-# React + TypeScript + Vite
+# AC Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**PortfolioAC** is a web and mobile developer's portfolio showcasing expertise in web development, technologies, and UI/UX design. The portfolio is built with React.js and includes various features and functionalities.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live: [AC Portfolio](http://andrelcarvalho.netlify.app/)
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React.js
+- React Router DOM
+- Yup
+- React Spinners
+- React Toastify
+- Swiper
+- Normalize.css
+- Web Vitals
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+To get a local copy of the project up and running, follow these simple steps:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Clone the repository:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   ```bash
+   git clone https://github.com/your-username/portfolioac.git
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. Navigate to the project directory:
+
+   ```bash
+   cd portfolioac
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the portfolio.
+
+## Usage
+
+Explore the different sections of the portfolio:
+
+- **Home:** Introduction and brief overview.
+- **About:** Detailed information about the developer.
+- **Skills:** Overview of technical skills and qualifications.
+- **Services:** Description of services offered.
+- **Portfolio:** Showcase of recent projects.
+- **Get in Touch:** Contact information and form to reach out.
+
+## Contributing
+
+Contributions are welcome! Feel free to submit pull requests or open issues for any improvements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+Special thanks to [Netlify](https://www.netlify.com/) for hosting the live demo.
