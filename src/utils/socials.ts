@@ -10,7 +10,7 @@ export const socials: Array<ISocialIconProps> = [
     icon: "github-alt",
   },
   {
-    link: "https://dribbble.com/andre_carvalho",
+    link: "https://dribbble.com/carvalhoandre",
     icon: "dribbble",
   },
 ];
