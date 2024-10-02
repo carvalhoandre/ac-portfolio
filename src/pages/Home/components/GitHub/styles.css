@@ -1,0 +1,24 @@
+.github-profile img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.repo-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.github-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.github-section h3 {
+  margin-bottom: 10px;
+}
+
+.github-section ul {
+  list-style-type: none;
+  padding: 0;
+}

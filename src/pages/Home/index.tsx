@@ -17,6 +17,7 @@ import {
   Portfolio,
   Testimonial,
 } from "./components";
+import { GitHub } from "./components/GitHub";
 
 const Home: IComponent = ({ testId = "home" }) => {
   const [isDarkMode, setIsDarkMode] = useState(isDarkTheme());
@@ -31,7 +32,7 @@ const Home: IComponent = ({ testId = "home" }) => {
 
   return (
     <>
-      <body className={isDarkMode ? "dark-theme" : ""} data-testid={testId}>
+      <div className={isDarkMode ? "dark-theme" : ""} data-testid={testId}>
         <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
 
         <Emphasis />
@@ -48,10 +49,12 @@ const Home: IComponent = ({ testId = "home" }) => {
 
         <Portfolio />
 
+        <GitHub />
+
         <Testimonial />
 
         <Contact />
-      </body>
+      </div>
       <Footer />
     </>
   );
