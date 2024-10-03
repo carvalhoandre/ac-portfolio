@@ -8,26 +8,21 @@ export const navItems: Array<INavITemProps> = [
   {
     href: "about",
     icon: "user",
-    name: "About me",
   },
   {
     href: "skills",
     icon: "file-alt",
-    name: "Skills",
   },
   {
     href: "services",
     icon: "bag",
-    name: "Services",
   },
   {
     href: "portfolio",
     icon: "scenery",
-    name: "Portfolio",
   },
   {
     href: "contactme",
     icon: "message",
-    name: "Get in Touch",
   },
 ];

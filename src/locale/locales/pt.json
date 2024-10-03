@@ -1,0 +1,29 @@
+{
+  "navbar": {
+    "home": "Início",
+    "about": "Sobre",
+    "contactme": "Contato",
+    "skills": "Habilidades",
+    "services": "Services",
+    "portfolio": "Projetos"
+  },
+  "header": {
+    "welcome": "Bem-vindo ao Meu Portfólio",
+    "description": "Sou um desenvolvedor especializado em criar experiências digitais excepcionais."
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Sou um desenvolvedor web apaixonado com experiência em várias tecnologias frontend e backend."
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "description": "Aqui estão alguns dos projetos em que trabalhei."
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "description": "Sinta-se à vontade para entrar em contato para colaborações ou apenas um bate-papo amigável."
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  }
+}

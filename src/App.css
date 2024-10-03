@@ -158,13 +158,9 @@
     margin-right: 30em;
   }
   .nav_logo {
-    margin-top: 1em;
+    margin-top: var(--mb-0-5);
     position: absolute;
-    left: 2%;
-  }
-  .change-theme {
-    margin: 0;
-    margin-top: 0.5em;
+    left: 4%;
   }
   .header,
   .main,
@@ -295,10 +291,6 @@
   .nav_menu {
     margin-left: auto;
     margin-right: 35em;
-  }
-  .change-theme {
-    margin-top: 5px;
-    right: 1%;
   }
   .swiper-portifolio-icon {
     font-size: 3.5em !important;

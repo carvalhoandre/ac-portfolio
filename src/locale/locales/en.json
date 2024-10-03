@@ -1,0 +1,29 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contactme": "Contact"
+  },
+  "header": {
+    "welcome": "Welcome to My Portfolio",
+    "description": "I am a developer specializing in building exceptional digital experiences."
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I am a passionate web developer with experience in various frontend and backend technologies."
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Here are some of the projects I have worked on."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Feel free to reach out for collaborations or just a friendly chat."
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import { navItems } from "@utils/navItems";
+import { getLanguage, setLanguage } from "@utils/language";
 
 import LogoWhite from "@assets/logo/white.svg";
 import LogoBlack from "@assets/logo/black.svg";
@@ -22,7 +24,22 @@ const Header: IComponent<IHeaderProps> = ({
   isDarkMode,
   toggleTheme,
 }) => {
+  const { i18n, t } = useTranslation();
+
+  const lng = getLanguage() || "en";
+
   const [isNavVisible, setIsNavVisible] = useState(false);
+
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+    i18n.changeLanguage(lang);
+  };
+
+  const navMenuItems = useMemo(() => {
+    return navItems.map(({ href, icon }, key) => (
+      <NavItem href={href} icon={icon} name={t(`navbar.${href}`)} key={key} />
+    ));
+  }, [t]);
 
   return (
     <header className="header" id="header" data-testid={testId}>
@@ -31,11 +48,7 @@ const Header: IComponent<IHeaderProps> = ({
           className={`nav_menu ${isNavVisible ? "show-menu" : "close-menu"}`}
           id="nav-menu"
         >
-          <ul className="nav_list grid">
-            {navItems.map(({ href, icon, name }, key) => (
-              <NavItem href={href} icon={icon} name={name} key={key} />
-            ))}
-          </ul>
+          <ul className="nav_list grid">{navMenuItems}</ul>
 
           <div>
             <Icon
@@ -59,6 +72,15 @@ const Header: IComponent<IHeaderProps> = ({
           </a>
 
           <div className="nav_btns">
+            <select
+              value={lng}
+              onChange={(e) => changeLanguage(e.target.value)}
+              className="language-selector"
+            >
+              <option value="en">English</option>
+              <option value="pt">Português</option>
+            </select>
+
             <Icon
               className="change-theme"
               icon={isDarkMode ? "sun" : "moon"}
