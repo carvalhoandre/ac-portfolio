@@ -14,7 +14,15 @@
   },
   "about": {
     "title": "About Me",
-    "description": "I am a passionate web developer with experience in various frontend and backend technologies."
+    "subTitle": "My introduction",
+    "description": " Web and Mobile Developer specializing in modern web technologies and UI/UX design. I am communicative and interested, new challenges move me.",
+    "download": "Download My CV",
+    "years": "years",
+    "experience": "Experience",
+    "completed": "Completed",
+    "projects": "Projects",
+    "companies": "Companies",
+    "worked": "Worked"
   },
   "projects": {
     "title": "My Projects",

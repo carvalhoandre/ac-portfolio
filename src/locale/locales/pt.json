@@ -14,8 +14,15 @@
   },
   "about": {
     "title": "Sobre Mim",
-    "subTitle": "",
-    "description": "Sou um desenvolvedor web apaixonado com experiência em várias tecnologias frontend e backend."
+    "subTitle": "Minha introdução",
+    "description": "Desenvolvedor Web e Mobile especializado em tecnologias web modernas e design UI/UX. Sou comunicativo e interessado, novos desafios me movem.",
+    "download": "Baixar meu CV",
+    "years": "Anos",
+    "experience": "Experiência",
+    "completed": "Completado",
+    "projects": "Projetos",
+    "companies": "Empresas",
+    "worked": "Trabalhado"
   },
   "projects": {
     "title": "Meus Projetos",
