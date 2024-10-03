@@ -4,15 +4,17 @@
     "about": "Sobre",
     "contactme": "Contato",
     "skills": "Habilidades",
-    "services": "Services",
+    "services": "Serviços",
     "portfolio": "Projetos"
   },
-  "header": {
-    "welcome": "Bem-vindo ao Meu Portfólio",
-    "description": "Sou um desenvolvedor especializado em criar experiências digitais excepcionais."
+  "emphasis": {
+    "welcome": "Olá! Sou o André",
+    "developer": "Desenvolvedor Front End",
+    "description": "Comprometidos em entregar trabalho de alta qualidade de forma consistente."
   },
   "about": {
     "title": "Sobre Mim",
+    "subTitle": "",
     "description": "Sou um desenvolvedor web apaixonado com experiência em várias tecnologias frontend e backend."
   },
   "projects": {

@@ -14,6 +14,7 @@ const NavItem: IComponent<INavITemProps> = ({
     <a href={`#${href}`} className="nav_link" data-testid={testId}>
       <div className="nav_icon_container">
         <Icon icon={icon} className="nav_icon" />
+
         <p className="icon_title">{name || href}</p>
       </div>
     </a>

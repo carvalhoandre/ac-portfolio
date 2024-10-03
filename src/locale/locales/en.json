@@ -7,9 +7,10 @@
     "portfolio": "Portfolio",
     "contactme": "Contact"
   },
-  "header": {
-    "welcome": "Welcome to My Portfolio",
-    "description": "I am a developer specializing in building exceptional digital experiences."
+  "emphasis": {
+    "welcome": "Hi there! I'm André",
+    "developer": "Front-End Developer",
+    "description": "Committed to delivering high-quality work consistently."
   },
   "about": {
     "title": "About Me",
