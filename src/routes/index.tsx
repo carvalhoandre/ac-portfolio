@@ -8,6 +8,7 @@ import {
 
 const Home = lazy(() => import("@pages/Home"));
 
+import { Lazy } from "@components/Lazy";
 import { Loader } from "@components/Loader";
 
 const handleLoader = () => <Loader />;
@@ -17,7 +18,7 @@ const Routes = () => {
     <BrowserRouter>
       <Suspense fallback={handleLoader()}>
         <BrowserRouterRoutes>
-          <Route index path="*" element={<Home />} />
+          <Route index path="*" element={<Lazy component={Home} />} />
         </BrowserRouterRoutes>
       </Suspense>
     </BrowserRouter>
