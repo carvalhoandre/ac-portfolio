@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import IComponent from "@/@types";
 
-import usePortfolios from "./portfolio";
+import usePortfolios from "./hook";
 
 import { SectionHeader, SliderDots, SliderControls } from "@components/index";
 import "./styles.css";

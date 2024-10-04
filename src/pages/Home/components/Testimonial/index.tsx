@@ -1,31 +1,19 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import IComponent from "@/@types";
-import { ITestimonial } from "./types";
+
+import useTestimonial from "./hook";
 
 import { SliderDots, SliderControls, SectionHeader } from "@components/index";
 import "./styles.css";
 
-const testimonials: Array<ITestimonial> = [
-  {
-    name: "Ian Charlesson Gomes Santana",
-    client:
-      "Senior Test Analyst - Was working with me on the same team at Hyperlocal.",
-    description:
-      "On August 10, 2023, Ian Charlesson was working with André on the same team. It's a pleasure to work with and recommend André Leite, a developer with immense potential in Front-End and Mobile. In the moments we worked together, he demonstrated a remarkable passion for learning and growing in the field...",
-  },
-  {
-    name: "Bruno Elias de Souza",
-    client:
-      "Software Developer - Was working with me on the same team at Hyperlocal.",
-    description:
-      "Working and sharing knowledge with André has always been very productive. He is dedicated to learning/teaching and implementing logical solutions for the business.",
-  },
-];
-
 const TEN_SECONDS = 10000;
 
 const Testimonial: IComponent = ({ testId = "testimonial" }) => {
+  const { t } = useTranslation();
+  const { testimonials } = useTestimonial();
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handlePrevSlide = () => {
@@ -56,7 +44,7 @@ const Testimonial: IComponent = ({ testId = "testimonial" }) => {
       data-testid={testId}
       aria-labelledby="testimonial"
     >
-      <SectionHeader title="Testimonial" />
+      <SectionHeader title={t("testimonial.title")} />
 
       <div className="testimonial_container container">
         <div className="slider" aria-live="polite">

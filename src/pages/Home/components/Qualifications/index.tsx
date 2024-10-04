@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import IComponent from "@/@types";
 import { ISelected } from "./types";
 
-import useQualifications from "./qualifications";
+import useQualifications from "./hook";
 
 import { SectionHeader } from "@components/index";
 import QualificationsHeader from "./components/Header";

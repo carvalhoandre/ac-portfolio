@@ -8,14 +8,14 @@
     "portfolio": "Projetos"
   },
   "emphasis": {
-    "welcome": "Olá! Sou o André",
+    "welcome": "André Carvalho",
     "developer": "Front End",
     "designer": "Designer",
-    "description": "Comprometido em entregar trabalho de alta qualidade de forma consistente."
+    "description": "Comprometido em entregar trabalho de qualidade de forma consistente."
   },
   "qualification": {
     "title": "Qualificação",
-    "subTitle": "Minha jornada",
+    "subTitle": "Jornada",
     "education": "Educação",
     "work": "Trabalho",
     "english": "Inglês",
@@ -33,7 +33,7 @@
   },
   "about": {
     "title": "Sobre Mim",
-    "subTitle": "Minha introdução",
+    "subTitle": "Introdução",
     "description": "Desenvolvedor Web e Mobile especializado em tecnologias web modernas e design UI/UX. Sou comunicativo e interessado, novos desafios me movem.",
     "download": "Baixar meu CV",
     "years": "Anos",
@@ -66,6 +66,13 @@
     "bikcraft": "Uma equipe apaixonada cria bicicletas exclusivas para experiências excepcionais.",
     "countries": "Consultar e apresentar informações sobre países usando a API RestCountries.",
     "go": "Ir!"
+  },
+  "testimonial": {
+    "title": "Depoimentos",
+    "firstClient": "Analista de testes sênior - Estava trabalhando comigo na mesma equipe na Hyperlocal.",
+    "firstDescription": "É um prazer trabalhar e recomendar André Leite, um desenvolvedor com imenso potencial em Front-End e Mobile. Nos momentos em que trabalhamos juntos, ele demonstrou uma paixão notável por aprender e crescer na área...",
+    "secondClient": "Desenvolvedor de software - Estava trabalhando comigo na mesma equipe na Hyperlocal.",
+    "secondDescription": "Trabalhar e compartilhar conhecimento com André sempre foi muito produtivo. Ele se dedica a aprender/ensinar e implementar soluções lógicas para o negócio."
   },
   "contact": {
     "title": "Entrar em Contato",

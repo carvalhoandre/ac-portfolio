@@ -17,7 +17,10 @@ const Services: IComponent = ({ testId = "services" }) => {
       aria-labelledby="label-services"
       data-testid={testId}
     >
-      <SectionHeader title="Services" subTitle="What i offer" />
+      <SectionHeader
+        title={t("services.title")}
+        subTitle={t("services.subTitle")}
+      />
 
       <ul className="services_container container grid">
         <ServiceItem
