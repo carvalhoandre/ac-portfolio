@@ -59,9 +59,13 @@
     "web": "Páginas WEB responsivas",
     "frontend": "Desenvolvedor FrontEnd"
   },
-  "projects": {
-    "title": "Meus Projetos",
-    "description": "Aqui estão alguns dos projetos em que trabalhei."
+  "portfolio": {
+    "title": "Portfólio",
+    "subTitle": "Meus trabalhos recentes",
+    "store": "Descubra relógios modernos que combinam estilo e funcionalidade.",
+    "bikcraft": "Uma equipe apaixonada cria bicicletas exclusivas para experiências excepcionais.",
+    "countries": "Consultar e apresentar informações sobre países usando a API RestCountries.",
+    "go": "Ir!"
   },
   "contact": {
     "title": "Entrar em Contato",

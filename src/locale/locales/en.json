@@ -59,9 +59,12 @@
     "subTitle": "Contact me now",
     "contact": "Get in Touch"
   },
-  "projects": {
-    "title": "My Projects",
-    "description": "Here are some of the projects I have worked on."
+  "portfolio": {
+    "title": "Portfolio",
+    "subTitle": "Most recent work",
+    "store": "Discover modern watches blending style and function.",
+    "bikcraft": "Passionate team crafting unique bicycles for exceptional experiences.",
+    "countries": "Querying and presenting information about countries using the RestCountries API."
   },
   "contact": {
     "title": "Get in Touch",

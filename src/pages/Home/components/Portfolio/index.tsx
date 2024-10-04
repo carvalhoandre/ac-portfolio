@@ -2,39 +2,19 @@ import { useEffect, useState } from "react";
 
 import IComponent from "@/@types";
 
-import Bikcraft from "@assets/portfolio/bikcraft.svg";
-import Store from "@assets/portfolio/store.svg";
-import Countries from "@assets/portfolio/countries.svg";
+import usePortfolios from "./portfolio";
 
 import { SectionHeader, SliderDots, SliderControls } from "@components/index";
 import "./styles.css";
-
-const portfolioItems = [
-  {
-    image: Store,
-    title: "ac Store",
-    description: "Discover modern watches blending style and function.",
-    link: "https://acstore.netlify.app/",
-  },
-  {
-    image: Bikcraft,
-    title: "ac Bikcraft",
-    description:
-      "Passionate team crafting unique bicycles for exceptional experiences.",
-    link: "https://acbikcraft.netlify.app/",
-  },
-  {
-    image: Countries,
-    title: "ac Countries",
-    description:
-      "Querying and presenting information about countries using the RestCountries API.",
-    link: "https://accountries.netlify.app/",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const TEN_SECONDS = 10000;
 
 const Portfolio: IComponent = ({ testId = "portfolio" }) => {
+  const { t } = useTranslation();
+
+  const { portfolioItems } = usePortfolios();
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handlePrevSlide = () => {
@@ -57,7 +37,7 @@ const Portfolio: IComponent = ({ testId = "portfolio" }) => {
     }, TEN_SECONDS);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [portfolioItems.length]);
 
   return (
     <section
@@ -66,7 +46,10 @@ const Portfolio: IComponent = ({ testId = "portfolio" }) => {
       aria-labelledby="label-portfolio"
       data-testid={testId}
     >
-      <SectionHeader title="Portfolio" subTitle="Most recent work" />
+      <SectionHeader
+        title={t("portfolio.title")}
+        subTitle={t("portfolio.subTitle")}
+      />
 
       <div className="portfolio_container container">
         <div className="slider">
@@ -95,7 +78,7 @@ const Portfolio: IComponent = ({ testId = "portfolio" }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Go!
+                    {t("portfolio.go")}
                     <i className="uil uil-arrow-right button_icon" />
                   </a>
                 </div>
