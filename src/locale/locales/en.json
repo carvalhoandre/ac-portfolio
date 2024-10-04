@@ -30,6 +30,17 @@
     "subTitle": "My technical level",
     "time": "More than 3 years"
   },
+  "services": {
+    "title": "Services",
+    "subTitle": "What i offer",
+    "viewMore": "View More",
+    "designs": "Creating Designs.",
+    "interface": "I develop the user interface.",
+    "elements": "I create ux element interactions.",
+    "apps": "Apps for Android and IOS",
+    "web": "Web page development",
+    "frontend": "FrontEnd Developer"
+  },
   "qualification": {
     "title": "Qualification",
     "subTitle": "My personal journey",

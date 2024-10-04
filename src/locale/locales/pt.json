@@ -48,6 +48,17 @@
     "subTitle": "Meu nível técnico",
     "time": "Mais de 3 anos"
   },
+  "services": {
+    "title": "Serviços",
+    "subTitle": "O que posso oferecer",
+    "viewMore": "Ver Mais",
+    "designs": "Criação de designs",
+    "interface": "Desenvolvimento de interfaces",
+    "elements": "Criação de elemntos UX interativos",
+    "apps": "Aplicativos para Android e IOS",
+    "web": "Páginas WEB responsivas",
+    "frontend": "Desenvolvedor FrontEnd"
+  },
   "projects": {
     "title": "Meus Projetos",
     "description": "Aqui estão alguns dos projetos em que trabalhei."

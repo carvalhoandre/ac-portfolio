@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import IComponent from "@/@types";
 import { IServiceItemProps } from "./types";
@@ -11,6 +12,8 @@ const ServiceItem: IComponent<IServiceItemProps> = ({
   items,
   icon,
 }) => {
+  const { t } = useTranslation();
+
   const [showMore, setShowMore] = React.useState(false);
 
   return (
@@ -25,14 +28,11 @@ const ServiceItem: IComponent<IServiceItemProps> = ({
         className="button button--flex button--small button--link services_button"
         onClick={() => setShowMore(true)}
       >
-        View More
+        {t("services.viewMore")}
         <Icon icon="arrow-right" className="button_icon" />
       </span>
 
-      <div
-        className={`services_modal ${showMore ? "active-modal" : ""}`}
-        onClick={() => setShowMore(false)}
-      >
+      <div className={`services_modal ${showMore ? "active-modal" : ""}`}>
         <div className="services_modal-content">
           <h4 className="services_modal-title">{title}</h4>
 

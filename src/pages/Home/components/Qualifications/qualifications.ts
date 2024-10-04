@@ -30,7 +30,7 @@ const useQualifications = (): IUseQualifications => {
     {
       date: "2021",
       subtitle: "Udemy - André Bernardes",
-      title: "Interface design",
+      title: "Ui/Ux Designer",
     },
     {
       date: "2021",
