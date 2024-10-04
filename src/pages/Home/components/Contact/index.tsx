@@ -31,7 +31,7 @@ const Contact: IComponent = ({ testId = "contact" }) => {
                 rel="external"
                 className="contact_email"
               >
-                cavalho.devel@gmail.com
+                carvalho.devel@gmail.com
               </a>
             </span>
           </div>
