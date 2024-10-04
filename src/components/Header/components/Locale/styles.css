@@ -12,6 +12,7 @@
 
 .language_item,
 .language_title {
+  color: var(--title-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
   cursor: pointer;
@@ -21,7 +22,7 @@
 }
 
 .language_item {
-  padding: 0.3rem 0.5rem;
+  padding: 0 0.3rem;
 }
 
 .language_item:hover {

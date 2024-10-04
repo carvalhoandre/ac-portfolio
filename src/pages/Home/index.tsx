@@ -31,7 +31,10 @@ const Home: IComponent = ({ testId = "home" }) => {
 
   return (
     <>
-      <div className={isDarkMode ? "dark-theme" : ""} data-testid={testId}>
+      <div
+        className={`page ${isDarkMode ? "dark-theme" : ""}`}
+        data-testid={testId}
+      >
         <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
 
         <Emphasis />
