@@ -11,7 +11,7 @@
     "welcome": "Olá! Sou o André",
     "developer": "Front End",
     "designer": "Designer",
-    "description": "Comprometidos em entregar trabalho de alta qualidade de forma consistente."
+    "description": "Comprometido em entregar trabalho de alta qualidade de forma consistente."
   },
   "qualification": {
     "title": "Qualificação",
@@ -25,6 +25,11 @@
     "apr": "Abr",
     "aug": "Ago",
     "internship": "Estágio"
+  },
+  "inMind": {
+    "title": "Tem algum projeto?",
+    "subTitle": "Entre em contato agora",
+    "contact": "Entrar em contado"
   },
   "about": {
     "title": "Sobre Mim",
@@ -48,7 +53,7 @@
     "description": "Aqui estão alguns dos projetos em que trabalhei."
   },
   "contact": {
-    "title": "Entre em Contato",
+    "title": "Entrar em Contato",
     "description": "Sinta-se à vontade para entrar em contato para colaborações ou apenas um bate-papo amigável."
   },
   "footer": {

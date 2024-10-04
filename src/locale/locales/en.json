@@ -43,6 +43,11 @@
     "aug": "Aug",
     "internship": "Internship"
   },
+  "inMind": {
+    "title": "Got a project?",
+    "subTitle": "Contact me now",
+    "contact": "Get in Touch"
+  },
   "projects": {
     "title": "My Projects",
     "description": "Here are some of the projects I have worked on."

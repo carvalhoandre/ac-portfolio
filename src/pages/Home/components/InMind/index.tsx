@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import IComponent from "@/@types";
 
 import CardFrom from "@assets/card/front.svg";
@@ -7,6 +9,8 @@ import { Icon } from "@components/Icon";
 import "./styles.css";
 
 const InMind: IComponent = ({ testId = "in-mind" }) => {
+  const { t } = useTranslation();
+
   return (
     <section
       className="project section"
@@ -16,14 +20,12 @@ const InMind: IComponent = ({ testId = "in-mind" }) => {
       <div className="project_bg">
         <div className="project_container grid">
           <div className="project_data">
-            <h2 className="project_title">Got a new project?</h2>
+            <h2 className="project_title">{t("inMind.title")}</h2>
 
-            <p className="project_description">
-              Contact and enjoy a 15% discount on your first project
-            </p>
+            <p className="project_description">{t("inMind.subTitle")}</p>
 
             <a href="#contactme" className="button button--flex button--white">
-              Get in Touch
+              {t("inMind.contact")}
               <Icon icon="message" className="project_icon button_icon" />
             </a>
           </div>
