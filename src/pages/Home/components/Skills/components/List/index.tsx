@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { useState } from "react";
 
 import IComponent from "@/@types";
@@ -13,6 +15,8 @@ const SkillList: IComponent<ISkillListProps> = ({
   icon,
   items,
 }) => {
+  const { t } = useTranslation();
+
   const [isOpen, setOpen] = useState(false);
 
   const toggleOpen = () => {
@@ -28,8 +32,8 @@ const SkillList: IComponent<ISkillListProps> = ({
           <Icon icon={icon} className="skills_icon" />
 
           <div>
-            <h3 className="skills_title">{title}</h3>
-            {!!subTitle && <h4 className="skills_subtitle">{subTitle}</h4>}
+            <h3 className="skills_title">{t(title)}</h3>
+            {!!subTitle && <h4 className="skills_subtitle">{t(subTitle)}</h4>}
           </div>
 
           <i className="uil uil-angle-down skills_arrow" />

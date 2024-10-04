@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import IComponent from "@/@types";
 
 import { Icon } from "@components/Icon";
@@ -6,6 +7,8 @@ import { SectionHeader } from "@components/index";
 import "./styles.css";
 
 const Contact: IComponent = ({ testId = "contact" }) => {
+  const { t } = useTranslation();
+
   return (
     <section
       className="contact section"
@@ -13,7 +16,7 @@ const Contact: IComponent = ({ testId = "contact" }) => {
       aria-labelledby="label-contact"
       data-testid={testId}
     >
-      <SectionHeader title="Get in Touch" />
+      <SectionHeader title={t("contact.title")} />
 
       <ul className="contact_container container">
         <li className="contact_information">
@@ -28,7 +31,7 @@ const Contact: IComponent = ({ testId = "contact" }) => {
                 rel="external"
                 className="contact_email"
               >
-                cavalho.devel@gmail.com
+                carvalho.devel@gmail.com
               </a>
             </span>
           </div>
@@ -38,8 +41,8 @@ const Contact: IComponent = ({ testId = "contact" }) => {
           <Icon icon="map-marker" className="contact_icon" />
 
           <div>
-            <h3 className="contact_title">Location</h3>
-            <span className="contact_subtitle">Brazil - São Paulo</span>
+            <h3 className="contact_title">{t("contact.location")}</h3>
+            <span className="contact_subtitle">{t("contact.city")}</span>
           </div>
         </li>
       </ul>

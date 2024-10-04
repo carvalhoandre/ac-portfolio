@@ -1,0 +1,86 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contactme": "Contact",
+    "language": "Language"
+  },
+  "emphasis": {
+    "welcome": "Hi there! I'm André",
+    "developer": "Front End",
+    "designer": "Designer",
+    "description": "Committed to delivering high-quality work consistently."
+  },
+  "about": {
+    "title": "About Me",
+    "subTitle": "My introduction",
+    "description": " Web and Mobile Developer specializing in modern web technologies and UI/UX design. I am communicative and interested, new challenges move me.",
+    "download": "Download My CV",
+    "years": "years",
+    "experience": "Experience",
+    "completed": "Completed",
+    "projects": "Projects",
+    "companies": "Companies",
+    "worked": "Worked"
+  },
+  "skills": {
+    "title": "Skills",
+    "subTitle": "My technical level",
+    "time": "More than 3 years"
+  },
+  "services": {
+    "title": "Services",
+    "subTitle": "What i offer",
+    "viewMore": "View More",
+    "designs": "Creating Designs.",
+    "interface": "I develop the user interface.",
+    "elements": "I create ux element interactions.",
+    "apps": "Apps for Android and IOS",
+    "web": "Web page development",
+    "frontend": "FrontEnd Developer"
+  },
+  "qualification": {
+    "title": "Qualification",
+    "subTitle": "My personal journey",
+    "education": "Education",
+    "work": "Work",
+    "english": "English",
+    "frontend": "Front End Developer",
+    "science": "Computer Science",
+    "current": "Current",
+    "apr": "Apr",
+    "aug": "Aug",
+    "internship": "Internship"
+  },
+  "inMind": {
+    "title": "Got a project?",
+    "subTitle": "Contact me now",
+    "contact": "Get in Touch"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subTitle": "Most recent work",
+    "store": "Discover modern watches blending style and function.",
+    "bikcraft": "Passionate team crafting unique bicycles for exceptional experiences.",
+    "countries": "Querying and presenting information about countries using the RestCountries API.",
+    "go": "Go!"
+  },
+  "testimonial": {
+    "title": "Testimonial",
+    "firstClient": "Senior Test Analyst - Was working with me on the same team at Hyperlocal.",
+    "firstDescription": "On August 10, 2023, Ian Charlesson was working with André on the same team. It's a pleasure to work with and recommend André Leite, a developer with immense potential in Front-End and Mobile. In the moments we worked together, he demonstrated a remarkable passion for learning and growing in the field...",
+    "secondClient": "Software Developer - Was working with me on the same team at Hyperlocal.",
+    "secondDescription": "Working and sharing knowledge with André has always been very productive. He is dedicated to learning/teaching and implementing logical solutions for the business."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "location": "Location",
+    "city": "Brazil - São Paulo"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

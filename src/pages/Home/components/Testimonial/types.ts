@@ -3,3 +3,7 @@ export interface ITestimonial {
   client: string;
   description: string;
 }
+
+export interface IUseTestimonial {
+  testimonials: Array<ITestimonial>;
+}

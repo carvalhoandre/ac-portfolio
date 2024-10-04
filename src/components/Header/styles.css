@@ -86,7 +86,6 @@
 .close-menu {
   bottom: -1000px;
   width: 0px;
-  height: 0px;
 }
 
 .active-link {
@@ -96,12 +95,12 @@
 .nav_btns {
   display: flex;
   align-items: center;
+  gap: var(--mb-2);
 }
 
 .change-theme {
   font-size: 1.25em;
   color: var(--title-color);
-  margin-right: var(--mb-1);
   cursor: pointer;
 }
 

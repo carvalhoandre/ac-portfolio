@@ -1,0 +1,36 @@
+.language_container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.language_items {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.language_item,
+.language_title {
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+  border: none;
+  background-color: transparent;
+}
+
+.language_item {
+  padding: 0 0.3rem;
+}
+
+.language_item:hover {
+  color: var(--first-color);
+  transform: scale(1.1);
+}
+
+.language_selected {
+  color: var(--first-color);
+  text-decoration: underline;
+}

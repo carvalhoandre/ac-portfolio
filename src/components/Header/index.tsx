@@ -1,28 +1,34 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
+
+import IComponent from "@/@types";
+import { IHeaderProps } from "./types";
 
 import { navItems } from "@utils/navItems";
 
 import LogoWhite from "@assets/logo/white.svg";
 import LogoBlack from "@assets/logo/black.svg";
 
-import IComponent from "@/@types";
-
 import { Icon } from "@components/Icon";
-import NavItem from "@components/Header/components/NavItem";
+import { Locale } from "./components/Locale";
+import { NavItem } from "./components/NavItem";
 
 import "./styles.css";
-
-type IHeaderProps = {
-  isDarkMode: boolean;
-  toggleTheme: () => void;
-};
 
 const Header: IComponent<IHeaderProps> = ({
   testId = "header",
   isDarkMode,
   toggleTheme,
 }) => {
+  const { t } = useTranslation();
+
   const [isNavVisible, setIsNavVisible] = useState(false);
+
+  const navMenuItems = useMemo(() => {
+    return navItems.map(({ href, icon }, key) => (
+      <NavItem href={href} icon={icon} name={t(`navbar.${href}`)} key={key} />
+    ));
+  }, [t]);
 
   return (
     <header className="header" id="header" data-testid={testId}>
@@ -31,11 +37,7 @@ const Header: IComponent<IHeaderProps> = ({
           className={`nav_menu ${isNavVisible ? "show-menu" : "close-menu"}`}
           id="nav-menu"
         >
-          <ul className="nav_list grid">
-            {navItems.map(({ href, icon, name }, key) => (
-              <NavItem href={href} icon={icon} name={name} key={key} />
-            ))}
-          </ul>
+          <ul className="nav_list grid">{navMenuItems}</ul>
 
           <div>
             <Icon
@@ -59,6 +61,8 @@ const Header: IComponent<IHeaderProps> = ({
           </a>
 
           <div className="nav_btns">
+            <Locale />
+
             <Icon
               className="change-theme"
               icon={isDarkMode ? "sun" : "moon"}

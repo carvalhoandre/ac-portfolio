@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import IComponent from "@/@types";
 
 import { ListsSkills } from "./skills";
@@ -7,9 +9,14 @@ import SkillList from "./components/List";
 import "./styles.css";
 
 const Skills: IComponent = ({ testId = "skills" }) => {
+  const { t } = useTranslation();
+
   return (
     <section className="skills section" id="skills" data-testid={testId}>
-      <SectionHeader title="Skills" subTitle="My technical level" />
+      <SectionHeader
+        title={t("skills.title")}
+        subTitle={t("skills.subTitle")}
+      />
 
       <ul className="skills_container container grid">
         {ListsSkills.map(({ icon, items, title, subTitle }, index) => (

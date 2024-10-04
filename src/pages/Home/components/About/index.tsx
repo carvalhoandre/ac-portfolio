@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import IComponent from "@/@types";
 import { IAboutItemProps } from "./components/AboutItem/types";
 
@@ -12,22 +14,21 @@ import "./styles.css";
 const aboutItems: Array<IAboutItemProps> = [
   {
     number: 3,
-    title: "Years",
-    subTitle: "experience",
+    title: "experience",
   },
   {
     number: 8,
-    title: "Completed",
-    subTitle: "projects",
+    title: "projects",
   },
   {
     number: 3,
-    title: "Companies",
-    subTitle: "worked",
+    title: "companies",
   },
 ];
 
 const About: IComponent = ({ testId = "about" }) => {
+  const { t } = useTranslation();
+
   return (
     <section
       className="about section"
@@ -35,32 +36,27 @@ const About: IComponent = ({ testId = "about" }) => {
       aria-labelledby="label-about"
       data-testid={testId}
     >
-      <SectionHeader title="About Me" subTitle="My introduction" />
+      <SectionHeader title={t("about.title")} subTitle={t("about.subTitle")} />
 
       <div className="about_container container grid">
         <img src={Image} alt="André Leite Carvalho" className="about_img" />
 
         <div className="about_data">
-          <p className="about_description">
-            Web and Mobile Developer specializing in modern web technologies and
-            UI/UX design. Committed to delivering top-notch quality in every
-            project
-          </p>
+          <p className="about_description">{t("about.description")}</p>
 
           <div className="about_info">
-            {aboutItems.map(({ number, subTitle, title }, index) => (
+            {aboutItems.map(({ number, title }, index) => (
               <AboutItem
                 key={index}
                 number={number}
-                subTitle={subTitle}
-                title={title}
+                title={t(`about.${title}`)}
               />
             ))}
           </div>
 
           <div className="about_buttons">
             <a href={Curriculum} download className="button button--flex">
-              Download My CV
+              {t("about.download")}
               <i className="uil uil-arrow-to-bottom button_icon" />
             </a>
           </div>

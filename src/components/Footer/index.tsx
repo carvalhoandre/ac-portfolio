@@ -7,8 +7,11 @@ import { getCurrentYear } from "@helper/data";
 
 import "./styles.css";
 import { Icon } from "@/components/Icon";
+import { useTranslation } from "react-i18next";
 
 const Footer: IComponent = ({ testId = "footer" }) => {
+  const { t } = useTranslation();
+
   const currentYear = useMemo(() => getCurrentYear(), []);
 
   return (
@@ -17,7 +20,7 @@ const Footer: IComponent = ({ testId = "footer" }) => {
         <div className="footer_container container grid">
           <div>
             <h1 className="footer_title">André Carvalho</h1>
-            <span className="footer_subtitle">Front-End Engineer</span>
+            <span className="footer_subtitle">{t("emphasis.developer")}</span>
 
             <div className="footer_socials">
               {socials.map(({ icon, link }, index) => (
@@ -35,16 +38,16 @@ const Footer: IComponent = ({ testId = "footer" }) => {
           </div>
 
           <ul className="footer_links">
-            {navItems.map(({ href, name }, index) => (
+            {navItems.map(({ href }, index) => (
               <li key={index}>
                 <a href={`#${href}`} className="footer_link">
-                  {name}
+                  {t(`navbar.${href}`)}
                 </a>
               </li>
             ))}
 
             <li>
-              <a href="#home" className="footer_social">
+              <a href="#header" className="footer_social">
                 <Icon icon="arrow-up" />
               </a>
             </li>
@@ -52,7 +55,7 @@ const Footer: IComponent = ({ testId = "footer" }) => {
         </div>
 
         <p className="footer_copy">
-          &#169; {` ${currentYear} André Carvalho. All right reserved`}
+          &#169; {` ${currentYear} André Carvalho. ${t("footer.rights")}`}
         </p>
       </div>
     </footer>

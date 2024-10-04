@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import IComponent from "@/@types";
 
 import { socials } from "@utils/socials";
@@ -9,6 +11,8 @@ import Blob from "@assets/photos/perfil.png";
 import "./styles.css";
 
 const Emphasis: IComponent = ({ testId = "emphasis" }) => {
+  const { t } = useTranslation();
+
   return (
     <section
       className="home section"
@@ -34,16 +38,14 @@ const Emphasis: IComponent = ({ testId = "emphasis" }) => {
         </div>
 
         <div className="home_data">
-          <h1 className="home_title">Hi there! I'm André</h1>
+          <h1 className="home_title">{t("emphasis.welcome")}</h1>
 
-          <h3 className="home_subtitle">Front-End Developer</h3>
+          <h3 className="home_subtitle">{t("emphasis.developer")}</h3>
 
-          <p className="home_descption">
-            committed to delivering high-quality work consistently.
-          </p>
+          <p className="home_descption">{t("emphasis.description")}</p>
 
           <a href="#contactme" className="button button--flex">
-            Get in Touch <i className="uil uil-message button_icon" />
+            {t("contact.title")} <i className="uil uil-message button_icon" />
           </a>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import IComponent from "@/@types";
 import ServiceItem from "./components/ServiceItem";
 
@@ -6,6 +8,8 @@ import { SectionHeader } from "@components/index";
 import "./styles.css";
 
 const Services: IComponent = ({ testId = "services" }) => {
+  const { t } = useTranslation();
+
   return (
     <section
       className="services section"
@@ -13,22 +17,25 @@ const Services: IComponent = ({ testId = "services" }) => {
       aria-labelledby="label-services"
       data-testid={testId}
     >
-      <SectionHeader title="Services" subTitle="What i offer" />
+      <SectionHeader
+        title={t("services.title")}
+        subTitle={t("services.subTitle")}
+      />
 
       <ul className="services_container container grid">
         <ServiceItem
           icon="arrow"
-          title="Frontend Developer"
-          items={["Apps for Android and IOS.", "Web page development."]}
+          title={t("services.frontend")}
+          items={[t("services.apps"), t("services.web")]}
         />
 
         <ServiceItem
           icon="web-grid"
           title="Ui/Ux Designer"
           items={[
-            "Creating Designs.",
-            "I develop the user interface.",
-            "I create ux element interactions.",
+            t("services.designs"),
+            t("services.elements"),
+            t("services.interface"),
           ]}
         />
       </ul>

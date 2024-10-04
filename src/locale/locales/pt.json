@@ -1,0 +1,86 @@
+{
+  "navbar": {
+    "home": "Início",
+    "about": "Sobre",
+    "contactme": "Contato",
+    "skills": "Habilidades",
+    "services": "Serviços",
+    "portfolio": "Projetos",
+    "language": "Idioma"
+  },
+  "emphasis": {
+    "welcome": "André Carvalho",
+    "developer": "Front End",
+    "designer": "Designer",
+    "description": "Comprometido em entregar trabalho de qualidade de forma consistente."
+  },
+  "qualification": {
+    "title": "Qualificação",
+    "subTitle": "Jornada",
+    "education": "Educação",
+    "work": "Trabalho",
+    "english": "Inglês",
+    "frontend": "Desenvolvedor Front End",
+    "science": "Bacharel em Ciência da Computação",
+    "current": "Atualmente",
+    "apr": "Abr",
+    "aug": "Ago",
+    "internship": "Estágio"
+  },
+  "inMind": {
+    "title": "Tem algum projeto?",
+    "subTitle": "Entre em contato agora",
+    "contact": "Entrar em contado"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "subTitle": "Introdução",
+    "description": "Desenvolvedor Web e Mobile especializado em tecnologias web modernas e design UI/UX. Sou comunicativo e interessado, novos desafios me movem.",
+    "download": "Baixar meu CV",
+    "years": "Anos",
+    "experience": "Experiência",
+    "completed": "Completado",
+    "projects": "Projetos",
+    "companies": "Empresas",
+    "worked": "Trabalhado"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "subTitle": "Meu nível técnico",
+    "time": "Mais de 3 anos"
+  },
+  "services": {
+    "title": "Serviços",
+    "subTitle": "O que posso oferecer",
+    "viewMore": "Ver Mais",
+    "designs": "Criação de designs",
+    "interface": "Desenvolvimento de interfaces",
+    "elements": "Criação de elemntos UX interativos",
+    "apps": "Aplicativos para Android e IOS",
+    "web": "Páginas WEB responsivas",
+    "frontend": "Desenvolvedor FrontEnd"
+  },
+  "portfolio": {
+    "title": "Portfólio",
+    "subTitle": "Meus trabalhos recentes",
+    "store": "Descubra relógios modernos que combinam estilo e funcionalidade.",
+    "bikcraft": "Uma equipe apaixonada cria bicicletas exclusivas para experiências excepcionais.",
+    "countries": "Consultar e apresentar informações sobre países usando a API RestCountries.",
+    "go": "Ir!"
+  },
+  "testimonial": {
+    "title": "Depoimentos",
+    "firstClient": "Analista de testes sênior - Estava trabalhando comigo na mesma equipe na Hyperlocal.",
+    "firstDescription": "É um prazer trabalhar e recomendar André Leite, um desenvolvedor com imenso potencial em Front-End e Mobile. Nos momentos em que trabalhamos juntos, ele demonstrou uma paixão notável por aprender e crescer na área...",
+    "secondClient": "Desenvolvedor de software - Estava trabalhando comigo na mesma equipe na Hyperlocal.",
+    "secondDescription": "Trabalhar e compartilhar conhecimento com André sempre foi muito produtivo. Ele se dedica a aprender/ensinar e implementar soluções lógicas para o negócio."
+  },
+  "contact": {
+    "title": "Entrar em Contato",
+    "location": "Localização",
+    "city": "Brasil - São Paulo"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  }
+}

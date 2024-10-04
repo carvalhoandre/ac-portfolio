@@ -48,7 +48,7 @@
 
 /* Variables Dark Theme */
 
-body.dark-theme {
+.page.dark-theme {
   /* colors */
   --first-color-second: hsl(var(--hue-color), 30%, 8%);
   --title-color: hsl(var(--hue-color), 8%, 95%);
@@ -73,13 +73,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
-}
-
 h1,
 h2,
 h3,
@@ -99,6 +92,13 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.page {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
 }
 
 /* scroll bar */
