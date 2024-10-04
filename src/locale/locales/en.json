@@ -76,7 +76,8 @@
   },
   "contact": {
     "title": "Get in Touch",
-    "description": "Feel free to reach out for collaborations or just a friendly chat."
+    "location": "Location",
+    "city": "Brazil - São Paulo"
   },
   "footer": {
     "rights": "All rights reserved."

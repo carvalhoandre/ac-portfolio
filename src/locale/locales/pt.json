@@ -76,7 +76,8 @@
   },
   "contact": {
     "title": "Entrar em Contato",
-    "description": "Sinta-se à vontade para entrar em contato para colaborações ou apenas um bate-papo amigável."
+    "location": "Localização",
+    "city": "Brasil - São Paulo"
   },
   "footer": {
     "rights": "Todos os direitos reservados."
