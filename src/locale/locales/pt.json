@@ -9,7 +9,8 @@
   },
   "emphasis": {
     "welcome": "Olá! Sou o André",
-    "developer": "Desenvolvedor Front End",
+    "developer": "Front End",
+    "designer": "Designer",
     "description": "Comprometidos em entregar trabalho de alta qualidade de forma consistente."
   },
   "about": {
@@ -23,6 +24,11 @@
     "projects": "Projetos",
     "companies": "Empresas",
     "worked": "Trabalhado"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "subTitle": "Meu nível técnico",
+    "time": "Mais de 3 anos"
   },
   "projects": {
     "title": "Meus Projetos",

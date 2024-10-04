@@ -3,13 +3,13 @@ import { ISkillListProps } from "@/pages/Home/components/Skills/components/List/
 export const ListsSkills: Array<ISkillListProps> = [
   {
     icon: "brackets-curly",
-    title: "Front-End Developer",
-    subTitle: "More than 3 years",
+    title: "emphasis.developer",
+    subTitle: "skills.time",
     items: [
       {
         className: "html",
         percentage: 95,
-        title: "HTML and CSS",
+        title: "HTML / CSS",
       },
       {
         className: "js",
@@ -60,7 +60,7 @@ export const ListsSkills: Array<ISkillListProps> = [
   },
   {
     icon: "swatchbook",
-    title: "Designer",
+    title: "emphasis.designer",
     items: [
       {
         className: "figma",

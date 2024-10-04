@@ -9,7 +9,8 @@
   },
   "emphasis": {
     "welcome": "Hi there! I'm André",
-    "developer": "Front-End Developer",
+    "developer": "Front End",
+    "designer": "Designer",
     "description": "Committed to delivering high-quality work consistently."
   },
   "about": {
@@ -23,6 +24,11 @@
     "projects": "Projects",
     "companies": "Companies",
     "worked": "Worked"
+  },
+  "skills": {
+    "title": "Skills",
+    "subTitle": "My technical level",
+    "time": "More than 3 years"
   },
   "projects": {
     "title": "My Projects",
