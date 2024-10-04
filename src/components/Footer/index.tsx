@@ -15,7 +15,7 @@ const Footer: IComponent = ({ testId = "footer" }) => {
   const currentYear = useMemo(() => getCurrentYear(), []);
 
   return (
-    <footer className="footer" data-testid={testId}>
+    <footer className="page footer" data-testid={testId}>
       <div className="footer_bg">
         <div className="footer_container container grid">
           <div>
