@@ -1,39 +1,28 @@
 import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import IComponent from "@/@types";
+import { IHeaderProps } from "./types";
+
 import { navItems } from "@utils/navItems";
-import { getLanguage, setLanguage } from "@utils/language";
 
 import LogoWhite from "@assets/logo/white.svg";
 import LogoBlack from "@assets/logo/black.svg";
 
-import IComponent from "@/@types";
-
 import { Icon } from "@components/Icon";
-import NavItem from "@components/Header/components/NavItem";
+import { Locale } from "./components/Locale";
+import { NavItem } from "./components/NavItem";
 
 import "./styles.css";
-
-type IHeaderProps = {
-  isDarkMode: boolean;
-  toggleTheme: () => void;
-};
 
 const Header: IComponent<IHeaderProps> = ({
   testId = "header",
   isDarkMode,
   toggleTheme,
 }) => {
-  const { i18n, t } = useTranslation();
-
-  const lng = getLanguage() || "en";
+  const { t } = useTranslation();
 
   const [isNavVisible, setIsNavVisible] = useState(false);
-
-  const changeLanguage = (lang: string) => {
-    setLanguage(lang);
-    i18n.changeLanguage(lang);
-  };
 
   const navMenuItems = useMemo(() => {
     return navItems.map(({ href, icon }, key) => (
@@ -72,14 +61,7 @@ const Header: IComponent<IHeaderProps> = ({
           </a>
 
           <div className="nav_btns">
-            <select
-              value={lng}
-              onChange={(e) => changeLanguage(e.target.value)}
-              className="language-selector"
-            >
-              <option value="en">English</option>
-              <option value="pt">Português</option>
-            </select>
+            <Locale />
 
             <Icon
               className="change-theme"

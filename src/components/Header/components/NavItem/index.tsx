@@ -21,4 +21,4 @@ const NavItem: IComponent<INavITemProps> = ({
   );
 };
 
-export default NavItem;
+export { NavItem };

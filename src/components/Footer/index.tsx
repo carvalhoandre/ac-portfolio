@@ -47,7 +47,7 @@ const Footer: IComponent = ({ testId = "footer" }) => {
             ))}
 
             <li>
-              <a href="#home" className="footer_social">
+              <a href="#header" className="footer_social">
                 <Icon icon="arrow-up" />
               </a>
             </li>
