@@ -1,31 +1,34 @@
 import { useState, useCallback } from "react";
+import { useTranslation } from "react-i18next";
 
 import IComponent from "@/@types";
 import { ISelected } from "./types";
+
+import useQualifications from "./qualifications";
 
 import { SectionHeader } from "@components/index";
 import QualificationsHeader from "./components/Header";
 import QualificationsItem from "./components/Item";
 
 import "./styles.css";
-import {
-  QualificationsStudentList,
-  QualificationsWorkList,
-} from "./qualifications";
 
 const Qualifications: IComponent = ({ testId = "skills" }) => {
+  const { t } = useTranslation();
+
+  const { studentList, workList } = useQualifications();
+
   const [selected, setSelected] = useState<ISelected>(null);
+
+  const items =
+    selected === "education"
+      ? studentList
+      : selected === "work"
+      ? workList
+      : [];
 
   const handleToggleOpen = useCallback((option: ISelected) => {
     setSelected((prevSelected) => (prevSelected === option ? null : option));
   }, []);
-
-  const items =
-    selected === "education"
-      ? QualificationsStudentList
-      : selected === "work"
-      ? QualificationsWorkList
-      : [];
 
   return (
     <section
@@ -34,19 +37,22 @@ const Qualifications: IComponent = ({ testId = "skills" }) => {
       aria-labelledby="label-qualification"
       data-testid={testId}
     >
-      <SectionHeader title="Qualification" subTitle="My personal journey" />
+      <SectionHeader
+        title={t("qualification.title")}
+        subTitle={t("qualification.subTitle")}
+      />
 
       <article className="qualification_container container">
         <div className="qualification_tabs">
           <QualificationsHeader
-            title="Education"
+            title={t("qualification.education")}
             icon="graduation-cap"
             isOpen={selected === "education"}
             toggleOpen={() => handleToggleOpen("education")}
           />
 
           <QualificationsHeader
-            title="Work"
+            title={t("qualification.work")}
             icon="briefcase-alt"
             isOpen={selected === "work"}
             toggleOpen={() => handleToggleOpen("work")}

@@ -30,6 +30,19 @@
     "subTitle": "My technical level",
     "time": "More than 3 years"
   },
+  "qualification": {
+    "title": "Qualification",
+    "subTitle": "My personal journey",
+    "education": "Education",
+    "work": "Work",
+    "english": "English",
+    "frontend": "Front End Developer",
+    "science": "Computer Science",
+    "current": "Current",
+    "apr": "Apr",
+    "aug": "Aug",
+    "internship": "Internship"
+  },
   "projects": {
     "title": "My Projects",
     "description": "Here are some of the projects I have worked on."

@@ -13,6 +13,19 @@
     "designer": "Designer",
     "description": "Comprometidos em entregar trabalho de alta qualidade de forma consistente."
   },
+  "qualification": {
+    "title": "Qualificação",
+    "subTitle": "Minha jornada",
+    "education": "Educação",
+    "work": "Trabalho",
+    "english": "Inglês",
+    "frontend": "Desenvolvedor Front End",
+    "science": "Bacharel em Ciência da Computação",
+    "current": "Atualmente",
+    "apr": "Abr",
+    "aug": "Ago",
+    "internship": "Estágio"
+  },
   "about": {
     "title": "Sobre Mim",
     "subTitle": "Minha introdução",
