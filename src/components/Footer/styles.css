@@ -1,5 +1,5 @@
 .footer_bg {
-  background-color: var(--first-color);
+  background-color: hsl(60, 20%, 95%);
   padding: 1em 0 2em;
   text-align: center;
   width: 100%;
@@ -23,7 +23,7 @@
 }
 
 .footer_link:hover {
-  color: var(--first-color-lighter);
+  color: var(--first-color-second);
   cursor: pointer;
   transform: scale(1.05);
 }
@@ -33,13 +33,13 @@
 }
 
 .footer_social:hover {
-  color: var(--first-color-lighter);
+  color: var(--first-color-second);
 }
 
 .footer_copy {
   font-size: var(--smaller-font-size);
   text-align: center;
-  color: #fff;
+  color: var(--title-color);
   margin-top: var(--mb-3);
 }
 
@@ -55,5 +55,21 @@
 .footer_subtitle,
 .footer_link,
 .footer_social {
-  color: #fff;
+  color: var(--title-color);
+}
+
+@media screen and (min-width: 768px) {
+  .footer_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer_bg {
+    padding: 3em 0 3.5em;
+  }
+  .footer_links {
+    flex-direction: row;
+    column-gap: 2em;
+  }
+  .footer_copy {
+    margin-top: 4.5em;
+  }
 }

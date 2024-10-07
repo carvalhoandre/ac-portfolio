@@ -119,3 +119,19 @@
 .dot.active-dot {
   background-color: var(--first-color);
 }
+
+@media screen and (min-width: 768px) {
+  .portfolio_img {
+    width: 320px;
+  }
+  .portfolio_content {
+    align-items: center;
+  }
+}
+
+/* for large devices */
+@media screen and (min-width: 1024px) {
+  .portfolio_content {
+    column-gap: 5em;
+  }
+}

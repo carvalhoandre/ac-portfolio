@@ -15,7 +15,7 @@
 }
 
 .home_social-icon {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   color: var(--first-color);
 }
 
@@ -24,12 +24,12 @@
 }
 
 .home_blob {
-  width: 400px;
+  width: 200px;
   fill: var(--first-color);
 }
 
 .home_blob-img {
-  width: 270px;
+  width: 170px;
 }
 
 .home_data {
@@ -61,11 +61,11 @@
 }
 
 .home_scroll-button:hover {
-  transform: translateY(0.25em);
+  transform: translateY(0.25rem);
 }
 
 .home_scroll-mouse {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 .home_scroll-name {
@@ -76,7 +76,7 @@
 }
 
 .home_scroll-arrow {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 .home_perfil {
@@ -84,28 +84,51 @@
   border-radius: 0em 20em;
 }
 
-/* buttons */
-.button {
-  display: inline-block;
-  background-color: var(--first-color);
-  color: #fff;
-  padding: 1em;
-  border-radius: 0.5em;
-  font-weight: var(--font-medium);
+@media screen and (max-width: 350px) {
+  .home_content {
+    grid-template-columns: 0.25fr 3fr;
+  }
+  .home_blob {
+    width: 180px;
+  }
 }
 
-.button:hover {
-  background-color: var(--first-color);
+/* for medium devices */
+@media screen and (min-width: 568px) {
+  .home_content {
+    grid-template-columns: max-content 1fr 1fr;
+  }
+  .home_data {
+    grid-column: initial;
+  }
+  .home_img {
+    order: 1;
+    justify-self: center;
+  }
 }
 
-.button_icon {
-  font-size: 1.25em;
-  margin-left: var(--mb-0-5);
-  transition: 0.3s;
+@media screen and (min-width: 768px) {
+  .home_container {
+    row-gap: 5rem;
+  }
+  .home__content {
+    padding-top: 5.5rem;
+    column-gap: 2rem;
+  }
+  .home_scroll {
+    display: block;
+  }
+  .home_scroll-button {
+    margin-left: 3rem;
+  }
+  .home_blob {
+    width: 270px;
+  }
 }
 
-.button--flex {
-  margin: 30px auto;
-  display: inline-flex;
-  align-items: center;
+/* for large devices */
+@media screen and (min-width: 1024px) {
+  .home_blob {
+    width: 320px;
+  }
 }

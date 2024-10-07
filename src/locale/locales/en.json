@@ -9,10 +9,11 @@
     "language": "Language"
   },
   "emphasis": {
-    "welcome": "Hi there! I'm André",
+    "welcome": "Hi! I'm André",
     "developer": "Front End",
     "designer": "Designer",
-    "description": "Committed to delivering high-quality work consistently."
+    "description": "Committed to delivering high-quality work consistently.",
+    "scroll": "Scroll down"
   },
   "about": {
     "title": "About Me",

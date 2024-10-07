@@ -19,20 +19,20 @@ const Portfolio: IComponent = ({ testId = "portfolio" }) => {
 
   const handlePrevSlide = () => {
     setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? portfolioItems.length - 1 : prevSlide - 1
+      prevSlide === 0 ? portfolioItems.length - 1 : prevSlide - 1,
     );
   };
 
   const handleNextSlide = () => {
     setCurrentSlide((prevSlide) =>
-      prevSlide === portfolioItems.length - 1 ? 0 : prevSlide + 1
+      prevSlide === portfolioItems.length - 1 ? 0 : prevSlide + 1,
     );
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) =>
-        prevSlide === portfolioItems.length - 1 ? 0 : prevSlide + 1
+        prevSlide === portfolioItems.length - 1 ? 0 : prevSlide + 1,
       );
     }, TEN_SECONDS);
 

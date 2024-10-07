@@ -16,7 +16,9 @@
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
   cursor: pointer;
-  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition:
+    transform 0.2s ease-in-out,
+    color 0.2s ease-in-out;
   border: none;
   background-color: transparent;
 }
@@ -26,11 +28,14 @@
 }
 
 .language_item:hover {
-  color: var(--first-color);
   transform: scale(1.1);
 }
 
 .language_selected {
-  color: var(--first-color);
   text-decoration: underline;
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--text-button-color);
+  border-radius: 0.5em;
+  padding: var(--mb-0-5);
 }

@@ -9,6 +9,7 @@ import SocialIcon from "./components/SocialIcon";
 import Blob from "@assets/photos/perfil.png";
 
 import "./styles.css";
+import { Icon } from "@/components";
 
 const Emphasis: IComponent = ({ testId = "emphasis" }) => {
   const { t } = useTranslation();
@@ -35,17 +36,29 @@ const Emphasis: IComponent = ({ testId = "emphasis" }) => {
               alt="André Carvalho's Profile"
             />
           </div>
+
+          <div className="home_data">
+            <h1 className="home_title">{t("emphasis.welcome")}</h1>
+
+            <h3 className="home_subtitle">{t("emphasis.developer")}</h3>
+
+            <p className="home_descption">{t("emphasis.description")}</p>
+
+            <a href="#contactme" className="button button--flex">
+              {t("contact.title")}
+
+              <i className="uil uil-message button_icon" />
+            </a>
+          </div>
         </div>
 
-        <div className="home_data">
-          <h1 className="home_title">{t("emphasis.welcome")}</h1>
+        <div className="home_scroll">
+          <a href="#contactme" className="home_scroll-button button--flex">
+            <Icon icon="mouse-alt" className="home_scroll-mouse" />
 
-          <h3 className="home_subtitle">{t("emphasis.developer")}</h3>
+            <span className="home_scroll-name">{t("contact.title")}</span>
 
-          <p className="home_descption">{t("emphasis.description")}</p>
-
-          <a href="#contactme" className="button button--flex">
-            {t("contact.title")} <i className="uil uil-message button_icon" />
+            <Icon icon="arrow-down" className="home_scroll-arrow" />
           </a>
         </div>
       </div>

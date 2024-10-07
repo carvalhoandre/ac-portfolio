@@ -114,3 +114,9 @@
 .skills_open .skills_arrow {
   transform: rotate(-180deg);
 }
+
+@media screen and (max-width: 350px) {
+  .skills_title {
+    font-size: var(--normal-font-size);
+  }
+}

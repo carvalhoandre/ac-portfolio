@@ -56,3 +56,20 @@
 .contact_input:focus ~ label {
   color: var(--first-color);
 }
+
+/* for large devices */
+@media screen and (min-width: 1024px) {
+  .contact_form {
+    width: 460px;
+  }
+  .contact_inputs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact_container {
+    display: flex;
+    gap: var(--mb-3);
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+}
