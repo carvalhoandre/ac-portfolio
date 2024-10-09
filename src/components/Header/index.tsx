@@ -52,7 +52,13 @@ const Header: IComponent<IHeaderProps> = ({
         <div
           className={`nav_header ${isNavVisible ? "close-menu" : "show-menu"}`}
         >
-          <a href="/" className="nav_logo">
+          <a
+            href="/"
+            className="nav_logo"
+            aria-label={t("navbar.navigate", {
+              name: "home",
+            })}
+          >
             {isDarkMode ? (
               <img src={LogoWhite} alt="logo" className="logo-ac" />
             ) : (
