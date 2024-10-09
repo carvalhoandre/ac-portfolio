@@ -47,7 +47,6 @@
   font-size: var(--normal-font-size);
   color: var(--text-color);
   text-align: justify;
-  max-width: 80%;
   margin: var(--mb-1-5) auto var(--mb-2-5) auto;
 }
 
@@ -89,6 +88,7 @@
 
 .prev_button,
 .next_button {
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
@@ -120,6 +120,14 @@
 @media screen and (min-width: 568px) {
   .testimonial_data,
   .testimonial_header {
-    flex-direction: column !important;
+    flex-direction: column;
+  }
+}
+
+/* for large devices */
+@media screen and (min-width: 1024px) {
+  .prev_button,
+  .next_button {
+    display: block;
   }
 }

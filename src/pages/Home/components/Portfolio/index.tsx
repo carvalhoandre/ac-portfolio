@@ -1,43 +1,26 @@
-import { useEffect, useState } from "react";
-
 import IComponent from "@/@types";
 
+import { useSlider } from "@hooks/slider";
 import usePortfolios from "./hook";
 
 import { SectionHeader, SliderDots, SliderControls } from "@components/index";
 import "./styles.css";
 import { useTranslation } from "react-i18next";
 
-const TEN_SECONDS = 10000;
-
 const Portfolio: IComponent = ({ testId = "portfolio" }) => {
   const { t } = useTranslation();
 
   const { portfolioItems } = usePortfolios();
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const handlePrevSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? portfolioItems.length - 1 : prevSlide - 1,
-    );
-  };
-
-  const handleNextSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === portfolioItems.length - 1 ? 0 : prevSlide + 1,
-    );
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) =>
-        prevSlide === portfolioItems.length - 1 ? 0 : prevSlide + 1,
-      );
-    }, TEN_SECONDS);
-
-    return () => clearInterval(interval);
-  }, [portfolioItems.length]);
+  const {
+    currentSlide,
+    handlePrevSlide,
+    handleNextSlide,
+    handleTouchStart,
+    handleTouchMove,
+    handleTouchEnd,
+    setCurrentSlide,
+  } = useSlider({ itemsLength: portfolioItems.length });
 
   return (
     <section
@@ -45,6 +28,9 @@ const Portfolio: IComponent = ({ testId = "portfolio" }) => {
       id="portfolio"
       aria-labelledby="label-portfolio"
       data-testid={testId}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       <SectionHeader
         title={t("portfolio.title")}

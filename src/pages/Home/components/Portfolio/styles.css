@@ -54,9 +54,10 @@
 .slider_controls {
   position: absolute;
   top: 50%;
-  width: 100%;
+  width: 111%;
   display: flex;
   justify-content: space-between;
+  margin-left: -3%;
 }
 
 .prev_button,

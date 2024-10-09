@@ -53,7 +53,7 @@ const Emphasis: IComponent = ({ testId = "emphasis" }) => {
 
         <div className="home_scroll">
           <a
-            href="#contactme"
+            href="#about"
             className="home_scroll-button button--flex"
             aria-label={t("emphasis.scroll")}
           >

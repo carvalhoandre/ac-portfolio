@@ -10,7 +10,8 @@
       "@helper/*": ["src/helper/*"],
       "@pages/*": ["src/pages/*"],
       "@routes/*": ["src/routes/*"],
-      "@utils/*": ["src/utils/*"]
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"]
     },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
