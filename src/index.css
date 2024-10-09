@@ -13,7 +13,7 @@
   --title-color: hsl(var(--hue-color), 0%, 15%);
   --text-color: hsl(var(--hue-color), 0%, 45%);
   --text-button-color: hsl(var(--hue-color), 0%, 95%);
-  --text-color-light: hsl(var(--hue-color), 0%, 65%);
+  --text-color-light: hsl(var(--hue-color), 0%, 40%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
   --container-color: hsl(var(--hue-color), 0%, 100%);

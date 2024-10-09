@@ -27,6 +27,7 @@
 .skills_subtitle {
   font-size: var(--small-font-size);
   color: var(--text-color-light);
+  padding: 8px 0;
 }
 
 .skills_arrow {

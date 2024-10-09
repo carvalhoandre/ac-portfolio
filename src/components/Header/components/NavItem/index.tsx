@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import IComponent from "@/@types";
 import { INavITemProps } from "./types";
 
@@ -10,8 +12,17 @@ const NavItem: IComponent<INavITemProps> = ({
   icon,
   name,
 }) => {
+  const { t } = useTranslation();
+
   return (
-    <a href={`#${href}`} className="nav_link" data-testid={testId}>
+    <a
+      href={`#${href}`}
+      className="nav_link"
+      data-testid={testId}
+      aria-label={t("navbar.navigate", {
+        name: name,
+      })}
+    >
       <div className="nav_icon_container">
         <Icon icon={icon} className="nav_icon" />
 

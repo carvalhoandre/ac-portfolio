@@ -2,9 +2,7 @@ import { useTranslation } from "react-i18next";
 
 import IComponent from "@/@types";
 
-import { socials } from "@utils/socials";
-
-import SocialIcon from "./components/SocialIcon";
+import SocialsIcons from "@components/SocialsIcons";
 
 import Blob from "@assets/photos/perfil.png";
 
@@ -24,23 +22,24 @@ const Emphasis: IComponent = ({ testId = "emphasis" }) => {
       <div className="home_container container grid">
         <div className="home_content grid">
           <div className="home_social">
-            {socials.map(({ link, icon }, index) => (
-              <SocialIcon link={link} icon={icon} key={index} />
-            ))}
+            <SocialsIcons testId={testId} />
           </div>
 
           <div className="home_img">
             <img
               src={Blob}
               className="home home_perfil"
-              alt="André Carvalho's Profile"
+              alt={t("emphasis.profileAlt", {
+                name: "André Carvalho",
+                role: t("emphasis.developer"),
+              })}
             />
           </div>
 
           <div className="home_data">
             <h1 className="home_title">{t("emphasis.welcome")}</h1>
 
-            <h3 className="home_subtitle">{t("emphasis.developer")}</h3>
+            <h2 className="home_subtitle">{t("emphasis.developer")}</h2>
 
             <p className="home_descption">{t("emphasis.description")}</p>
 
@@ -53,10 +52,14 @@ const Emphasis: IComponent = ({ testId = "emphasis" }) => {
         </div>
 
         <div className="home_scroll">
-          <a href="#contactme" className="home_scroll-button button--flex">
+          <a
+            href="#contactme"
+            className="home_scroll-button button--flex"
+            aria-label={t("emphasis.scroll")}
+          >
             <Icon icon="mouse-alt" className="home_scroll-mouse" />
 
-            <span className="home_scroll-name">{t("contact.title")}</span>
+            <span className="home_scroll-name">{t("emphasis.scroll")}</span>
 
             <Icon icon="arrow-down" className="home_scroll-arrow" />
           </a>

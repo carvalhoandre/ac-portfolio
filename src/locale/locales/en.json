@@ -6,14 +6,19 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "contactme": "Contact",
-    "language": "Language"
+    "language": "Language",
+    "navigate": "navigate to {{name}}"
   },
   "emphasis": {
+    "profileAlt": "{{name}} - {{role}}",
     "welcome": "Hi! I'm André",
     "developer": "Front End",
     "designer": "Designer",
     "description": "Committed to delivering high-quality work consistently.",
-    "scroll": "Scroll down"
+    "scroll": "Scroll down",
+    "linkedin": "Visit linkedin profile",
+    "github": "Visit github profile",
+    "dribbble": "Visit dribbble profile"
   },
   "about": {
     "title": "About Me",
@@ -82,6 +87,7 @@
     "city": "Brazil - São Paulo"
   },
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "navigate": "return for top"
   }
 }

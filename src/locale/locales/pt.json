@@ -6,14 +6,19 @@
     "skills": "Habilidades",
     "services": "Serviços",
     "portfolio": "Projetos",
-    "language": "Idioma"
+    "language": "Idioma",
+    "navigate": "navegar para {{name}}"
   },
   "emphasis": {
+    "profileAlt": "{{name}} - {{role}}",
     "welcome": "André Carvalho",
     "developer": "Front End",
     "designer": "Designer",
     "description": "Comprometido em entregar trabalho de qualidade de forma consistente.",
-    "scroll": "Rolar para baixo"
+    "scroll": "Rolar para baixo",
+    "linkedin": "Visite perfil no linkedin",
+    "github": "Visite perfil no github",
+    "dribbble": "Visite perfil no dribbble"
   },
   "qualification": {
     "title": "Qualificação",
@@ -82,6 +87,7 @@
     "city": "Brasil - São Paulo"
   },
   "footer": {
-    "rights": "Todos os direitos reservados."
+    "rights": "Todos os direitos reservados.",
+    "navigate": "retornar para o topo"
   }
 }
