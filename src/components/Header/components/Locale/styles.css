@@ -38,4 +38,10 @@
   color: var(--text-button-color);
   border-radius: 0.5em;
   padding: var(--mb-0-5);
+  cursor: default;
+  transition: none;
+}
+
+.language_selected:hover {
+  transform: scale(1);
 }
