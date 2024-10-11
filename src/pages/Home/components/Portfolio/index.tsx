@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import IComponent from "@/@types";
 
 import { useSlider } from "@hooks/slider";
@@ -5,7 +7,6 @@ import usePortfolios from "./hook";
 
 import { SectionHeader, SliderDots, SliderControls } from "@components/index";
 import "./styles.css";
-import { useTranslation } from "react-i18next";
 
 const Portfolio: IComponent = ({ testId = "portfolio" }) => {
   const { t } = useTranslation();
