@@ -5,20 +5,20 @@
 :root {
   --header-height: 3em;
   /* colors */
-  --hue-color: 250;
-  --first-color: hsl(var(--hue-color), 69%, 61%);
-  --first-color-second: hsl(var(--hue-color), 69%, 61%);
-  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
-  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-  --title-color: hsl(var(--hue-color), 8%, 15%);
-  --text-color: hsl(var(--hue-color), 8%, 45%);
-  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --hue-color: 0;
+  --first-color: hsl(var(--hue-color), 0%, 7%);
+  --first-color-second: hsl(var(--hue-color), 0%, 9%);
+  --first-color-alt: hsl(var(--hue-color), 0%, 11%);
+  --first-color-lighter: hsl(var(--hue-color), 0%, 92%);
+  --title-color: hsl(var(--hue-color), 0%, 15%);
+  --text-color: hsl(var(--hue-color), 0%, 45%);
+  --text-button-color: hsl(var(--hue-color), 0%, 95%);
+  --text-color-light: hsl(var(--hue-color), 0%, 40%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
-  --container-color: #fff;
-  --swiper-theme-color: hsl(var(--hue-color), 69%, 61%) !important;
-  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  --container-color: hsl(var(--hue-color), 0%, 100%);
+  --scroll-bar-color: hsl(var(--hue-color), 0%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 0%, 80%);
   /* font and typography */
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2em;
@@ -50,14 +50,18 @@
 
 .page.dark-theme {
   /* colors */
-  --first-color-second: hsl(var(--hue-color), 30%, 8%);
-  --title-color: hsl(var(--hue-color), 8%, 95%);
-  --text-color: hsl(var(--hue-color), 8%, 75%);
-  --input-color: hsl(var(--hue-color), 29%, 16%);
-  --body-color: hsl(var(--hue-color), 28%, 12%);
-  --container-color: hsl(var(--hue-color), 29%, 16%);
-  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
-  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+  --first-color: hsl(var(--hue-color), 0%, 95%);
+  --first-color-lighter: hsl(var(--hue-color), 0%, 70%);
+  --first-color-second: hsl(var(--hue-color), 0%, 9%);
+  --title-color: hsl(var(--hue-color), 0%, 95%);
+  --text-color: hsl(var(--hue-color), 0%, 75%);
+  --text-color-light: hsl(var(--hue-color), 0%, 80%);
+  --input-color: hsl(var(--hue-color), 0%, 16%);
+  --body-color: hsl(var(--hue-color), 0%, 7%);
+  --text-button-color: hsl(var(--hue-color), 0%, 7%);
+  --container-color: hsl(var(--hue-color), 0%, 9%);
+  --scroll-bar-color: hsl(var(--hue-color), 0%, 48%);
+  --scroll-thumb-color: hsl(var(--hue-color), 0%, 36%);
 }
 
 /* base */
@@ -101,6 +105,23 @@ img {
   color: var(--text-color);
 }
 
+/* reusable css classes */
+.section {
+  padding: 2em 0 4em;
+}
+
+/* layout */
+.container {
+  max-width: 768px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5em;
+}
+
 /* scroll bar */
 ::-webkit-scrollbar {
   max-width: 60em;
@@ -118,14 +139,48 @@ img {
 }
 
 /* selection */
-
 *::selection {
   background-color: var(--first-color-alt);
-  color: #fff;
+  color: hsl(var(--hue-color), 0%, 100%);
+}
+
+/* buttons */
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--text-button-color);
+  padding: 1em;
+  border-radius: 0.5em;
+  font-weight: var(--font-medium);
+}
+
+.button:hover {
+  background-color: var(--first-color);
+  transform: scale(1.01);
+}
+
+.button_icon {
+  font-size: 1.25em;
+  margin-left: var(--mb-0-5);
+  transition: 0.3s;
+}
+
+.button--flex {
+  margin: 30px auto;
+  display: inline-flex;
+  align-items: center;
+}
+
+.button--white {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(var(--hue-color), 0%, 9%);
+}
+
+.button--white:hover {
+  background-color: hsl(0, 0%, 100%);
 }
 
 /* base screens */
-
 @media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3em;
@@ -135,5 +190,54 @@ img {
     --normal-font-size: 1em;
     --small-font-size: 0.875em;
     --smaller-font-size: 0.813em;
+  }
+}
+
+/* for small devices */
+@media screen and (max-width: 350px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+}
+
+/* for medium devices */
+@media screen and (min-width: 568px) {
+  .about_container,
+  .skills_container,
+  .portfolio_content,
+  .project_container,
+  .contact_container,
+  .footer_container {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+  }
+  .page {
+    margin: 0;
+  }
+  .section {
+    padding: 4rem 0 2rem;
+  }
+  .header,
+  .main,
+  .footer_container {
+    padding: 0 1rem;
+  }
+}
+
+/* for large devices */
+@media screen and (min-width: 1024px) {
+  .header,
+  .main,
+  .footer_container {
+    padding: 0;
+  }
+  .home_blob {
+    width: 320px;
   }
 }

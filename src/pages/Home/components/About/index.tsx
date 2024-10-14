@@ -3,9 +3,12 @@ import { useTranslation } from "react-i18next";
 import IComponent from "@/@types";
 import { IAboutItemProps } from "./components/AboutItem/types";
 
+import { getLanguage } from "@utils/language";
+
 import Image from "@assets/photos/about.png";
 
-import Curriculum from "@assets/cv/CVAndreLeiteCarvalho.pdf";
+import CurriculumPt from "@assets/cv/CVAndreLeiteCarvalho.pdf";
+import CurriculumEng from "@assets/cv/CVAndreCarvalhoENG.pdf";
 
 import { SectionHeader } from "@components/index";
 import AboutItem from "./components/AboutItem";
@@ -28,6 +31,9 @@ const aboutItems: Array<IAboutItemProps> = [
 
 const About: IComponent = ({ testId = "about" }) => {
   const { t } = useTranslation();
+  const currentLang = getLanguage() || "en";
+
+  const href = currentLang === "en" ? CurriculumEng : CurriculumPt;
 
   return (
     <section
@@ -55,7 +61,7 @@ const About: IComponent = ({ testId = "about" }) => {
           </div>
 
           <div className="about_buttons">
-            <a href={Curriculum} download className="button button--flex">
+            <a href={href} download className="button button--flex">
               {t("about.download")}
               <i className="uil uil-arrow-to-bottom button_icon" />
             </a>

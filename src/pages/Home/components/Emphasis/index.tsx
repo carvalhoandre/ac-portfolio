@@ -2,13 +2,12 @@ import { useTranslation } from "react-i18next";
 
 import IComponent from "@/@types";
 
-import { socials } from "@utils/socials";
-
-import SocialIcon from "./components/SocialIcon";
+import SocialsIcons from "@components/SocialsIcons";
 
 import Blob from "@assets/photos/perfil.png";
 
 import "./styles.css";
+import { Icon } from "@/components";
 
 const Emphasis: IComponent = ({ testId = "emphasis" }) => {
   const { t } = useTranslation();
@@ -23,29 +22,46 @@ const Emphasis: IComponent = ({ testId = "emphasis" }) => {
       <div className="home_container container grid">
         <div className="home_content grid">
           <div className="home_social">
-            {socials.map(({ link, icon }, index) => (
-              <SocialIcon link={link} icon={icon} key={index} />
-            ))}
+            <SocialsIcons testId={testId} />
           </div>
 
           <div className="home_img">
             <img
               src={Blob}
               className="home home_perfil"
-              alt="André Carvalho's Profile"
+              alt={t("emphasis.profileAlt", {
+                name: "André Carvalho",
+                role: t("emphasis.developer"),
+              })}
             />
+          </div>
+
+          <div className="home_data">
+            <h1 className="home_title">André Carvalho</h1>
+
+            <h2 className="home_subtitle">{t("emphasis.developer")}</h2>
+
+            <p className="home_descption">{t("emphasis.description")}</p>
+
+            <a href="#contactme" className="button button--flex">
+              {t("contact.title")}
+
+              <i className="uil uil-message button_icon" />
+            </a>
           </div>
         </div>
 
-        <div className="home_data">
-          <h1 className="home_title">{t("emphasis.welcome")}</h1>
+        <div className="home_scroll">
+          <a
+            href="#about"
+            className="home_scroll-button button--flex"
+            aria-label={t("emphasis.scroll")}
+          >
+            <Icon icon="mouse-alt" className="home_scroll-mouse" />
 
-          <h3 className="home_subtitle">{t("emphasis.developer")}</h3>
+            <span className="home_scroll-name">{t("emphasis.scroll")}</span>
 
-          <p className="home_descption">{t("emphasis.description")}</p>
-
-          <a href="#contactme" className="button button--flex">
-            {t("contact.title")} <i className="uil uil-message button_icon" />
+            <Icon icon="arrow-down" className="home_scroll-arrow" />
           </a>
         </div>
       </div>

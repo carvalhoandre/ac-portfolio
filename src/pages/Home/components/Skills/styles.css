@@ -27,6 +27,7 @@
 .skills_subtitle {
   font-size: var(--small-font-size);
   color: var(--text-color-light);
+  padding: 8px 0;
 }
 
 .skills_arrow {
@@ -113,4 +114,10 @@
 
 .skills_open .skills_arrow {
   transform: rotate(-180deg);
+}
+
+@media screen and (max-width: 350px) {
+  .skills_title {
+    font-size: var(--normal-font-size);
+  }
 }

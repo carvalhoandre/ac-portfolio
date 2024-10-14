@@ -10,7 +10,7 @@ const Loader: IComponent = ({ testId = "loader" }) => {
       aria-labelledby="label-loading"
       data-testid={testId}
     >
-      <ClockLoader size={100} color="#5022c3" />
+      <ClockLoader size={100} color="hsl(0%, 0%, 7%)" />
     </div>
   );
 };

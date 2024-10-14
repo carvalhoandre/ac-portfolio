@@ -1,48 +1,36 @@
-import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import IComponent from "@/@types";
 
+import { useSlider } from "@hooks/slider";
 import useTestimonial from "./hook";
 
 import { SliderDots, SliderControls, SectionHeader } from "@components/index";
 import "./styles.css";
 
-const TEN_SECONDS = 10000;
-
 const Testimonial: IComponent = ({ testId = "testimonial" }) => {
   const { t } = useTranslation();
   const { testimonials } = useTestimonial();
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const handlePrevSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? testimonials.length - 1 : prevSlide - 1
-    );
-  };
-
-  const handleNextSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === testimonials.length - 1 ? 0 : prevSlide + 1
-    );
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) =>
-        prevSlide === testimonials.length - 1 ? 0 : prevSlide + 1
-      );
-    }, TEN_SECONDS);
-
-    return () => clearInterval(interval);
-  }, []);
+  const {
+    currentSlide,
+    handlePrevSlide,
+    handleNextSlide,
+    handleTouchStart,
+    handleTouchMove,
+    handleTouchEnd,
+    setCurrentSlide,
+  } = useSlider({ itemsLength: testimonials.length });
 
   return (
     <section
       className="testimonial section"
       data-testid={testId}
       aria-labelledby="testimonial"
+      id="testimonial"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       <SectionHeader title={t("testimonial.title")} />
 

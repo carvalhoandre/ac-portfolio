@@ -6,13 +6,20 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "contactme": "Contact",
-    "language": "Language"
+    "language": "Language",
+    "testimonial": "Testimonial",
+    "navigate": "navigate to {{name}}"
   },
   "emphasis": {
-    "welcome": "Hi there! I'm André",
+    "profileAlt": "{{name}} - {{role}}",
+    "welcome": "Hi! I'm André",
     "developer": "Front End",
     "designer": "Designer",
-    "description": "Committed to delivering high-quality work consistently."
+    "description": "Committed to delivering high-quality work consistently.",
+    "scroll": "Scroll down",
+    "linkedin": "Visit linkedin profile",
+    "github": "Visit github profile",
+    "dribbble": "Visit dribbble profile"
   },
   "about": {
     "title": "About Me",
@@ -64,7 +71,7 @@
     "title": "Portfolio",
     "subTitle": "Most recent work",
     "store": "Discover modern watches blending style and function.",
-    "bikcraft": "Passionate team crafting unique bicycles for exceptional experiences.",
+    "marvel": "Find your favorite heroes and explore their comics.",
     "countries": "Querying and presenting information about countries using the RestCountries API.",
     "go": "Go!"
   },
@@ -81,6 +88,7 @@
     "city": "Brazil - São Paulo"
   },
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "navigate": "return for top"
   }
 }

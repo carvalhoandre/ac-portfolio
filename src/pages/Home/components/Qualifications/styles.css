@@ -82,3 +82,31 @@
 .icon-calendar {
   margin-right: 0.5em;
 }
+
+/* for small devices */
+@media screen and (max-width: 350px) {
+  .qualification_data {
+    gap: 0.5rem;
+  }
+}
+
+/* for medium devices */
+@media screen and (min-width: 568px) {
+  .qualification_sections {
+    display: grid;
+    grid-template-columns: 0.6fr;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .qualification_tabs {
+    justify-content: center;
+  }
+  .qualification_button {
+    margin: 0 var(--mb-1);
+  }
+  .qualification_sections {
+    grid-template-columns: 0.5fr;
+  }
+}

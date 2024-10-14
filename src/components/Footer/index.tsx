@@ -1,13 +1,15 @@
 import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
+
 import IComponent from "@/@types";
 
-import { socials } from "@utils/socials";
 import { navItems } from "@utils/navItems";
 import { getCurrentYear } from "@helper/data";
 
-import "./styles.css";
 import { Icon } from "@/components/Icon";
-import { useTranslation } from "react-i18next";
+import SocialsIcons from "../SocialsIcons";
+
+import "./styles.css";
 
 const Footer: IComponent = ({ testId = "footer" }) => {
   const { t } = useTranslation();
@@ -23,31 +25,31 @@ const Footer: IComponent = ({ testId = "footer" }) => {
             <span className="footer_subtitle">{t("emphasis.developer")}</span>
 
             <div className="footer_socials">
-              {socials.map(({ icon, link }, index) => (
-                <a
-                  href={link}
-                  className="footer_social"
-                  target="_new"
-                  rel="external"
-                  key={index}
-                >
-                  <Icon icon={icon} />
-                </a>
-              ))}
+              <SocialsIcons testId={testId} />
             </div>
           </div>
 
           <ul className="footer_links">
-            {navItems.map(({ href }, index) => (
+            {navItems.map(({ href, name }, index) => (
               <li key={index}>
-                <a href={`#${href}`} className="footer_link">
+                <a
+                  href={`#${href}`}
+                  className="footer_link"
+                  aria-label={t("navbar.navigate", {
+                    name: name,
+                  })}
+                >
                   {t(`navbar.${href}`)}
                 </a>
               </li>
             ))}
 
             <li>
-              <a href="#header" className="footer_social">
+              <a
+                href="#header"
+                className="footer_social"
+                aria-label={t("footer.navigate")}
+              >
                 <Icon icon="arrow-up" />
               </a>
             </li>
