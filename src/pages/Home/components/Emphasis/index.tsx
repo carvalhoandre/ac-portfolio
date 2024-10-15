@@ -33,6 +33,7 @@ const Emphasis: IComponent = ({ testId = "emphasis" }) => {
                 name: "André Carvalho",
                 role: t("emphasis.developer"),
               })}
+              loading="lazy"
             />
           </div>
 

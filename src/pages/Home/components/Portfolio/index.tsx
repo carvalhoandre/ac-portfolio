@@ -52,6 +52,7 @@ const Portfolio: IComponent = ({ testId = "portfolio" }) => {
                   src={item.image}
                   alt="portfolio_image"
                   className="portfolio_img"
+                  loading="lazy"
                 />
 
                 <div className="portfolio_data">

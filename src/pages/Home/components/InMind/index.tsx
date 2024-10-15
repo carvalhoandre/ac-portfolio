@@ -31,8 +31,18 @@ const InMind: IComponent = ({ testId = "in-mind" }) => {
           </div>
 
           <div className="project_images">
-            <img src={CardFrom} alt="card_from" className="project_img" />
-            <img src={CardBack} alt="card_from" className="project_img" />
+            <img
+              src={CardFrom}
+              alt="card_from"
+              className="project_img"
+              loading="lazy"
+            />
+            <img
+              src={CardBack}
+              alt="card_from"
+              className="project_img"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

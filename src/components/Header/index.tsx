@@ -30,6 +30,8 @@ const Header: IComponent<IHeaderProps> = ({
     ));
   }, [t]);
 
+  const imageSrc = isDarkMode ? LogoWhite : LogoBlack;
+
   return (
     <header className="header" id="header" data-testid={testId}>
       <nav className="nav" aria-label="primary">
@@ -59,11 +61,7 @@ const Header: IComponent<IHeaderProps> = ({
               name: "home",
             })}
           >
-            {isDarkMode ? (
-              <img src={LogoWhite} alt="logo" className="logo-ac" />
-            ) : (
-              <img src={LogoBlack} alt="logo" className="logo-ac" />
-            )}
+            <img src={imageSrc} alt="logo" className="logo-ac" loading="lazy" />
           </a>
 
           <div className="nav_btns">

@@ -45,7 +45,12 @@ const About: IComponent = ({ testId = "about" }) => {
       <SectionHeader title={t("about.title")} subTitle={t("about.subTitle")} />
 
       <div className="about_container container grid">
-        <img src={Image} alt="André Leite Carvalho" className="about_img" />
+        <img
+          src={Image}
+          alt="André Leite Carvalho"
+          className="about_img"
+          loading="lazy"
+        />
 
         <div className="about_data">
           <p className="about_description">{t("about.description")}</p>
