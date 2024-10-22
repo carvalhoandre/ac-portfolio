@@ -30,7 +30,7 @@ const Emphasis: IComponent = ({ testId = "emphasis" }) => {
               src={Blob}
               className="home home_perfil"
               alt={t("emphasis.profileAlt", {
-                name: "André Carvalho",
+                name: "André Leite Carvalho",
                 role: t("emphasis.developer"),
               })}
               loading="lazy"
