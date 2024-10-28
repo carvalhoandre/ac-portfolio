@@ -40,19 +40,19 @@
 }
 
 /* for small devices */
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 350px) {
   .project_container {
-    padding-bottom: 3rem;
+    padding: 3rem 0rem;
   }
   .project_data {
-    padding-bottom: 2rem;
+    padding: 2rem 0rem;
   }
 }
 
 /* for medium devices */
 @media screen and (min-width: 568px) {
   .project_data {
-    padding-bottom: 2rem;
+    padding: 2rem 0rem;
   }
 }
 
