@@ -5,7 +5,7 @@ import { IAboutItemProps } from "./components/AboutItem/types";
 
 import { getLanguage } from "@utils/language";
 
-import Image from "@assets/photos/about.png";
+import Image from "@assets/photos/about.webp";
 
 import CurriculumPt from "@assets/cv/CVAndreCarvalho.pdf";
 import CurriculumEng from "@assets/cv/CVAndreCarvalhoENG.pdf";

@@ -22,10 +22,6 @@ export const navItems: Array<INavITemProps> = [
     icon: "scenery",
   },
   {
-    href: "testimonial",
-    icon: "comment-alt",
-  },
-  {
     href: "contactme",
     icon: "message",
   },

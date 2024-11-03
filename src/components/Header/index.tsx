@@ -26,7 +26,9 @@ const Header: IComponent<IHeaderProps> = ({
 
   const navMenuItems = useMemo(() => {
     return navItems.map(({ href, icon }, key) => (
-      <NavItem href={href} icon={icon} name={t(`navbar.${href}`)} key={key} />
+      <li key={key} className="nav_item">
+        <NavItem href={href} icon={icon} name={t(`navbar.${href}`)} />
+      </li>
     ));
   }, [t]);
 
@@ -39,7 +41,9 @@ const Header: IComponent<IHeaderProps> = ({
           className={`nav_menu ${isNavVisible ? "show-menu" : "close-menu"}`}
           id="nav-menu"
         >
-          <ul className="nav_list grid">{navMenuItems}</ul>
+          <ul className="nav_list grid" role="menu">
+            {navMenuItems}
+          </ul>
 
           <div>
             <Icon

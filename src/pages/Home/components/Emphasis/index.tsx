@@ -4,7 +4,7 @@ import IComponent from "@/@types";
 
 import SocialsIcons from "@components/SocialsIcons";
 
-import Blob from "@assets/photos/perfil.png";
+import Blob from "@assets/photos/perfil.webp";
 
 import "./styles.css";
 import { Icon } from "@/components";
@@ -38,7 +38,7 @@ const Emphasis: IComponent = ({ testId = "emphasis" }) => {
           </div>
 
           <div className="home_data">
-            <h1 className="home_title">André Carvalho</h1>
+            <h1 className="home_title">André Leite Carvalho</h1>
 
             <h2 className="home_subtitle">{t("emphasis.developer")}</h2>
 

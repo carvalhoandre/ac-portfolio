@@ -81,7 +81,7 @@
 
 .home_perfil {
   border-color: var(--hue-color);
-  border-radius: 0em 20em;
+  border-radius: 0.5em;
 }
 
 @media screen and (max-width: 350px) {
@@ -96,7 +96,7 @@
 /* for medium devices */
 @media screen and (min-width: 568px) {
   .home_content {
-    grid-template-columns: max-content 1fr 1fr;
+    grid-template-columns: min-content 1fr 1fr;
   }
   .home_data {
     grid-column: initial;
@@ -130,5 +130,9 @@
 @media screen and (min-width: 1024px) {
   .home_blob {
     width: 320px;
+  }
+
+  .home {
+    padding-top: 4rem;
   }
 }

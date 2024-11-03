@@ -21,7 +21,7 @@ const Footer: IComponent = ({ testId = "footer" }) => {
       <div className="footer_bg">
         <div className="footer_container container grid">
           <div>
-            <h1 className="footer_title">André Carvalho</h1>
+            <h1 className="footer_title">André Leite Carvalho</h1>
             <span className="footer_subtitle">{t("emphasis.developer")}</span>
 
             <div className="footer_socials">

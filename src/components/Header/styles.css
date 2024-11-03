@@ -47,6 +47,7 @@
   color: var(--title-color);
   font-weight: var(--font-medium);
   width: 80px;
+  padding: 1em;
 }
 
 .case {
@@ -102,6 +103,8 @@
   font-size: 1.25em;
   color: var(--title-color);
   cursor: pointer;
+
+  padding: 0.5em;
 }
 
 .change-theme:hover {

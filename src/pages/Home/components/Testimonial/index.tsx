@@ -43,8 +43,6 @@ const Testimonial: IComponent = ({ testId = "testimonial" }) => {
                 index === currentSlide ? "active-slide" : "hidden-slide"
               }`}
               role="group"
-              aria-roledescription="testimonial"
-              aria-hidden={index !== currentSlide}
             >
               <div className="testimonial_inner">
                 <div className="testimonial_data">
