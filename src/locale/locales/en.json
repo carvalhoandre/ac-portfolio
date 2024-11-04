@@ -26,12 +26,12 @@
     "subTitle": "My introduction",
     "description": " Web and Mobile Developer specializing in modern web technologies and UI/UX design. I am communicative and interested, new challenges move me.",
     "download": "Download My Resume",
-    "years": "years",
-    "experience": "Experience",
-    "completed": "Completed",
-    "projects": "Projects",
+    "experience": "Years",
+    "experienceSubtitle": "experience",
+    "projects": "Completed",
+    "projectsSubtitle": "projects",
     "companies": "Companies",
-    "worked": "Worked"
+    "companiesSubtitle": "Worked"
   },
   "skills": {
     "title": "Skills",

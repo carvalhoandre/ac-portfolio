@@ -45,11 +45,12 @@
     "description": "Desenvolvedor Web e Mobile especializado em tecnologias web modernas e design UI/UX. Sou comunicativo e interessado, novos desafios me movem.",
     "download": "Baixar meu CV",
     "years": "Anos",
-    "experience": "Experiência",
-    "completed": "Completado",
-    "projects": "Projetos",
+    "experience": "Anos",
+    "experienceSubtitle": "experiência",
+    "projects": "Completado",
+    "projectsSubtitle": "projetos",
     "companies": "Empresas",
-    "worked": "Trabalhado"
+    "companiesSubtitle": "Trabalhado"
   },
   "skills": {
     "title": "Habilidades",

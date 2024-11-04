@@ -18,14 +18,17 @@ const aboutItems: Array<IAboutItemProps> = [
   {
     number: 3,
     title: "experience",
+    subtitle: "experienceSubtitle",
   },
   {
     number: 8,
     title: "projects",
+    subtitle: "projectsSubtitle",
   },
   {
     number: 3,
     title: "companies",
+    subtitle: "companiesSubtitle",
   },
 ];
 
@@ -56,11 +59,12 @@ const About: IComponent = ({ testId = "about" }) => {
           <p className="about_description">{t("about.description")}</p>
 
           <div className="about_info">
-            {aboutItems.map(({ number, title }, index) => (
+            {aboutItems.map(({ number, title, subtitle }, index) => (
               <AboutItem
                 key={index}
                 number={number}
                 title={t(`about.${title}`)}
+                subtitle={subtitle && t(`about.${subtitle}`)}
               />
             ))}
           </div>
