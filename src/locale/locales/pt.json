@@ -67,7 +67,9 @@
     "elements": "Criação de elemntos UX interativos",
     "apps": "Aplicativos para Android e IOS",
     "web": "Páginas WEB responsivas",
-    "frontend": "Desenvolvedor FrontEnd"
+    "frontend": "Desenvolvedor frontend",
+    "api": "As APIs REST em Spring Boot",
+    "data": "Análise e Visualização de Dados com Pandas"
   },
   "portfolio": {
     "title": "Portfólio",

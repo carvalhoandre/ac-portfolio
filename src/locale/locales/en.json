@@ -25,7 +25,7 @@
   "about": {
     "title": "About Me",
     "subTitle": "My introduction",
-    "description": " Web and Mobile Developer specializing in modern web technologies and UI/UX design. I am communicative and interested, new challenges move me.",
+    "description": "Web and Mobile Developer specializing in modern web technologies and UI/UX design. I am communicative and interested, new challenges move me.",
     "download": "Download My Resume",
     "experience": "Years",
     "experienceSubtitle": "experience",
@@ -48,7 +48,9 @@
     "elements": "I create ux element interactions.",
     "apps": "Apps for Android and IOS",
     "web": "Web page development",
-    "frontend": "FrontEnd Developer"
+    "frontend": "Frontend developer",
+    "api": "APIs REST using Spring Boot",
+    "data": "Data Analysis and Visualization with Pandas"
   },
   "qualification": {
     "title": "Qualification",

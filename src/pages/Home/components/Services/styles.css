@@ -99,6 +99,10 @@
   font-size: 1.5em;
   color: var(--first-color);
   cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 .services_modal-icon {

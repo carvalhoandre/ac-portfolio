@@ -30,6 +30,12 @@ const Services: IComponent = ({ testId = "services" }) => {
         />
 
         <ServiceItem
+          icon="cog"
+          title="Backend developer"
+          items={[t("services.api"), t("services.data")]}
+        />
+
+        <ServiceItem
           icon="web-grid"
           title="Ui/Ux Designer"
           items={[
