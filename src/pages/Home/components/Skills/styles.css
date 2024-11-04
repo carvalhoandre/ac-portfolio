@@ -74,7 +74,8 @@
 .skills_java,
 .skills_photoshop,
 .skills_jest,
-.skills_cypress {
+.skills_cypress,
+.skills_java {
   width: 80%;
 }
 
@@ -98,8 +99,8 @@
   width: 60%;
 }
 
-.skills_php {
-  width: 55%;
+.skills_python {
+  width: 60%;
 }
 
 .skills_close .skills_list {

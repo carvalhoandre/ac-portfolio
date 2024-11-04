@@ -13,13 +13,14 @@
   "emphasis": {
     "profileAlt": "{{name}} - {{role}}",
     "welcome": "Hi! I'm André",
-    "developer": "Front End",
+    "developer": "Frontend developer",
     "designer": "Designer",
     "description": "Committed to delivering high-quality work consistently.",
     "scroll": "Scroll down",
     "linkedin": "Visit linkedin profile",
     "github": "Visit github profile",
-    "dribbble": "Visit dribbble profile"
+    "dribbble": "Visit dribbble profile",
+    "backend": "Backend developer"
   },
   "about": {
     "title": "About Me",

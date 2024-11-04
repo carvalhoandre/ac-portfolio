@@ -57,7 +57,7 @@ const Footer: IComponent = ({ testId = "footer" }) => {
         </div>
 
         <p className="footer_copy">
-          &#169; {` ${currentYear} André Carvalho. ${t("footer.rights")}`}
+          &#169; {` ${currentYear} André Leite Carvalho. ${t("footer.rights")}`}
         </p>
       </div>
     </footer>
