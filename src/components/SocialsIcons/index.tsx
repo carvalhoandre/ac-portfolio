@@ -14,7 +14,7 @@ const SocialsIcons: IComponent = ({ testId = "social-icon" }) => {
       key={`${testId}-${index}`}
       href={link}
       target="_blank"
-      rel="noreferrer"
+      rel="noreferrer noopener"
       className="home_social-icon"
       data-testid={testId}
       aria-label={t(`emphasis.${name}`)}
