@@ -9,7 +9,7 @@ import { navItems } from "@utils/navItems";
 import LogoWhite from "@assets/logo/white.svg";
 import LogoBlack from "@assets/logo/black.svg";
 
-import { Icon } from "@components/Icon";
+import { Icon, Image } from "@components/index";
 import { Locale } from "./components/Locale";
 import { NavItem } from "./components/NavItem";
 
@@ -65,7 +65,7 @@ const Header: IComponent<IHeaderProps> = ({
               name: "home",
             })}
           >
-            <img src={imageSrc} alt="logo" className="logo-ac" loading="lazy" />
+            <Image src={imageSrc} alt="logo" className="logo-ac" />
           </a>
 
           <div className="nav_btns">

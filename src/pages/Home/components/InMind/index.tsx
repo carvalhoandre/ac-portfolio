@@ -5,7 +5,7 @@ import IComponent from "@/@types";
 import CardFrom from "@assets/card/front.svg";
 import CardBack from "@assets/card/back.svg";
 
-import { Icon } from "@components/Icon";
+import { Icon, Image } from "@components/index";
 import "./styles.css";
 
 const InMind: IComponent = ({ testId = "in-mind" }) => {
@@ -31,18 +31,8 @@ const InMind: IComponent = ({ testId = "in-mind" }) => {
           </div>
 
           <div className="project_images">
-            <img
-              src={CardFrom}
-              alt="card_from"
-              className="project_img"
-              loading="lazy"
-            />
-            <img
-              src={CardBack}
-              alt="card_from"
-              className="project_img"
-              loading="lazy"
-            />
+            <Image src={CardFrom} alt="card_from" className="project_img" />
+            <Image src={CardBack} alt="card_from" className="project_img" />
           </div>
         </div>
       </div>

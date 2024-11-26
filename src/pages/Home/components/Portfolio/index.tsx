@@ -5,7 +5,12 @@ import IComponent from "@/@types";
 import { useSlider } from "@hooks/slider";
 import usePortfolios from "./hook";
 
-import { SectionHeader, SliderDots, SliderControls } from "@components/index";
+import {
+  Image,
+  SliderDots,
+  SectionHeader,
+  SliderControls,
+} from "@components/index";
 import "./styles.css";
 
 const Portfolio: IComponent = ({ testId = "portfolio" }) => {
@@ -48,11 +53,10 @@ const Portfolio: IComponent = ({ testId = "portfolio" }) => {
               }`}
             >
               <div className="portfolio_content grid">
-                <img
-                  src={item.image}
+                <Image
+                  src={item.image ?? ""}
                   alt="portfolio_image"
                   className="portfolio_img"
-                  loading="lazy"
                 />
 
                 <div className="portfolio_data">

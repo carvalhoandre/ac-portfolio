@@ -1,8 +1,9 @@
-export { ErrorBoundary } from "./ErrorBoundary";
-export { Footer } from "./Footer";
 export { Icon } from "./Icon";
 export { Lazy } from "./Lazy";
+export { Image } from "./Image";
 export { Loader } from "./Loader";
-export { SectionHeader } from "./SectionHeader";
-export { SliderControls } from "./SliderControls";
+export { Footer } from "./Footer";
 export { SliderDots } from "./SliderDots";
+export { SectionHeader } from "./SectionHeader";
+export { ErrorBoundary } from "./ErrorBoundary";
+export { SliderControls } from "./SliderControls";

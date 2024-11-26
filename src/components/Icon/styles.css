@@ -1,0 +1,10 @@
+.icon-i {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.icon-wrapper.loaded .icon-i {
+  visibility: visible;
+  opacity: 1;
+}

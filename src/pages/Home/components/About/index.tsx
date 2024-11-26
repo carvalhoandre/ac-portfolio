@@ -5,12 +5,12 @@ import { IAboutItemProps } from "./components/AboutItem/types";
 
 import { getLanguage } from "@utils/language";
 
-import Image from "@assets/photos/about.webp";
+import Photo from "@assets/photos/about.webp";
 
 import CurriculumPt from "@assets/cv/CVAndreCarvalho.pdf";
 import CurriculumEng from "@assets/cv/CVAndreCarvalhoENG.pdf";
 
-import { SectionHeader } from "@components/index";
+import { SectionHeader, Image } from "@components/index";
 import AboutItem from "./components/AboutItem";
 import "./styles.css";
 
@@ -48,12 +48,7 @@ const About: IComponent = ({ testId = "about" }) => {
       <SectionHeader title={t("about.title")} subTitle={t("about.subTitle")} />
 
       <div className="about_container container grid">
-        <img
-          src={Image}
-          alt="André Leite Carvalho"
-          className="about_img"
-          loading="lazy"
-        />
+        <Image src={Photo} alt="André Leite Carvalho" className="about_img" />
 
         <div className="about_data">
           <p className="about_description">{t("about.description")}</p>

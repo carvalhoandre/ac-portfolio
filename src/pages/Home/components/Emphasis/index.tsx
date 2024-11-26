@@ -6,8 +6,8 @@ import SocialsIcons from "@components/SocialsIcons";
 
 import Blob from "@assets/photos/perfil.webp";
 
+import { Icon, Image } from "@/components";
 import "./styles.css";
-import { Icon } from "@/components";
 
 const Emphasis: IComponent = ({ testId = "emphasis" }) => {
   const { t } = useTranslation();
@@ -26,14 +26,13 @@ const Emphasis: IComponent = ({ testId = "emphasis" }) => {
           </div>
 
           <div className="home_img">
-            <img
+            <Image
               src={Blob}
               className="home home_perfil"
               alt={t("emphasis.profileAlt", {
                 name: "André Leite Carvalho",
                 role: t("emphasis.developer"),
               })}
-              loading="lazy"
             />
           </div>
 
