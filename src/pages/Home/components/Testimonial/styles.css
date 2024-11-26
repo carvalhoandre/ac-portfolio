@@ -29,15 +29,8 @@
 
 .testimonial_container {
   position: relative;
-  background-color: var(--container-color);
   padding: 3.5em 0.5em 1.25em 1.5em;
-  border-radius: 0.25em;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   transition: 0.3s;
-}
-
-.testimonial_container:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .testimonial_name {

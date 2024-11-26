@@ -8,7 +8,7 @@ const useQualifications = (): IUseQualifications => {
 
   const studentList: Array<IQualificationsItemProps> = [
     {
-      date: "2024",
+      date: "Current",
       subtitle: "EF English",
       title: t("qualification.english"),
     },
@@ -18,7 +18,12 @@ const useQualifications = (): IUseQualifications => {
       title: t("qualification.frontend"),
     },
     {
-      date: "2018 - 2022",
+      date: "2024",
+      subtitle: "Cod3r",
+      title: "Angular 9 Essencial",
+    },
+    {
+      date: "2019 - 2022",
       subtitle: "Universidade Nove de Julho - UNINOVE",
       title: t("qualification.science"),
     },
@@ -41,7 +46,12 @@ const useQualifications = (): IUseQualifications => {
 
   const workList: Array<IQualificationsItemProps> = [
     {
-      date: `${t("qualification.apr")} 2024 - ${t("qualification.current")}`,
+      date: `Nov 2024 - ${t("qualification.current")}`,
+      subtitle: "Montreal",
+      title: t("qualification.frontend"),
+    },
+    {
+      date: `${t("qualification.apr")} 2024 - Nov 2024`,
       subtitle: "Syndesi",
       title: t("qualification.frontend"),
     },

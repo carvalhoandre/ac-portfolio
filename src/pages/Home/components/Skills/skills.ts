@@ -32,6 +32,11 @@ export const ListsSkills: Array<ISkillListProps> = [
         title: "React",
       },
       {
+        className: "angular",
+        percentage: 85,
+        title: "Angular",
+      },
+      {
         className: "jest",
         percentage: 80,
         title: "Jest",
@@ -45,11 +50,6 @@ export const ListsSkills: Array<ISkillListProps> = [
         className: "cypress",
         percentage: 80,
         title: "Cypress",
-      },
-      {
-        className: "angular",
-        percentage: 70,
-        title: "Angular",
       },
       {
         className: "ionic",
@@ -71,7 +71,7 @@ export const ListsSkills: Array<ISkillListProps> = [
         className: "python",
         percentage: 60,
         title: "Python",
-      }
+      },
     ],
   },
   {

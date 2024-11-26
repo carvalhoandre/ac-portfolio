@@ -89,8 +89,11 @@
   width: 90%;
 }
 
-.skills_ionic,
 .skills_angular {
+  width: 85%;
+}
+
+.skills_ionic {
   width: 70%;
 }
 
