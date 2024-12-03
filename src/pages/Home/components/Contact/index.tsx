@@ -91,6 +91,23 @@ const Contact: IComponent = ({ testId = "contact" }) => {
               <span className="contact_subtitle">{t("contact.city")}</span>
             </div>
           </div>
+
+          <div className="contact_information">
+            <Icon icon="phone" className="contact_icon" />
+            <div>
+              <h3 className="contact_title">{t("contact.cellphone")}</h3>
+              <span className="contact_subtitle">
+                <a
+                  href="https://wa.me/5511949245875?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho!"
+                  target="_new"
+                  rel="external"
+                  className="contact_email"
+                >
+                  +55 11 949245875
+                </a>
+              </span>
+            </div>
+          </div>
         </div>
 
         <form className="contact_form grid" onSubmit={handleSubmit}>

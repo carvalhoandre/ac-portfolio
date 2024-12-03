@@ -89,7 +89,8 @@
   "contact": {
     "title": "Get in Touch",
     "location": "Location",
-    "city": "Brazil - São Paulo"
+    "city": "Brazil - São Paulo",
+    "cellphone": "Cellphone "
   },
   "footer": {
     "rights": "All rights reserved.",

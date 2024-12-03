@@ -90,7 +90,8 @@
   "contact": {
     "title": "Entrar em Contato",
     "location": "Localização",
-    "city": "Brasil - São Paulo"
+    "city": "Brasil - São Paulo",
+    "cellphone": "Cellphone "
   },
   "footer": {
     "rights": "Todos os direitos reservados.",
