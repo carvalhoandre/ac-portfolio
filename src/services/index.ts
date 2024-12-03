@@ -9,6 +9,7 @@ export const postSendEmail = (body: IBodyEMailRequest) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        origin: "https://andrelcarvalho.netlify.app",
       },
       body: JSON.stringify(body),
     },
