@@ -13,7 +13,7 @@
   "emphasis": {
     "profileAlt": "{{name}} - {{role}}",
     "welcome": "Hi! I'm André",
-    "developer": "Frontend developer",
+    "developer": "Developer",
     "designer": "Designer",
     "description": "Committed to delivering high-quality work consistently.",
     "scroll": "Scroll down",
@@ -89,10 +89,21 @@
   "contact": {
     "title": "Get in Touch",
     "location": "Location",
-    "city": "Brazil - São Paulo"
+    "city": "Brazil - São Paulo",
+    "cellphone": "Cellphone "
   },
   "footer": {
     "rights": "All rights reserved.",
     "navigate": "return for top"
+  },
+  "error": {
+    "required": "Mandatory field, please answer a value!",
+    "email": "Please fill in a valid email address"
+  },
+  "form": {
+    "name": "Name",
+    "project": "Project",
+    "message": "Message",
+    "send": "Send Message"
   }
 }

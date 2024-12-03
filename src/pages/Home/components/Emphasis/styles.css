@@ -84,6 +84,10 @@
   border-radius: 0.5em;
 }
 
+.home_button {
+  margin: 40px auto;
+}
+
 @media screen and (max-width: 350px) {
   .home_content {
     grid-template-columns: 0.25fr 3fr;

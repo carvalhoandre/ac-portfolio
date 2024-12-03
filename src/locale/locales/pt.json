@@ -13,7 +13,7 @@
   "emphasis": {
     "profileAlt": "{{name}} - {{role}}",
     "welcome": "André Carvalho",
-    "developer": "Front End",
+    "developer": "Desenvolvedor",
     "designer": "Designer",
     "description": "Comprometido em entregar trabalho de qualidade de forma consistente.",
     "scroll": "Rolar para baixo",
@@ -90,10 +90,21 @@
   "contact": {
     "title": "Entrar em Contato",
     "location": "Localização",
-    "city": "Brasil - São Paulo"
+    "city": "Brasil - São Paulo",
+    "cellphone": "Cellphone "
   },
   "footer": {
     "rights": "Todos os direitos reservados.",
     "navigate": "retornar para o topo"
+  },
+  "error": {
+    "required": "Campo obrigatório, por favor, preencha um valor!",
+    "email": "Preencha um e-mail válido"
+  },
+  "form": {
+    "name": "Nome",
+    "project": "Projeto",
+    "message": "Menssagem",
+    "send": "Enviar Mensagem"
   }
 }

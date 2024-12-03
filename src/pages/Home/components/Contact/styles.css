@@ -1,3 +1,7 @@
+.contact_container {
+  row-gap: 3rem;
+}
+
 .contact_information {
   display: flex;
   margin-bottom: var(--mb-2);
@@ -35,6 +39,19 @@
   background-color: var(--input-color);
   border-radius: 0.5em;
   padding: 0.75em 1em 0.25em;
+  position: relative;
+}
+
+.contact_error,
+.contact_areaerror {
+  color: #f31;
+  font-size: 0.875rem;
+  position: absolute;
+  top: 70px;
+}
+
+.contact_areaerror {
+  top: 190px;
 }
 
 .contact_label {
@@ -62,14 +79,11 @@
   .contact_form {
     width: 460px;
   }
-  .contact_inputs {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .contact_container {
     display: flex;
     gap: var(--mb-3);
     justify-content: center;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
   }
 }
