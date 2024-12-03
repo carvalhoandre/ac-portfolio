@@ -5,6 +5,9 @@
 }
 
 .qualification_button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   cursor: pointer;
