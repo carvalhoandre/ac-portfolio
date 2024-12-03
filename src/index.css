@@ -102,6 +102,11 @@ button {
   border: none;
 }
 
+button:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
 .page {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);

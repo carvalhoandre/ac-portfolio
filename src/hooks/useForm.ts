@@ -13,37 +13,47 @@ const types: Record<string, ValidationType> = {
   },
 };
 
+type UseFormConfig = {
+  type?: keyof typeof types;
+  required?: boolean;
+};
+
 type UseFormReturnType = {
   value: string;
   error: string | null;
+  touched: boolean;
   onChange: (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => void;
-  onBlur?: (
+  onBlur: (
     event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => void;
   setValue: React.Dispatch<React.SetStateAction<string>>;
   validate: () => boolean;
 };
 
-const useForm = (type?: keyof typeof types): UseFormReturnType => {
+const useForm = ({
+  type,
+  required = false,
+}: UseFormConfig = {}): UseFormReturnType => {
   const { t } = useTranslation();
 
   const [value, setValue] = React.useState<string>("");
   const [error, setError] = React.useState<string | null>(null);
+  const [touched, setTouched] = React.useState<boolean>(false);
 
   const validate = (value: string): boolean => {
-    if (!type) return true;
-
-    if (value.trim().length === 0) {
+    if (required && value.trim().length === 0) {
       setError(t("error.required"));
       return false;
     }
 
-    const validationType = types[type];
-    if (validationType && !validationType.regex.test(value)) {
-      setError(t(validationType.messageKey));
-      return false;
+    if (type) {
+      const validationType = types[type];
+      if (validationType && !validationType.regex.test(value)) {
+        setError(t(validationType.messageKey));
+        return false;
+      }
     }
 
     setError(null);
@@ -55,16 +65,21 @@ const useForm = (type?: keyof typeof types): UseFormReturnType => {
   ): void => {
     const newValue = event.target.value;
     setValue(newValue);
-    if (error) validate(newValue);
+
+    if (touched) validate(newValue);
   };
 
   const onBlur = (
     event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ): boolean => validate(event.target.value);
+  ): void => {
+    setTouched(true);
+    validate(event.target.value);
+  };
 
   return {
     value,
-    error,
+    error: touched ? error : null,
+    touched,
     onChange,
     onBlur,
     setValue,

@@ -1,42 +1,69 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
+
 import IComponent from "@/@types";
 
 import { useForm } from "@hooks/useForm";
+import { useFetch } from "@/hooks/useRequest";
 
-import { SectionHeader, Icon, Input } from "@components/index";
+import { postSendEmail } from "@/services";
+
+import { SectionHeader, Icon, Input, Error, Loader } from "@components/index";
 
 import "./styles.css";
 
 const Contact: IComponent = ({ testId = "contact" }) => {
   const { t } = useTranslation();
 
-  const name = useForm();
-  const email = useForm();
-  const project = useForm();
-  const message = useForm();
+  const { loading, error, request } = useFetch();
 
-  const handleSubmit = async (event: any) => {
+  const project = useForm();
+  const name = useForm({ required: true });
+  const message = useForm({ required: true });
+  const email = useForm({ type: "email", required: true });
+
+  const [isFormValid, setIsFormValid] = React.useState(false);
+
+  const clearForm = () => {
+    name.setValue("");
+    email.setValue("");
+    project.setValue("");
+    message.setValue("");
+
+    setIsFormValid(false);
+  };
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (!email.validate()) return;
+    if (!isFormValid) return;
 
-    const { url, options } = LOST_PASSWORD({
-      login: login.value,
-      url: window.location.href.replace("recovery", "reset"),
+    const { url, options } = postSendEmail({
+      email: email.value,
+      message: message.value,
+      name: name.value,
+      title: project.value,
     });
 
-    const { response } = await request(url, options);
+    const response = await request(url, options);
 
-    if (response.ok) login.onChange("");
+    if (response && !error) clearForm();
   };
+
+  React.useEffect(() => {
+    setIsFormValid(name.validate() && email.validate() && message.validate());
+  }, [name.value, email.value, message.value]);
 
   return (
     <section
       className="contact section"
       id="contactme"
       aria-labelledby="label-contact"
+      aria-describedby="contact-description"
       data-testid={testId}
     >
+      {loading && <Loader />}
+
       <SectionHeader title={t("contact.title")} />
 
       <div className="contact_container container">
@@ -68,24 +95,38 @@ const Contact: IComponent = ({ testId = "contact" }) => {
 
         <form className="contact_form grid" onSubmit={handleSubmit}>
           <div className="contact_inputs grid">
-            <Input label={t("form.name")} name="name" {...name} />
-            <Input type="email" label="Email" name="email" {...email} />
+            <Input label={t("form.name")} name="name" isRequired {...name} />
+            <Input
+              type="email"
+              label="Email"
+              name="email"
+              isRequired
+              {...email}
+            />
             <Input label={t("form.project")} name="project" {...project} />
             <Input
               variant="textarea"
               label={t("form.message")}
               name="message"
+              isRequired
               {...message}
             />
           </div>
 
           <div>
-            <button className="button button--flex" type="submit">
+            <button
+              className="button button--flex"
+              type="submit"
+              disabled={!isFormValid}
+              aria-disabled={!isFormValid}
+            >
               {t("form.send")}
 
               <Icon icon="message" className="button_icon" />
             </button>
           </div>
+
+          <Error error={error} />
         </form>
       </div>
     </section>

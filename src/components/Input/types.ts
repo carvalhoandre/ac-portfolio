@@ -6,6 +6,7 @@ export interface InputProps {
   value: string;
   error: string | null;
   type?: string;
+  isRequired?: boolean;
   variant?: "input" | "textarea";
   onChange: (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,

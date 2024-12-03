@@ -1,8 +1,6 @@
 import IComponent from "@/@types";
 import { InputProps } from "./types";
 
-import "./styles.css";
-
 const Input: IComponent<InputProps> = ({
   testId = "input",
   label,
@@ -11,13 +9,14 @@ const Input: IComponent<InputProps> = ({
   error,
   value,
   variant = "input",
+  isRequired = false,
   onChange,
   onBlur,
 }) => {
   return (
     <div className="contact_content" data-testid={testId}>
       <label htmlFor={name} className="contact_label">
-        {label}
+        {`${label} ${isRequired ? "*" : ""}`}
       </label>
 
       {variant === "input" ? (
@@ -42,7 +41,16 @@ const Input: IComponent<InputProps> = ({
           onBlur={onBlur}
         />
       )}
-      {!!error && <p className="contact_error">{error}</p>}
+
+      {!!error && (
+        <p
+          className={
+            variant === "input" ? "contact_error" : "contact_areaerror"
+          }
+        >
+          {error}
+        </p>
+      )}
     </div>
   );
 };

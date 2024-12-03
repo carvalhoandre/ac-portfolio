@@ -43,7 +43,7 @@ const Emphasis: IComponent = ({ testId = "emphasis" }) => {
 
             <p className="home_descption">{t("emphasis.description")}</p>
 
-            <a href="#contactme" className="button button--flex">
+            <a href="#contactme" className="button button--flex home_button">
               {t("contact.title")}
 
               <i className="uil uil-message button_icon" />
