@@ -94,5 +94,15 @@
   "footer": {
     "rights": "All rights reserved.",
     "navigate": "return for top"
+  },
+  "error": {
+    "required": "Mandatory field, please answer a value!",
+    "email": "Please fill in a valid email address"
+  },
+  "form": {
+    "name": "Name",
+    "project": "Project",
+    "message": "Message",
+    "send": "Send Message"
   }
 }

@@ -1,5 +1,7 @@
 export { Icon } from "./Icon";
 export { Lazy } from "./Lazy";
+export { Input } from "./Input";
+export { Error } from "./Error";
 export { Image } from "./Image";
 export { Loader } from "./Loader";
 export { Footer } from "./Footer";

@@ -66,7 +66,7 @@ const Portfolio: IComponent = ({ testId = "portfolio" }) => {
 
                   <a
                     href={item.link}
-                    className="button button--flex button--samll portfolio_button"
+                    className="button button--flex button--small portfolio_button"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

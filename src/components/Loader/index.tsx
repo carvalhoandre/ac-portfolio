@@ -4,6 +4,8 @@ import IComponent from "@/@types";
 import "./styles.css";
 
 const Loader: IComponent = ({ testId = "loader" }) => {
+  const [step, setStep] = React.useState(0);
+
   return (
     <div
       className="loader"
