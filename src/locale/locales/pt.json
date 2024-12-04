@@ -105,6 +105,8 @@
     "name": "Nome",
     "project": "Projeto",
     "message": "Menssagem",
-    "send": "Enviar Mensagem"
+    "send": "Enviar Mensagem",
+    "success": "Email enviado com sucesso",
+    "error": "Error ao enviar email"
   }
 }

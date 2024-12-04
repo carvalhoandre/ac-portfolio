@@ -5,15 +5,17 @@ import IComponent from "@/@types";
 
 import { useForm } from "@hooks/useForm";
 import { useFetch } from "@/hooks/useRequest";
+import { useNotification } from "@components/NotificationContainer";
 
 import { postSendEmail } from "@/services";
 
-import { SectionHeader, Icon, Input, Error, Loader } from "@components/index";
+import { Icon, Input, Error, Loader, SectionHeader } from "@components/index";
 
 import "./styles.css";
 
 const Contact: IComponent = ({ testId = "contact" }) => {
   const { t } = useTranslation();
+  const { notification } = useNotification();
 
   const { loading, error, request } = useFetch();
 
@@ -47,7 +49,13 @@ const Contact: IComponent = ({ testId = "contact" }) => {
 
     const { response } = await request(url, options);
 
-    if (response?.ok) clearForm();
+    const success = response?.ok;
+
+    const messageNotify = success ? t("form.success") : t("form.error");
+
+    notification(messageNotify, success ? "success" : "error");
+
+    if (success) clearForm();
   };
 
   React.useEffect(() => {

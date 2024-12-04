@@ -104,6 +104,8 @@
     "name": "Name",
     "project": "Project",
     "message": "Message",
-    "send": "Send Message"
+    "send": "Send Message",
+    "success": "Email sent successfully",
+    "error": "Error sending email"
   }
 }

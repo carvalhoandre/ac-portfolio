@@ -6,6 +6,7 @@ export { Image } from "./Image";
 export { Loader } from "./Loader";
 export { Footer } from "./Footer";
 export { SliderDots } from "./SliderDots";
+export { Notification } from "./Notification";
 export { SectionHeader } from "./SectionHeader";
 export { ErrorBoundary } from "./ErrorBoundary";
 export { SliderControls } from "./SliderControls";
