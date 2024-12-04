@@ -29,7 +29,9 @@ type UseFormReturnType = {
     event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => void;
   setValue: React.Dispatch<React.SetStateAction<string>>;
+  setError: React.Dispatch<React.SetStateAction<string | null>>;
   validate: () => boolean;
+  reset: () => void;
 };
 
 const useForm = ({
@@ -76,6 +78,12 @@ const useForm = ({
     validate(event.target.value);
   };
 
+  const reset = () => {
+    setValue("");
+    setError(null);
+    setTouched(false);
+  };
+
   return {
     value,
     error: touched ? error : null,
@@ -83,7 +91,9 @@ const useForm = ({
     onChange,
     onBlur,
     setValue,
+    setError,
     validate: () => validate(value),
+    reset,
   };
 };
 

@@ -25,10 +25,10 @@ const Contact: IComponent = ({ testId = "contact" }) => {
   const [isFormValid, setIsFormValid] = React.useState(false);
 
   const clearForm = () => {
-    name.setValue("");
-    email.setValue("");
-    project.setValue("");
-    message.setValue("");
+    name.reset();
+    email.reset();
+    project.reset();
+    message.reset();
 
     setIsFormValid(false);
   };
@@ -45,9 +45,9 @@ const Contact: IComponent = ({ testId = "contact" }) => {
       title: project.value,
     });
 
-    const response = await request(url, options);
+    const { response } = await request(url, options);
 
-    if (response && !error) clearForm();
+    if (response?.ok) clearForm();
   };
 
   React.useEffect(() => {
