@@ -35,23 +35,17 @@
 
 .contact_content {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   background-color: var(--input-color);
   border-radius: 0.5em;
   padding: 0.75em 1em 0.25em;
   position: relative;
 }
 
-.contact_error,
-.contact_areaerror {
+.contact_error {
   color: #f31;
   font-size: 0.875rem;
-  position: absolute;
   top: 70px;
-}
-
-.contact_areaerror {
-  top: 190px;
 }
 
 .contact_label {
