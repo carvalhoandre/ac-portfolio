@@ -60,6 +60,7 @@
   --body-color: hsl(var(--hue-color), 0%, 7%);
   --text-button-color: hsl(var(--hue-color), 0%, 7%);
   --container-color: hsl(var(--hue-color), 0%, 9%);
+  --first-color-alt: hsl(var(--hue-color), 0%, 40%);
   --scroll-bar-color: hsl(var(--hue-color), 0%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 0%, 36%);
 }
