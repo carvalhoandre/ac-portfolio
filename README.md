@@ -6,21 +6,22 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4773c3ae-732c-4012-a7c0-9baa3b5fd413/deploy-status)](https://app.netlify.com/sites/andrelcarvalho/deploys)
 
-Check out the live: [AC Portfolio](http://andrelcarvalho.netlify.app/)
+Check out the live: [AC Portfolio](https://andreleitecarvalho.space/)
 
 ## Technologies Used
 
-- React ts
+- TypeScript
+- React ts ^18.3.1
 - Vite
 - Husky
 - React Router DOM
 - Normalize.css
+- Eslint
+- i18next
 
 ## Design
 
 I use Designe from bedimcode: [Responsive Portfolio Website Alexa](https://buymeacoffee.com/bedimcode/e/31360)
-
-## Usage
 
 Explore the different sections of the portfolio:
 
