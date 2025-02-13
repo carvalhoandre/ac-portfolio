@@ -32,7 +32,6 @@ const NotificationContainer: IComponent<INotificationContainer> = ({
     setNotification((prev) => prev.filter((toast) => toast.id !== id));
   };
 
-  console.log("chama", notifications);
   return (
     <NotificationContext.Provider value={{ notification }}>
       {children}
