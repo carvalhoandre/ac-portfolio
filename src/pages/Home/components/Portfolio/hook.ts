@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import Marvel from "@assets/portfolio/marvel.svg";
+import Fintech from "@assets/portfolio/fintech.svg";
 import Store from "@assets/portfolio/store.svg";
 import Countries from "@assets/portfolio/countries.svg";
 import Dogs from "@assets/portfolio/dogs.svg";
@@ -24,10 +24,10 @@ const usePortfolios = (): IUsePortfolios => {
       link: "https://acstore.netlify.app",
     },
     {
-      image: Marvel,
-      title: "ac Marvel",
-      description: t("portfolio.marvel"),
-      link: "https://ac-marvel-heroes.netlify.app",
+      image: Fintech,
+      title: "ac Simple Fintech",
+      description: t("portfolio.fintech"),
+      link: "https://ac-simple-fintech.netlify.app",
     },
     {
       image: Countries,

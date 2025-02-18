@@ -16,4 +16,9 @@ export const socials: Array<ISocialIconProps> = [
     link: "https://dribbble.com/carvalhoandre",
     icon: "dribbble",
   },
+  {
+    name: "kaggle",
+    link: "https://www.kaggle.com/andreleitecarvalho",
+    icon: "kaggle",
+  },
 ];

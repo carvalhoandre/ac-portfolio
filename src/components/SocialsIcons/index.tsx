@@ -6,6 +6,10 @@ import { socials } from "@utils/socials";
 
 import { Icon } from "@components/Icon";
 
+import FintechSVG from "@assets/icons/kaggleSVG";
+
+import "./styles.css";
+
 const SocialsIcons: IComponent = ({ testId = "social-icon" }) => {
   const { t } = useTranslation();
 
@@ -19,7 +23,13 @@ const SocialsIcons: IComponent = ({ testId = "social-icon" }) => {
       data-testid={testId}
       aria-label={t(`emphasis.${name}`)}
     >
-      <Icon icon={icon} />
+      {
+        name === "kaggle" ? (
+          <FintechSVG  />
+        ) : (
+          <Icon icon={icon} />
+        )
+      }
     </a>
   ));
 };

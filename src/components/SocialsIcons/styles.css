@@ -1,0 +1,9 @@
+.icon-kaggle {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--first-color);
+}
+
+.icon-kaggle:hover {
+  color: var(--first-color-alt);
+}
