@@ -1,17 +1,12 @@
+import { IResponseData } from "@/@types/services";
 import { IBodyEMailRequest } from "./types";
 
-const API_URL = import.meta.env.VITE_API_URL;
+import API from './api';
 
-export const postSendEmail = (body: IBodyEMailRequest) => {
-  return {
-    url: API_URL + "/email",
-    options: {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        origin: "https://andrelcarvalho.netlify.app",
-      },
-      body: JSON.stringify(body),
-    },
-  };
+export const postSendEmail = async (
+  body: IBodyEMailRequest
+): Promise<IResponseData<any>> => {
+  const { data } = await API.post('/email', body);
+
+  return data;
 };
