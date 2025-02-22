@@ -1,9 +1,9 @@
 import React from "react";
 
-type IDefaultProps = {
+export type IDefaultProps = {
   testId?: string;
 };
 
-interface IComponent<T = {}> extends React.FC<IDefaultProps & T> {}
+ type IComponent<T = Record<string, unknown>> = React.FC<IDefaultProps & T>;
 
-export default IComponent;
+ export  default IComponent;

@@ -7,9 +7,7 @@ import { useForm } from "@hooks/useForm";
 import { useFetch } from "@/hooks/useRequest";
 import { useNotification } from "@components/NotificationContainer";
 
-import { postSendEmail } from "@/services";
-
-import { Icon, Input, Loader, SectionHeader } from "@components/index";
+import { Icon, Input, Loader, SectionHeader, Error } from "@components/index";
 
 import "./styles.css";
 
@@ -17,7 +15,7 @@ const Contact: IComponent = ({ testId = "contact" }) => {
   const { t } = useTranslation();
   const { notification } = useNotification();
 
-  const { loading, request } = useFetch();
+  const { loading, request, error } = useFetch();
 
   const project = useForm();
   const name = useForm({ required: true });
@@ -40,20 +38,19 @@ const Contact: IComponent = ({ testId = "contact" }) => {
 
     if (!isFormValid) return;
 
-    const { url, options } = postSendEmail({
+     await request({
       email: email.value,
       message: message.value,
       name: name.value,
       title: project.value,
     });
 
-    await request(url, options);
+    const success = !error;
+    const messageNotify = success ? t("form.success") : t("form.error");
 
-    const messageNotify = t("form.success")
+    notification(messageNotify, success ? "success" : "error");
 
-    notification(messageNotify, "success");
-
-    clearForm();
+    if (success) clearForm();
   };
 
   React.useEffect(() => {
@@ -148,6 +145,8 @@ const Contact: IComponent = ({ testId = "contact" }) => {
               <Icon icon="message" className="button_icon" />
             </button>
           </div>
+
+          <Error error={error} />
         </form>
       </div>
     </section>

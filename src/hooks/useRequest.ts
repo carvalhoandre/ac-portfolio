@@ -1,3 +1,5 @@
+import { postSendEmail } from "@/services";
+import { IBodyEMailRequest } from "@/services/types";
 import React from "react";
 
 type UseFetchReturn<T> = {
@@ -5,9 +7,8 @@ type UseFetchReturn<T> = {
   error: string | null;
   loading: boolean;
   request: (
-    url: string,
-    options?: RequestInit,
-  ) => Promise<{ response: Response | null; json: T | null }>;
+    body: IBodyEMailRequest
+  ) => Promise<void>;
 };
 
 const useFetch = <T = any>(): UseFetchReturn<T> => {
@@ -16,25 +17,21 @@ const useFetch = <T = any>(): UseFetchReturn<T> => {
   const [loading, setLoading] = React.useState<boolean>(false);
 
   const request = React.useCallback(
-    async (url: string, options?: RequestInit) => {
+    async (body: IBodyEMailRequest) => {
       setLoading(true);
       setError(null);
       setData(null);
 
-      let response: Response | null = null;
-      let json: T | null = null;
-
       try {
-        response = await fetch(url, options);
+        const { success, code, message } = await postSendEmail(body);
 
-        if (!response.ok) {
+        if (!success) {
           throw new Error(
-            `HTTP error! Status: ${response.status} ${response.statusText}`,
+            `HTTP error! Status: ${code} ${message}`,
           );
         }
 
-        json = await response.json();
-        setData(json);
+        setData(data);
       } catch (err: unknown) {
         const errorMessage =
           err instanceof Error ? err.message : "Unknown error occurred";
@@ -42,8 +39,6 @@ const useFetch = <T = any>(): UseFetchReturn<T> => {
       } finally {
         setLoading(false);
       }
-
-      return { response, json };
     },
     [],
   );
