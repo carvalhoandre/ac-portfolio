@@ -38,14 +38,13 @@ const Contact: IComponent = ({ testId = "contact" }) => {
 
     if (!isFormValid) return;
 
-     await request({
+    const success = await request({
       email: email.value,
       message: message.value,
       name: name.value,
       title: project.value,
     });
-
-    const success = !error;
+    
     const messageNotify = success ? t("form.success") : t("form.error");
 
     notification(messageNotify, success ? "success" : "error");
