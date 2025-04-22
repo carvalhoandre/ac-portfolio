@@ -103,15 +103,18 @@
 
 /* for small devices */
 @media screen and (max-width: 350px) {
+
   .testimonial_data,
   .testimonial_header {
     flex-direction: column;
     align-items: center;
   }
+
   .testimonial_img {
     margin-right: 0;
     margin-bottom: var(--mb-0-25);
   }
+
   .testimonial_data,
   .testimonial_description {
     text-align: center;
@@ -120,6 +123,7 @@
 
 /* for medium devices */
 @media screen and (min-width: 568px) {
+
   .testimonial_data,
   .testimonial_header {
     flex-direction: column;
@@ -132,8 +136,9 @@
 
 /* for large devices */
 @media screen and (min-width: 1024px) {
+
   .prev_button,
   .next_button {
-    display: block;
+    display: flex;
   }
 }

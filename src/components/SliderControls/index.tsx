@@ -14,6 +14,7 @@ const SliderControls: IComponent<ISliderControlsProps> = ({
         className="prev_button"
         onClick={handlePrevSlide}
         aria-label="Previous slide"
+        title="Previous slide"
       >
         <Icon icon="angle-left" className="arrow_icon" />
       </button>
@@ -22,6 +23,7 @@ const SliderControls: IComponent<ISliderControlsProps> = ({
         className="next_button"
         onClick={handleNextSlide}
         aria-label="Next slide"
+        title="Next slide"
       >
         <Icon icon="angle-right" className="arrow_icon" />
       </button>

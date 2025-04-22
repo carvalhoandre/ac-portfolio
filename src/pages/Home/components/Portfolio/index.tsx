@@ -26,7 +26,13 @@ const Portfolio: IComponent = ({ testId = "portfolio" }) => {
     handleTouchMove,
     handleTouchEnd,
     setCurrentSlide,
+    handleMouseEnter,
+    handleMouseLeave,
   } = useSlider({ itemsLength: portfolioItems.length });
+
+  // Calculate previous and next slide indices for transition effects
+  const prevSlideIndex = currentSlide === 0 ? portfolioItems.length - 1 : currentSlide - 1;
+  const nextSlideIndex = currentSlide === portfolioItems.length - 1 ? 0 : currentSlide + 1;
 
   return (
     <section
@@ -43,40 +49,54 @@ const Portfolio: IComponent = ({ testId = "portfolio" }) => {
         subTitle={t("portfolio.subTitle")}
       />
 
-      <div className="portfolio_container container">
+      <div
+        className="portfolio_container container"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="slider">
-          {portfolioItems.map((item, index) => (
-            <div
-              key={index}
-              className={`portfolio_slide ${
-                index === currentSlide ? "active" : ""
-              }`}
-            >
-              <div className="portfolio_content grid">
-                <Image
-                  src={item.image ?? ""}
-                  alt="portfolio_image"
-                  className="portfolio_img"
-                />
+          {portfolioItems.map((item, index) => {
+            let slideClass = "portfolio_slide";
 
-                <div className="portfolio_data">
-                  <h3 className="portfolio_title">{item.title}</h3>
+            if (index === currentSlide) {
+              slideClass += " active";
+            } else if (index === prevSlideIndex) {
+              slideClass += " prev";
+            } else if (index === nextSlideIndex) {
+              slideClass += " next";
+            }
 
-                  <p className="portfolio_description">{item.description}</p>
+            return (
+              <div
+                key={index}
+                className={slideClass}
+              >
+                <div className="portfolio_content grid">
+                  <Image
+                    src={item.image ?? ""}
+                    alt="portfolio_image"
+                    className="portfolio_img"
+                  />
 
-                  <a
-                    href={item.link}
-                    className="button button--flex button--small portfolio_button"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {t("portfolio.go")}
-                    <i className="uil uil-arrow-right button_icon" />
-                  </a>
+                  <div className="portfolio_data">
+                    <h3 className="portfolio_title">{item.title}</h3>
+
+                    <p className="portfolio_description">{item.description}</p>
+
+                    <a
+                      href={item.link}
+                      className="button button--flex button--small portfolio_button"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t("portfolio.go")}
+                      <i className="uil uil-arrow-right button_icon" />
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <SliderDots
