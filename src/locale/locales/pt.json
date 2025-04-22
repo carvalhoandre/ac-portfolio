@@ -74,10 +74,9 @@
   "portfolio": {
     "title": "Portfólio",
     "subTitle": "Meus trabalhos recentes",
-    "store": "Descubra relógios modernos que combinam estilo e funcionalidade.",
-    "countries": "Consultar e apresentar informações sobre países usando a API RestCountries.",
+    "psi": "Site da Psicóloga Giovanna Desenvolvido por mim.",
     "dogs": "Rede social de cachorros desenvolvida durante o curso da Origamid.",
-    "fintech": "Sistema de gerenciamento de transações financeiras desenvolvido durante o curso da Origamid.",
+    "tweets": "Ferramenta de coleta de Tweets.",
     "go": "Ir!"
   },
   "testimonial": {

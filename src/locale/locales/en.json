@@ -73,10 +73,9 @@
   "portfolio": {
     "title": "Portfolio",
     "subTitle": "Most recent work",
-    "store": "Discover modern watches blending style and function.",
-    "fintech": "Financial transaction management system developed during the Origamida course.",
-    "countries": "Querying and presenting information about countries using the RestCountries API.",
+    "psi": "Psychologist Giovanna's website Developed by me.",
     "dogs": "Dog social network developed during the Origamid course",
+    "tweets": "Tweet Collection Tool",
     "go": "Go!"
   },
   "testimonial": {

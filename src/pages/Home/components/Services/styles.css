@@ -94,6 +94,7 @@
 
 .services_modal-close {
   position: absolute;
+  background-color: #fff;
   top: 1em;
   right: 1em;
   font-size: 1.5em;
@@ -121,9 +122,11 @@
     grid-template-columns: max-content;
     justify-content: center;
   }
+
   .services_content {
     padding-right: 3.5rem;
   }
+
   .services_modal {
     padding: 0 0.5rem;
   }
@@ -141,12 +144,15 @@
     grid-template-columns: repeat(3, 218px);
     justify-content: center;
   }
+
   .services_icon {
     font-size: 2em;
   }
+
   .services_content {
     padding: 6em 0 2em 2.5em;
   }
+
   .services_modal-content {
     width: 450px;
   }
