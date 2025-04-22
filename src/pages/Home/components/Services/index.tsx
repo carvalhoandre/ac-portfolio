@@ -24,7 +24,7 @@ const Services: IComponent = ({ testId = "services" }) => {
 
       <ul className="services_container container grid">
         <ServiceItem
-          icon="arrow"
+          icon="code"
           title={t("services.frontend")}
           items={[t("services.apps"), t("services.web")]}
         />

@@ -92,6 +92,7 @@
   .home_content {
     grid-template-columns: 0.25fr 3fr;
   }
+
   .home_blob {
     width: 180px;
   }
@@ -102,9 +103,11 @@
   .home_content {
     grid-template-columns: min-content 1fr 1fr;
   }
+
   .home_data {
     grid-column: initial;
   }
+
   .home_img {
     order: 1;
     justify-self: center;
@@ -115,16 +118,23 @@
   .home_container {
     row-gap: 5rem;
   }
+
   .home__content {
     padding-top: 5.5rem;
     column-gap: 2rem;
   }
+
   .home_scroll {
-    display: block;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
   }
+
   .home_scroll-button {
     margin-left: 3rem;
   }
+
   .home_blob {
     width: 270px;
   }

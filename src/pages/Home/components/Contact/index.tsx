@@ -44,7 +44,7 @@ const Contact: IComponent = ({ testId = "contact" }) => {
       name: name.value,
       title: project.value,
     });
-    
+
     const messageNotify = success ? t("form.success") : t("form.error");
 
     notification(messageNotify, success ? "success" : "error");
@@ -141,7 +141,7 @@ const Contact: IComponent = ({ testId = "contact" }) => {
             >
               {t("form.send")}
 
-              <Icon icon="message" className="button_icon" />
+              <Icon icon="send" className="button_icon" />
             </button>
           </div>
 

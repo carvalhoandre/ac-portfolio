@@ -23,8 +23,8 @@ const Qualifications: IComponent = ({ testId = "skills" }) => {
     selected === "education"
       ? studentList
       : selected === "work"
-      ? workList
-      : [];
+        ? workList
+        : [];
 
   const handleToggleOpen = useCallback((option: ISelected) => {
     setSelected((prevSelected) => (prevSelected === option ? null : option));
@@ -53,7 +53,7 @@ const Qualifications: IComponent = ({ testId = "skills" }) => {
 
           <QualificationsHeader
             title={t("qualification.work")}
-            icon="briefcase-alt"
+            icon="bag"
             isOpen={selected === "work"}
             toggleOpen={() => handleToggleOpen("work")}
           />

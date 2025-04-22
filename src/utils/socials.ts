@@ -12,13 +12,8 @@ export const socials: Array<ISocialIconProps> = [
     icon: "github-alt",
   },
   {
-    name: "dribbble",
-    link: "https://dribbble.com/carvalhoandre",
-    icon: "dribbble",
-  },
-  {
-    name: "kaggle",
-    link: "https://www.kaggle.com/andreleitecarvalho",
-    icon: "kaggle",
+    name: "instagram",
+    link: "https://www.instagram.com/o_dev_dre/",
+    icon: "instagram",
   },
 ];

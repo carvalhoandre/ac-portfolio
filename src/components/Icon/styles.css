@@ -2,9 +2,16 @@
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  color: currentColor;
+  stroke-width: 2;
 }
 
 .icon-wrapper.loaded .icon-i {
   visibility: visible;
   opacity: 1;
+}
+
+/* Add hover effect */
+.icon-i:hover {
+  opacity: 0.8;
 }

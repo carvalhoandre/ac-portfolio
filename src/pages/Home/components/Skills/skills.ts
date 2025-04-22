@@ -2,7 +2,7 @@ import { ISkillListProps } from "@/pages/Home/components/Skills/components/List/
 
 export const ListsSkills: Array<ISkillListProps> = [
   {
-    icon: "brackets-curly",
+    icon: "code",
     title: "emphasis.developer",
     subTitle: "skills.time",
     items: [
