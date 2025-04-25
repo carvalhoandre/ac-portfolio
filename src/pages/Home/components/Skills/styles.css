@@ -12,7 +12,7 @@
 
 .skills_icon,
 .skills_arrow {
-  font-size: 2em;
+  font-size: 1rem;
   color: var(--first-color);
 }
 
@@ -31,7 +31,8 @@
 }
 
 .skills_arrow {
-  margin-left: auto;
+
+  margin: 0.5rem 0 0 0.5rem;
   transition: 0.4s;
 }
 

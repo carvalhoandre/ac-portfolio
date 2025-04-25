@@ -1,5 +1,6 @@
 import IComponent from "@/@types";
 import { IQualificationsItemProps } from "./types";
+import { Icon } from "@/components";
 
 const QualificationsItem: IComponent<IQualificationsItemProps> = ({
   testId = "qualifications-item",
@@ -17,7 +18,7 @@ const QualificationsItem: IComponent<IQualificationsItemProps> = ({
 
       {!!date && (
         <div className="qualification_calendar">
-          <i className="uil uil-calendar-alt icon-calendar" />
+          <Icon icon="calendar" className="uil uil-calendar-alt icon-calendar" />
           {date}
         </div>
       )}

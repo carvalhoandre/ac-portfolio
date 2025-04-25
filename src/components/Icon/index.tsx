@@ -32,7 +32,10 @@ import {
   Mail,
   MapPin,
   Send,
-  ArrowUp
+  ArrowUp,
+  Download,
+  Calendar,
+  ChevronDownIcon
 } from "lucide-react";
 
 import IComponent from "@/@types";
@@ -86,7 +89,10 @@ const Icon: IComponent<IIconProps> = ({
     "phone": Phone,
     "map-marker": MapPin,
     "send": Send,
-    "arrow-up": ArrowUp
+    "arrow-up": ArrowUp,
+    "download": Download,
+    "calendar": Calendar,
+    "chevron-down": ChevronDownIcon
   };
 
   const IconComponent = iconMap[icon] || HelpCircle;

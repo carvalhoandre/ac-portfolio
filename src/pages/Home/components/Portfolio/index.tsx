@@ -10,6 +10,7 @@ import {
   SliderDots,
   SectionHeader,
   SliderControls,
+  Icon,
 } from "@components/index";
 import "./styles.css";
 
@@ -90,7 +91,7 @@ const Portfolio: IComponent = ({ testId = "portfolio" }) => {
                       rel="noopener noreferrer"
                     >
                       {t("portfolio.go")}
-                      <i className="uil uil-arrow-right button_icon" />
+                      <Icon icon="arrow-right" className="uil uil-arrow-right button_icon" />
                     </a>
                   </div>
                 </div>

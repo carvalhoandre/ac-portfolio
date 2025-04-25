@@ -45,8 +45,7 @@ const Emphasis: IComponent = ({ testId = "emphasis" }) => {
 
             <a href="#contactme" className="button button--flex home_button">
               {t("contact.title")}
-
-              <i className="uil uil-message button_icon" />
+              <Icon icon="send" className="uil uil-message button_icon" />
             </a>
           </div>
         </div>

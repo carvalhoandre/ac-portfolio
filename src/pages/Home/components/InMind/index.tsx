@@ -26,7 +26,7 @@ const InMind: IComponent = ({ testId = "in-mind" }) => {
 
             <a href="#contactme" className="button button--flex button--white">
               {t("inMind.contact")}
-              <Icon icon="message" className="project_icon button_icon" />
+              <Icon icon="send" className="project_icon button_icon" />
             </a>
           </div>
 

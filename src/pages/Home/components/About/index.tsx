@@ -10,7 +10,7 @@ import Photo from "@assets/photos/about.webp";
 import CurriculumPt from "@assets/cv/CVAndreCarvalho.pdf";
 import CurriculumEng from "@assets/cv/CVAndreCarvalhoENG.pdf";
 
-import { SectionHeader, Image } from "@components/index";
+import { SectionHeader, Image, Icon } from "@components/index";
 import AboutItem from "./components/AboutItem";
 import "./styles.css";
 
@@ -67,7 +67,7 @@ const About: IComponent = ({ testId = "about" }) => {
           <div className="about_buttons">
             <a href={href} download className="button button--flex">
               {t("about.download")}
-              <i className="uil uil-arrow-to-bottom button_icon" />
+              <Icon icon="download" className="uil uil-arrow-to-bottom button_icon" />
             </a>
           </div>
         </div>

@@ -83,7 +83,7 @@
 }
 
 .icon-calendar {
-  margin-right: 0.5em;
+  width: 1rem;
 }
 
 /* for small devices */
@@ -106,9 +106,11 @@
   .qualification_tabs {
     justify-content: center;
   }
+
   .qualification_button {
     margin: 0 var(--mb-1);
   }
+
   .qualification_sections {
     grid-template-columns: 0.5fr;
   }
