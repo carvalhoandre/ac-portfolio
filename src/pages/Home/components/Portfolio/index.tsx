@@ -84,15 +84,16 @@ const Portfolio: IComponent = ({ testId = "portfolio" }) => {
 
                     <p className="portfolio_description">{item.description}</p>
 
-                    <a
-                      href={item.link}
-                      className="button button--flex button--small portfolio_button"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {t("portfolio.go")}
-                      <Icon icon="arrow-right" className="uil uil-arrow-right button_icon" />
-                    </a>
+                    <div className="portfolio_button_container">
+                      <button
+                        onClick={() => window.open(item.link, '_blank', 'noopener,noreferrer')}
+                        className="portfolio_button"
+                        aria-label={`Visit ${item.title}`}
+                      >
+                        <span className="button_text">{t("portfolio.go")}</span>
+                        <Icon icon="arrow-right" className="button_icon" />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
