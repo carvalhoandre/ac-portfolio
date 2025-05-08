@@ -11,9 +11,4 @@ export const socials: Array<ISocialIconProps> = [
     link: "https://github.com/carvalhoandre",
     icon: "github-alt",
   },
-  {
-    name: "instagram",
-    link: "https://www.instagram.com/o_dev_dre/",
-    icon: "instagram",
-  },
 ];
