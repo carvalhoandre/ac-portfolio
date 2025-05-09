@@ -31,7 +31,6 @@
 }
 
 .skills_arrow {
-
   margin: 0.5rem 0 0 0.5rem;
   transition: 0.4s;
 }
@@ -72,20 +71,16 @@
 }
 
 .skills_css,
-.skills_java,
+.skills_python,
 .skills_photoshop,
 .skills_jest,
-.skills_cypress,
-.skills_java {
+.skills_cypress {
   width: 80%;
 }
 
 .skills_js,
 .skills_figma,
-.skills_react {
-  width: 90%;
-}
-
+.skills_react,
 .skills_type {
   width: 90%;
 }
@@ -99,11 +94,8 @@
 }
 
 .skills_node,
+.skills_java,
 .skills_illustrator {
-  width: 60%;
-}
-
-.skills_python {
   width: 60%;
 }
 

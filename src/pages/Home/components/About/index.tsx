@@ -16,7 +16,7 @@ import "./styles.css";
 
 const aboutItems: Array<IAboutItemProps> = [
   {
-    number: 3,
+    number: 4,
     title: "experience",
     subtitle: "experienceSubtitle",
   },

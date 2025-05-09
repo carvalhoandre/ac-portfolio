@@ -78,7 +78,7 @@ const ServiceItem: IComponent<IServiceItemProps> = ({
             onClick={() => setIsModalOpen(false)}
             aria-label={t("common.close")}
           >
-            <Icon icon="times" />
+            <Icon icon="times" className="button_icon" />
           </button>
 
           <ul className="services_modal-services grid">

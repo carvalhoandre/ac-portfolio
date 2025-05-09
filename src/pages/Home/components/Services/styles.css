@@ -94,12 +94,12 @@
 
 .services_modal-close {
   position: absolute;
-  background-color: #fff;
+  background-color: var(--container-color);
   top: 1em;
   right: 1em;
   font-size: 1.5em;
-  color: var(--first-color);
   cursor: pointer;
+  color: var(--first-color);
 
   &:hover {
     transform: scale(1.2);

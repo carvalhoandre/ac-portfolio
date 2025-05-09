@@ -63,14 +63,14 @@ export const ListsSkills: Array<ISkillListProps> = [
     title: "emphasis.backend",
     items: [
       {
-        className: "java",
+        className: "python",
         percentage: 80,
-        title: "Java",
+        title: "Python",
       },
       {
-        className: "python",
+        className: "java",
         percentage: 60,
-        title: "Python",
+        title: "Java",
       },
     ],
   },
