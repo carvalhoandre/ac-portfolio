@@ -6,8 +6,16 @@ import axios, {
 } from 'axios';
 
 const API = axios.create({
-	baseURL: import.meta.env.VITE_API_URL,
-	headers: { 'Content-Type': 'application/json' },
+	baseURL: 'https://api.clarya.site',
+	headers: {
+		'Content-Type': 'application/json',
+		'Accept': 'application/json',
+		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
+		'sec-ch-ua': '"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+		'sec-ch-ua-mobile': '?0',
+		'sec-ch-ua-platform': '"Windows"',
+	},
+	withCredentials: true
 });
 
 const parseRequest = (
