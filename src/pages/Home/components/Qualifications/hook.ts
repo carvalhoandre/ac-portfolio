@@ -46,7 +46,12 @@ const useQualifications = (): IUseQualifications => {
 
   const workList: Array<IQualificationsItemProps> = [
     {
-      date: `Nov 2024 - ${t("qualification.current")}`,
+      date: `Jun 2025 - ${t("qualification.current")}`,
+      subtitle: "GFT",
+      title: t("qualification.frontend"),
+    },
+    {
+      date: `Nov 2024 - Jun 2025`,
       subtitle: "Montreal",
       title: t("qualification.frontend"),
     },
