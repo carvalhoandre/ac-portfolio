@@ -9,7 +9,7 @@ const useQualifications = (): IUseQualifications => {
   const studentList: Array<IQualificationsItemProps> = [
     {
       date: "Current",
-      subtitle: "EF English",
+      subtitle: "EF English - General English - Level 7",
       title: t("qualification.english"),
     },
     {
