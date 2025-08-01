@@ -12,7 +12,6 @@ import {
   FileText,
   Github,
   Linkedin,
-  InstagramIcon,
   MessageSquare,
   Moon,
   Image,
