@@ -56,12 +56,7 @@ const useQualifications = (): IUseQualifications => {
       title: t("qualification.frontend"),
     },
     {
-      date: `${t("qualification.apr")} 2024 - Nov 2024`,
-      subtitle: "Syndesi",
-      title: t("qualification.frontend"),
-    },
-    {
-      date: `Mar 2022 - ${t("qualification.apr")} 2024`,
+      date: `Mar 2022 - Nov 2024`,
       subtitle: "Hyperlocal",
       title: t("qualification.frontend"),
     },
