@@ -12,6 +12,7 @@ import {
   FileText,
   Github,
   Linkedin,
+  InstagramIcon,
   MessageSquare,
   Moon,
   Image,
@@ -92,7 +93,7 @@ const Icon: IComponent<IIconProps> = ({
     "arrow-up": ArrowUp,
     "download": Download,
     "calendar": Calendar,
-    "chevron-down": ChevronDownIcon
+    "chevron-down": ChevronDownIcon,
   };
 
   const IconComponent = iconMap[icon] || HelpCircle;
