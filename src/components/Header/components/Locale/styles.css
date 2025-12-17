@@ -15,7 +15,6 @@
   color: var(--title-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
-  cursor: pointer;
   transition:
     transform 0.2s ease-in-out,
     color 0.2s ease-in-out;
@@ -24,6 +23,7 @@
 }
 
 .language_item {
+  cursor: pointer;
   padding: 0 0.3rem;
 }
 
