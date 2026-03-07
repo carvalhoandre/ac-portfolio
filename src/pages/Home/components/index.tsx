@@ -1,3 +1,5 @@
+import ImageWithLoader from "@components/Image";
+
 export { About } from "./About";
 export { Contact } from "./Contact";
 export { InMind } from "./InMind";
