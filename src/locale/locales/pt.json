@@ -13,14 +13,15 @@
   "emphasis": {
     "profileAlt": "{{name}} - {{role}}",
     "welcome": "André Carvalho",
-    "developer": "Desenvolvedor",
+    "role": "Full-Stack",
+    "developer": "Desenvolvimento Frontend",
     "designer": "Designer",
-    "description": "Comprometido em entregar trabalho de qualidade de forma consistente.",
-    "scroll": "Rolar para baixo",
+    "description": "Desenvolvendo arquiteturas frontend escaláveis e soluções full-stack para ambientes de alta demanda.",
+    "scroll": "Descer",
     "linkedin": "Visite perfil no linkedin",
     "github": "Visite perfil no github",
     "dribbble": "Visite perfil no dribbble",
-    "backend": "Backend developer"
+    "backend": "Backend & Node.js"
   },
   "qualification": {
     "title": "Qualificação",
@@ -29,6 +30,7 @@
     "work": "Trabalho",
     "english": "Inglês",
     "frontend": "Desenvolvedor Front End",
+    "fullstack": "Full-Stack",
     "science": "Bacharel em Ciência da Computação",
     "current": "Atualmente",
     "apr": "Abr",
@@ -38,12 +40,12 @@
   "inMind": {
     "title": "Tem algum projeto?",
     "subTitle": "Entre em contato agora",
-    "contact": "Entrar em contado"
+    "contact": "Entrar em contato"
   },
   "about": {
     "title": "Sobre Mim",
     "subTitle": "Introdução",
-    "description": "Desenvolvedor Web e Mobile especializado em tecnologias web modernas e design UI/UX. Sou comunicativo e interessado, novos desafios me movem.",
+    "description": "Full-Stack com mais de 5 anos de experiência entregando soluções escaláveis em ambientes bancários, fintechs e sistemas críticos. Meu trabalho vai da arquitetura frontend   React, Angular, Design Systems e Microfrontends   ao desenvolvimento full-stack com Node.js e Python, sustentado por práticas de CI/CD na AWS e Azure DevOps.",
     "download": "Baixar CV",
     "years": "Anos",
     "experience": "Anos",
@@ -51,40 +53,45 @@
     "projects": "Completado",
     "projectsSubtitle": "projetos",
     "companies": "Empresas",
-    "companiesSubtitle": "Trabalhado"
+    "companiesSubtitle": "Trabalhadas"
   },
   "skills": {
     "title": "Habilidades",
     "subTitle": "Meu nível técnico",
-    "time": "Mais de 5 anos"
+    "time": "Mais de 5 anos",
+    "devops": "DevOps & Infraestrutura"
   },
   "services": {
     "title": "Serviços",
-    "subTitle": "O que posso oferecer",
+    "subTitle": "O que entrego",
     "viewMore": "Ver Mais",
     "designs": "Criação de designs",
     "interface": "Desenvolvimento de interfaces",
     "elements": "Criação de elementos UX interativos",
-    "apps": "Aplicativos para Android e IOS",
-    "web": "Páginas WEB responsivas",
-    "frontend": "Desenvolvedor frontend",
-    "api": "APIs REST",
-    "data": "Análise e Visualização de Dados com Pandas"
+    "apps": "React, Angular e React Native",
+    "web": "Design Systems e arquitetura de Microfrontends",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "api": "Desenvolvimento de APIs REST e BFF",
+    "data": "Serviços com Node.js e Python",
+    "devops": "DevOps & CI/CD",
+    "cicd": "Pipelines CI/CD   Jenkins & Azure DevOps",
+    "cloud": "Docker, containerização e AWS"
   },
   "portfolio": {
     "title": "Portfólio",
     "subTitle": "Meus trabalhos recentes",
-    "psi": "Site da Psicóloga Giovanna Desenvolvido por mim.",
-    "dogs": "Rede social de cachorros desenvolvida durante o curso da Origamid.",
-    "tweets": "Ferramenta de coleta de Tweets.",
+    "psi": "Landing page responsiva para clínica de psicologia particular.",
+    "dogs": "Rede social completa em React   autenticação, feed, perfis de usuário e upload de mídia.",
+    "tweets": "Ferramenta de coleta de tweets com integração de API, filtros de conteúdo e exibição em tempo real.",
     "go": "Ir!"
   },
   "testimonial": {
     "title": "Depoimentos",
-    "firstClient": "Analista de testes sênior - Estava trabalhando comigo na mesma equipe na Hyperlocal.",
-    "firstDescription": "É um prazer trabalhar e recomendar André Leite, um desenvolvedor com imenso potencial em Front-End e Mobile. Nos momentos em que trabalhamos juntos, ele demonstrou uma paixão notável por aprender e crescer na área...",
-    "secondClient": "Desenvolvedor de software - Estava trabalhando comigo na mesma equipe na Hyperlocal.",
-    "secondDescription": "Trabalhar e compartilhar conhecimento com André sempre foi muito produtivo. Ele se dedica a aprender/ensinar e implementar soluções lógicas para o negócio."
+    "firstClient": "Analista de testes sênior   mesma equipe na Hyperlocal.",
+    "firstDescription": "É um prazer trabalhar e recomendar André Leite. Um   focado que entrega com consistência em Front-End e Mobile. Ele se destacou pela qualidade das suas soluções e pela capacidade de gerar resultados em um ambiente colaborativo.",
+    "secondClient": "Desenvolvedor de software   mesma equipe na Hyperlocal.",
+    "secondDescription": "Trabalhar e compartilhar conhecimento com André sempre foi altamente produtivo. Ele é dedicado a entregar soluções bem estruturadas e lógicas que servem diretamente ao negócio."
   },
   "contact": {
     "title": "Entrar em Contato",

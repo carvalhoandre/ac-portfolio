@@ -39,7 +39,7 @@ const Emphasis: IComponent = ({ testId = "emphasis" }) => {
           <div className="home_data">
             <h1 className="home_title">André Leite Carvalho</h1>
 
-            <h2 className="home_subtitle">{t("emphasis.developer")}</h2>
+            <h2 className="home_subtitle">{t("emphasis.role")}</h2>
 
             <p className="home_descption">{t("emphasis.description")}</p>
 

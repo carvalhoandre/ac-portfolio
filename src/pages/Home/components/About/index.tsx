@@ -26,7 +26,7 @@ const aboutItems: Array<IAboutItemProps> = [
     subtitle: "projectsSubtitle",
   },
   {
-    number: 3,
+    number: 4,
     title: "companies",
     subtitle: "companiesSubtitle",
   },

@@ -63,35 +63,40 @@ export const ListsSkills: Array<ISkillListProps> = [
     title: "emphasis.backend",
     items: [
       {
+        className: "js",
+        percentage: 90,
+        title: "Node.js",
+      },
+      {
         className: "python",
         percentage: 80,
         title: "Python",
       },
-      {
-        className: "java",
-        percentage: 60,
-        title: "Java",
-      },
     ],
   },
   {
-    icon: "swatchbook",
-    title: "emphasis.designer",
+    icon: "server-network",
+    title: "skills.devops",
     items: [
       {
-        className: "figma",
-        percentage: 90,
-        title: "Figma",
+        className: "docker",
+        percentage: 85,
+        title: "Docker",
       },
       {
-        className: "photoshop",
+        className: "jest",
         percentage: 80,
-        title: "Photoshop",
+        title: "Jenkins",
       },
       {
-        className: "illustrator",
-        percentage: 60,
-        title: "Illustrator",
+        className: "jest",
+        percentage: 80,
+        title: "Azure DevOps",
+      },
+      {
+        className: "jest",
+        percentage: 75,
+        title: "AWS",
       },
     ],
   },

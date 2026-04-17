@@ -13,44 +13,50 @@
   "emphasis": {
     "profileAlt": "{{name}} - {{role}}",
     "welcome": "Hi! I'm André",
-    "developer": "Developer",
+    "role": "Full-Stack  ",
+    "developer": "Frontend Development",
     "designer": "Designer",
-    "description": "Committed to delivering high-quality work consistently.",
+    "description": "Building scalable front-end architectures and full-stack solutions for high-demand environments.",
     "scroll": "Scroll down",
     "linkedin": "Visit linkedin profile",
     "github": "Visit github profile",
     "dribbble": "Visit dribbble profile",
-    "backend": "Backend developer"
+    "backend": "Backend"
   },
   "about": {
     "title": "About Me",
     "subTitle": "My introduction",
-    "description": "Web and Mobile Developer specializing in modern web technologies and UI/UX design. I am communicative and interested, new challenges move me.",
+    "description": "Full-Stack with 5+ years of experience delivering scalable solutions in banking, fintech, and enterprise environments. My work spans front-end architecture   React, Angular, Design Systems, Microfrontends   through full-stack development with Node.js and Python, backed by CI/CD practices on AWS and Azure DevOps.",
     "download": "Download Resume",
     "experience": "Years",
     "experienceSubtitle": "experience",
     "projects": "Completed",
     "projectsSubtitle": "projects",
     "companies": "Companies",
-    "companiesSubtitle": "Worked"
+    "companiesSubtitle": "Worked at"
   },
   "skills": {
     "title": "Skills",
     "subTitle": "My technical level",
-    "time": "More than 5 years"
+    "time": "More than 5 years",
+    "devops": "DevOps & Infrastructure"
   },
   "services": {
     "title": "Services",
-    "subTitle": "What i offer",
+    "subTitle": "What I deliver",
     "viewMore": "View More",
     "designs": "Creating Designs.",
     "interface": "I develop the user interface.",
     "elements": "I create ux element interactions.",
-    "apps": "Apps for Android and IOS",
-    "web": "Web page development",
-    "frontend": "Frontend developer",
-    "api": "APIs REST",
-    "data": "Data Analysis and Visualization with Pandas"
+    "apps": "React, Angular & React Native",
+    "web": "Design Systems & Microfrontend architecture",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "api": "BFF & REST API development",
+    "data": "Node.js & Python services",
+    "devops": "DevOps & CI/CD",
+    "cicd": "CI/CD   Jenkins & Azure DevOps",
+    "cloud": "Docker, containerization & AWS"
   },
   "qualification": {
     "title": "Qualification",
@@ -59,6 +65,7 @@
     "work": "Work",
     "english": "English",
     "frontend": "Front End Developer",
+    "fullstack": "Full-Stack  ",
     "science": "Bachelor’s Degree in Computer Science",
     "current": "Current",
     "apr": "Apr",
@@ -73,17 +80,17 @@
   "portfolio": {
     "title": "Portfolio",
     "subTitle": "Most recent work",
-    "psi": "Psychologist Giovanna's website Developed by me.",
-    "dogs": "Dog social network developed during the Origamid course",
-    "tweets": "Tweet Collection Tool",
+    "psi": "Responsive landing page for a private practice psychology clinic. Custom design, performance-focused.",
+    "dogs": "Full-featured social network built with React   authentication, feeds, user profiles, and media upload.",
+    "tweets": "Twitter data collection tool with API integration, content filtering, and real-time display.",
     "go": "Go!"
   },
   "testimonial": {
     "title": "Testimonial",
-    "firstClient": "Senior Test Analyst - Was working with me on the same team at Hyperlocal.",
-    "firstDescription": "On August 10, 2023, Ian Charlesson was working with André on the same team. It's a pleasure to work with and recommend André Leite, a developer with immense potential in Front-End and Mobile. In the moments we worked together, he demonstrated a remarkable passion for learning and growing in the field...",
-    "secondClient": "Software Developer - Was working with me on the same team at Hyperlocal.",
-    "secondDescription": "Working and sharing knowledge with André has always been very productive. He is dedicated to learning/teaching and implementing logical solutions for the business."
+    "firstClient": "Senior Test Analyst   same team at Hyperlocal.",
+    "firstDescription": "It's a pleasure to work with and recommend André Leite. A focused   who consistently delivers in Front-End and Mobile. He stood out for the quality of his solutions and his ability to drive results in a collaborative environment.",
+    "secondClient": "Software Developer   same team at Hyperlocal.",
+    "secondDescription": "Working and sharing knowledge with André has always been highly productive. He is dedicated to delivering well-structured, logical solutions that directly serve the business."
   },
   "contact": {
     "title": "Get in Touch",

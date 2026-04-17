@@ -48,7 +48,7 @@ const useQualifications = (): IUseQualifications => {
     {
       date: `Jun 2025 - ${t("qualification.current")}`,
       subtitle: "GFT",
-      title: t("qualification.frontend"),
+      title: t("qualification.fullstack"),
     },
     {
       date: "Nov 2024 - Jun 2025",
