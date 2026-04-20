@@ -84,17 +84,17 @@ export const ListsSkills: Array<ISkillListProps> = [
         title: "Docker",
       },
       {
-        className: "jest",
+        className: "jenkins",
         percentage: 80,
         title: "Jenkins",
       },
       {
-        className: "jest",
+        className: "azure-devops",
         percentage: 80,
         title: "Azure DevOps",
       },
       {
-        className: "jest",
+        className: "aws",
         percentage: 75,
         title: "AWS",
       },

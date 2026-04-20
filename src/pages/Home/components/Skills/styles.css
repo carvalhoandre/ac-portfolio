@@ -74,7 +74,9 @@
 .skills_python,
 .skills_photoshop,
 .skills_jest,
-.skills_cypress {
+.skills_jenkins,
+.skills_cypress,
+.skills_azure-devops {
   width: 80%;
 }
 
@@ -85,8 +87,12 @@
   width: 90%;
 }
 
-.skills_angular {
+.skills_angular, .skills_docker {
   width: 85%;
+}
+
+.skills_aws {
+  width: 75%;
 }
 
 .skills_ionic {
