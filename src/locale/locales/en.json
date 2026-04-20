@@ -12,9 +12,9 @@
   },
   "emphasis": {
     "profileAlt": "{{name}} - {{role}}",
-    "welcome": "Hi! I'm André",
-    "role": "Full-Stack  ",
-    "developer": "Frontend Development",
+    "welcome": "Hi! I'm André Leite Carvalho",
+    "role": "Full-Stack",
+    "developer": "Full-Stack Developer",
     "designer": "Designer",
     "description": "Building scalable front-end architectures and full-stack solutions for high-demand environments.",
     "scroll": "Scroll down",
@@ -55,7 +55,7 @@
     "api": "BFF & REST API development",
     "data": "Node.js & Python services",
     "devops": "DevOps & CI/CD",
-    "cicd": "CI/CD   Jenkins & Azure DevOps",
+    "cicd": "CI/CD Jenkins & Azure DevOps",
     "cloud": "Docker, containerization & AWS"
   },
   "qualification": {
@@ -65,7 +65,7 @@
     "work": "Work",
     "english": "English",
     "frontend": "Front End Developer",
-    "fullstack": "Full-Stack  ",
+    "fullstack": "Full-Stack Developer",
     "science": "Bachelor’s Degree in Computer Science",
     "current": "Current",
     "apr": "Apr",
@@ -87,9 +87,9 @@
   },
   "testimonial": {
     "title": "Testimonial",
-    "firstClient": "Senior Test Analyst   same team at Hyperlocal.",
-    "firstDescription": "It's a pleasure to work with and recommend André Leite. A focused   who consistently delivers in Front-End and Mobile. He stood out for the quality of his solutions and his ability to drive results in a collaborative environment.",
-    "secondClient": "Software Developer   same team at Hyperlocal.",
+    "firstClient": "Senior Test Analyst same team at Hyperlocal.",
+    "firstDescription": "It's a pleasure to work with and recommend André Leite. A focused who consistently delivers in Front-End and Mobile. He stood out for the quality of his solutions and his ability to drive results in a collaborative environment.",
+    "secondClient": "Software Developer same team at Hyperlocal.",
     "secondDescription": "Working and sharing knowledge with André has always been highly productive. He is dedicated to delivering well-structured, logical solutions that directly serve the business."
   },
   "contact": {

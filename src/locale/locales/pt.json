@@ -12,16 +12,16 @@
   },
   "emphasis": {
     "profileAlt": "{{name}} - {{role}}",
-    "welcome": "André Carvalho",
+    "welcome": "André Leite Carvalho",
     "role": "Full-Stack",
-    "developer": "Desenvolvimento Frontend",
+    "developer": "Desenvolvedor Full-Stack",
     "designer": "Designer",
     "description": "Desenvolvendo arquiteturas frontend escaláveis e soluções full-stack para ambientes de alta demanda.",
     "scroll": "Descer",
     "linkedin": "Visite perfil no linkedin",
     "github": "Visite perfil no github",
     "dribbble": "Visite perfil no dribbble",
-    "backend": "Backend & Node.js"
+    "backend": "Backend"
   },
   "qualification": {
     "title": "Qualificação",
@@ -45,7 +45,7 @@
   "about": {
     "title": "Sobre Mim",
     "subTitle": "Introdução",
-    "description": "Full-Stack com mais de 5 anos de experiência entregando soluções escaláveis em ambientes bancários, fintechs e sistemas críticos. Meu trabalho vai da arquitetura frontend   React, Angular, Design Systems e Microfrontends   ao desenvolvimento full-stack com Node.js e Python, sustentado por práticas de CI/CD na AWS e Azure DevOps.",
+    "description": "Full-Stack com mais de 5 anos de experiência entregando soluções escaláveis em ambientes bancários, fintechs e sistemas críticos. Meu trabalho vai da arquitetura frontend   React, Angular, Design Systems e Microfrontends ao desenvolvimento full-stack com Node.js e Python, sustentado por práticas de CI/CD na AWS e Azure DevOps.",
     "download": "Baixar CV",
     "years": "Anos",
     "experience": "Anos",
@@ -59,7 +59,7 @@
     "title": "Habilidades",
     "subTitle": "Meu nível técnico",
     "time": "Mais de 5 anos",
-    "devops": "DevOps & Infraestrutura"
+    "devops": "DevOps e Infraestrutura"
   },
   "services": {
     "title": "Serviços",
@@ -74,8 +74,8 @@
     "backend": "Backend",
     "api": "Desenvolvimento de APIs REST e BFF",
     "data": "Serviços com Node.js e Python",
-    "devops": "DevOps & CI/CD",
-    "cicd": "Pipelines CI/CD   Jenkins & Azure DevOps",
+    "devops": "DevOps e CI/CD",
+    "cicd": "Pipelines CI/CDJenkins e Azure DevOps",
     "cloud": "Docker, containerização e AWS"
   },
   "portfolio": {
