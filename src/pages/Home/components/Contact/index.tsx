@@ -1,60 +1,14 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 
 import IComponent from "@/@types";
 
-import { useForm } from "@hooks/useForm";
-import { useFetch } from "@/hooks/useRequest";
-import { useNotification } from "@components/NotificationContainer";
-
-import { Icon, Input, Loader, SectionHeader, Error } from "@components/index";
+import { Icon, SectionHeader } from "@components/index";
 
 import "./styles.css";
 
 const Contact: IComponent = ({ testId = "contact" }) => {
   const { t } = useTranslation();
-  const { notification } = useNotification();
 
-  const { loading, request, error } = useFetch();
-
-  const project = useForm();
-  const name = useForm({ required: true });
-  const message = useForm({ required: true });
-  const email = useForm({ type: "email", required: true });
-
-  const [isFormValid, setIsFormValid] = React.useState(false);
-
-  const clearForm = () => {
-    name.reset();
-    email.reset();
-    project.reset();
-    message.reset();
-
-    setIsFormValid(false);
-  };
-
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    if (!isFormValid) return;
-
-    const success = await request({
-      email: email.value,
-      message: message.value,
-      name: name.value,
-      title: project.value,
-    });
-
-    const messageNotify = success ? t("form.success") : t("form.error");
-
-    notification(messageNotify, success ? "success" : "error");
-
-    if (success) clearForm();
-  };
-
-  React.useEffect(() => {
-    setIsFormValid(name.validate() && email.validate() && message.validate());
-  }, [name.value, email.value, message.value]);
 
   return (
     <section
@@ -64,12 +18,10 @@ const Contact: IComponent = ({ testId = "contact" }) => {
       aria-describedby="contact-description"
       data-testid={testId}
     >
-      {loading && <Loader />}
-
       <SectionHeader title={t("contact.title")} />
 
       <div className="contact_container container">
-        <div>
+        <div className="contact_items">
           <div className="contact_information">
             <Icon icon="envelope" className="contact_icon" />
             <div>
@@ -111,42 +63,6 @@ const Contact: IComponent = ({ testId = "contact" }) => {
             </div>
           </div>
         </div>
-
-        <form className="contact_form grid" onSubmit={handleSubmit}>
-          <div className="contact_inputs grid">
-            <Input label={t("form.name")} name="name" isRequired {...name} />
-            <Input
-              type="email"
-              label="Email"
-              name="email"
-              isRequired
-              {...email}
-            />
-            <Input label={t("form.project")} name="project" {...project} />
-            <Input
-              variant="textarea"
-              label={t("form.message")}
-              name="message"
-              isRequired
-              {...message}
-            />
-          </div>
-
-          <div>
-            <button
-              className="button button--flex"
-              type="submit"
-              disabled={!isFormValid}
-              aria-disabled={!isFormValid}
-            >
-              {t("form.send")}
-
-              <Icon icon="send" className="button_icon" />
-            </button>
-          </div>
-
-          <Error error={error} />
-        </form>
       </div>
     </section>
   );

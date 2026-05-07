@@ -4,7 +4,15 @@
 
 .contact_information {
   display: flex;
-  margin-bottom: var(--mb-2);
+  align-items: center;
+}
+
+.contact_items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  gap: 2rem;
+  width: 100%;
 }
 
 .contact_icon {
@@ -68,16 +76,19 @@
   color: var(--first-color);
 }
 
-/* for large devices */
-@media screen and (min-width: 1024px) {
-  .contact_form {
-    width: 460px;
+@media screen and (max-width: 720px) {
+  .contact_items {
+    grid-template-columns: 1fr;
+    justify-items: start;
   }
-  .contact_container {
-    display: flex;
-    gap: var(--mb-3);
-    justify-content: center;
-    flex-direction: row;
+
+  .contact_information {
     align-items: flex-start;
   }
+
+  .contact_icon {
+    flex-shrink: 0;
+    margin-top: 0.15em;
+  }
 }
+
