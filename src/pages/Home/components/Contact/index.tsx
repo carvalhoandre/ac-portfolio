@@ -38,13 +38,6 @@ const Contact: IComponent = ({ testId = "contact" }) => {
               </span>
             </div>
           </div>
-          <div className="contact_information">
-            <Icon icon="map-marker" className="contact_icon" />
-            <div>
-              <h3 className="contact_title">{t("contact.location")}</h3>
-              <span className="contact_subtitle">{t("contact.city")}</span>
-            </div>
-          </div>
 
           <div className="contact_information">
             <Icon icon="phone" className="contact_icon" />

@@ -72,11 +72,11 @@
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
-  margin-right: var(--mb-0-25);
+  margin-bottom: 0.2rem;
 }
 
 .home_scroll-arrow {
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
 
 .home_perfil {
@@ -126,13 +126,9 @@
 
   .home_scroll {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     align-items: center;
     justify-content: center;
-  }
-
-  .home_scroll-button {
-    margin-left: 3rem;
   }
 
   .home_blob {

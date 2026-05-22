@@ -59,7 +59,9 @@
     "title": "Habilidades",
     "subTitle": "Meu nível técnico",
     "time": "Mais de 5 anos",
-    "devops": "DevOps e Infraestrutura"
+    "devops": "DevOps e Infraestrutura",
+    "frontend": "Frontend",
+    "backend": "Backend"
   },
   "services": {
     "title": "Serviços",
@@ -94,7 +96,7 @@
     "secondDescription": "Trabalhar e compartilhar conhecimento com André sempre foi altamente produtivo. Ele é dedicado a entregar soluções bem estruturadas e lógicas que servem diretamente ao negócio."
   },
   "contact": {
-    "title": "Entrar em Contato",
+    "title": "Entre em Contato",
     "location": "Localização",
     "city": "Brasil - São Paulo",
     "cellphone": "Telefone "

@@ -50,10 +50,10 @@ const Emphasis: IComponent = ({ testId = "emphasis" }) => {
           </div>
         </div>
 
-        <div className="home_scroll">
+        <div>
           <a
             href="#about"
-            className="home_scroll-button button--flex"
+            className="home_scroll home_scroll-button button--flex"
             aria-label={t("emphasis.scroll")}
           >
             <Icon icon="mouse-alt" className="home_scroll-mouse" />

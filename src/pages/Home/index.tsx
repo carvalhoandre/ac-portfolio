@@ -8,14 +8,13 @@ import { Footer } from "@components/Footer";
 
 import {
   About,
-  Contact,
-  Emphasis,
-  Qualifications,
   Skills,
   InMind,
+  Contact,
+  Emphasis,
   Services,
   Portfolio,
-  Testimonial,
+  Qualifications,
 } from "./components";
 
 const Home: IComponent = ({ testId = "home" }) => {
@@ -50,8 +49,6 @@ const Home: IComponent = ({ testId = "home" }) => {
         <Services />
 
         <Portfolio />
-
-        <Testimonial />
 
         <Contact />
       </div>

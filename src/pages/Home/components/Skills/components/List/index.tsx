@@ -36,7 +36,7 @@ const SkillList: IComponent<ISkillListProps> = ({
             {!!subTitle && <h4 className="skills_subtitle">{t(subTitle)}</h4>}
           </div>
 
-          <Icon icon="chevron-down" className="uil uil-angle-down skills_arrow" />
+          <Icon icon="chevron-down" className="skills_arrow" />
         </div>
 
         {isOpen && (

@@ -8,6 +8,7 @@
   align-items: center;
   margin-bottom: var(--mb-2-5);
   cursor: pointer;
+  gap: 0.75em;
 }
 
 .skills_icon,
@@ -16,12 +17,9 @@
   color: var(--first-color);
 }
 
-.skills_icon {
-  margin-right: var(--mb-0-75);
-}
-
 .skills_title {
   font-size: var(--h3-font-size);
+  margin-bottom: 0.5rem;
 }
 
 .skills_subtitle {
@@ -31,7 +29,6 @@
 }
 
 .skills_arrow {
-  margin: 0.5rem 0 0 0.5rem;
   transition: 0.4s;
 }
 
