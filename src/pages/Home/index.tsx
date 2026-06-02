@@ -12,7 +12,6 @@ import {
   InMind,
   Contact,
   Emphasis,
-  Services,
   Portfolio,
   Qualifications,
 } from "./components";
