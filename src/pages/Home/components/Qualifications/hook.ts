@@ -26,9 +26,9 @@ const useQualifications = (): IUseQualifications => {
       title: "Backend & Cloud",
     },
     {
-      date: `Jun 2025 - Jun 2026`,
+      date: "Jun 2025 - Jun 2026",
       subtitle: "GFT",
-      title: "Frontend",
+      title: t("qualification.frontend"),
     },
     {
       date: "Nov 2024 - Jun 2025",
@@ -36,7 +36,7 @@ const useQualifications = (): IUseQualifications => {
       title: t("qualification.frontend"),
     },
     {
-      date: `Mar 2022 - Nov 2024`,
+      date: "Mar 2022 - Nov 2024",
       subtitle: "Hyperlocal",
       title: t("qualification.frontend"),
     },
