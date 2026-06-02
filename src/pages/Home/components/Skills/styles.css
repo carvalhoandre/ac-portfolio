@@ -86,7 +86,7 @@
 
 .skills__tag {
   background-color: var(--first-color-lighter);
-  color: var(--text-color);
+  color: var(--title-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
   padding: 0.375rem 0.875rem;
