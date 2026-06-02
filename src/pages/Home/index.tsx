@@ -46,8 +46,6 @@ const Home: IComponent = ({ testId = "home" }) => {
 
         <InMind />
 
-        <Services />
-
         <Portfolio />
 
         <Contact />

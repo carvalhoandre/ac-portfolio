@@ -1,59 +1,38 @@
 import { useTranslation } from "react-i18next";
 
-import { useState } from "react";
-
 import IComponent from "@/@types";
-import { ISkillListProps } from "./types";
+import { ISkillCategoryProps } from "./types";
 
 import { Icon } from "@components/Icon";
-import SkillItem from "../Item";
+import SkillTag from "../Item";
 
-const SkillList: IComponent<ISkillListProps> = ({
-  testId = "skill-list",
-  subTitle,
+const SkillCategory: IComponent<ISkillCategoryProps> = ({
+  testId = "skill-category",
   title,
+  description,
   icon,
   items,
 }) => {
   const { t } = useTranslation();
 
-  const [isOpen, setOpen] = useState(false);
-
-  const toggleOpen = () => {
-    setOpen((prevMode) => !prevMode);
-  };
-
   return (
-    <li data-testid={testId}>
-      <div
-        className={`skills_content ${isOpen ? "skills_open" : "skills_close"}`}
-      >
-        <div className="skills_header" onClick={toggleOpen}>
-          <Icon icon={icon} className="skills_icon" />
-
-          <div>
-            <h3 className="skills_title">{t(title)}</h3>
-            {!!subTitle && <h4 className="skills_subtitle">{t(subTitle)}</h4>}
-          </div>
-
-          <Icon icon="chevron-down" className="skills_arrow" />
+    <li className="skills__card" data-testid={testId}>
+      <div className="skills__card-header">
+        <Icon icon={icon} className="skills__card-icon" />
+        <div className="skills__card-heading">
+          <h3 className="skills__card-title">{t(title)}</h3>
+          <p className="skills__card-description">{t(description)}</p>
         </div>
-
-        {isOpen && (
-          <ul className="skills_list grid">
-            {items.map(({ className, percentage, title }, index) => (
-              <SkillItem
-                key={index}
-                className={className}
-                percentage={percentage}
-                title={title}
-              />
-            ))}
-          </ul>
-        )}
       </div>
+
+      <ul className="skills__tags" aria-label={t(title)}>
+        {items.map(({ title: tagTitle }, index) => (
+          <SkillTag key={index} title={tagTitle} />
+        ))}
+      </ul>
     </li>
   );
 };
 
-export default SkillList;
+export default SkillCategory;
+

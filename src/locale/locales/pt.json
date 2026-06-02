@@ -16,7 +16,7 @@
     "role": "Full-Stack",
     "developer": "Desenvolvedor Full-Stack",
     "designer": "Designer",
-    "description": "Desenvolvendo arquiteturas frontend escaláveis e soluções full-stack para ambientes de alta demanda.",
+    "description": "Especialista em Frontend com foco em arquiteturas escaláveis, integrações de backend e Open Finance.",
     "scroll": "Descer",
     "linkedin": "Visite perfil no linkedin",
     "github": "Visite perfil no github",
@@ -32,6 +32,7 @@
     "frontend": "Desenvolvedor Front End",
     "fullstack": "Full-Stack",
     "science": "Bacharel em Ciência da Computação",
+    "pos": "Pós-graduação em Arquitetura de Software, Ciência de Dados e Cibersegurança",
     "current": "Atualmente",
     "apr": "Abr",
     "aug": "Ago",
@@ -45,7 +46,7 @@
   "about": {
     "title": "Sobre Mim",
     "subTitle": "Introdução",
-    "description": "Full-Stack com mais de 5 anos de experiência entregando soluções escaláveis em ambientes bancários, fintechs e sistemas críticos. Meu trabalho vai da arquitetura frontend   React, Angular, Design Systems e Microfrontends ao desenvolvimento full-stack com Node.js e Python, sustentado por práticas de CI/CD na AWS e Azure DevOps.",
+    "description": "Desenvolvedor com mais de 5 anos de experiência na entrega de soluções escaláveis ​​em ambientes bancários, fintech e corporativos. Focado em arquitetura frontend utilizando React, Angular, Design Systems e Microfrontends, com expansão para desenvolvimento full-stack com Node.js, Python e fluxos de trabalho baseados em nuvem. Experiência com aplicações escaláveis, integrações de backend, pipelines de CI/CD e práticas modernas de engenharia utilizando AWS e Azure DevOps.",
     "download": "Baixar CV",
     "years": "Anos",
     "experience": "Anos",
@@ -56,12 +57,18 @@
     "companiesSubtitle": "Trabalhadas"
   },
   "skills": {
-    "title": "Habilidades",
-    "subTitle": "Meu nível técnico",
-    "time": "Mais de 5 anos",
-    "devops": "DevOps e Infraestrutura",
+    "title": "Especialização",
+    "subTitle": "Áreas técnicas principais",
     "frontend": "Frontend",
-    "backend": "Backend"
+    "frontendDesc": "Arquiteturas orientadas a componentes, design systems e desenvolvimento multiplataforma.",
+    "backend": "Backend & APIs",
+    "backendDesc": "Camadas de serviço, padrões BFF e integrações de API resilientes.",
+    "devops": "Cloud & DevOps",
+    "devopsDesc": "Pipelines de entrega automatizados, containerização e infraestrutura em nuvem na AWS.",
+    "architecture": "Arquitetura & Escalabilidade",
+    "architectureDesc": "Design modular de sistemas, estratégias de monorepo e padrões de engenharia em escala.",
+    "openFinance": "Open Finance",
+    "openFinanceDesc": "Integrações seguras em ecossistemas bancários e fluxos de dados baseados em consentimento."
   },
   "services": {
     "title": "Serviços",

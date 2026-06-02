@@ -54,8 +54,15 @@
 }
 
 .qualification_calendar {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
+}
+
+.qualification_date {
+  margin-bottom: 4px;
 }
 
 .qualification_rounder {

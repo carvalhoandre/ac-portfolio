@@ -16,7 +16,7 @@
     "role": "Full-Stack",
     "developer": "Full-Stack Developer",
     "designer": "Designer",
-    "description": "Building scalable front-end architectures and full-stack solutions for high-demand environments.",
+    "description": "Frontend Specialist focused on scalable architectures, backend integrations and Open Finance.",
     "scroll": "Scroll down",
     "linkedin": "Visit linkedin profile",
     "github": "Visit github profile",
@@ -26,7 +26,7 @@
   "about": {
     "title": "About Me",
     "subTitle": "My introduction",
-    "description": "Full-Stack with 5+ years of experience delivering scalable solutions in banking, fintech, and enterprise environments. My work spans front-end architecture   React, Angular, Design Systems, Microfrontends   through full-stack development with Node.js and Python, backed by CI/CD practices on AWS and Azure DevOps.",
+    "description": "Developer with 5+ years of experience delivering scalable solutions across banking, fintech and enterprise environments. Focused on frontend architecture using React, Angular, Design Systems and Microfrontends, while expanding into full-stack development with Node.js, Python and cloud-based workflows. Experience working with scalable applications, backend integrations, CI/CD pipelines and modern engineering practices using AWS and Azure DevOps.",
     "download": "Download Resume",
     "experience": "Years",
     "experienceSubtitle": "experience",
@@ -36,12 +36,18 @@
     "companiesSubtitle": "Worked at"
   },
   "skills": {
-    "title": "Skills",
-    "subTitle": "My technical level",
-    "time": "More than 5 years",
-    "devops": "DevOps & Infrastructure",
+    "title": "Expertise",
+    "subTitle": "Core technical areas",
     "frontend": "Frontend",
-    "backend": "Backend"
+    "frontendDesc": "Component-driven architectures, design systems, and cross-platform development.",
+    "backend": "Backend & APIs",
+    "backendDesc": "Service layers, BFF patterns, and resilient API integrations.",
+    "devops": "Cloud & DevOps",
+    "devopsDesc": "Automated delivery pipelines, containerization, and cloud infrastructure on AWS.",
+    "architecture": "Architecture & Scalability",
+    "architectureDesc": "Modular system design, monorepo strategies, and engineering standards at scale.",
+    "openFinance": "Open Finance",
+    "openFinanceDesc": "Secure integrations within banking ecosystems and consent-based data flows."
   },
   "services": {
     "title": "Services",
@@ -72,7 +78,8 @@
     "current": "Current",
     "apr": "Apr",
     "aug": "Aug",
-    "internship": "Internship"
+    "internship": "Internship",
+    "pos": "Postgraduate in Software Architecture, Data Science, and Cybersecurity"
   },
   "inMind": {
     "title": "Got a project?",

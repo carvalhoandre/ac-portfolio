@@ -19,7 +19,7 @@ const QualificationsItem: IComponent<IQualificationsItemProps> = ({
       {!!date && (
         <div className="qualification_calendar">
           <Icon icon="calendar" className="uil uil-calendar-alt icon-calendar" />
-          {date}
+          <p className="qualification_date">{date}</p>
         </div>
       )}
     </div>

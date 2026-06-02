@@ -2,10 +2,10 @@ import { useTranslation } from "react-i18next";
 
 import IComponent from "@/@types";
 
-import { ListsSkills } from "./skills";
+import { SkillsData } from "./skills";
 
 import { SectionHeader } from "@components/index";
-import SkillList from "./components/List";
+import SkillCategory from "./components/List";
 import "./styles.css";
 
 const Skills: IComponent = ({ testId = "skills" }) => {
@@ -18,14 +18,14 @@ const Skills: IComponent = ({ testId = "skills" }) => {
         subTitle={t("skills.subTitle")}
       />
 
-      <ul className="skills_container container grid">
-        {ListsSkills.map(({ icon, items, title, subTitle }, index) => (
-          <SkillList
+      <ul className="skills__container container grid">
+        {SkillsData.map(({ icon, items, title, description }, index) => (
+          <SkillCategory
             key={index}
             icon={icon}
             items={items}
             title={title}
-            subTitle={subTitle}
+            description={description}
           />
         ))}
       </ul>
@@ -34,3 +34,4 @@ const Skills: IComponent = ({ testId = "skills" }) => {
 };
 
 export { Skills };
+

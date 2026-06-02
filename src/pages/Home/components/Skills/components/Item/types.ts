@@ -1,5 +1,3 @@
-export type ISkillItemProps = {
+export type ISkillTagProps = {
   title: string;
-  percentage: number;
-  className: string;
 };

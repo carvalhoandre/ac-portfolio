@@ -1,102 +1,69 @@
-import { ISkillListProps } from "@/pages/Home/components/Skills/components/List/types";
+import { ISkillCategoryProps } from "@/pages/Home/components/Skills/components/List/types";
 
-export const ListsSkills: Array<ISkillListProps> = [
+export const SkillsData: Array<ISkillCategoryProps> = [
   {
     icon: "code",
     title: "skills.frontend",
+    description: "skills.frontendDesc",
     items: [
-      {
-        className: "html",
-        percentage: 95,
-        title: "HTML / CSS",
-      },
-      {
-        className: "js",
-        percentage: 90,
-        title: "JavaScript",
-      },
-      {
-        className: "type",
-        percentage: 90,
-        title: "TypeScript",
-      },
-      {
-        className: "react",
-        percentage: 90,
-        title: "React Native",
-      },
-      {
-        className: "react",
-        percentage: 90,
-        title: "React",
-      },
-      {
-        className: "angular",
-        percentage: 85,
-        title: "Angular",
-      },
-      {
-        className: "jest",
-        percentage: 80,
-        title: "Jest",
-      },
-      {
-        className: "jest",
-        percentage: 80,
-        title: "Vitest",
-      },
-      {
-        className: "cypress",
-        percentage: 80,
-        title: "Cypress",
-      },
-      {
-        className: "ionic",
-        percentage: 70,
-        title: "Ionic",
-      },
+      { title: "React" },
+      { title: "Angular" },
+      { title: "TypeScript" },
+      { title: "React Native" },
+      { title: "Design Systems" },
+      { title: "Microfrontends" },
+      { title: "JavaScript" },
     ],
   },
   {
     icon: "server-network",
     title: "skills.backend",
+    description: "skills.backendDesc",
     items: [
-      {
-        className: "js",
-        percentage: 90,
-        title: "Node.js",
-      },
-      {
-        className: "python",
-        percentage: 80,
-        title: "Python",
-      },
+      { title: "Node.js" },
+      { title: "Python" },
+      { title: "REST APIs" },
+      { title: "BFF Architecture" },
+      { title: "Authentication Flows" },
+      { title: "API Integrations" },
     ],
   },
   {
-    icon: "server-network",
+    icon: "cog",
     title: "skills.devops",
+    description: "skills.devopsDesc",
     items: [
-      {
-        className: "docker",
-        percentage: 85,
-        title: "Docker",
-      },
-      {
-        className: "jenkins",
-        percentage: 80,
-        title: "Jenkins",
-      },
-      {
-        className: "azure-devops",
-        percentage: 80,
-        title: "Azure DevOps",
-      },
-      {
-        className: "aws",
-        percentage: 75,
-        title: "AWS",
-      },
+      { title: "AWS" },
+      { title: "Docker" },
+      { title: "Linux" },
+      { title: "Jenkins" },
+      { title: "Azure DevOps" },
+      { title: "CI/CD" },
+    ],
+  },
+  // {
+  //   icon: "web-grid",
+  //   title: "skills.architecture",
+  //   description: "skills.architectureDesc",
+  //   items: [
+  //     { title: "Scalable Systems" },
+  //     { title: "Modular Architecture" },
+  //     { title: "Monorepo Strategies" },
+  //     { title: "Component Standards" },
+  //     { title: "Frontend Architecture" },
+  //   ],
+  // },
+  {
+    icon: "bag",
+    title: "skills.openFinance",
+    description: "skills.openFinanceDesc",
+    items: [
+      { title: "Banking Ecosystems" },
+      { title: "Secure Integrations" },
+      { title: "Consent-Based Flows" },
+      { title: "Distributed Systems" },
+      { title: "Auth & Security" },
     ],
   },
 ];
+

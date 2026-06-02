@@ -8,47 +8,27 @@ const useQualifications = (): IUseQualifications => {
 
   const studentList: Array<IQualificationsItemProps> = [
     {
-      date: "Current",
-      subtitle: "EF English - General English - Level 7",
-      title: t("qualification.english"),
-    },
-    {
-      date: "Current",
-      subtitle: "Origamid",
-      title: t("qualification.frontend"),
-    },
-    {
-      date: "2024",
-      subtitle: "Cod3r",
-      title: "Angular 9 Essencial",
+      date: "2026 - 2027",
+      subtitle: "Pontifícia Universidade Católica do Paraná - PUC-PR",
+      title: t("qualification.pos"),
     },
     {
       date: "2019 - 2022",
       subtitle: "Universidade Nove de Julho - UNINOVE",
       title: t("qualification.science"),
     },
-    {
-      date: "2018 - 2022",
-      subtitle: "Scrum Certificate",
-      title: "Scrum",
-    },
-    {
-      date: "2021",
-      subtitle: "Udemy - André Bernardes",
-      title: "Ui / Ux Designer",
-    },
-    {
-      date: "2021",
-      subtitle: "Cod3r",
-      title: "React Native",
-    },
   ];
 
   const workList: Array<IQualificationsItemProps> = [
     {
-      date: `Jun 2025 - ${t("qualification.current")}`,
+      date: `Jun 2026 - ${t("qualification.current")}`,
       subtitle: "GFT",
-      title: t("qualification.fullstack"),
+      title: "Backend & Cloud",
+    },
+    {
+      date: `Jun 2025 - Jun 2026`,
+      subtitle: "GFT",
+      title: "Frontend",
     },
     {
       date: "Nov 2024 - Jun 2025",

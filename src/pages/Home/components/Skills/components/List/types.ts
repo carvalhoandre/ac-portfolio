@@ -1,8 +1,10 @@
-import { ISkillItemProps } from "../Item/types";
+export type ISkillTagData = {
+  title: string;
+};
 
-export type ISkillListProps = {
+export type ISkillCategoryProps = {
   icon: string;
   title: string;
-  items: Array<ISkillItemProps>;
-  subTitle?: string;
+  description: string;
+  items: Array<ISkillTagData>;
 };
