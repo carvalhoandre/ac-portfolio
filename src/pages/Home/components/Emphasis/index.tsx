@@ -33,6 +33,9 @@ const Emphasis: IComponent = ({ testId = "emphasis" }) => {
                 name: "André Leite Carvalho",
                 role: t("emphasis.developer"),
               })}
+              width={400}
+              height={400}
+              priority
             />
           </div>
 

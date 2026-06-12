@@ -13,10 +13,10 @@
   "emphasis": {
     "profileAlt": "{{name}} - {{role}}",
     "welcome": "Hi! I'm André Leite Carvalho",
-    "role": "Full-Stack",
-    "developer": "Full-Stack Developer",
+    "role": "Frontend Specialist",
+    "developer": "Frontend Specialist",
     "designer": "Designer",
-    "description": "Frontend Specialist focused on scalable architectures, backend integrations and Open Finance.",
+    "description": "Focused on scalable architectures and backend integrations.",
     "scroll": "Scroll down",
     "linkedin": "Visit linkedin profile",
     "github": "Visit github profile",
@@ -26,7 +26,7 @@
   "about": {
     "title": "About Me",
     "subTitle": "My introduction",
-    "description": "Developer with 5+ years of experience delivering scalable solutions across banking, fintech and enterprise environments. Focused on frontend architecture using React, Angular, Design Systems and Microfrontends, while expanding into full-stack development with Node.js, Python and cloud-based workflows. Experience working with scalable applications, backend integrations, CI/CD pipelines and modern engineering practices using AWS and Azure DevOps.",
+    "description": "Developer with 5+ years of experience delivering scalable solutions across banking, fintech and enterprise environments. Focused on frontend architecture using React, Angular, Design Systems and Microfrontends, while expanding into Frontend Specialist development with Node.js, Python and cloud-based workflows. Experience working with scalable applications, backend integrations, CI/CD pipelines and modern engineering practices using AWS and Azure DevOps.",
     "download": "Download Resume",
     "experience": "Years",
     "experienceSubtitle": "experience",
@@ -45,9 +45,7 @@
     "devops": "Cloud & DevOps",
     "devopsDesc": "Automated delivery pipelines, containerization, and cloud infrastructure on AWS.",
     "architecture": "Architecture & Scalability",
-    "architectureDesc": "Modular system design, monorepo strategies, and engineering standards at scale.",
-    "openFinance": "Open Finance",
-    "openFinanceDesc": "Secure integrations within banking ecosystems and consent-based data flows."
+    "architectureDesc": "Modular system design, monorepo strategies, and engineering standards at scale."
   },
   "services": {
     "title": "Services",
@@ -73,7 +71,7 @@
     "work": "Work",
     "english": "English",
     "frontend": "Front End Developer",
-    "fullstack": "Full-Stack Developer",
+    "fullstack": "Frontend Specialist Developer",
     "science": "Bachelor’s Degree in Computer Science",
     "current": "Current",
     "apr": "Apr",

@@ -9,7 +9,6 @@ import "./styles.css";
 const Contact: IComponent = ({ testId = "contact" }) => {
   const { t } = useTranslation();
 
-
   return (
     <section
       className="contact section"

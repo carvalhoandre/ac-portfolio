@@ -14,10 +14,6 @@ export const navItems: Array<INavITemProps> = [
     icon: "file-alt",
   },
   {
-    href: "services",
-    icon: "bag",
-  },
-  {
     href: "portfolio",
     icon: "scenery",
   },
