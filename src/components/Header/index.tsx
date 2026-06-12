@@ -41,7 +41,7 @@ const Header: IComponent<IHeaderProps> = ({
           className={`nav_menu ${isNavVisible ? "show-menu" : "close-menu"}`}
           id="nav-menu"
         >
-          <ul className="nav_list grid" role="menu">
+          <ul className="nav_list grid">
             {navMenuItems}
           </ul>
 

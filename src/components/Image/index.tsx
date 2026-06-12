@@ -11,6 +11,9 @@ const Image: IComponent<IImageProps> = ({
   src,
   alt,
   className,
+  width,
+  height,
+  priority = false,
 }) => {
   const [showSkeleton, setShowSkeleton] = React.useState(true);
 
@@ -30,7 +33,10 @@ const Image: IComponent<IImageProps> = ({
         className={`image-img ${className ?? ""}`}
         alt={alt}
         src={src}
-        loading="lazy"
+        width={width}
+        height={height}
+        loading={priority ? undefined : "lazy"}
+        fetchPriority={priority ? "high" : undefined}
       />
     </div>
   );

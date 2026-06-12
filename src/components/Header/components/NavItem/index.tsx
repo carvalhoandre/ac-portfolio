@@ -26,7 +26,7 @@ const NavItem: IComponent<INavITemProps> = ({
       <div className="nav_icon_container">
         <Icon icon={icon} className="nav_icon" />
 
-        <p className="icon_title">{name || href}</p>
+        <p className="icon_title">{name}</p>
       </div>
     </a>
   );

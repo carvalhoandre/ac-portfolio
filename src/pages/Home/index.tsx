@@ -35,19 +35,21 @@ const Home: IComponent = ({ testId = "home" }) => {
       >
         <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
 
-        <Emphasis />
+        <main>
+          <Emphasis />
 
-        <About />
+          <About />
 
-        <Skills />
+          <Skills />
 
-        <Qualifications />
+          <Qualifications />
 
-        <InMind />
+          <InMind />
 
-        <Portfolio />
+          <Portfolio />
 
-        <Contact />
+          <Contact />
+        </main>
       </div>
 
       <Footer />

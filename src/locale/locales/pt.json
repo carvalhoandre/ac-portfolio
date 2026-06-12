@@ -13,10 +13,10 @@
   "emphasis": {
     "profileAlt": "{{name}} - {{role}}",
     "welcome": "André Leite Carvalho",
-    "role": "Full-Stack",
-    "developer": "Desenvolvedor Full-Stack",
+    "role": "Especialista em Frontend",
+    "developer": "Desenvolvedor Frontend",
     "designer": "Designer",
-    "description": "Especialista em Frontend com foco em arquiteturas escaláveis, integrações de backend e Open Finance.",
+    "description": "Com foco em arquiteturas escaláveis e integrações de backend",
     "scroll": "Descer",
     "linkedin": "Visite perfil no linkedin",
     "github": "Visite perfil no github",
@@ -30,7 +30,7 @@
     "work": "Trabalho",
     "english": "Inglês",
     "frontend": "Desenvolvedor Front End",
-    "fullstack": "Full-Stack",
+    "fullstack": "Especialista em Frontend",
     "science": "Bacharel em Ciência da Computação",
     "pos": "Pós-graduação em Arquitetura de Software, Ciência de Dados e Cibersegurança",
     "current": "Atualmente",
@@ -46,7 +46,7 @@
   "about": {
     "title": "Sobre Mim",
     "subTitle": "Introdução",
-    "description": "Desenvolvedor com mais de 5 anos de experiência na entrega de soluções escaláveis ​​em ambientes bancários, fintech e corporativos. Focado em arquitetura frontend utilizando React, Angular, Design Systems e Microfrontends, com expansão para desenvolvimento full-stack com Node.js, Python e fluxos de trabalho baseados em nuvem. Experiência com aplicações escaláveis, integrações de backend, pipelines de CI/CD e práticas modernas de engenharia utilizando AWS e Azure DevOps.",
+    "description": "Desenvolvedor com mais de 5 anos de experiência na entrega de soluções escaláveis ​​em ambientes bancários, fintech e corporativos. Focado em arquitetura frontend utilizando React, Angular, Design Systems e Microfrontends, com expansão para desenvolvimento Frontend Specialist com Node.js, Python e fluxos de trabalho baseados em nuvem. Experiência com aplicações escaláveis, integrações de backend, pipelines de CI/CD e práticas modernas de engenharia utilizando AWS e Azure DevOps.",
     "download": "Baixar CV",
     "years": "Anos",
     "experience": "Anos",
@@ -66,9 +66,7 @@
     "devops": "Cloud & DevOps",
     "devopsDesc": "Pipelines de entrega automatizados, containerização e infraestrutura em nuvem na AWS.",
     "architecture": "Arquitetura & Escalabilidade",
-    "architectureDesc": "Design modular de sistemas, estratégias de monorepo e padrões de engenharia em escala.",
-    "openFinance": "Open Finance",
-    "openFinanceDesc": "Integrações seguras em ecossistemas bancários e fluxos de dados baseados em consentimento."
+    "architectureDesc": "Design modular de sistemas, estratégias de monorepo e padrões de engenharia em escala."
   },
   "services": {
     "title": "Serviços",
