@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import Tweets from "@assets/portfolio/tweets.svg";
+import Labs from "@assets/portfolio/labs.svg";
 import Giovanna from "@assets/portfolio/psi.svg";
 import Dogs from "@assets/portfolio/dogs.svg";
 
@@ -17,10 +17,10 @@ const usePortfolios = (): IUsePortfolios => {
       link: "https://giovannadias.netlify.app/",
     },
     {
-      image: Tweets,
-      title: "ac Tweets",
-      description: t("portfolio.tweets"),
-      link: "https://tweet.andreleitecarvalho.space/",
+      image: Labs,
+      title: "ac Labs",
+      description: t("portfolio.labs"),
+      link: "https://lab.andreleitecarvalho.space/",
     },
     {
       image: Dogs,
