@@ -1,80 +1,123 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="theme-color"
+      content="#f5f2ec"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#11110f"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="description"
+      content="Portfólio de André Leite Carvalho, especialista em Frontend com experiência em React, Angular, React Native, TypeScript, Design Systems, integrações, testes, cloud e Arquitetura de Software."
+    />
+    <meta name="author" content="André Leite Carvalho" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta
+      name="google-site-verification"
+      content="Di3muIsvRKXrN4aGfjy4eblMtVrXQXIqqLn2D8o6vPQ"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#FFF" />
+    <link rel="canonical" href="https://andreleitecarvalho.space/pt-BR/" />
+    <link
+      rel="alternate"
+      hreflang="pt-BR"
+      href="https://andreleitecarvalho.space/pt-BR/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://andreleitecarvalho.space/en/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://andreleitecarvalho.space/pt-BR/"
+    />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="preload"
+      href="/images/profile/andre-hero-480.avif"
+      as="image"
+      type="image/avif"
+      media="(max-width: 767px)"
+      fetchpriority="high"
+    />
 
-  <!-- Essential Meta Tags for SEO -->
-  <meta name="description"
-    content="Front-End Developer, working in web technologies like React, React Native, and UI/UX design. Check out André's portfolio and projects." />
-  <meta name="keywords"
-    content="Front-End Developer, Web Development, React, React Native, UI/UX Design, JavaScript, Portfolio" />
-  <meta name="author" content="André Leite Carvalho" />
-  <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://andreleitecarvalho.space/pt-BR/" />
+    <meta
+      property="og:title"
+      content="André Leite Carvalho | Frontend Specialist e Arquitetura de Software"
+    />
+    <meta
+      property="og:description"
+      content="Portfólio de André Leite Carvalho, especialista em Frontend com experiência em React, Angular, React Native, TypeScript, Design Systems, integrações, testes, cloud e Arquitetura de Software."
+    />
+    <meta
+      property="og:image"
+      content="https://andreleitecarvalho.space/images/social/andre-leite-carvalho-og.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Retrato de André Leite Carvalho e seu posicionamento como Frontend Specialist"
+    />
+    <meta property="og:site_name" content="André Leite Carvalho — Portfolio" />
+    <meta property="og:locale" content="pt_BR" />
 
-  <!-- Open Graph / Facebook / LinkedIn -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://andrelcarvalho.netlify.app/" />
-  <meta property="og:title" content="André Leite Carvalho - Front-End Developer" />
-  <meta property="og:description"
-    content="Front-End Developer, working in web technologies like React, React Native, and UI/UX design. Check out André's portfolio and projects." />
-  <meta property="og:image"
-    content="https://raw.githubusercontent.com/carvalhoandre/carvalhoandre/refs/heads/main/assets/perfil.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="André Leite Carvalho | Frontend Specialist e Arquitetura de Software"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfólio de André Leite Carvalho, especialista em Frontend com experiência em React, Angular, React Native, TypeScript, Design Systems, integrações, testes, cloud e Arquitetura de Software."
+    />
+    <meta
+      name="twitter:image"
+      content="https://andreleitecarvalho.space/images/social/andre-leite-carvalho-og.jpg"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Retrato de André Leite Carvalho e seu posicionamento como Frontend Specialist"
+    />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://andrelcarvalho.netlify.app/" />
-  <meta name="twitter:title" content="André Leite Carvalho - Front-End Developer" />
-  <meta name="twitter:description"
-    content="Front-End, working in web technologies like React, React Native, and UI/UX design. Check out André's portfolio and projects." />
-  <meta name="twitter:image"
-    content="https://raw.githubusercontent.com/carvalhoandre/carvalhoandre/refs/heads/main/assets/perfil.webp" />
+    <title>
+      André Leite Carvalho | Frontend Specialist e Arquitetura de Software
+    </title>
 
-  <!-- Google Site Verification -->
-  <meta name="google-site-verification" content="Di3muIsvRKXrN4aGfjy4eblMtVrXQXIqqLn2D8o6vPQ" />
-
-  <!-- Preconnect to Google Fonts origins -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <!-- Non-render-blocking font loading -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
-  </noscript>
-
-  <title>André Leite Carvalho</title>
-
-  <!-- Schema.org Markup for Google Rich Results -->
-  <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "André Leite Carvalho",
-        "jobTitle": "Front-End Developer",
-        "url": "https://andrelcarvalho.netlify.app",
-        "sameAs": [
-          "https://www.linkedin.com/in/andre-carvalho/",
-          "https://github.com/andre-carvalho"
-        ],
-        "worksFor": {
-          "@type": "Organization",
-          "name": "AC Developer"
-        },
-        "alumniOf": "University Name",
-        "description": "Front-End Developer specializing in React, React Native, and UI/UX Design.",
-        "image": "https://raw.githubusercontent.com/carvalhoandre/carvalhoandre/refs/heads/main/assets/perfil.webp"
-      }
+    <script>
+      (() => {
+        let savedTheme;
+        try {
+          savedTheme = localStorage.getItem("portfolio-theme");
+        } catch {}
+        const theme =
+          savedTheme === "light" || savedTheme === "dark"
+            ? savedTheme
+            : matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.dataset.theme = theme;
+      })();
     </script>
-</head>
-
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx" defer></script>
-</body>
-
+    <script id="structured-data" type="application/ld+json">
+      {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

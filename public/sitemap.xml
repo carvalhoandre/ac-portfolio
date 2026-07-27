@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://andreleitecarvalho.space/pt-BR/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://andreleitecarvalho.space/pt-BR/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://andreleitecarvalho.space/en/" />
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://andreleitecarvalho.space/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://andreleitecarvalho.space/pt-BR/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://andreleitecarvalho.space/en/" />
+    <priority>0.9</priority>
+  </url>
+  <url><loc>https://andreleitecarvalho.space/pt-BR/projetos/psi-giovanna/</loc></url>
+  <url><loc>https://andreleitecarvalho.space/en/projects/psi-giovanna/</loc></url>
+  <url><loc>https://andreleitecarvalho.space/pt-BR/projetos/ac-labs/</loc></url>
+  <url><loc>https://andreleitecarvalho.space/en/projects/ac-labs/</loc></url>
+  <url><loc>https://andreleitecarvalho.space/pt-BR/projetos/ac-dogs/</loc></url>
+  <url><loc>https://andreleitecarvalho.space/en/projects/ac-dogs/</loc></url>
+</urlset>
