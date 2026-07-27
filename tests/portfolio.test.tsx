@@ -1,0 +1,114 @@
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import axe from "axe-core";
+import { describe, expect, it } from "vitest";
+import App from "../src/App";
+import {
+  getPageMetadata,
+  resolveRoute,
+  staticPaths,
+} from "../src/content/routes";
+import { content, profile } from "../src/content/portfolio";
+
+describe("portfolio experience", () => {
+  it("renders a single descriptive heading and the primary CTAs", () => {
+    render(<App locale="pt-BR" route={{ type: "home" }} />);
+
+    expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
+    expect(
+      screen.getByRole("heading", { name: profile.name }),
+    ).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /ver projetos/i })).toHaveAttribute(
+      "href",
+      "#projetos",
+    );
+    expect(
+      screen.getAllByRole("link", { name: /baixar currículo/i })[0],
+    ).toHaveAttribute("href", profile.resume["pt-BR"]);
+  });
+
+  it("renders all projects with descriptive case-study links", () => {
+    render(<App locale="en" route={{ type: "home" }} />);
+
+    for (const project of content.en.projects) {
+      expect(
+        screen.getByRole("heading", { name: project.title }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getAllByRole("link", {
+          name: new RegExp(`case study.*${project.title}`, "i"),
+        }).length,
+      ).toBeGreaterThan(0);
+    }
+  });
+
+  it("supports keyboard navigation in the journey tabs", async () => {
+    const user = userEvent.setup();
+    render(<App locale="pt-BR" route={{ type: "home" }} />);
+    const education = screen.getByRole("tab", { name: "Educação" });
+    const experience = screen.getByRole("tab", { name: "Experiência" });
+
+    education.focus();
+    await user.keyboard("{ArrowRight}");
+
+    expect(experience).toHaveAttribute("aria-selected", "true");
+    expect(screen.getByText("Hyperlocal")).toBeInTheDocument();
+  });
+
+  it("persists the theme choice and exposes an accessible menu", async () => {
+    const user = userEvent.setup();
+    render(<App locale="pt-BR" route={{ type: "home" }} />);
+
+    const theme = screen.getByRole("button", { name: "Usar tema escuro" });
+    await user.click(theme);
+    expect(document.documentElement).toHaveAttribute("data-theme", "dark");
+    expect(window.localStorage.getItem("portfolio-theme")).toBe("dark");
+
+    const menu = screen.getByRole("button", { name: "Abrir menu" });
+    await user.click(menu);
+    expect(menu).toHaveAttribute("aria-expanded", "true");
+    expect(document.body.style.overflow).toBe("hidden");
+    await user.keyboard("{Escape}");
+    expect(menu).toHaveAttribute("aria-expanded", "false");
+    expect(menu).toHaveFocus();
+  });
+
+  it("uses eager, high-priority hero media and lazy below-fold media", () => {
+    render(<App locale="en" route={{ type: "home" }} />);
+    const hero = screen.getByAltText(/^professional portrait/i);
+    const about = screen.getByAltText(/second professional portrait/i);
+
+    expect(hero).toHaveAttribute("loading", "eager");
+    expect(hero).toHaveAttribute("fetchpriority", "high");
+    expect(hero).toHaveAttribute("width");
+    expect(hero).toHaveAttribute("height");
+    expect(about).toHaveAttribute("loading", "lazy");
+  });
+
+  it("has no automatically detectable accessibility violations", async () => {
+    render(<App locale="pt-BR" route={{ type: "home" }} />);
+    const result = await axe.run(document, {
+      rules: { "color-contrast": { enabled: false } },
+    });
+    expect(result.violations).toEqual([]);
+  });
+});
+
+describe("routing and SEO", () => {
+  it("resolves every generated route and a real not-found state", () => {
+    for (const path of staticPaths) {
+      expect(resolveRoute(path).route.type).not.toBe("notFound");
+    }
+    expect(resolveRoute("/pt-BR/nao-existe").route.type).toBe("notFound");
+  });
+
+  it("provides localized canonical, hreflang, social and structured data", () => {
+    const metadata = getPageMetadata(resolveRoute("/en/"));
+    expect(metadata.title).toContain("Frontend Specialist");
+    expect(metadata.canonical).toBe(`${profile.website}/en/`);
+    expect(metadata.alternatePt).toBe(`${profile.website}/pt-BR/`);
+    expect(metadata.alternateEn).toBe(`${profile.website}/en/`);
+    expect(metadata.image).toMatch(/1200|andre-leite-carvalho-og/);
+    expect(metadata.jsonLd).toHaveProperty("@graph");
+  });
+});
