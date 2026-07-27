@@ -1,5 +1,5 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react";
 import * as path from "path";
 
 export default defineConfig({
@@ -20,7 +20,8 @@ export default defineConfig({
     },
   },
   build: {
-    chunkSizeWarningLimit: 2000,
+    target: "es2022",
+    chunkSizeWarningLimit: 500,
   },
   server: {
     host: true,
@@ -30,7 +31,10 @@ export default defineConfig({
     host: true,
     port: 8080,
   },
-  optimizeDeps: {
-    exclude: ["@typescript-eslint/eslint-plugin", "@typescript-eslint/parser"],
+  test: {
+    environment: "jsdom",
+    setupFiles: ["./tests/setup.ts"],
+    include: ["tests/**/*.test.ts", "tests/**/*.test.tsx"],
+    css: true,
   },
 });
