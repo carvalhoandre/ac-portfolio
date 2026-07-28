@@ -1,7 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import axe from "axe-core";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import App from "../src/App";
 import {
   getPageMetadata,
@@ -76,21 +76,66 @@ describe("portfolio experience", () => {
     ).toHaveAttribute("href", "#inicio");
   });
 
-  it("shows the confirmed English certification and a secure contact form", async () => {
+  it("shows the confirmed English certification and direct contact channels", async () => {
     const user = userEvent.setup();
+    const writeText = vi.fn().mockResolvedValue(undefined);
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: { writeText },
+    });
     render(<App locale="pt-BR" route={{ type: "home" }} />);
 
     await user.click(screen.getByRole("tab", { name: "Certificações" }));
     expect(screen.getByText("English Level B2")).toBeInTheDocument();
     expect(screen.getByText("EF English")).toBeInTheDocument();
 
-    const form = screen.getByRole("form", { name: "Envie uma mensagem" });
-    expect(form).toHaveAttribute("method", "POST");
-    expect(form).toHaveAttribute("data-netlify", "true");
-    expect(screen.getByLabelText("E-mail")).toHaveAttribute("type", "email");
-    expect(screen.getByLabelText("Mensagem")).toHaveAttribute(
-      "maxlength",
-      "3000",
+    expect(screen.queryByRole("form")).not.toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: /Enviar e-mail/i }),
+    ).toHaveAttribute(
+      "href",
+      expect.stringContaining("subject=Contato%20pelo%20portf%C3%B3lio"),
+    );
+    expect(
+      screen.getByRole("link", { name: /Falar pelo LinkedIn/i }),
+    ).toHaveAttribute("href", profile.linkedin);
+    expect(screen.getByRole("link", { name: /Ver GitHub/i })).toHaveAttribute(
+      "href",
+      profile.github,
+    );
+    expect(
+      screen.getByRole("link", { name: /Conversar no WhatsApp/i }),
+    ).toHaveAttribute("href", profile.whatsapp);
+
+    const pathname = window.location.pathname;
+    await user.click(
+      screen.getByRole("button", { name: /Copiar endereço de e-mail/i }),
+    );
+    expect(writeText).toHaveBeenCalledWith(profile.email);
+    expect(screen.getByText("E-mail copiado")).toBeInTheDocument();
+    expect(window.location.pathname).toBe(pathname);
+  });
+
+  it("keeps direct contact available when clipboard access fails", async () => {
+    const user = userEvent.setup();
+    const writeText = vi.fn().mockRejectedValueOnce(new Error("blocked"));
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: { writeText },
+    });
+    render(<App locale="en" route={{ type: "home" }} />);
+
+    await user.click(
+      screen.getByRole("button", { name: /Copy email address/i }),
+    );
+    expect(
+      screen.getByText("Could not copy. Use the address below."),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: /Send an email/i }),
+    ).toHaveAttribute(
+      "href",
+      expect.stringContaining("subject=Portfolio%20contact"),
     );
   });
 

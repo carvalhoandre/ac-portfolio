@@ -74,6 +74,40 @@ test("preserves the section and viewport while changing language", async ({
     .toBeLessThan(8);
 });
 
+test("keeps direct contact on-page without a broken form redirect", async ({
+  page,
+}) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: { writeText: async () => undefined },
+    });
+  });
+  await page.goto("/pt-BR/#contato");
+  await page.locator("#contato").scrollIntoViewIfNeeded();
+  const before = await page.evaluate(() => window.scrollY);
+
+  await expect(page.getByRole("form")).toHaveCount(0);
+  await page
+    .getByRole("button", { name: /Copiar endereço de e-mail/i })
+    .dispatchEvent("click");
+  await expect(page.getByText("E-mail copiado")).toBeVisible();
+  await expect(page).toHaveURL(/\/pt-BR\/#contato$/);
+  expect(await page.evaluate(() => window.scrollY)).toBe(before);
+  await expect(
+    page.getByRole("link", { name: /Enviar e-mail/i }),
+  ).toHaveAttribute("href", /subject=Contato%20pelo%20portf%C3%B3lio/);
+  await expect(
+    page.getByRole("link", { name: /Falar pelo LinkedIn/i }),
+  ).toBeVisible();
+
+  await page.getByRole("link", { name: /English/ }).dispatchEvent("click");
+  await expect(page).toHaveURL(/\/en\/#contato$/);
+  await expect(
+    page.getByRole("button", { name: /Copy email address/i }),
+  ).toBeVisible();
+});
+
 test("renders the custom 404 experience", async ({ page }) => {
   await page.goto("/pt-BR/rota-inexistente");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
