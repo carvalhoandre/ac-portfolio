@@ -12,6 +12,8 @@ Live site: [andreleitecarvalho.space](https://andreleitecarvalho.space)
 - Playwright using locally installed Chrome
 - ESLint 10 and Prettier
 - Sharp image pipeline
+- Build-time GitHub REST integration with a committed fallback
+- Netlify Forms with honeypot spam protection
 
 The build produces indexable Portuguese and English pages at `/pt-BR/` and `/en/`, localized case studies, and a custom 404 page. Professional content is centralized in `src/content`.
 
@@ -29,10 +31,11 @@ npm run test:e2e
 npm run build
 npm run preview
 npm run audit:bundle
+npm run sync:github
 ```
 
 ## Production
 
 The static output is written to `dist`. Netlify reads `public/_redirects`; public routes are prerendered during `npm run build`, and unknown URLs resolve to `404.html` with a real 404 status on Netlify.
 
-See [the implementation report](docs/portfolio-refactor-report.md) and [Search Console setup](docs/search-console.md) for validation and indexing details.
+See [the implementation report](docs/portfolio-refactor-report.md), [the experience evolution decisions](docs/experience-evolution-decisions.md), and [Search Console setup](docs/search-console.md) for validation and indexing details.
