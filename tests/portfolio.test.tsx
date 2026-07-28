@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import axe from "axe-core";
 import { describe, expect, it } from "vitest";
@@ -55,7 +55,7 @@ describe("portfolio experience", () => {
     expect(screen.getByText("Hyperlocal")).toBeInTheDocument();
   });
 
-  it("persists the theme choice and exposes an accessible menu", async () => {
+  it("persists the theme choice and exposes accessible mobile navigation", async () => {
     const user = userEvent.setup();
     render(<App locale="pt-BR" route={{ type: "home" }} />);
 
@@ -64,13 +64,34 @@ describe("portfolio experience", () => {
     expect(document.documentElement).toHaveAttribute("data-theme", "dark");
     expect(window.localStorage.getItem("portfolio-theme")).toBe("dark");
 
-    const menu = screen.getByRole("button", { name: "Abrir menu" });
-    await user.click(menu);
-    expect(menu).toHaveAttribute("aria-expanded", "true");
-    expect(document.body.style.overflow).toBe("hidden");
-    await user.keyboard("{Escape}");
-    expect(menu).toHaveAttribute("aria-expanded", "false");
-    expect(menu).toHaveFocus();
+    const mobileNavigation = screen.getByRole("navigation", {
+      name: "Navegação principal mobile",
+    });
+    expect(mobileNavigation).toBeInTheDocument();
+    expect(
+      within(mobileNavigation).getByRole("link", {
+        name: "Início",
+        current: "location",
+      }),
+    ).toHaveAttribute("href", "#inicio");
+  });
+
+  it("shows the confirmed English certification and a secure contact form", async () => {
+    const user = userEvent.setup();
+    render(<App locale="pt-BR" route={{ type: "home" }} />);
+
+    await user.click(screen.getByRole("tab", { name: "Certificações" }));
+    expect(screen.getByText("English Level B2")).toBeInTheDocument();
+    expect(screen.getByText("EF English")).toBeInTheDocument();
+
+    const form = screen.getByRole("form", { name: "Envie uma mensagem" });
+    expect(form).toHaveAttribute("method", "POST");
+    expect(form).toHaveAttribute("data-netlify", "true");
+    expect(screen.getByLabelText("E-mail")).toHaveAttribute("type", "email");
+    expect(screen.getByLabelText("Mensagem")).toHaveAttribute(
+      "maxlength",
+      "3000",
+    );
   });
 
   it("uses eager, high-priority hero media and lazy below-fold media", () => {
