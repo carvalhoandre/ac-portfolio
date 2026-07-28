@@ -10,9 +10,11 @@ A migration should be reconsidered if the portfolio gains authenticated content,
 
 GitHub highlights use the public REST API during the build, never in the visitor's browser. `scripts/sync-github.mjs` keeps a curated repository allowlist, rejects forks, archived repositories, and entries without descriptions, applies a four-second timeout, and reuses a 24-hour generated cache. The committed fallback keeps the section usable when the API or its unauthenticated rate limit is unavailable. No token is stored in frontend code.
 
-## Contact security
+## Contact delivery decision
 
-The form uses Netlify Forms because the site is statically hosted on Netlify. Submission is server-handled without a client API key. Native field constraints, length limits, and a honeypot reduce malformed and automated submissions. Netlify's dashboard should keep spam filtering enabled and apply notification rules with least-privilege recipients. No sensitive information should be requested in this form.
+The native Netlify form was removed after its POST action proved unreliable: it navigated to a localized success URL that the static 404 strategy handled as an unknown POST route. Gmail SMTP was evaluated only as a server-side Netlify Function, but this environment has no linked Netlify site, SMTP variables, Gmail app password, or way to verify delivery in a Deploy Preview and production. Keeping an unverified function or inactive form would violate the stability criteria for this portfolio.
+
+The contact section now uses direct `mailto`, LinkedIn, GitHub, WhatsApp, and copy-email actions. Copy feedback is announced accessibly, and no action changes the current route, locale, theme, hash, or scroll position. No Nodemailer dependency, SMTP variable, `.env` template, or incomplete Function remains in the repository.
 
 ## Newsletter assessment
 

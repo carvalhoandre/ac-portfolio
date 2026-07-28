@@ -29,7 +29,7 @@ The portfolio was rebuilt as a bilingual, statically prerendered React experienc
 - Light and dark themes honor `prefers-color-scheme`, persist safely, and initialize before paint without a hydration mismatch.
 - PT and EN labels, navigation, dates, CTAs, metadata, and alternative text are complete.
 - Locale changes keep the existing React root mounted, preserve the hash and viewport, and retain the selected theme.
-- Expertise badges, three-way education/experience/certification tabs, English Level B2, build-time GitHub highlights, project themes, and a Netlify contact form extend the information architecture without adding runtime dependencies.
+- Expertise badges, three-way education/experience/certification tabs, English Level B2, build-time GitHub highlights, project themes, and direct contact actions extend the information architecture without adding runtime dependencies.
 
 ## Images and loading
 
@@ -66,11 +66,11 @@ Validation commands completed successfully:
 - `npm run format:check`
 - `npm run lint`
 - `npm run typecheck`
-- `npm run test`: 9 passed
-- `npm run test:e2e`: 15 passed across 320 px, 390 px, and desktop
+- `npm run test`: 10 passed
+- `npm run test:e2e`: 18 passed across 320 px, 390 px, and desktop
 - `npm run build`: 11 public routes plus `404.html` prerendered
-- `npm run audit:bundle`: 80.42 kB gzip JS/CSS budget result
-- `npm audit`: zero vulnerabilities
+- `npm run audit:bundle`: 79.87 kB gzip JS/CSS budget result
+- `npm audit`: inconclusive because the local TLS certificate chain prevented access to the npm audit endpoint
 
 ## Limitations
 
