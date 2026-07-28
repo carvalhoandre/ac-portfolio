@@ -13,7 +13,6 @@ Live site: [andreleitecarvalho.space](https://andreleitecarvalho.space)
 - ESLint 10 and Prettier
 - Sharp image pipeline
 - Build-time GitHub REST integration with a committed fallback
-- Netlify Forms with honeypot spam protection
 
 The build produces indexable Portuguese and English pages at `/pt-BR/` and `/en/`, localized case studies, and a custom 404 page. Professional content is centralized in `src/content`.
 

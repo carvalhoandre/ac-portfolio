@@ -5,6 +5,7 @@ type IconName =
   | "arrow-up-right"
   | "check"
   | "close"
+  | "copy"
   | "download"
   | "github"
   | "globe"
@@ -27,6 +28,12 @@ const paths: Record<IconName, React.ReactNode> = {
   "arrow-up-right": <path d="M7 17 17 7M7 7h10v10" />,
   check: <path d="m5 12 4 4L19 6" />,
   close: <path d="M6 6l12 12M18 6 6 18" />,
+  copy: (
+    <>
+      <rect x="8" y="8" width="11" height="11" rx="2" />
+      <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" />
+    </>
+  ),
   download: (
     <>
       <path d="M12 3v12m0 0 5-5m-5 5-5-5" />

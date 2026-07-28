@@ -1099,89 +1099,6 @@ h3 {
   align-content: start;
 }
 
-.contact-form {
-  display: grid;
-  gap: 1rem;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  background: var(--color-surface);
-  padding: clamp(1.25rem, 4vw, 2rem);
-  box-shadow: var(--shadow-soft);
-}
-
-.contact-form h3 {
-  margin-bottom: 0.25rem;
-  font-family: var(--font-display);
-  font-size: clamp(1.6rem, 4vw, 2.2rem);
-  font-weight: 400;
-}
-
-.contact-form label {
-  display: grid;
-  gap: 0.4rem;
-  color: var(--color-muted);
-  font-size: 0.75rem;
-  font-weight: 750;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  background: var(--color-bg);
-  padding: 0.72rem 0.8rem;
-  color: var(--color-text);
-  transition:
-    border-color var(--transition),
-    background-color 180ms ease;
-}
-
-.contact-form textarea {
-  resize: vertical;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: var(--color-accent);
-}
-
-.form-grid {
-  display: grid;
-  gap: 1rem;
-}
-
-.form-footer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.8rem 1rem;
-}
-
-.form-footer small {
-  max-width: 29rem;
-  color: var(--color-faint);
-  font-size: 0.68rem;
-}
-
-.form-success {
-  border-left: 3px solid #4a9b68;
-  background: color-mix(in srgb, #4a9b68 12%, transparent);
-  padding: 0.65rem 0.8rem;
-  color: var(--color-text);
-  font-size: 0.85rem;
-}
-
-.form-honeypot {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  overflow: hidden !important;
-  clip: rect(0 0 0 0) !important;
-  clip-path: inset(50%) !important;
-  white-space: nowrap !important;
-}
-
 .contact-actions > .button {
   justify-self: start;
   margin-bottom: 1rem;
@@ -1196,6 +1113,24 @@ h3 {
   padding: 1rem 0;
   font-weight: 700;
   text-decoration: none;
+}
+
+button.contact-link {
+  width: 100%;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.contact-copy:hover {
+  color: var(--color-accent);
+}
+
+.contact-copy > span {
+  display: grid;
+  min-height: 3.5rem;
+  align-content: center;
 }
 
 .contact-link small {
@@ -1515,10 +1450,6 @@ h3 {
     display: inline;
   }
 
-  .form-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .github-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1627,25 +1558,6 @@ h3 {
   .contact-grid {
     grid-template-columns: minmax(0, 0.9fr) minmax(22rem, 1.1fr);
     gap: clamp(3rem, 8vw, 7rem);
-  }
-
-  .contact-grid {
-    grid-template-areas:
-      "intro form"
-      "actions form";
-    align-items: start;
-  }
-
-  .contact-grid > div:first-child {
-    grid-area: intro;
-  }
-
-  .contact-form {
-    grid-area: form;
-  }
-
-  .contact-actions {
-    grid-area: actions;
   }
 
   .github-heading {
