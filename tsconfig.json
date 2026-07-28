@@ -18,7 +18,24 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": [
+    "src/App.tsx",
+    "src/main.tsx",
+    "src/entry-server.tsx",
+    "src/vite-env.d.ts",
+    "src/content/**/*.ts",
+    "src/sections/**/*.tsx",
+    "src/pages/HomePage.tsx",
+    "src/pages/ProjectPage.tsx",
+    "src/pages/NotFoundPage.tsx",
+    "src/components/Icon.tsx",
+    "src/components/OptimizedImage.tsx",
+    "src/components/SectionHeading.tsx",
+    "src/components/Header.tsx",
+    "src/components/Footer.tsx",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"
