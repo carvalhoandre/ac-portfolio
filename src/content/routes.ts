@@ -17,7 +17,12 @@ export interface ResolvedRoute {
   route: AppRoute;
 }
 
-const projectSlugs: ProjectSlug[] = ["psi-giovanna", "ac-labs", "ac-dogs"];
+const projectSlugs: ProjectSlug[] = [
+  "psi-giovanna",
+  "ac-labs",
+  "ac-dogs",
+  "prumo-digital",
+];
 
 const normalizePath = (pathname: string) => {
   if (pathname === "/") return pathname;

@@ -1,6 +1,15 @@
 export type Locale = "pt-BR" | "en";
 
-export type ProjectSlug = "psi-giovanna" | "ac-labs" | "ac-dogs";
+export type ProjectSlug =
+  "psi-giovanna" | "ac-labs" | "ac-dogs" | "prumo-digital";
+
+export interface ProjectTheme {
+  accent: string;
+  accentMuted: string;
+  surface: string;
+  text: string;
+  visualStyle: "editorial" | "technical" | "playful" | "directional";
+}
 
 export interface Project {
   slug: ProjectSlug;
@@ -15,6 +24,8 @@ export interface Project {
   outcome: string;
   technologies: string[];
   image: string;
+  imageAlt: string;
+  theme: ProjectTheme;
   demo?: string;
   article?: string;
 }
@@ -24,6 +35,8 @@ export interface TimelineItem {
   title: string;
   organization: string;
   current?: boolean;
+  summary?: string;
+  skills?: readonly string[];
 }
 
 export const profile = {
@@ -46,6 +59,38 @@ const projectImages: Record<ProjectSlug, string> = {
   "psi-giovanna": "/images/projects/psi-giovanna.svg",
   "ac-labs": "/images/projects/ac-labs.svg",
   "ac-dogs": "/images/projects/ac-dogs.svg",
+  "prumo-digital": "/images/projects/prumo-digital.svg",
+};
+
+const projectThemes: Record<ProjectSlug, ProjectTheme> = {
+  "psi-giovanna": {
+    accent: "#246792",
+    accentMuted: "#dcebf2",
+    surface: "#f8f6f1",
+    text: "#153f61",
+    visualStyle: "editorial",
+  },
+  "ac-labs": {
+    accent: "#7550c7",
+    accentMuted: "#ebe4fa",
+    surface: "#fbfaff",
+    text: "#17162b",
+    visualStyle: "technical",
+  },
+  "ac-dogs": {
+    accent: "#d99a00",
+    accentMuted: "#fff0bb",
+    surface: "#fffaf0",
+    text: "#33270b",
+    visualStyle: "playful",
+  },
+  "prumo-digital": {
+    accent: "#ff2d72",
+    accentMuted: "#471628",
+    surface: "#141315",
+    text: "#f7f4f0",
+    visualStyle: "directional",
+  },
 };
 
 const sharedExperience: TimelineItem[] = [
@@ -89,11 +134,25 @@ const sharedEducation: TimelineItem[] = [
       "Pós-graduação em Arquitetura de Software, Ciência de Dados e Cibersegurança",
     organization: "Pontifícia Universidade Católica do Paraná — PUCPR",
     current: true,
+    summary:
+      "Aprofundamento integrado em arquitetura, dados e segurança de software.",
+    skills: ["Arquitetura de Software", "Dados", "Cibersegurança"],
   },
   {
     period: "2019 — 2022",
     title: "Bacharelado em Ciência da Computação",
     organization: "Universidade Nove de Julho — UNINOVE",
+    summary: "Formação superior em fundamentos e práticas da computação.",
+    skills: ["Ciência da Computação"],
+  },
+];
+
+const sharedCertifications: TimelineItem[] = [
+  {
+    period: "Nível confirmado",
+    title: "English Level B2",
+    organization: "EF English",
+    skills: ["English", "B2"],
   },
 ];
 
@@ -122,6 +181,9 @@ const projectsPt: Project[] = [
       "Uma landing page pública e responsiva, orientada à apresentação clara da prática profissional.",
     technologies: ["Frontend responsivo", "Web performance", "UI"],
     image: projectImages["psi-giovanna"],
+    imageAlt:
+      "Página responsiva de Giovanna Dias com apresentação profissional e ações de contato",
+    theme: projectThemes["psi-giovanna"],
     demo: "https://giovannadias.netlify.app/",
   },
   {
@@ -148,6 +210,9 @@ const projectsPt: Project[] = [
       "Uma base pública em desenvolvimento contínuo para compartilhar repertório e consolidar aprendizados.",
     technologies: ["Documentação", "Software Architecture", "Knowledge base"],
     image: projectImages["ac-labs"],
+    imageAlt:
+      "Interface do André’s Lab com artigos e categorias de engenharia de software",
+    theme: projectThemes["ac-labs"],
     article: profile.lab,
   },
   {
@@ -174,14 +239,44 @@ const projectsPt: Project[] = [
       "Um projeto de estudo funcional que integra autenticação, conteúdo e mídia em uma única aplicação.",
     technologies: ["React", "Autenticação", "Integração de API"],
     image: projectImages["ac-dogs"],
+    imageAlt: "Galeria responsiva da aplicação social ac Dogs",
+    theme: projectThemes["ac-dogs"],
     demo: "https://ac-dogs.netlify.app",
+  },
+  {
+    slug: "prumo-digital",
+    title: "Prumo Digital",
+    descriptor: "Presença digital orientada a pequenos negócios",
+    summary:
+      "Landing page responsiva que apresenta duas soluções digitais e conduz a solicitação completa para o WhatsApp.",
+    context:
+      "Uma presença digital para organizar a oferta da Prumo e tornar o primeiro contato mais objetivo em desktop e mobile.",
+    challenge:
+      "Comunicar direção, estrutura e presença com personalidade, mantendo leitura rápida, navegação clara e um CTA prioritário.",
+    role: "Estruturação da experiência e implementação frontend responsiva.",
+    responsibilities: [
+      "Construção da hierarquia e dos fluxos de ação.",
+      "Adaptação da composição para desktop e mobile.",
+      "Implementação da identidade visual e dos estados interativos.",
+    ],
+    decisions: [
+      "Contraste elevado e linguagem visual direcional para reforçar posicionamento.",
+      "CTA principal persistente na hierarquia e navegação compacta no mobile.",
+    ],
+    outcome:
+      "Uma página de apresentação direta, responsiva e preparada para transformar interesse em conversa qualificada.",
+    technologies: ["React", "TypeScript", "Responsive UI"],
+    image: projectImages["prumo-digital"],
+    imageAlt:
+      "Landing page escura da Prumo Digital com destaque rosa e composição responsiva",
+    theme: projectThemes["prumo-digital"],
   },
 ];
 
 const projectsEn: Project[] = projectsPt.map((project) => {
   const translations: Record<
     ProjectSlug,
-    Omit<Project, "slug" | "image" | "demo" | "article">
+    Omit<Project, "slug" | "image" | "imageAlt" | "theme" | "demo" | "article">
   > = {
     "psi-giovanna": {
       title: "Psi Giovanna",
@@ -256,9 +351,46 @@ const projectsEn: Project[] = projectsPt.map((project) => {
         "A functional study project integrating authentication, content, and media in one application.",
       technologies: ["React", "Authentication", "API integration"],
     },
+    "prumo-digital": {
+      title: "Prumo Digital",
+      descriptor: "A digital presence for small businesses",
+      summary:
+        "A responsive landing page that presents two digital solutions and guides complete enquiries to WhatsApp.",
+      context:
+        "A digital presence designed to organize Prumo’s offer and make the first contact more objective on desktop and mobile.",
+      challenge:
+        "Communicate direction, structure, and presence with personality while keeping content scannable, navigation clear, and one primary CTA.",
+      role: "Experience structure and responsive frontend implementation.",
+      responsibilities: [
+        "Action flow and content hierarchy implementation.",
+        "Desktop and mobile composition adaptation.",
+        "Visual identity and interaction state implementation.",
+      ],
+      decisions: [
+        "High contrast and directional graphics to reinforce positioning.",
+        "A primary CTA with clear hierarchy and compact mobile navigation.",
+      ],
+      outcome:
+        "A direct, responsive presentation page designed to turn interest into a qualified conversation.",
+      technologies: ["React", "TypeScript", "Responsive UI"],
+    },
   };
 
-  return { ...project, ...translations[project.slug] };
+  const imageAlts: Record<ProjectSlug, string> = {
+    "psi-giovanna":
+      "Giovanna Dias responsive page with professional introduction and contact actions",
+    "ac-labs":
+      "André’s Lab interface with software engineering articles and categories",
+    "ac-dogs": "Responsive gallery from the ac Dogs social application",
+    "prumo-digital":
+      "Prumo Digital dark landing page with pink highlights and responsive composition",
+  };
+
+  return {
+    ...project,
+    ...translations[project.slug],
+    imageAlt: imageAlts[project.slug],
+  };
 });
 
 export const content = {
@@ -267,6 +399,7 @@ export const content = {
     alternateLocaleName: "English",
     skip: "Pular para o conteúdo",
     navLabel: "Navegação principal",
+    mobileNavLabel: "Navegação principal mobile",
     menuOpen: "Abrir menu",
     menuClose: "Fechar menu",
     themeLight: "Usar tema claro",
@@ -275,7 +408,9 @@ export const content = {
       home: "Início",
       projects: "Projetos",
       expertise: "Especialidades",
+      mobileExpertise: "Skills",
       experience: "Experiência",
+      journey: "Trajetória",
       about: "Sobre",
       contact: "Contato",
     },
@@ -392,9 +527,22 @@ export const content = {
       title: "Uma jornada contínua entre prática e aprofundamento técnico.",
       education: "Educação",
       experience: "Experiência",
+      certifications: "Certificações",
       current: "Em andamento",
+      certificationItems: sharedCertifications,
       educationItems: sharedEducation,
       experienceItems: sharedExperience,
+    },
+    githubSection: {
+      eyebrow: "Código e projetos abertos",
+      title: "GitHub em destaque",
+      description:
+        "Repositórios selecionados que complementam os estudos de caso com código, documentação e experimentação técnica.",
+      profile: "Ver perfil completo",
+      repository: "Abrir repositório",
+      updated: "Atualizado",
+      stars: "estrelas",
+      forks: "forks",
     },
     lab: {
       eyebrow: "André’s Lab",
@@ -413,6 +561,16 @@ export const content = {
       github: "Ver GitHub",
       whatsapp: "Conversar no WhatsApp",
       resume: "Baixar currículo",
+      formTitle: "Envie uma mensagem",
+      name: "Nome",
+      emailField: "E-mail",
+      subject: "Assunto",
+      message: "Mensagem",
+      send: "Enviar mensagem",
+      privacy:
+        "Seus dados serão usados somente para responder a esta mensagem.",
+      success: "Mensagem enviada. Obrigado pelo contato!",
+      required: "Campo obrigatório",
     },
     footer: {
       role: "Frontend Specialist · Software Architecture",
@@ -449,6 +607,7 @@ export const content = {
     alternateLocaleName: "Português",
     skip: "Skip to content",
     navLabel: "Primary navigation",
+    mobileNavLabel: "Mobile primary navigation",
     menuOpen: "Open menu",
     menuClose: "Close menu",
     themeLight: "Use light theme",
@@ -457,7 +616,9 @@ export const content = {
       home: "Home",
       projects: "Projects",
       expertise: "Expertise",
+      mobileExpertise: "Skills",
       experience: "Experience",
+      journey: "Journey",
       about: "About",
       contact: "Contact",
     },
@@ -573,7 +734,12 @@ export const content = {
       title: "A continuous journey between practice and technical depth.",
       education: "Education",
       experience: "Experience",
+      certifications: "Certifications",
       current: "In progress",
+      certificationItems: sharedCertifications.map((item) => ({
+        ...item,
+        period: "Confirmed level",
+      })),
       educationItems: sharedEducation.map((item, index) => ({
         ...item,
         period: index === 0 ? "2026 — 2027" : item.period,
@@ -581,6 +747,14 @@ export const content = {
           index === 0
             ? "Postgraduate studies in Software Architecture, Data Science, and Cybersecurity"
             : "Bachelor’s Degree in Computer Science",
+        summary:
+          index === 0
+            ? "Integrated postgraduate studies in software architecture, data, and security."
+            : "Undergraduate education in computer science foundations and practice.",
+        skills:
+          index === 0
+            ? ["Software Architecture", "Data", "Cybersecurity"]
+            : ["Computer Science"],
       })),
       experienceItems: sharedExperience.map((item) => ({
         ...item,
@@ -599,6 +773,17 @@ export const content = {
               : item.title,
       })),
     },
+    githubSection: {
+      eyebrow: "Code and open projects",
+      title: "GitHub highlights",
+      description:
+        "Selected repositories that complement the case studies with code, documentation, and technical experimentation.",
+      profile: "View complete profile",
+      repository: "Open repository",
+      updated: "Updated",
+      stars: "stars",
+      forks: "forks",
+    },
     lab: {
       eyebrow: "André’s Lab",
       title: "Learn, document, and share.",
@@ -616,6 +801,15 @@ export const content = {
       github: "View GitHub",
       whatsapp: "Talk on WhatsApp",
       resume: "Download resume",
+      formTitle: "Send a message",
+      name: "Name",
+      emailField: "Email",
+      subject: "Subject",
+      message: "Message",
+      send: "Send message",
+      privacy: "Your details will only be used to reply to this message.",
+      success: "Message sent. Thank you for reaching out!",
+      required: "Required field",
     },
     footer: {
       role: "Frontend Specialist · Software Architecture",

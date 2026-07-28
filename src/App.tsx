@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import { MotionController } from "./components/MotionController";
 import { content, type Locale } from "./content/portfolio";
 import { getPageMetadata, type AppRoute } from "./content/routes";
 import { HomePage } from "./pages/HomePage";
@@ -26,6 +27,7 @@ export default function App({ locale, route }: AppProps) {
         {skip}
       </a>
       <Header locale={locale} route={route} />
+      <MotionController key={`${locale}-${route.type}`} />
       {route.type === "home" && <HomePage locale={locale} />}
       {route.type === "project" && (
         <ProjectPage locale={locale} slug={route.slug} />

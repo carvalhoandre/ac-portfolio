@@ -1,4 +1,5 @@
 import { SectionHeading } from "../components/SectionHeading";
+import { TechnologyBadge } from "../components/TechnologyBadge";
 import { content, type Locale } from "../content/portfolio";
 
 interface ExpertiseProps {
@@ -11,6 +12,7 @@ export function Expertise({ locale }: ExpertiseProps) {
   return (
     <section
       className="section"
+      data-reveal
       id="especialidades"
       aria-labelledby="expertise-title"
     >
@@ -31,7 +33,9 @@ export function Expertise({ locale }: ExpertiseProps) {
               <p>{item.description}</p>
               <ul className="technology-list">
                 {item.technologies.map((technology) => (
-                  <li key={technology}>{technology}</li>
+                  <li key={technology}>
+                    <TechnologyBadge group={index} technology={technology} />
+                  </li>
                 ))}
               </ul>
             </article>

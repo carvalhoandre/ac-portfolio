@@ -1,0 +1,33 @@
+{
+  "refreshedAt": "2026-07-28T12:00:00.000Z",
+  "source": "github-rest",
+  "repositories": [
+    {
+      "name": "ac-portfolio",
+      "description": "Portfolio architecture, accessibility, performance and localized case studies built with React and TypeScript.",
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2026-07-15T22:27:53Z",
+      "url": "https://github.com/carvalhoandre/ac-portfolio"
+    },
+    {
+      "name": "courses-node-api",
+      "description": "Backend learning project built during the Origamid Node.js course, covering REST APIs, authentication, file uploads, Docker, rate limiting and production deployment.",
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2026-06-16T13:39:44Z",
+      "url": "https://github.com/carvalhoandre/courses-node-api"
+    },
+    {
+      "name": "dev-playbook",
+      "description": "Playbook visual com boas práticas de Git, Angular e outras stacks — docs, diagramas e exemplos.",
+      "language": "MDX",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-10-25T19:10:02Z",
+      "url": "https://github.com/carvalhoandre/dev-playbook"
+    }
+  ]
+}

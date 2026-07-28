@@ -8,6 +8,9 @@ type IconName =
   | "download"
   | "github"
   | "globe"
+  | "grid"
+  | "home"
+  | "code"
   | "linkedin"
   | "mail"
   | "menu"
@@ -39,6 +42,21 @@ const paths: Record<IconName, React.ReactNode> = {
       <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
     </>
   ),
+  grid: (
+    <>
+      <rect x="4" y="4" width="6" height="6" rx="1" />
+      <rect x="14" y="4" width="6" height="6" rx="1" />
+      <rect x="4" y="14" width="6" height="6" rx="1" />
+      <rect x="14" y="14" width="6" height="6" rx="1" />
+    </>
+  ),
+  home: (
+    <>
+      <path d="m3 11 9-8 9 8" />
+      <path d="M5 10v10h14V10M9 20v-6h6v6" />
+    </>
+  ),
+  code: <path d="m9 18-6-6 6-6m6 0 6 6-6 6" />,
   linkedin: (
     <>
       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2" />

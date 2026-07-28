@@ -21,7 +21,7 @@ function ProjectCard({ locale, project, index }: ProjectCardProps) {
   const copy = content[locale].projectsSection;
 
   return (
-    <article className="project-card">
+    <article className="project-card" data-reveal>
       <a
         className="project-media"
         href={projectPath(locale, project.slug)}
@@ -31,7 +31,7 @@ function ProjectCard({ locale, project, index }: ProjectCardProps) {
           0{index + 1}
         </span>
         <img
-          alt={`Interface do projeto ${project.title}`}
+          alt={project.imageAlt}
           decoding="async"
           height="426"
           loading="lazy"
@@ -86,6 +86,7 @@ export function Projects({ locale }: ProjectsProps) {
   return (
     <section
       className="section section-projects"
+      data-reveal
       id="projetos"
       aria-labelledby="projects-title"
     >

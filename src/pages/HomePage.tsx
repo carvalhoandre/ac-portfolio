@@ -3,6 +3,7 @@ import { Contact } from "../sections/Contact";
 import { Expertise } from "../sections/Expertise";
 import { Experience } from "../sections/Experience";
 import { Hero } from "../sections/Hero";
+import { GitHubHighlights } from "../sections/GitHubHighlights";
 import { Journey } from "../sections/Journey";
 import { Lab } from "../sections/Lab";
 import { Projects } from "../sections/Projects";
@@ -21,6 +22,7 @@ export function HomePage({ locale }: HomePageProps) {
       <Experience locale={locale} />
       <About locale={locale} />
       <Journey locale={locale} />
+      <GitHubHighlights locale={locale} />
       <Lab locale={locale} />
       <Contact locale={locale} />
     </main>

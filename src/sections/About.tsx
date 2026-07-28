@@ -9,7 +9,12 @@ export function About({ locale }: AboutProps) {
   const copy = content[locale];
 
   return (
-    <section className="section" id="sobre" aria-labelledby="about-title">
+    <section
+      className="section"
+      data-reveal
+      id="sobre"
+      aria-labelledby="about-title"
+    >
       <div className="container about-grid">
         <div className="about-visual">
           <OptimizedImage

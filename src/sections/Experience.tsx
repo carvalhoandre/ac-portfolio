@@ -11,6 +11,7 @@ export function Experience({ locale }: ExperienceProps) {
   return (
     <section
       className="section section-impact"
+      data-reveal
       id="experiencia"
       aria-labelledby="impact-title"
     >

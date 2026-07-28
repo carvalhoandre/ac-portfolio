@@ -1,4 +1,5 @@
 import { Icon } from "../components/Icon";
+import type { CSSProperties } from "react";
 import {
   content,
   localePath,
@@ -20,9 +21,19 @@ export function ProjectPage({ locale, slug }: ProjectPageProps) {
 
   const index = copy.projects.findIndex((item) => item.slug === slug);
   const nextProject = copy.projects[(index + 1) % copy.projects.length];
+  const projectStyle = {
+    "--project-accent": project.theme.accent,
+    "--project-accent-muted": project.theme.accentMuted,
+    "--project-surface": project.theme.surface,
+    "--project-text": project.theme.text,
+  } as CSSProperties;
 
   return (
-    <main className="project-page" id="main-content">
+    <main
+      className={`project-page project-theme-${project.theme.visualStyle}`}
+      id="main-content"
+      style={projectStyle}
+    >
       <article>
         <header className="project-hero">
           <div className="container">
@@ -42,7 +53,7 @@ export function ProjectPage({ locale, slug }: ProjectPageProps) {
               </div>
               <div className="project-hero-media">
                 <img
-                  alt={`Interface do projeto ${project.title}`}
+                  alt={project.imageAlt}
                   decoding="sync"
                   fetchPriority="high"
                   height="426"

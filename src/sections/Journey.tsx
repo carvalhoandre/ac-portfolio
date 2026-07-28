@@ -6,7 +6,7 @@ interface JourneyProps {
   locale: Locale;
 }
 
-type JourneyTab = "education" | "experience";
+type JourneyTab = "education" | "experience" | "certifications";
 
 function Timeline({
   items,
@@ -23,6 +23,14 @@ function Timeline({
           <div>
             <h3>{item.title}</h3>
             <p>{item.organization}</p>
+            {item.summary && <p className="timeline-summary">{item.summary}</p>}
+            {item.skills && (
+              <ul className="timeline-skills" aria-label="Skills">
+                {item.skills.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
+            )}
             {item.current && (
               <span className="status-pill">{currentLabel}</span>
             )}
@@ -40,6 +48,7 @@ export function Journey({ locale }: JourneyProps) {
   const tabs: Array<{ id: JourneyTab; label: string }> = [
     { id: "education", label: copy.education },
     { id: "experience", label: copy.experience },
+    { id: "certifications", label: copy.certifications },
   ];
 
   const selectWithKeyboard = (
@@ -67,6 +76,7 @@ export function Journey({ locale }: JourneyProps) {
   return (
     <section
       className="section section-journey"
+      data-reveal
       id="trajetoria"
       aria-labelledby="journey-title"
     >
@@ -108,7 +118,9 @@ export function Journey({ locale }: JourneyProps) {
               items={
                 active === "education"
                   ? copy.educationItems
-                  : copy.experienceItems
+                  : active === "experience"
+                    ? copy.experienceItems
+                    : copy.certificationItems
               }
             />
           </div>

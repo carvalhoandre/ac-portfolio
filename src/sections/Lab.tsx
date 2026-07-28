@@ -9,7 +9,11 @@ export function Lab({ locale }: LabProps) {
   const copy = content[locale].lab;
 
   return (
-    <section className="section section-lab" aria-labelledby="lab-title">
+    <section
+      className="section section-lab"
+      data-reveal
+      aria-labelledby="lab-title"
+    >
       <div className="container lab-card">
         <div>
           <p className="eyebrow">{copy.eyebrow}</p>

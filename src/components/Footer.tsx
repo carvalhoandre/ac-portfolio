@@ -5,6 +5,7 @@ import {
   type Locale,
 } from "../content/portfolio";
 import { Icon } from "./Icon";
+import { BrandLogo } from "./BrandLogo";
 
 interface FooterProps {
   locale: Locale;
@@ -19,7 +20,7 @@ export function Footer({ locale }: FooterProps) {
       <div className="container footer-grid">
         <div>
           <a className="footer-name" href={home}>
-            {profile.name}
+            <BrandLogo />
           </a>
           <p>{copy.footer.role}</p>
         </div>
