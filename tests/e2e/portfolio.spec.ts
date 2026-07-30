@@ -117,3 +117,21 @@ test("renders the custom 404 experience", async ({ page }) => {
     page.getByRole("link", { name: "Ir para o início" }),
   ).toBeVisible();
 });
+
+test("loads localized project routes directly and after refresh", async ({
+  page,
+}) => {
+  for (const route of ["/pt-BR/projetos/ac-labs/", "/en/projects/ac-labs/"]) {
+    const response = await page.goto(route);
+    expect(response?.status()).toBe(200);
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText(
+      "André’s Lab",
+    );
+
+    await page.reload();
+    await expect(page).toHaveURL(new RegExp(`${route}$`));
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText(
+      "André’s Lab",
+    );
+  }
+});
