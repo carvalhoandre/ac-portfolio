@@ -1,0 +1,13 @@
+/portfolio /pt-BR/#projetos 301
+/projetos /pt-BR/#projetos 301
+/about /en/#about 301
+/site.webmanifest /404.html 404
+/robots.txt /404.html 404
+/sitemap.xml /404.html 404
+/favicon* /404.html 404
+/apple-touch-icon* /404.html 404
+/brand-symbol.svg /404.html 404
+/assets/* /404.html 404
+/images/* /404.html 404
+/documents/* /404.html 404
+/* /index.html 200

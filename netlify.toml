@@ -23,28 +23,3 @@
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
-
-# Keep legacy URL redirects ahead of the application fallback. Pre-rendered
-# files still take precedence because these rules are not forced.
-[[redirects]]
-  from = "/portfolio"
-  to = "/pt-BR/#projetos"
-  status = 301
-
-[[redirects]]
-  from = "/projetos"
-  to = "/pt-BR/#projetos"
-  status = 301
-
-[[redirects]]
-  from = "/about"
-  to = "/en/#about"
-  status = 301
-
-# Netlify must return the application shell for a client-side route that does
-# not have a pre-rendered file. The in-app router then renders its own 404 for
-# unknown paths instead of exposing Netlify's 404 page.
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
