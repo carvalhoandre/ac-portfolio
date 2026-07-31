@@ -21,7 +21,7 @@ export function BrandLogo({ compact = false, className }: BrandLogoProps) {
           d="m18 19.39-6.52 10.52 9.83.17m-3.31-10.69 3.31-5.35 9.19 16.2-6.24-.11L18 19.39Z"
         />
       </svg>
-      {!compact && <span className="brand-logo-name">André Carvalho</span>}
+      {!compact && <span className="brand-logo-name">André Leite Carvalho</span>}
     </span>
   );
 }
