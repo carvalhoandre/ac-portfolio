@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   alternateLocale,
   content,
@@ -27,6 +28,7 @@ const getTheme = (): "light" | "dark" => {
 
 export function Header({ locale, route }: HeaderProps) {
   const copy = content[locale];
+  const navigate = useNavigate();
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const initializedTheme = useRef(false);
   const activeSection = useActiveSection(route.type === "home", "inicio");
@@ -122,7 +124,7 @@ export function Header({ locale, route }: HeaderProps) {
               lang={alternate}
               onClick={(event) => {
                 event.preventDefault();
-                changeLocalePreservingViewport(alternateHref);
+                changeLocalePreservingViewport(alternateHref, navigate);
               }}
             >
               <Icon name="globe" />

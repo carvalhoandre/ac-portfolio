@@ -121,7 +121,18 @@ test("renders the custom 404 experience", async ({ page }) => {
 test("loads localized project routes directly and after refresh", async ({
   page,
 }) => {
-  for (const route of ["/pt-BR/projetos/ac-labs/", "/en/projects/ac-labs/"]) {
+  const consoleErrors: string[] = [];
+  const pageErrors: string[] = [];
+  page.on("console", (message) => {
+    if (message.type() === "error") consoleErrors.push(message.text());
+  });
+  page.on("pageerror", (error) => pageErrors.push(error.message));
+
+  for (const route of [
+    "/pt-BR/projetos/ac-labs/",
+    "/pt-br/projetos/ac-labs/",
+    "/en/projects/ac-labs/",
+  ]) {
     const response = await page.goto(route);
     expect(response?.status()).toBe(200);
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(
@@ -134,4 +145,7 @@ test("loads localized project routes directly and after refresh", async ({
       "André’s Lab",
     );
   }
+
+  expect(consoleErrors).toEqual([]);
+  expect(pageErrors).toEqual([]);
 });

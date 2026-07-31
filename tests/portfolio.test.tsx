@@ -1,18 +1,35 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import axe from "axe-core";
+import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it, vi } from "vitest";
-import App from "../src/App";
+import App, { type PortfolioPageComponents } from "../src/App";
 import {
   getPageMetadata,
-  resolveRoute,
+  matchPortfolioRoute,
   staticPaths,
 } from "../src/content/routes";
 import { content, profile } from "../src/content/portfolio";
+import { HomePage } from "../src/pages/HomePage";
+import { NotFoundPage } from "../src/pages/NotFoundPage";
+import { ProjectPage } from "../src/pages/ProjectPage";
+
+const pages: PortfolioPageComponents = {
+  HomePage,
+  NotFoundPage,
+  ProjectPage,
+};
+
+const renderRoute = (path: string) =>
+  render(
+    <MemoryRouter initialEntries={[path]}>
+      <App pages={pages} />
+    </MemoryRouter>,
+  );
 
 describe("portfolio experience", () => {
   it("renders a single descriptive heading and the primary CTAs", () => {
-    render(<App locale="pt-BR" route={{ type: "home" }} />);
+    renderRoute("/pt-BR/");
 
     expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
     expect(
@@ -28,7 +45,7 @@ describe("portfolio experience", () => {
   });
 
   it("renders all projects with descriptive case-study links", () => {
-    render(<App locale="en" route={{ type: "home" }} />);
+    renderRoute("/en/");
 
     for (const project of content.en.projects) {
       expect(
@@ -44,7 +61,7 @@ describe("portfolio experience", () => {
 
   it("supports keyboard navigation in the journey tabs", async () => {
     const user = userEvent.setup();
-    render(<App locale="pt-BR" route={{ type: "home" }} />);
+    renderRoute("/pt-BR/");
     const education = screen.getByRole("tab", { name: "Educação" });
     const experience = screen.getByRole("tab", { name: "Experiência" });
 
@@ -57,7 +74,7 @@ describe("portfolio experience", () => {
 
   it("persists the theme choice and exposes accessible mobile navigation", async () => {
     const user = userEvent.setup();
-    render(<App locale="pt-BR" route={{ type: "home" }} />);
+    renderRoute("/pt-BR/");
 
     const theme = screen.getByRole("button", { name: "Usar tema escuro" });
     await user.click(theme);
@@ -83,7 +100,7 @@ describe("portfolio experience", () => {
       configurable: true,
       value: { writeText },
     });
-    render(<App locale="pt-BR" route={{ type: "home" }} />);
+    renderRoute("/pt-BR/");
 
     await user.click(screen.getByRole("tab", { name: "Certificações" }));
     expect(screen.getByText("English Level B2")).toBeInTheDocument();
@@ -123,7 +140,7 @@ describe("portfolio experience", () => {
       configurable: true,
       value: { writeText },
     });
-    render(<App locale="en" route={{ type: "home" }} />);
+    renderRoute("/en/");
 
     await user.click(
       screen.getByRole("button", { name: /Copy email address/i }),
@@ -140,7 +157,7 @@ describe("portfolio experience", () => {
   });
 
   it("uses eager, high-priority hero media and lazy below-fold media", () => {
-    render(<App locale="en" route={{ type: "home" }} />);
+    renderRoute("/en/");
     const hero = screen.getByAltText(/^professional portrait/i);
     const about = screen.getByAltText(/second professional portrait/i);
 
@@ -152,7 +169,7 @@ describe("portfolio experience", () => {
   });
 
   it("has no automatically detectable accessibility violations", async () => {
-    render(<App locale="pt-BR" route={{ type: "home" }} />);
+    renderRoute("/pt-BR/");
     const result = await axe.run(document, {
       rules: { "color-contrast": { enabled: false } },
     });
@@ -161,15 +178,37 @@ describe("portfolio experience", () => {
 });
 
 describe("routing and SEO", () => {
+  it("renders a project after Netlify lowercases the localized path", () => {
+    renderRoute("/pt-br/projetos/ac-labs/");
+
+    expect(
+      screen.getByRole("heading", { level: 1, name: "André’s Lab" }),
+    ).toBeInTheDocument();
+  });
+
+  it("keeps the localized not-found page for an unknown project slug", () => {
+    renderRoute("/en/projects/unknown-project/");
+
+    expect(
+      screen.getByRole("heading", { level: 1, name: /could not be found/i }),
+    ).toBeInTheDocument();
+  });
+
   it("resolves every generated route and a real not-found state", () => {
     for (const path of staticPaths) {
-      expect(resolveRoute(path).route.type).not.toBe("notFound");
+      expect(matchPortfolioRoute(path).route.type).not.toBe("notFound");
     }
-    expect(resolveRoute("/pt-BR/nao-existe").route.type).toBe("notFound");
+    expect(matchPortfolioRoute("/pt-BR/nao-existe").route.type).toBe(
+      "notFound",
+    );
+    expect(matchPortfolioRoute("/pt-br/projetos/ac-labs/").route).toEqual({
+      type: "project",
+      slug: "ac-labs",
+    });
   });
 
   it("provides localized canonical, hreflang, social and structured data", () => {
-    const metadata = getPageMetadata(resolveRoute("/en/"));
+    const metadata = getPageMetadata(matchPortfolioRoute("/en/"));
     expect(metadata.title).toContain("Frontend Specialist");
     expect(metadata.canonical).toBe(`${profile.website}/en/`);
     expect(metadata.alternatePt).toBe(`${profile.website}/pt-BR/`);

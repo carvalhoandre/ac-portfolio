@@ -1,19 +1,49 @@
-import { useEffect } from "react";
+import {
+  Suspense,
+  useEffect,
+  useMemo,
+  type ComponentType,
+  type LazyExoticComponent,
+  type ReactNode,
+} from "react";
+import {
+  Outlet,
+  Route,
+  Routes,
+  useLocation,
+  useParams,
+} from "react-router-dom";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { MotionController } from "./components/MotionController";
-import { content, type Locale } from "./content/portfolio";
-import { getPageMetadata, type AppRoute } from "./content/routes";
-import { HomePage } from "./pages/HomePage";
-import { NotFoundPage } from "./pages/NotFoundPage";
-import { ProjectPage } from "./pages/ProjectPage";
+import { content, type Locale, type ProjectSlug } from "./content/portfolio";
+import {
+  getPageMetadata,
+  isProjectSlug,
+  matchPortfolioRoute,
+  type AppRoute,
+} from "./content/routes";
 
-interface AppProps {
-  locale: Locale;
-  route: AppRoute;
+type PageComponent<Props> =
+  ComponentType<Props> | LazyExoticComponent<ComponentType<Props>>;
+
+export interface PortfolioPageComponents {
+  HomePage: PageComponent<{ locale: Locale }>;
+  NotFoundPage: PageComponent<{ locale: Locale }>;
+  ProjectPage: PageComponent<{ locale: Locale; slug: ProjectSlug }>;
 }
 
-export default function App({ locale, route }: AppProps) {
+interface PortfolioShellProps {
+  children: ReactNode;
+  locale: Locale;
+}
+
+function PortfolioShell({ children, locale }: PortfolioShellProps) {
+  const location = useLocation();
+  const route = useMemo<AppRoute>(() => {
+    const resolved = matchPortfolioRoute(location.pathname);
+    return resolved.locale === locale ? resolved.route : { type: "notFound" };
+  }, [locale, location.pathname]);
   const skip = content[locale].skip;
 
   useEffect(() => {
@@ -27,13 +57,92 @@ export default function App({ locale, route }: AppProps) {
         {skip}
       </a>
       <Header locale={locale} route={route} />
-      <MotionController key={`${locale}-${route.type}`} />
-      {route.type === "home" && <HomePage locale={locale} />}
-      {route.type === "project" && (
-        <ProjectPage locale={locale} slug={route.slug} />
-      )}
-      {route.type === "notFound" && <NotFoundPage locale={locale} />}
+      <Suspense fallback={null}>
+        {children}
+        <MotionController key={`${locale}-${location.pathname}`} />
+      </Suspense>
       <Footer locale={locale} />
     </>
+  );
+}
+
+function PortfolioLayout({ locale }: { locale: Locale }) {
+  return (
+    <PortfolioShell locale={locale}>
+      <Outlet />
+    </PortfolioShell>
+  );
+}
+
+interface ProjectRouteProps {
+  locale: Locale;
+  pages: PortfolioPageComponents;
+}
+
+function ProjectRoute({ locale, pages }: ProjectRouteProps) {
+  const { slug } = useParams();
+
+  if (!isProjectSlug(slug)) {
+    return <pages.NotFoundPage locale={locale} />;
+  }
+
+  return <pages.ProjectPage locale={locale} slug={slug} />;
+}
+
+interface FallbackRouteProps {
+  pages: PortfolioPageComponents;
+}
+
+function FallbackRoute({ pages }: FallbackRouteProps) {
+  return (
+    <PortfolioShell locale="pt-BR">
+      <pages.NotFoundPage locale="pt-BR" />
+    </PortfolioShell>
+  );
+}
+
+export interface AppProps {
+  pages: PortfolioPageComponents;
+}
+
+export default function App({ pages }: AppProps) {
+  return (
+    <Routes>
+      <Route
+        caseSensitive={false}
+        path="/"
+        element={<PortfolioLayout locale="pt-BR" />}
+      >
+        <Route index element={<pages.HomePage locale="pt-BR" />} />
+      </Route>
+
+      <Route
+        caseSensitive={false}
+        path="/pt-BR"
+        element={<PortfolioLayout locale="pt-BR" />}
+      >
+        <Route index element={<pages.HomePage locale="pt-BR" />} />
+        <Route
+          path="projetos/:slug"
+          element={<ProjectRoute locale="pt-BR" pages={pages} />}
+        />
+        <Route path="*" element={<pages.NotFoundPage locale="pt-BR" />} />
+      </Route>
+
+      <Route
+        caseSensitive={false}
+        path="/en"
+        element={<PortfolioLayout locale="en" />}
+      >
+        <Route index element={<pages.HomePage locale="en" />} />
+        <Route
+          path="projects/:slug"
+          element={<ProjectRoute locale="en" pages={pages} />}
+        />
+        <Route path="*" element={<pages.NotFoundPage locale="en" />} />
+      </Route>
+
+      <Route path="*" element={<FallbackRoute pages={pages} />} />
+    </Routes>
   );
 }

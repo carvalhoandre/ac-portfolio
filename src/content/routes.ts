@@ -6,6 +6,7 @@ import {
   type Locale,
   type ProjectSlug,
 } from "./portfolio";
+import { matchRoutes, type RouteObject } from "react-router-dom";
 
 export type AppRoute =
   | { type: "home" }
@@ -17,35 +18,93 @@ export interface ResolvedRoute {
   route: AppRoute;
 }
 
-const projectSlugs: ProjectSlug[] = [
+export const projectSlugs: ProjectSlug[] = [
   "psi-giovanna",
   "ac-labs",
   "ac-dogs",
   "prumo-digital",
 ];
 
-const normalizePath = (pathname: string) => {
-  if (pathname === "/") return pathname;
-  return pathname.endsWith("/") ? pathname : `${pathname}/`;
-};
+export const isProjectSlug = (slug: string | undefined): slug is ProjectSlug =>
+  Boolean(slug && projectSlugs.includes(slug as ProjectSlug));
 
-export const resolveRoute = (pathname: string): ResolvedRoute => {
-  const path = normalizePath(pathname);
-  const locale: Locale = path.startsWith("/en") ? "en" : "pt-BR";
+interface PortfolioRouteHandle {
+  locale: Locale;
+  type: AppRoute["type"];
+}
 
-  if (path === "/" || path === localePath(locale)) {
-    return { locale, route: { type: "home" } };
+const routeManifest = [
+  {
+    path: "/",
+    handle: { locale: "pt-BR", type: "home" } satisfies PortfolioRouteHandle,
+  },
+  {
+    path: "/pt-BR",
+    handle: { locale: "pt-BR", type: "home" } satisfies PortfolioRouteHandle,
+  },
+  {
+    path: "/pt-BR/projetos/:slug",
+    handle: {
+      locale: "pt-BR",
+      type: "project",
+    } satisfies PortfolioRouteHandle,
+  },
+  {
+    path: "/pt-BR/*",
+    handle: {
+      locale: "pt-BR",
+      type: "notFound",
+    } satisfies PortfolioRouteHandle,
+  },
+  {
+    path: "/en",
+    handle: { locale: "en", type: "home" } satisfies PortfolioRouteHandle,
+  },
+  {
+    path: "/en/projects/:slug",
+    handle: { locale: "en", type: "project" } satisfies PortfolioRouteHandle,
+  },
+  {
+    path: "/en/*",
+    handle: {
+      locale: "en",
+      type: "notFound",
+    } satisfies PortfolioRouteHandle,
+  },
+  {
+    path: "*",
+    handle: {
+      locale: "pt-BR",
+      type: "notFound",
+    } satisfies PortfolioRouteHandle,
+  },
+] satisfies RouteObject[];
+
+const notFoundRoute = (locale: Locale): ResolvedRoute => ({
+  locale,
+  route: { type: "notFound" },
+});
+
+export const matchPortfolioRoute = (pathname: string): ResolvedRoute => {
+  const matches = matchRoutes(routeManifest, pathname);
+  const match = matches?.[matches.length - 1];
+  const handle = match?.route.handle as PortfolioRouteHandle | undefined;
+
+  if (!match || !handle) return notFoundRoute("pt-BR");
+
+  if (handle.type === "project") {
+    return isProjectSlug(match.params.slug)
+      ? {
+          locale: handle.locale,
+          route: { type: "project", slug: match.params.slug },
+        }
+      : notFoundRoute(handle.locale);
   }
 
-  const matchingProject = projectSlugs.find(
-    (slug) => path === projectPath(locale, slug),
-  );
-
-  if (matchingProject) {
-    return { locale, route: { type: "project", slug: matchingProject } };
-  }
-
-  return { locale, route: { type: "notFound" } };
+  return {
+    locale: handle.locale,
+    route: { type: handle.type },
+  };
 };
 
 export const staticPaths = [

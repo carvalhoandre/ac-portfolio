@@ -1,5 +1,6 @@
 import { Icon } from "../components/Icon";
 import type { CSSProperties } from "react";
+import { Link } from "react-router-dom";
 import {
   content,
   localePath,
@@ -150,9 +151,9 @@ export function ProjectPage({ locale, slug }: ProjectPageProps) {
         aria-label={copy.projectPage.next}
       >
         <span>{copy.projectPage.next}</span>
-        <a href={projectPath(locale, nextProject.slug)}>
+        <Link to={projectPath(locale, nextProject.slug)}>
           {nextProject.title} <Icon name="arrow-right" />
-        </a>
+        </Link>
       </nav>
     </main>
   );

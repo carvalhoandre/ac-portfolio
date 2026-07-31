@@ -1,4 +1,9 @@
-export function changeLocalePreservingViewport(href: string) {
+import type { NavigateFunction } from "react-router-dom";
+
+export function changeLocalePreservingViewport(
+  href: string,
+  navigate: NavigateFunction,
+) {
   const viewport = { x: window.scrollX, y: window.scrollY };
   const previousOverflowAnchor = document.documentElement.style.overflowAnchor;
   document.documentElement.style.overflowAnchor = "none";
@@ -8,12 +13,10 @@ export function changeLocalePreservingViewport(href: string) {
     destination.hash = window.location.hash;
   }
 
-  window.history.pushState(
-    { ...window.history.state, localeChange: true },
-    "",
+  navigate(
     `${destination.pathname}${destination.search}${destination.hash}`,
+    { state: { localeChange: true } },
   );
-  window.dispatchEvent(new PopStateEvent("popstate"));
 
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {

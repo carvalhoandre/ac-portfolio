@@ -33,6 +33,7 @@
     "src/components/SectionHeading.tsx",
     "src/components/Header.tsx",
     "src/components/Footer.tsx",
+    "src/routes/**/*.ts",
     "tests/**/*.ts",
     "tests/**/*.tsx"
   ],

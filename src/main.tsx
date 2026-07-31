@@ -1,31 +1,39 @@
-/* eslint-disable react-refresh/only-export-components */
-import { useEffect, useState } from "react";
 import { createRoot, hydrateRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import { resolveRoute } from "./content/routes";
+import { matchPortfolioRoute, type AppRoute } from "./content/routes";
+import { clientPages } from "./routes/client-pages";
 import "./styles/index.css";
 
 const root = document.getElementById("root");
-const resolved = resolveRoute(window.location.pathname);
 
-function PortfolioRoot() {
-  const [current, setCurrent] = useState(resolved);
-
-  useEffect(() => {
-    const handleNavigation = () =>
-      setCurrent(resolveRoute(window.location.pathname));
-    window.addEventListener("popstate", handleNavigation);
-    return () => window.removeEventListener("popstate", handleNavigation);
-  }, []);
-
-  return <App locale={current.locale} route={current.route} />;
-}
+const routesMatch = (left: AppRoute, right: AppRoute) =>
+  left.type === right.type &&
+  (left.type !== "project" ||
+    (right.type === "project" && left.slug === right.slug));
 
 if (root) {
-  const app = <PortfolioRoot />;
-  if (root.hasChildNodes()) {
+  const app = (
+    <BrowserRouter>
+      <App pages={clientPages} />
+    </BrowserRouter>
+  );
+  const current = matchPortfolioRoute(window.location.pathname);
+  const prerenderedPath = root.dataset.prerenderPath;
+  const prerendered = prerenderedPath
+    ? matchPortfolioRoute(prerenderedPath)
+    : null;
+  const canHydrate = Boolean(
+    root.hasChildNodes() &&
+    prerendered &&
+    current.locale === prerendered.locale &&
+    routesMatch(current.route, prerendered.route),
+  );
+
+  if (canHydrate) {
     hydrateRoot(root, app);
   } else {
+    root.replaceChildren();
     createRoot(root).render(app);
   }
 }

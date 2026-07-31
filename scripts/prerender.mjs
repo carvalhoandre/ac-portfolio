@@ -93,7 +93,7 @@ const writeRoute = async (pathname) => {
   const withMeta = setMeta(template, rendered.metadata, rendered.locale);
   const html = withMeta.replace(
     '<div id="root"></div>',
-    `<div id="root">${rendered.html}</div>`,
+    `<div id="root" data-prerender-path="${pathname}">${rendered.html}</div>`,
   );
   const destination =
     pathname === "/"
@@ -112,7 +112,10 @@ const notFoundHtml = setMeta(
   template,
   notFound.metadata,
   notFound.locale,
-).replace('<div id="root"></div>', `<div id="root">${notFound.html}</div>`);
+).replace(
+  '<div id="root"></div>',
+  `<div id="root" data-prerender-path="/404.html">${notFound.html}</div>`,
+);
 await writeFile(resolve(distRoot, "404.html"), notFoundHtml, "utf8");
 await rm(resolve(distRoot, "server"), { recursive: true, force: true });
 

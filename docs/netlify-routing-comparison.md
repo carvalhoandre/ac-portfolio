@@ -25,15 +25,22 @@ real. Depois disso, o React Router resolve a URL no navegador.
 ## Estrutura de navegação do portfólio
 
 O portfólio é uma aplicação React 19 e Vite 8 híbrida, com pré-renderização
-estática e navegação no cliente. Ele não usa React Router. A resolução é feita por
-`resolveRoute(window.location.pathname)` em `src/main.tsx` e
-`src/content/routes.ts`, enquanto mudanças internas usam History API e o evento
-`popstate`.
+estática e navegação no cliente. Antes da migração, não usava React Router:
+`src/main.tsx` lia `window.location.pathname`, `resolveRoute()` comparava strings
+com caixa exata e `App.tsx` escolhia a página por `route.type`.
 
-O resolvedor conhece as páginas iniciais localizadas e quatro slugs de projeto em
-português e inglês. Qualquer outro caminho produz o estado interno `notFound`, que
-renderiza `src/pages/NotFoundPage.tsx`. Esse componente mantém as ações de voltar
-ao início, ver projetos e entrar em contato.
+Depois da migração, o cliente usa `BrowserRouter` e uma árvore declarativa com
+`Routes`, `Route`, rotas aninhadas por idioma e catch-all localizado. As rotas são
+case-insensitive, como é padrão no React Router, portanto `/pt-BR/` e `/pt-br/`
+resolvem para a mesma página. `Header`, `Footer` e `MotionController` permanecem no
+layout compartilhado. `HomePage`, `ProjectPage` e `NotFoundPage` são carregadas
+com `React.lazy` em chunks independentes.
+
+O servidor usa `StaticRouter` com componentes síncronos para manter a
+pré-renderização. O manifesto de rotas também alimenta os metadados de SEO e
+valida os quatro slugs conhecidos. Slugs desconhecidos e outras rotas continuam
+renderizando `src/pages/NotFoundPage.tsx`, com as mesmas ações de voltar ao início,
+ver projetos e entrar em contato.
 
 ## Estratégia de build
 
@@ -119,24 +126,21 @@ Uma rota desconhecida também terminou em `200 text/html`, como esperado para um
 em `200 text/html`, o que não é esperado e demonstra a falta das regras de
 proteção presentes no Prumo.
 
-## Causa exata ou mais provável do 404 informado
+## Causa exata do 404 interno
 
-O sintoma original é compatível com uma requisição profunda chegando a um deploy
-que não recebeu a regra de fallback. A causa estrutural comprovada é que o
-portfólio depende de o site da Netlify descobrir e aplicar o `netlify.toml`, mas o
-artefato publicado não carrega uma regra própria. Qualquer diferença de base
-directory, configuração do painel, build parcial ou publicação isolada de `dist`
-remove o fallback e devolve a página 404 da Netlify.
+A resposta HTTP e o corpo pré-renderizado da página estavam corretos. A falha
+ocorria depois, no cliente: a Netlify normaliza `/pt-BR/` para `/pt-br/`, enquanto
+o resolvedor anterior comparava a URL recebida com strings como
+`/pt-BR/projetos/ac-labs/`. A comparação case-sensitive falhava e produzia
+`route.type === "notFound"`, exibindo o componente interno do portfólio.
 
-O deploy público consultado durante esta análise já aplica a rewrite do TOML e
-não reproduziu o 404 nas rotas válidas. Portanto, não há evidência para atribuir o
-estado atual a um erro no resolvedor de slugs. O risco remanescente e reproduzível
-é a ausência do fallback no artefato, exatamente a diferença relevante em relação
-ao Prumo.
+O fallback ausente no artefato continuava sendo um risco separado de deploy e foi
+corrigido com `public/_redirects`. A migração para React Router corrige a causa da
+404 interna sem remover o fallback ou a página 404 legítima.
 
 ## Solução escolhida
 
-Replicar somente o padrão de deploy do Prumo:
+Combinar o padrão de deploy do Prumo com roteamento declarativo:
 
 1. tornar `public/_redirects` a fonte única de redirects;
 2. manter os redirects legados no início;
@@ -145,11 +149,17 @@ Replicar somente o padrão de deploy do Prumo:
 5. remover as regras de redirect duplicadas do `netlify.toml`, preservando nele
    apenas build, publish, ambiente e headers;
 6. confirmar após o build que `dist/_redirects` existe e contém a ordem correta.
+7. usar `BrowserRouter` no cliente e `StaticRouter` no prerender;
+8. declarar rotas localizadas, dinâmicas e catch-all com React Router DOM;
+9. carregar as três páginas com `React.lazy`, mantendo o layout compartilhado;
+10. identificar no HTML qual rota foi pré-renderizada e só hidratar quando ela
+    corresponder semanticamente à URL atual, evitando mismatch quando a Netlify
+    entregar `index.html` pelo fallback.
 
-Não será adotado React Router, `HashRouter`, migração de framework, HTML manual por
-slug ou redirect individual por projeto. As páginas pré-renderizadas continuam
-tendo precedência, e o fallback cobre acessos profundos quando um arquivo físico
-não for resolvido.
+Não será adotado `HashRouter`, migração de framework, HTML manual por slug ou
+redirect individual por projeto. As páginas pré-renderizadas continuam tendo
+precedência, e o fallback cobre acessos profundos quando um arquivo físico não for
+resolvido.
 
 ## Riscos e controles
 
@@ -158,8 +168,8 @@ não for resolvido.
 - **Configuração duplicada:** controlado removendo redirects do `netlify.toml`.
 - **Interferência nas páginas pré-renderizadas:** evitada por não usar `force`;
   arquivos reais continuam prioritários.
-- **404 legítima eliminada:** evitada mantendo o estado `notFound` do resolvedor e
-  o arquivo pré-renderizado `404.html`.
+- **404 legítima eliminada:** evitada mantendo as rotas catch-all localizadas, a
+  validação de slugs e o arquivo pré-renderizado `404.html`.
 - **Diferenças de painel da Netlify:** o `_redirects` dentro de `dist` reduz a
   dependência da descoberta do TOML, embora build e publish ainda devam permanecer
   alinhados com `netlify.toml`.
@@ -177,7 +187,8 @@ não for resolvido.
 
 ## Resultados após a implementação
 
-- `npm ci`: concluído com 284 pacotes instalados;
+- `npm ci --offline`: concluído com 288 pacotes instalados pelo lockfile;
+- `react-router-dom@7.18.1`: instalado como dependência de produção;
 - Prettier nos arquivos novos suportados: aprovado;
 - `npm run format:check`: bloqueado por 51 arquivos versionados preexistentes com
   divergências de formatação/fim de linha neste checkout Windows; nenhum deles foi
@@ -186,17 +197,22 @@ não for resolvido.
   confirmando que a falha anterior se limita à política de fim de linha local;
 - `npm run lint`: aprovado;
 - `npm run typecheck`: aprovado;
-- `npm test`: 2 arquivos e 13 testes aprovados, incluindo 3 testes novos das
-  regras da Netlify;
+- `npm test`: 2 arquivos e 15 testes aprovados, incluindo as regras da Netlify,
+  URL `/pt-br/` normalizada e slug de projeto desconhecido;
 - `npm run build`: aprovado; 11 rotas públicas e `404.html` pré-renderizados;
+- lazy loading confirmado no artefato pelos chunks separados `HomePage`,
+  `ProjectPage` e `NotFoundPage`;
+- cada página pré-renderizada registra `data-prerender-path`, permitindo evitar
+  hydration mismatch quando o fallback servir um shell de outra rota;
 - inspeção do build: `dist/index.html`, `dist/404.html`, assets, oito páginas de
   projeto localizadas e `dist/_redirects` presentes;
 - conteúdo de `dist/_redirects`: idêntico a `public/_redirects`, com o fallback
   como última regra;
 - `npm run test:e2e` contra `vite preview` do build: 21 testes aprovados nos três
   viewports configurados;
-- acesso direto e refresh E2E: aprovados para
-  `/pt-BR/projetos/ac-labs/` e `/en/projects/ac-labs/`;
+- acesso direto e refresh E2E: aprovados para `/pt-BR/projetos/ac-labs/`,
+  `/pt-br/projetos/ac-labs/` e `/en/projects/ac-labs/`;
+- erros de console e de página durante esses acessos: nenhum;
 - 404 interna E2E: aprovada para rota desconhecida;
 - assets e links relativos no código: nenhuma referência problemática encontrada;
 - sitemap, canonical, Open Graph e hreflang de `ac-labs`: alinhados com as rotas

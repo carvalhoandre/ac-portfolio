@@ -36,6 +36,7 @@
     "src/pages/NotFoundPage.tsx",
     "src/components/**/*.tsx",
     "src/hooks/**/*.ts",
+    "src/routes/**/*.ts",
     "src/utils/**/*.ts",
     "tests/**/*.ts",
     "tests/**/*.tsx"

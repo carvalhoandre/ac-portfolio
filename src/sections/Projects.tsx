@@ -1,5 +1,6 @@
 import { Icon } from "../components/Icon";
 import { SectionHeading } from "../components/SectionHeading";
+import { Link } from "react-router-dom";
 import {
   content,
   projectPath,
@@ -22,9 +23,9 @@ function ProjectCard({ locale, project, index }: ProjectCardProps) {
 
   return (
     <article className="project-card" data-reveal>
-      <a
+      <Link
         className="project-media"
-        href={projectPath(locale, project.slug)}
+        to={projectPath(locale, project.slug)}
         aria-label={`0${index + 1} — ${copy.caseStudy}: ${project.title}`}
       >
         <span className="project-index" aria-hidden="true">
@@ -38,7 +39,7 @@ function ProjectCard({ locale, project, index }: ProjectCardProps) {
           src={project.image}
           width="640"
         />
-      </a>
+      </Link>
       <div className="project-body">
         <div>
           <p className="project-kicker">{project.descriptor}</p>
@@ -51,9 +52,9 @@ function ProjectCard({ locale, project, index }: ProjectCardProps) {
           ))}
         </ul>
         <div className="project-links">
-          <a className="text-link" href={projectPath(locale, project.slug)}>
+          <Link className="text-link" to={projectPath(locale, project.slug)}>
             {copy.caseStudy} <Icon name="arrow-right" />
-          </a>
+          </Link>
           {project.demo && (
             <a
               className="text-link text-link-muted"
