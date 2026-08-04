@@ -407,6 +407,7 @@ export const content = {
     nav: {
       home: "Início",
       projects: "Projetos",
+      npm: "npm",
       expertise: "Especialidades",
       mobileExpertise: "Skills",
       experience: "Experiência",
@@ -437,6 +438,25 @@ export const content = {
       caseStudy: "Ler estudo de caso",
       demo: "Ver demonstração",
       article: "Ler artigos",
+    },
+    npmSection: {
+      eyebrow: "Open source",
+      title: "Pacotes npm",
+      description:
+        "Ferramentas, bibliotecas e CLIs que desenvolvi e disponibilizei para a comunidade.",
+      version: "Versão",
+      updated: "Atualizado em",
+      license: "Licença",
+      keywords: "Palavras-chave",
+      viewNpm: "Ver no npm",
+      repository: "Ver repositório",
+      homepage: "Visitar homepage",
+      loading: "Carregando metadados dos pacotes.",
+      loaded: "Metadados dos pacotes carregados.",
+      partial:
+        "Alguns detalhes estão temporariamente indisponíveis. Todos os links para o npm continuam acessíveis.",
+      error:
+        "Os detalhes estão temporariamente indisponíveis. Você ainda pode acessar todos os pacotes no npm.",
     },
     expertise: {
       eyebrow: "Especialidades",
@@ -609,6 +629,7 @@ export const content = {
     nav: {
       home: "Home",
       projects: "Projects",
+      npm: "npm",
       expertise: "Expertise",
       mobileExpertise: "Skills",
       experience: "Experience",
@@ -639,6 +660,25 @@ export const content = {
       caseStudy: "Read case study",
       demo: "View demo",
       article: "Read articles",
+    },
+    npmSection: {
+      eyebrow: "Open source",
+      title: "npm packages",
+      description:
+        "Tools, libraries, and CLIs I have built and made available to the community.",
+      version: "Version",
+      updated: "Updated",
+      license: "License",
+      keywords: "Keywords",
+      viewNpm: "View on npm",
+      repository: "View repository",
+      homepage: "Visit homepage",
+      loading: "Loading package metadata.",
+      loaded: "Package metadata loaded.",
+      partial:
+        "Some details are temporarily unavailable. All npm links remain accessible.",
+      error:
+        "Package details are temporarily unavailable. You can still access every package on npm.",
     },
     expertise: {
       eyebrow: "Expertise",

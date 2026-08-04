@@ -96,6 +96,12 @@ export function Header({ locale, route }: HeaderProps) {
                 {copy.nav.projects}
               </Link>
               <Link
+                aria-current={isCurrent("npm") ? "location" : undefined}
+                to={homeHref("#npm")}
+              >
+                {copy.nav.npm}
+              </Link>
+              <Link
                 aria-current={
                   isCurrent("especialidades") ? "location" : undefined
                 }
