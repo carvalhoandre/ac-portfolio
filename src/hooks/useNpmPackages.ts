@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import { npmPackageNames } from "../config/npm-packages";
-import {
-  fallbackNpmPackage,
-  loadNpmPackages,
-} from "../services/npm-registry";
+import { fallbackNpmPackage, loadNpmPackages } from "../services/npm-registry";
 import type { NpmPackagesResult } from "../types/npm";
 
 interface NpmPackagesState extends Omit<NpmPackagesResult, "status"> {

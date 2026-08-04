@@ -15,10 +15,9 @@ export function changeLocalePreservingViewport(
 
   const preserveViewport = !destination.hash;
 
-  navigate(
-    `${destination.pathname}${destination.search}${destination.hash}`,
-    { state: { localeChange: true, preserveViewport } },
-  );
+  navigate(`${destination.pathname}${destination.search}${destination.hash}`, {
+    state: { localeChange: true, preserveViewport },
+  });
 
   if (!preserveViewport) {
     document.documentElement.style.overflowAnchor = previousOverflowAnchor;
@@ -27,7 +26,11 @@ export function changeLocalePreservingViewport(
 
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
-      window.scrollTo({ left: viewport.x, top: viewport.y, behavior: "instant" });
+      window.scrollTo({
+        left: viewport.x,
+        top: viewport.y,
+        behavior: "instant",
+      });
       requestAnimationFrame(() => {
         document.documentElement.style.overflowAnchor = previousOverflowAnchor;
       });
