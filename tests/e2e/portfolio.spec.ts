@@ -82,6 +82,21 @@ test("starts project-to-project and browser history navigation at the top", asyn
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(2);
 });
 
+test("exposes social profiles", async ({
+  page,
+}) => {
+  await page.goto("/en/");
+  const hero = page.locator("#inicio");
+  await expect(hero.getByRole("link", { name: "LinkedIn" })).toHaveAttribute(
+    "href",
+    "https://www.linkedin.com/in/carvalhoandree",
+  );
+  await expect(hero.getByRole("link", { name: "GitHub" })).toHaveAttribute(
+    "href",
+    "https://github.com/carvalhoandre",
+  );
+});
+
 test("preserves the section and viewport while changing language", async ({
   page,
 }) => {

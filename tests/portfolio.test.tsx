@@ -42,6 +42,23 @@ describe("portfolio experience", () => {
     expect(
       screen.getAllByRole("link", { name: /baixar currículo/i })[0],
     ).toHaveAttribute("href", profile.resume["pt-BR"]);
+
+    const hero = screen
+      .getByRole("heading", { name: profile.name })
+      .closest("section");
+    expect(hero).not.toBeNull();
+    const linkedin = within(hero as HTMLElement).getByRole("link", {
+      name: "LinkedIn",
+    });
+    const github = within(hero as HTMLElement).getByRole("link", {
+      name: "GitHub",
+    });
+    expect(linkedin).toHaveAttribute("href", profile.linkedin);
+    expect(github).toHaveAttribute("href", profile.github);
+    for (const link of [linkedin, github]) {
+      expect(link).toHaveAttribute("target", "_blank");
+      expect(link).toHaveAttribute("rel", "noopener noreferrer");
+    }
   });
 
   it("renders all projects with descriptive case-study links", () => {

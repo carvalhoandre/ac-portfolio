@@ -424,6 +424,7 @@ export const content = {
       projects: "Ver projetos",
       contact: "Falar comigo",
       resume: "Baixar currículo (PDF)",
+      socialLabel: "Perfis profissionais",
       imageAlt:
         "Retrato profissional de André Leite Carvalho, especialista em Frontend",
       availability: "São Paulo, Brasil · Aberto a oportunidades e projetos",
@@ -625,6 +626,7 @@ export const content = {
       projects: "View projects",
       contact: "Talk to me",
       resume: "Download resume (PDF)",
+      socialLabel: "Professional profiles",
       imageAlt:
         "Professional portrait of André Leite Carvalho, Frontend Specialist",
       availability: "São Paulo, Brazil · Open to opportunities and projects",

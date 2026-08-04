@@ -34,6 +34,22 @@ export function Hero({ locale }: HeroProps) {
               <Icon name="download" /> {copy.hero.resume}
             </a>
           </div>
+          <div
+            className="hero-social"
+            role="group"
+            aria-label={copy.hero.socialLabel}
+          >
+            <a
+              href={profile.linkedin}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <Icon name="linkedin" /> LinkedIn
+            </a>
+            <a href={profile.github} rel="noopener noreferrer" target="_blank">
+              <Icon name="github" /> GitHub
+            </a>
+          </div>
           <p className="availability">
             <span aria-hidden="true" /> {copy.hero.availability}
           </p>
