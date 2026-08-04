@@ -61,6 +61,22 @@ describe("portfolio experience", () => {
     }
   });
 
+  it("renders all configured npm packages with crawlable fallback links", () => {
+    renderRoute("/en/");
+
+    for (const name of [
+      "react-vite-clean-cli",
+      "create-flask-api",
+      "ac-totvs-ds",
+      "create-base-vite",
+    ]) {
+      expect(screen.getByRole("heading", { name })).toBeInTheDocument();
+      expect(
+        screen.getByRole("link", { name: `View on npm: ${name}` }),
+      ).toHaveAttribute("href", `https://www.npmjs.com/package/${name}`);
+    }
+  });
+
   it("renders all projects with descriptive case-study links", () => {
     renderRoute("/en/");
 
@@ -236,6 +252,28 @@ describe("route scroll management", () => {
     expect(scrollIntoView).toHaveBeenCalledWith({
       behavior: "smooth",
       block: "start",
+    });
+    expect(scrollTo).not.toHaveBeenCalled();
+  });
+
+  it("finds an asynchronously rendered Home section from a project route", async () => {
+    const user = userEvent.setup();
+    renderRoute("/en/projects/ac-labs/");
+    const scrollTo = vi.mocked(window.scrollTo);
+    const scrollIntoView = vi.mocked(HTMLElement.prototype.scrollIntoView);
+    scrollTo.mockClear();
+    scrollIntoView.mockClear();
+
+    const navigation = screen.getByRole("navigation", {
+      name: "Primary navigation",
+    });
+    await user.click(within(navigation).getByRole("link", { name: "npm" }));
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole("heading", { name: "npm packages" }),
+      ).toBeInTheDocument();
+      expect(scrollIntoView).toHaveBeenCalledTimes(1);
     });
     expect(scrollTo).not.toHaveBeenCalled();
   });

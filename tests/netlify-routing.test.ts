@@ -40,4 +40,26 @@ describe("Netlify routing", () => {
 
     expect(netlifyConfig).not.toContain("[[redirects]]");
   });
+
+  it("allows only the public npm registry required by the package section", () => {
+    const netlifyConfig = readFileSync(
+      resolve(process.cwd(), "netlify.toml"),
+      "utf8",
+    );
+
+    expect(netlifyConfig).toContain(
+      "connect-src 'self' https://registry.npmjs.org",
+    );
+    expect(redirects[redirects.length - 1]).toBe("/* /index.html 200");
+  });
+
+  it("keeps the localized standalone manifest configuration", () => {
+    const manifest = JSON.parse(
+      readFileSync(resolve(process.cwd(), "public/site.webmanifest"), "utf8"),
+    );
+
+    expect(manifest.start_url).toBe("/pt-BR/");
+    expect(manifest.display).toBe("standalone");
+    expect(manifest.icons).toHaveLength(2);
+  });
 });

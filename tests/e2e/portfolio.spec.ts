@@ -1,5 +1,32 @@
 import { expect, test } from "@playwright/test";
 
+test.beforeEach(async ({ page }) => {
+  await page.route("https://registry.npmjs.org/**", async (route) => {
+    const name = decodeURIComponent(
+      new URL(route.request().url()).pathname.slice(1),
+    );
+    await route.fulfill({
+      body: JSON.stringify({
+        name,
+        "dist-tags": { latest: "1.4.3" },
+        time: { modified: "2026-01-14T18:50:31.031Z" },
+        versions: {
+          "1.4.3": {
+            description: `${name} public package`,
+            keywords: ["open-source", "tooling"],
+            license: "MIT",
+            repository: {
+              url: `git+https://github.com/carvalhoandre/${name}.git`,
+            },
+          },
+        },
+      }),
+      contentType: "application/json",
+      status: 200,
+    });
+  });
+});
+
 test("navigates through the localized portfolio and a case study", async ({
   page,
 }) => {
@@ -36,6 +63,7 @@ test("has no horizontal overflow and exposes app-like mobile navigation", async 
   page,
 }) => {
   await page.goto("/pt-BR/");
+  await expect(page.getByText("v1.4.3").first()).toBeVisible();
   const viewportWidth = await page.evaluate(
     () => document.documentElement.clientWidth,
   );
@@ -82,7 +110,30 @@ test("starts project-to-project and browser history navigation at the top", asyn
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(2);
 });
 
-test("exposes social profiles", async ({
+test("navigates from a project directly to the npm Home section", async ({
+  page,
+}) => {
+  await page.goto("/en/projects/ac-labs/");
+  const mobile = (page.viewportSize()?.width ?? 0) < 1024;
+  const navigation = page.getByRole("navigation", {
+    name: mobile ? "Mobile primary navigation" : "Primary navigation",
+  });
+  await navigation.getByRole("link", { name: "npm" }).click();
+
+  await expect(page).toHaveURL(/\/en\/#npm$/);
+  const npmSection = page.locator("#npm");
+  await expect(npmSection).toBeInViewport();
+  const positions = await page.evaluate(() => {
+    const header = document
+      .querySelector(".site-header")
+      ?.getBoundingClientRect();
+    const section = document.querySelector("#npm")?.getBoundingClientRect();
+    return { headerBottom: header?.bottom ?? 0, sectionTop: section?.top ?? 0 };
+  });
+  expect(positions.sectionTop).toBeGreaterThanOrEqual(positions.headerBottom);
+});
+
+test("exposes social profiles and localized npm package metadata", async ({
   page,
 }) => {
   await page.goto("/en/");
@@ -95,6 +146,21 @@ test("exposes social profiles", async ({
     "href",
     "https://github.com/carvalhoandre",
   );
+
+  await expect(
+    page.getByRole("heading", { name: "npm packages" }),
+  ).toBeVisible();
+  await expect(page.getByText("v1.4.3")).toHaveCount(4);
+  await expect(page.getByText("Jan 14, 2026")).toHaveCount(4);
+  await page.getByRole("button", { name: "Use dark theme" }).click();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  expect(
+    await page.evaluate(
+      () =>
+        document.documentElement.scrollWidth <=
+        document.documentElement.clientWidth,
+    ),
+  ).toBe(true);
 });
 
 test("preserves the section and viewport while changing language", async ({
