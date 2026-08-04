@@ -17,6 +17,7 @@ test("navigates through the localized portfolio and a case study", async ({
     .click();
   await expect(page).toHaveURL(/\/pt-BR\/projetos\/ac-dogs\/$/);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("ac Dogs");
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(2);
 
   await page.getByRole("link", { name: /English/ }).click();
   await expect(page).toHaveURL(/\/en\/projects\/ac-dogs\/$/);
@@ -57,20 +58,49 @@ test("has no horizontal overflow and exposes app-like mobile navigation", async 
   }
 });
 
+test("starts project-to-project and browser history navigation at the top", async ({
+  page,
+}) => {
+  await page.goto("/pt-BR/projetos/ac-labs/");
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  await page
+    .getByRole("navigation", { name: "Próximo projeto" })
+    .getByRole("link")
+    .click();
+
+  await expect(page).toHaveURL(/\/pt-BR\/projetos\/ac-dogs\/$/);
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(2);
+
+  await page.evaluate(() => window.scrollTo(0, 700));
+  await page.goBack();
+  await expect(page).toHaveURL(/\/pt-BR\/projetos\/ac-labs\/$/);
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(2);
+
+  await page.evaluate(() => window.scrollTo(0, 700));
+  await page.goForward();
+  await expect(page).toHaveURL(/\/pt-BR\/projetos\/ac-dogs\/$/);
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(2);
+});
+
 test("preserves the section and viewport while changing language", async ({
   page,
 }) => {
   await page.goto("/pt-BR/#trajetoria");
   await page.locator("#trajetoria").scrollIntoViewIfNeeded();
-  const before = await page.evaluate(() => window.scrollY);
+  const before = await page
+    .locator("#trajetoria")
+    .evaluate((element) => element.getBoundingClientRect().top);
 
   await page.getByRole("link", { name: /English/ }).dispatchEvent("click");
   await expect(page).toHaveURL(/\/en\/#trajetoria$/);
   await expect(page.getByText("Education and career")).toBeVisible();
   await expect
-    .poll(async () =>
-      Math.abs((await page.evaluate(() => window.scrollY)) - before),
-    )
+    .poll(async () => {
+      const current = await page
+        .locator("#trajetoria")
+        .evaluate((element) => element.getBoundingClientRect().top);
+      return Math.abs(current - before);
+    })
     .toBeLessThan(8);
 });
 

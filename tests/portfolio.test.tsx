@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import axe from "axe-core";
 import { MemoryRouter } from "react-router-dom";
@@ -37,7 +37,7 @@ describe("portfolio experience", () => {
     ).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /ver projetos/i })).toHaveAttribute(
       "href",
-      "#projetos",
+      "/pt-BR/#projetos",
     );
     expect(
       screen.getAllByRole("link", { name: /baixar currículo/i })[0],
@@ -90,7 +90,7 @@ describe("portfolio experience", () => {
         name: "Início",
         current: "location",
       }),
-    ).toHaveAttribute("href", "#inicio");
+    ).toHaveAttribute("href", "/pt-BR/#inicio");
   });
 
   it("shows the confirmed English certification and direct contact channels", async () => {
@@ -174,6 +174,67 @@ describe("portfolio experience", () => {
       rules: { "color-contrast": { enabled: false } },
     });
     expect(result.violations).toEqual([]);
+  });
+});
+
+describe("route scroll management", () => {
+  it("moves ordinary project navigation to the top once", async () => {
+    const user = userEvent.setup();
+    renderRoute("/pt-BR/");
+    const scrollTo = vi.mocked(window.scrollTo);
+    scrollTo.mockClear();
+
+    const project = screen
+      .getByRole("heading", { name: "ac Dogs" })
+      .closest("article");
+    expect(project).not.toBeNull();
+    await user.click(
+      within(project as HTMLElement).getByRole("link", {
+        name: "Ler estudo de caso",
+      }),
+    );
+
+    expect(
+      screen.getByRole("heading", { level: 1, name: "ac Dogs" }),
+    ).toBeInTheDocument();
+    expect(scrollTo).toHaveBeenCalledTimes(1);
+    expect(scrollTo).toHaveBeenCalledWith({
+      behavior: "auto",
+      left: 0,
+      top: 0,
+    });
+  });
+
+  it("scrolls to a Home hash without forcing the page to the top", async () => {
+    const user = userEvent.setup();
+    renderRoute("/pt-BR/");
+    const scrollTo = vi.mocked(window.scrollTo);
+    const scrollIntoView = vi.mocked(HTMLElement.prototype.scrollIntoView);
+    scrollTo.mockClear();
+    scrollIntoView.mockClear();
+
+    await user.click(screen.getByRole("link", { name: "Ver projetos" }));
+
+    await waitFor(() => expect(scrollIntoView).toHaveBeenCalledTimes(1));
+    expect(scrollIntoView).toHaveBeenCalledWith({
+      behavior: "smooth",
+      block: "start",
+    });
+    expect(scrollTo).not.toHaveBeenCalled();
+  });
+
+  it("moves navigation between project pages to the top", async () => {
+    const user = userEvent.setup();
+    renderRoute("/en/projects/ac-labs/");
+    const scrollTo = vi.mocked(window.scrollTo);
+    scrollTo.mockClear();
+
+    await user.click(screen.getByRole("link", { name: /ac Dogs/ }));
+
+    expect(
+      screen.getByRole("heading", { level: 1, name: "ac Dogs" }),
+    ).toBeInTheDocument();
+    expect(scrollTo).toHaveBeenCalledTimes(1);
   });
 });
 

@@ -1,5 +1,6 @@
 import { content, localePath, type Locale } from "../content/portfolio";
 import { BrandLogo } from "../components/BrandLogo";
+import { Link } from "react-router-dom";
 
 interface NotFoundPageProps {
   locale: Locale;
@@ -21,15 +22,15 @@ export function NotFoundPage({ locale }: NotFoundPageProps) {
           <h1>{copy.title}</h1>
           <p>{copy.description}</p>
           <div className="hero-actions">
-            <a className="button" href={home}>
+            <Link className="button" to={home}>
               {copy.home}
-            </a>
-            <a className="button button-secondary" href={`${home}#projetos`}>
+            </Link>
+            <Link className="button button-secondary" to={`${home}#projetos`}>
               {copy.projects}
-            </a>
-            <a className="text-link" href={`${home}#contato`}>
+            </Link>
+            <Link className="text-link" to={`${home}#contato`}>
               {copy.contact}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

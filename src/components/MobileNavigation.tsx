@@ -2,6 +2,7 @@ import { content, localePath, type Locale } from "../content/portfolio";
 import type { AppRoute } from "../content/routes";
 import { useActiveSection, type HomeSection } from "../hooks/useActiveSection";
 import { Icon } from "./Icon";
+import { Link } from "react-router-dom";
 
 interface MobileNavigationProps {
   locale: Locale;
@@ -34,16 +35,16 @@ export function MobileNavigation({ locale, route }: MobileNavigationProps) {
   return (
     <nav className="mobile-navigation" aria-label={copy.mobileNavLabel}>
       {items.map((item) => (
-        <a
+        <Link
           aria-current={current === item.id ? "location" : undefined}
           aria-label={item.label}
           className={item.id === "contato" ? "mobile-nav-contact" : undefined}
-          href={homeHref(item.id)}
+          to={homeHref(item.id)}
           key={item.id}
         >
           <Icon name={item.icon} />
           <span>{item.label}</span>
-        </a>
+        </Link>
       ))}
     </nav>
   );

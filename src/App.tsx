@@ -16,6 +16,7 @@ import {
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { MotionController } from "./components/MotionController";
+import { RouteScrollManager } from "./components/RouteScrollManager";
 import { content, type Locale, type ProjectSlug } from "./content/portfolio";
 import {
   getPageMetadata,
@@ -107,42 +108,45 @@ export interface AppProps {
 
 export default function App({ pages }: AppProps) {
   return (
-    <Routes>
-      <Route
-        caseSensitive={false}
-        path="/"
-        element={<PortfolioLayout locale="pt-BR" />}
-      >
-        <Route index element={<pages.HomePage locale="pt-BR" />} />
-      </Route>
-
-      <Route
-        caseSensitive={false}
-        path="/pt-BR"
-        element={<PortfolioLayout locale="pt-BR" />}
-      >
-        <Route index element={<pages.HomePage locale="pt-BR" />} />
+    <>
+      <RouteScrollManager />
+      <Routes>
         <Route
-          path="projetos/:slug"
-          element={<ProjectRoute locale="pt-BR" pages={pages} />}
-        />
-        <Route path="*" element={<pages.NotFoundPage locale="pt-BR" />} />
-      </Route>
+          caseSensitive={false}
+          path="/"
+          element={<PortfolioLayout locale="pt-BR" />}
+        >
+          <Route index element={<pages.HomePage locale="pt-BR" />} />
+        </Route>
 
-      <Route
-        caseSensitive={false}
-        path="/en"
-        element={<PortfolioLayout locale="en" />}
-      >
-        <Route index element={<pages.HomePage locale="en" />} />
         <Route
-          path="projects/:slug"
-          element={<ProjectRoute locale="en" pages={pages} />}
-        />
-        <Route path="*" element={<pages.NotFoundPage locale="en" />} />
-      </Route>
+          caseSensitive={false}
+          path="/pt-BR"
+          element={<PortfolioLayout locale="pt-BR" />}
+        >
+          <Route index element={<pages.HomePage locale="pt-BR" />} />
+          <Route
+            path="projetos/:slug"
+            element={<ProjectRoute locale="pt-BR" pages={pages} />}
+          />
+          <Route path="*" element={<pages.NotFoundPage locale="pt-BR" />} />
+        </Route>
 
-      <Route path="*" element={<FallbackRoute pages={pages} />} />
-    </Routes>
+        <Route
+          caseSensitive={false}
+          path="/en"
+          element={<PortfolioLayout locale="en" />}
+        >
+          <Route index element={<pages.HomePage locale="en" />} />
+          <Route
+            path="projects/:slug"
+            element={<ProjectRoute locale="en" pages={pages} />}
+          />
+          <Route path="*" element={<pages.NotFoundPage locale="en" />} />
+        </Route>
+
+        <Route path="*" element={<FallbackRoute pages={pages} />} />
+      </Routes>
+    </>
   );
 }

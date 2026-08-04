@@ -6,6 +6,7 @@ import {
 } from "../content/portfolio";
 import { Icon } from "./Icon";
 import { BrandLogo } from "./BrandLogo";
+import { Link } from "react-router-dom";
 
 interface FooterProps {
   locale: Locale;
@@ -19,9 +20,9 @@ export function Footer({ locale }: FooterProps) {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div>
-          <a className="footer-name" href={home}>
+          <Link className="footer-name" to={home}>
             <BrandLogo />
-          </a>
+          </Link>
           <p>{copy.footer.role}</p>
         </div>
         <div className="footer-social" aria-label="Social links">
@@ -35,9 +36,9 @@ export function Footer({ locale }: FooterProps) {
             <Icon name="mail" /> Email
           </a>
         </div>
-        <a className="footer-top" href="#top">
+        <Link className="footer-top" to={home}>
           {copy.footer.top} <span aria-hidden="true">↑</span>
-        </a>
+        </Link>
       </div>
       <div className="container footer-bottom">
         <span>

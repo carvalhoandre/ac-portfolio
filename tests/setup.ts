@@ -9,6 +9,33 @@ afterEach(() => {
   document.body.style.overflow = "";
 });
 
+Object.defineProperty(window, "scrollTo", {
+  configurable: true,
+  value: vi.fn(),
+  writable: true,
+});
+
+Object.defineProperty(HTMLElement.prototype, "scrollIntoView", {
+  configurable: true,
+  value: vi.fn(),
+  writable: true,
+});
+
+Object.defineProperty(window, "requestAnimationFrame", {
+  configurable: true,
+  value: vi.fn((callback: FrameRequestCallback) => {
+    callback(0);
+    return 1;
+  }),
+  writable: true,
+});
+
+Object.defineProperty(window, "cancelAnimationFrame", {
+  configurable: true,
+  value: vi.fn(),
+  writable: true,
+});
+
 Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: vi.fn().mockImplementation((query: string) => ({

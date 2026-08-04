@@ -1,6 +1,7 @@
 import { content, profile, type Locale } from "../content/portfolio";
 import { Icon } from "../components/Icon";
 import { OptimizedImage } from "../components/OptimizedImage";
+import { Link } from "react-router-dom";
 
 interface HeroProps {
   locale: Locale;
@@ -18,12 +19,12 @@ export function Hero({ locale }: HeroProps) {
           <p className="hero-subtitle">{copy.hero.subtitle}</p>
           <p className="hero-support">{copy.hero.support}</p>
           <div className="hero-actions">
-            <a className="button" href="#projetos">
+            <Link className="button" to="#projetos">
               {copy.hero.projects} <Icon name="arrow-right" />
-            </a>
-            <a className="button button-secondary" href="#contato">
+            </Link>
+            <Link className="button button-secondary" to="#contato">
               {copy.hero.contact}
-            </a>
+            </Link>
             <a
               className="text-link"
               download

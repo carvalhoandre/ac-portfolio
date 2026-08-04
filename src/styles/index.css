@@ -155,6 +155,10 @@ h3 {
   padding-block: var(--section-space);
 }
 
+section[id] {
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
 .skip-link {
   position: fixed;
   top: 0.75rem;

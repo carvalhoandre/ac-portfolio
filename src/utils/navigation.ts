@@ -13,10 +13,17 @@ export function changeLocalePreservingViewport(
     destination.hash = window.location.hash;
   }
 
+  const preserveViewport = !destination.hash;
+
   navigate(
     `${destination.pathname}${destination.search}${destination.hash}`,
-    { state: { localeChange: true } },
+    { state: { localeChange: true, preserveViewport } },
   );
+
+  if (!preserveViewport) {
+    document.documentElement.style.overflowAnchor = previousOverflowAnchor;
+    return;
+  }
 
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
