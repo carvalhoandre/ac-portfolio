@@ -1,37 +1,40 @@
-# AC Portfolio
+# André Leite Carvalho — Portfolio
 
-**PortfolioAC** is a web and mobile developer's portfolio showcasing expertise in web development, technologies, and UI/UX design. The portfolio is built with React and includes various features and functionalities.
+Professional portfolio focused on frontend architecture, Design Systems, integrations, quality, cloud, and Software Architecture.
 
-## Live Demo
+Live site: [andreleitecarvalho.space](https://andreleitecarvalho.space)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4773c3ae-732c-4012-a7c0-9baa3b5fd413/deploy-status)](https://app.netlify.com/sites/andrelcarvalho/deploys)
+## Stack
 
-Check out the live: [AC Portfolio](https://andreleitecarvalho.space)
+- React 19 and TypeScript
+- Vite 8 with static prerendering
+- Vitest and Testing Library
+- Playwright using locally installed Chrome
+- ESLint 10 and Prettier
+- Sharp image pipeline
+- Build-time GitHub REST integration with a committed fallback
 
-## Technologies Used
+The build produces indexable Portuguese and English pages at `/pt-BR/` and `/en/`, localized case studies, and a custom 404 page. Professional content is centralized in `src/content`.
 
-- TypeScript
-- React ts 25.2.1
-- Vite
-- Husky
-- React Router DOM
-- Normalize.css
-- Eslint
-- i18next
+## Commands
 
-## Design
+```bash
+npm ci
+npm run dev
+npm run optimize:images
+npm run format:check
+npm run lint
+npm run typecheck
+npm run test
+npm run test:e2e
+npm run build
+npm run preview
+npm run audit:bundle
+npm run sync:github
+```
 
-I use Designe from bedimcode: [Responsive Portfolio Website Alexa](https://buymeacoffee.com/bedimcode/e/31360)
+## Production
 
-Explore the different sections of the portfolio:
+The static output is written to `dist`. Netlify reads `public/_redirects`; public routes are prerendered during `npm run build`, and unknown URLs resolve to `404.html` with a real 404 status on Netlify.
 
-- **Home:** Introduction and brief overview.
-- **About:** Detailed information about the developer.
-- **Skills:** Overview of technical skills and qualifications.
-- **Services:** Description of services offered.
-- **Portfolio:** Showcase of recent projects.
-- **Get in Touch:** Contact information and form to reach out.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+See [the implementation report](docs/portfolio-refactor-report.md), [the experience evolution decisions](docs/experience-evolution-decisions.md), and [Search Console setup](docs/search-console.md) for validation and indexing details.

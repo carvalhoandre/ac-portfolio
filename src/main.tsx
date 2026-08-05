@@ -1,22 +1,39 @@
-import { createRoot } from "react-dom/client";
-import { I18nextProvider } from "react-i18next";
-import i18n from "./locale/i18n.ts";
+import { createRoot, hydrateRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+import { matchPortfolioRoute, type AppRoute } from "./content/routes";
+import { clientPages } from "./routes/client-pages";
+import "./styles/index.css";
 
-import { NotificationContainer } from "./components/NotificationContainer/index.tsx";
+const root = document.getElementById("root");
 
-import "./index.css";
-import App from "./App.tsx";
+const routesMatch = (left: AppRoute, right: AppRoute) =>
+  left.type === right.type &&
+  (left.type !== "project" ||
+    (right.type === "project" && left.slug === right.slug));
 
-const container = document.getElementById("root");
-
-if (container) {
-  const root = createRoot(container);
-
-  root.render(
-    <I18nextProvider i18n={i18n}>
-      <NotificationContainer>
-        <App />
-      </NotificationContainer>
-    </I18nextProvider>,
+if (root) {
+  const app = (
+    <BrowserRouter>
+      <App pages={clientPages} />
+    </BrowserRouter>
   );
+  const current = matchPortfolioRoute(window.location.pathname);
+  const prerenderedPath = root.dataset.prerenderPath;
+  const prerendered = prerenderedPath
+    ? matchPortfolioRoute(prerenderedPath)
+    : null;
+  const canHydrate = Boolean(
+    root.hasChildNodes() &&
+    prerendered &&
+    current.locale === prerendered.locale &&
+    routesMatch(current.route, prerendered.route),
+  );
+
+  if (canHydrate) {
+    hydrateRoot(root, app);
+  } else {
+    root.replaceChildren();
+    createRoot(root).render(app);
+  }
 }

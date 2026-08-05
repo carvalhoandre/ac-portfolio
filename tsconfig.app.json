@@ -23,5 +23,22 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": [
+    "src/App.tsx",
+    "src/main.tsx",
+    "src/entry-server.tsx",
+    "src/vite-env.d.ts",
+    "src/content/**/*.ts",
+    "src/content/**/*.json",
+    "src/sections/**/*.tsx",
+    "src/pages/HomePage.tsx",
+    "src/pages/ProjectPage.tsx",
+    "src/pages/NotFoundPage.tsx",
+    "src/components/**/*.tsx",
+    "src/hooks/**/*.ts",
+    "src/routes/**/*.ts",
+    "src/utils/**/*.ts",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ]
 }
