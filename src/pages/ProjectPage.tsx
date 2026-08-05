@@ -38,9 +38,9 @@ export function ProjectPage({ locale, slug }: ProjectPageProps) {
       <article>
         <header className="project-hero">
           <div className="container">
-            <a className="back-link" href={`${localePath(locale)}#projetos`}>
+            <Link className="back-link" to={`${localePath(locale)}#projetos`}>
               <span aria-hidden="true">←</span> {copy.projectPage.back}
-            </a>
+            </Link>
             <div className="project-hero-grid">
               <div>
                 <p className="eyebrow">{project.descriptor}</p>

@@ -13,14 +13,24 @@ export function changeLocalePreservingViewport(
     destination.hash = window.location.hash;
   }
 
-  navigate(
-    `${destination.pathname}${destination.search}${destination.hash}`,
-    { state: { localeChange: true } },
-  );
+  const preserveViewport = !destination.hash;
+
+  navigate(`${destination.pathname}${destination.search}${destination.hash}`, {
+    state: { localeChange: true, preserveViewport },
+  });
+
+  if (!preserveViewport) {
+    document.documentElement.style.overflowAnchor = previousOverflowAnchor;
+    return;
+  }
 
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
-      window.scrollTo({ left: viewport.x, top: viewport.y, behavior: "instant" });
+      window.scrollTo({
+        left: viewport.x,
+        top: viewport.y,
+        behavior: "instant",
+      });
       requestAnimationFrame(() => {
         document.documentElement.style.overflowAnchor = previousOverflowAnchor;
       });

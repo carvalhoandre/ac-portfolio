@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 const homeSections = [
   "inicio",
   "projetos",
+  "npm",
   "especialidades",
   "trajetoria",
   "github",

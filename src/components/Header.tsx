@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   alternateLocale,
   content,
@@ -73,54 +73,60 @@ export function Header({ locale, route }: HeaderProps) {
     <>
       <header className="site-header">
         <div className="container header-inner">
-          <a
+          <Link
             className="brand"
-            href={home}
+            to={home}
             aria-label={`AC — ${profile.name} — home`}
           >
             <BrandLogo />
-          </a>
+          </Link>
 
           <div className="nav-shell" id="primary-navigation">
             <nav aria-label={copy.navLabel}>
-              <a
+              <Link
                 aria-current={isCurrent("inicio") ? "location" : undefined}
-                href={homeHref("#inicio")}
+                to={homeHref("#inicio")}
               >
                 {copy.nav.home}
-              </a>
-              <a
+              </Link>
+              <Link
                 aria-current={isCurrent("projetos") ? "location" : undefined}
-                href={homeHref("#projetos")}
+                to={homeHref("#projetos")}
               >
                 {copy.nav.projects}
-              </a>
-              <a
+              </Link>
+              <Link
+                aria-current={isCurrent("npm") ? "location" : undefined}
+                to={homeHref("#npm")}
+              >
+                {copy.nav.npm}
+              </Link>
+              <Link
                 aria-current={
                   isCurrent("especialidades") ? "location" : undefined
                 }
-                href={homeHref("#especialidades")}
+                to={homeHref("#especialidades")}
               >
                 {copy.nav.expertise}
-              </a>
-              <a
+              </Link>
+              <Link
                 aria-current={isCurrent("trajetoria") ? "location" : undefined}
-                href={homeHref("#trajetoria")}
+                to={homeHref("#trajetoria")}
               >
                 {copy.nav.journey}
-              </a>
-              <a
+              </Link>
+              <Link
                 aria-current={isCurrent("github") ? "location" : undefined}
-                href={homeHref("#github")}
+                to={homeHref("#github")}
               >
                 GitHub
-              </a>
+              </Link>
             </nav>
           </div>
           <div className="header-actions">
-            <a
+            <Link
               className="locale-link"
-              href={alternateHref}
+              to={alternateHref}
               lang={alternate}
               onClick={(event) => {
                 event.preventDefault();
@@ -129,7 +135,7 @@ export function Header({ locale, route }: HeaderProps) {
             >
               <Icon name="globe" />
               {copy.alternateLocaleName}
-            </a>
+            </Link>
             <button
               className="icon-button"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -138,12 +144,12 @@ export function Header({ locale, route }: HeaderProps) {
             >
               <Icon name={theme === "dark" ? "sun" : "moon"} />
             </button>
-            <a
+            <Link
               className="button button-small desktop-contact"
-              href={homeHref("#contato")}
+              to={homeHref("#contato")}
             >
               {copy.nav.contact}
-            </a>
+            </Link>
           </div>
         </div>
       </header>

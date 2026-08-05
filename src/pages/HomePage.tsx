@@ -7,6 +7,7 @@ import { GitHubHighlights } from "../sections/GitHubHighlights";
 import { Journey } from "../sections/Journey";
 import { Lab } from "../sections/Lab";
 import { Projects } from "../sections/Projects";
+import { NpmPackages } from "../sections/NpmPackages";
 import type { Locale } from "../content/portfolio";
 
 interface HomePageProps {
@@ -18,6 +19,7 @@ export function HomePage({ locale }: HomePageProps) {
     <main id="main-content">
       <Hero locale={locale} />
       <Projects locale={locale} />
+      <NpmPackages locale={locale} />
       <Expertise locale={locale} />
       <Experience locale={locale} />
       <About locale={locale} />
