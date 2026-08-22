@@ -49,7 +49,7 @@
 3. Projetos selecionados em grid editorial e páginas de estudo de caso.
 4. Especialidades aplicadas, com tecnologias como suporte.
 5. Experiência e impacto sem métricas inventadas.
-6. Sobre André.
+6. Sobre mim.
 7. Formação e trajetória com tabs acessíveis.
 8. André’s Lab, usando a URL pública já existente.
 9. Contato objetivo.
