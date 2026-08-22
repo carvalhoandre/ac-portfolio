@@ -533,7 +533,7 @@ export const content = {
       ],
     },
     about: {
-      eyebrow: "Sobre André",
+      eyebrow: "Sobre mim",
       title:
         "Especialização construída entre interface, arquitetura e entrega.",
       paragraphs: [
