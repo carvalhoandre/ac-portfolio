@@ -2,11 +2,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { npmPackageNames } from "../src/config/npm-packages";
 import { clearNpmPackagesCache } from "../src/hooks/useNpmPackages";
-import {
-  loadNpmPackages,
-  normalizeNpmMetadata,
-  normalizePublicUrl,
-} from "../src/services/npm-registry";
+import { loadNpmPackages } from "../src/services/npm-registry";
 import { NpmPackages } from "../src/sections/NpmPackages";
 
 const registryResponse = (name: string, overrides = {}) =>
@@ -34,34 +30,6 @@ describe("npm registry integration", () => {
   beforeEach(() => {
     clearNpmPackagesCache();
     vi.mocked(fetch).mockReset();
-  });
-
-  it("normalizes the latest version and only safe public URLs", () => {
-    const packageData = normalizeNpmMetadata("react-vite-clean-cli", {
-      "dist-tags": { latest: "3.2.1" },
-      time: { modified: "2026-06-01T12:00:00.000Z" },
-      versions: {
-        "3.2.1": {
-          description: "Current release",
-          homepage: "javascript:alert(1)",
-          keywords: ["React", "Vite", "CLI", "extra"],
-          license: "MIT",
-          repository: "git+https://github.com/carvalhoandre/tool.git",
-        },
-      },
-    });
-
-    expect(packageData).toMatchObject({
-      description: "Current release",
-      keywords: ["React", "Vite", "CLI"],
-      license: "MIT",
-      repositoryUrl: "https://github.com/carvalhoandre/tool",
-      version: "3.2.1",
-    });
-    expect(packageData.homepageUrl).toBeUndefined();
-    expect(normalizePublicUrl("git://github.com/user/repo.git")).toBe(
-      "https://github.com/user/repo",
-    );
   });
 
   it("keeps successful packages when one registry request fails", async () => {

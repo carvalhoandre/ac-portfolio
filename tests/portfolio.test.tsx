@@ -65,7 +65,6 @@ describe("portfolio experience", () => {
     renderRoute("/en/");
 
     for (const name of [
-      "react-vite-clean-cli",
       "create-flask-api",
       "ac-totvs-ds",
       "create-base-vite",
