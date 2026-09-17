@@ -19,7 +19,6 @@ export function MobileNavigation({ locale, route }: MobileNavigationProps) {
   const items = [
     { id: "inicio", label: copy.nav.home, icon: "home" as const },
     { id: "projetos", label: copy.nav.projects, icon: "grid" as const },
-    { id: "npm", label: copy.nav.npm, icon: "code" as const },
     {
       id: "especialidades",
       label: copy.nav.mobileExpertise,

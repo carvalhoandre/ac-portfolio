@@ -22,7 +22,6 @@ export const projectSlugs: ProjectSlug[] = [
   "psi-giovanna",
   "ac-labs",
   "ac-dogs",
-  "prumo-digital",
 ];
 
 export const isProjectSlug = (slug: string | undefined): slug is ProjectSlug =>

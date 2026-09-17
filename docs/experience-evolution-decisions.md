@@ -22,7 +22,7 @@ A newsletter was deliberately not added in this release. The current content cad
 
 ## Project media
 
-The existing project SVGs remain lightweight, scalable cover images. Prumo Digital receives a new responsive SVG composition based on the supplied visual reference. The screenshots embedded in the task were not delivered as source image files, so they were not converted into lossy approximations. When original desktop/mobile exports are available, place them under `public/images/projects/<slug>/` and run the existing Sharp pipeline to generate AVIF, WebP, and JPEG variants with explicit dimensions.
+The existing project SVGs remain lightweight, scalable cover images. The screenshots embedded in the task were not delivered as source image files, so they were not converted into lossy approximations. When original desktop/mobile exports are available, place them under `public/images/projects/<slug>/` and run the existing Sharp pipeline to generate AVIF, WebP, and JPEG variants with explicit dimensions.
 
 ## Motion and locale navigation
 

@@ -1,7 +1,6 @@
 export type Locale = "pt-BR" | "en";
 
-export type ProjectSlug =
-  "psi-giovanna" | "ac-labs" | "ac-dogs" | "prumo-digital";
+export type ProjectSlug = "psi-giovanna" | "ac-labs" | "ac-dogs";
 
 export interface ProjectTheme {
   accent: string;
@@ -59,7 +58,6 @@ const projectImages: Record<ProjectSlug, string> = {
   "psi-giovanna": "/images/projects/psi-giovanna.svg",
   "ac-labs": "/images/projects/ac-labs.svg",
   "ac-dogs": "/images/projects/ac-dogs.svg",
-  "prumo-digital": "/images/projects/prumo-digital.svg",
 };
 
 const projectThemes: Record<ProjectSlug, ProjectTheme> = {
@@ -83,13 +81,6 @@ const projectThemes: Record<ProjectSlug, ProjectTheme> = {
     surface: "#fffaf0",
     text: "#33270b",
     visualStyle: "playful",
-  },
-  "prumo-digital": {
-    accent: "#ff2d72",
-    accentMuted: "#471628",
-    surface: "#141315",
-    text: "#f7f4f0",
-    visualStyle: "directional",
   },
 };
 
@@ -149,10 +140,22 @@ const sharedEducation: TimelineItem[] = [
 
 const sharedCertifications: TimelineItem[] = [
   {
-    period: "Nível confirmado",
+    period: "Jul 2026",
     title: "English Level B2",
     organization: "EF English",
     skills: ["English", "B2"],
+  },
+  {
+    period: "Jun 2026",
+    title: "Wynxx Foundation",
+    organization: "GFT",
+    skills: ["IA, LLMs, Prompt Engineering"],
+  },
+  {
+    period: "Mar 2025",
+    title: "Big Data & Analytics",
+    organization: "FIAP",
+    skills: ["Rstudio", "Python", "Data Analysis", "Data Visualization", "Mongo DB", "SQL", "Data Science"],
   },
 ];
 
@@ -243,34 +246,6 @@ const projectsPt: Project[] = [
     theme: projectThemes["ac-dogs"],
     demo: "https://ac-dogs.netlify.app",
   },
-  {
-    slug: "prumo-digital",
-    title: "Prumo Digital",
-    descriptor: "Presença digital orientada a pequenos negócios",
-    summary:
-      "Landing page responsiva que apresenta duas soluções digitais e conduz a solicitação completa para o WhatsApp.",
-    context:
-      "Uma presença digital para organizar a oferta da Prumo e tornar o primeiro contato mais objetivo em desktop e mobile.",
-    challenge:
-      "Comunicar direção, estrutura e presença com personalidade, mantendo leitura rápida, navegação clara e um CTA prioritário.",
-    role: "Estruturação da experiência e implementação frontend responsiva.",
-    responsibilities: [
-      "Construção da hierarquia e dos fluxos de ação.",
-      "Adaptação da composição para desktop e mobile.",
-      "Implementação da identidade visual e dos estados interativos.",
-    ],
-    decisions: [
-      "Contraste elevado e linguagem visual direcional para reforçar posicionamento.",
-      "CTA principal persistente na hierarquia e navegação compacta no mobile.",
-    ],
-    outcome:
-      "Uma página de apresentação direta, responsiva e preparada para transformar interesse em conversa qualificada.",
-    technologies: ["React", "TypeScript", "Responsive UI"],
-    image: projectImages["prumo-digital"],
-    imageAlt:
-      "Landing page escura da Prumo Digital com destaque rosa e composição responsiva",
-    theme: projectThemes["prumo-digital"],
-  },
 ];
 
 const projectsEn: Project[] = projectsPt.map((project) => {
@@ -351,29 +326,6 @@ const projectsEn: Project[] = projectsPt.map((project) => {
         "A functional study project integrating authentication, content, and media in one application.",
       technologies: ["React", "Authentication", "API integration"],
     },
-    "prumo-digital": {
-      title: "Prumo Digital",
-      descriptor: "A digital presence for small businesses",
-      summary:
-        "A responsive landing page that presents two digital solutions and guides complete enquiries to WhatsApp.",
-      context:
-        "A digital presence designed to organize Prumo’s offer and make the first contact more objective on desktop and mobile.",
-      challenge:
-        "Communicate direction, structure, and presence with personality while keeping content scannable, navigation clear, and one primary CTA.",
-      role: "Experience structure and responsive frontend implementation.",
-      responsibilities: [
-        "Action flow and content hierarchy implementation.",
-        "Desktop and mobile composition adaptation.",
-        "Visual identity and interaction state implementation.",
-      ],
-      decisions: [
-        "High contrast and directional graphics to reinforce positioning.",
-        "A primary CTA with clear hierarchy and compact mobile navigation.",
-      ],
-      outcome:
-        "A direct, responsive presentation page designed to turn interest into a qualified conversation.",
-      technologies: ["React", "TypeScript", "Responsive UI"],
-    },
   };
 
   const imageAlts: Record<ProjectSlug, string> = {
@@ -382,8 +334,6 @@ const projectsEn: Project[] = projectsPt.map((project) => {
     "ac-labs":
       "André’s Lab interface with software engineering articles and categories",
     "ac-dogs": "Responsive gallery from the ac Dogs social application",
-    "prumo-digital":
-      "Prumo Digital dark landing page with pink highlights and responsive composition",
   };
 
   return {
